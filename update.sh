@@ -13,3 +13,7 @@ done << EOF
 $(jq -r '.[] | "\(.title) \(.html_url)"' <<< `curl https://api.github.com/repos/levy9527/blog/issues`) 
 EOF
 # https://askubuntu.com/questions/678915/whats-the-difference-between-and-in-bash
+
+git add $readme
+git commit -m 'docs: update'
+git push 
