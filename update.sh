@@ -9,11 +9,12 @@ echo '## 正文\n' >> $readme
 while read -r title html_url
 do
   echo "- [$title]($html_url)" >> $readme
-done << EOF 
+done << EOF # https://askubuntu.com/questions/678915/whats-the-difference-between-and-in-bash
+# 需要先安装 https://github.com/stedolan/jq
 $(jq -r '.[] | "\(.title) \(.html_url)"' <<< `curl https://api.github.com/repos/levy9527/blog/issues`) 
 EOF
-# https://askubuntu.com/questions/678915/whats-the-difference-between-and-in-bash
 
 git add $readme
 git commit -m 'docs: update'
+git pull --rebase
 git push 
