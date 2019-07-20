@@ -1,4 +1,5 @@
 #!/bin/sh
+# 需要先安装 https://github.com/stedolan/jq
 readme=README.md
 
 # 恢复原始内容
@@ -10,7 +11,6 @@ while read -r title html_url
 do
   echo "- [$title]($html_url)" >> $readme
 done << EOF # https://askubuntu.com/questions/678915/whats-the-difference-between-and-in-bash
-# 需要先安装 https://github.com/stedolan/jq
 $(jq -r '.[] | "\(.title) \(.html_url)"' <<< `curl https://api.github.com/repos/levy9527/blog/issues`) 
 EOF
 
