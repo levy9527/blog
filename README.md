@@ -11,6 +11,8 @@
 
 ## 正文
 
+- [#](需要先安装 https://github.com/stedolan/jq)
+- [🔨揭秘vue-sfc-cli:](组件研发利器 https://github.com/levy9527/blog/issues/7)
 - [📝2019年中总结](https://github.com/levy9527/blog/issues/6)
 - [🔒免费开启HTTPS](https://github.com/levy9527/blog/issues/5)
 - [⚡️Github集成Netlify：快速预览PR](https://github.com/levy9527/blog/issues/4)
