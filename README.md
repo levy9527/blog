@@ -11,6 +11,7 @@
 
 ## 正文
 
+- [📱我曾经是怎么使用招聘软件的](https://github.com/levy9527/blog/issues/8)
 - [🔨揭秘vue-sfc-cli：组件研发利器](https://github.com/levy9527/blog/issues/7)
 - [📝2019年中总结](https://github.com/levy9527/blog/issues/6)
 - [🔒免费开启HTTPS](https://github.com/levy9527/blog/issues/5)
