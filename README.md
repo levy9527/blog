@@ -11,7 +11,7 @@
 
 ## 正文
 
-- [🤖如何写一个Github](App https://github.com/levy9527/blog/issues/10)
+- [🤖如何写一个GithubApp](https://github.com/levy9527/blog/issues/10)
 - [👨🏻‍💻我曾经是怎么做面试官的](https://github.com/levy9527/blog/issues/9)
 - [📱我曾经是怎么使用招聘软件的](https://github.com/levy9527/blog/issues/8)
 - [🔨揭秘vue-sfc-cli：组件研发利器](https://github.com/levy9527/blog/issues/7)
