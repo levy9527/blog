@@ -12,7 +12,7 @@
 ## 正文
 
 - [✅使用jest进行测试驱动开发](https://github.com/levy9527/blog/issues/13)
-- [🌪自动化的Github](Workflow https://github.com/levy9527/blog/issues/12)
+- [🌪自动化的GithubWorkflow](https://github.com/levy9527/blog/issues/12)
 - [🕸捕获与改写HTTPS请求](https://github.com/levy9527/blog/issues/11)
 - [🤖如何写一个GithubApp](https://github.com/levy9527/blog/issues/10)
 - [👨🏻‍💻我曾经是怎么做面试官的](https://github.com/levy9527/blog/issues/9)
