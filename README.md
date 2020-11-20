@@ -4,7 +4,7 @@
 
 [旧博客](https://levy.work)不再有更新。
 
-## 博客2.0 技术相关使用issue放技术相关内容。
+## 博客2.0 
 
 - [✅使用jest进行测试驱动开发](https://github.com/levy9527/blog/issues/13)
 - [🌪自动化的GithubWorkflow](https://github.com/levy9527/blog/issues/12)
