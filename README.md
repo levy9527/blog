@@ -1,11 +1,10 @@
 # blog
-博客2.0 技术相关使用issue放技术相关内容。
 
 博客3.0 人文相关：读书笔记、感想总结、团队管理，存放在[语雀](https://www.yuque.com/levy/blog)
 
 [旧博客](https://levy.work)不再有更新。
 
-## 正文
+## 博客2.0 技术相关使用issue放技术相关内容。
 
 - [✅使用jest进行测试驱动开发](https://github.com/levy9527/blog/issues/13)
 - [🌪自动化的GithubWorkflow](https://github.com/levy9527/blog/issues/12)
