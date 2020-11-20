@@ -2,9 +2,8 @@
 
 博客3.0 人文相关：读书笔记、感想总结、团队管理，存放在[语雀](https://www.yuque.com/levy/blog)
 
-[旧博客](https://levy.work)不再有更新。
 
-## 博客2.0 
+## 博客2.0 不再更新
 
 - [✅使用jest进行测试驱动开发](https://github.com/levy9527/blog/issues/13)
 - [🌪自动化的GithubWorkflow](https://github.com/levy9527/blog/issues/12)
@@ -19,3 +18,5 @@
 - [🐳从零开始Docker化Node.js应用](https://github.com/levy9527/blog/issues/3)
 - [📦vue组件发布npm最佳实践](https://github.com/levy9527/blog/issues/2)
 - [🚀Github集成TravisCI：自动发布](https://github.com/levy9527/blog/issues/1)
+
+## [博客1.0](https://levy.work) 不再有更新
