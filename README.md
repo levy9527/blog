@@ -1,10 +1,4 @@
-# blog
-
-博客3.0 人文相关：读书笔记、英语学习 在[语雀](https://www.yuque.com/levy/blog)
-
-
 ## 技术博客
-
 - [✅使用jest进行测试驱动开发](https://github.com/levy9527/blog/issues/13)
 - [🌪自动化的GithubWorkflow](https://github.com/levy9527/blog/issues/12)
 - [🕸捕获与改写HTTPS请求](https://github.com/levy9527/blog/issues/11)
@@ -14,9 +8,7 @@
 - [🔨揭秘vue-sfc-cli：组件研发利器](https://github.com/levy9527/blog/issues/7)
 - [📝2019年中总结](https://github.com/levy9527/blog/issues/6)
 - [🔒免费开启HTTPS](https://github.com/levy9527/blog/issues/5)
-- [⚡️Github集成Netlify：快速预览PR](https://github.com/levy9527/blog/issues/4)
+- [⚡Github集成Netlify：快速预览PR](https://github.com/levy9527/blog/issues/4)
 - [🐳从零开始Docker化Node.js应用](https://github.com/levy9527/blog/issues/3)
 - [📦vue组件发布npm最佳实践](https://github.com/levy9527/blog/issues/2)
 - [🚀Github集成TravisCI：自动发布](https://github.com/levy9527/blog/issues/1)
-
-## [博客1.0](https://levy.work) 不再有更新

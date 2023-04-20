@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "vuepress dev .",
+    "build": "cross-env vuepress build ."
+  },
+  "devDependencies": {
+    "fast-glob": "^2.2.6",
+    "vuepress": "^1.0.0-alpha.44"
+  }
+}
