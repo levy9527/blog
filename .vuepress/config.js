@@ -38,8 +38,8 @@ function generateSidebar() {
 sidebar = generateSidebar()
 
 module.exports = {
-  title: 'FEMessage blog',
-  description: 'things every member should konw',
+  title: "Levy's blog",
+  description: 'think, speak, practice, create',
   head: [
     [
       'link',
@@ -47,7 +47,8 @@ module.exports = {
         rel: 'icon',
         href: 'https://avatars3.githubusercontent.com/u/39977793?s=200&v=4'
       }
-    ]
+    ],
+    ['style', {}, 'img { display: block; }']
   ],
   base: '/blog/',
   themeConfig: {
