@@ -1,0 +1,18 @@
+language: node_js
+node_js:
+  - lts/*
+git:
+  depth: 3
+install:
+  - yarn
+script:
+  - yarn build
+cache: yarn
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  local-dir: .vuepress/dist
+  on:
+    branch: main
+  github-token: $GITHUB_TOKEN
