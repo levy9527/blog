@@ -50,7 +50,7 @@ module.exports = {
     ],
     ['style', {}, 'img { display: block; }']
   ],
-  base: '/blog/',
+  //base: '/blog/',
   themeConfig: {
     //repo: 'FEMessage/blog',
     //editLinks: true,
