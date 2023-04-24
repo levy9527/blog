@@ -6,10 +6,10 @@ const chromium = playwright.chromium
 
 const owner = 'levy9527'
 const repo = 'image-holder'
-const githubPrefix = `https://raw.gitmirror.com/${owner}/${repo}/main/`
+const githubPrefix = `https://raw.githubusercontent.com/${owner}/${repo}/main/`
 
 const sourcePrefix = 'https://cdn.nlark.com'
-const pathToMarkdownFile = 'docs/tools/how-to-connect-to-internet.md'
+const pathToMarkdownFile = 'docs/git/git-definitive-guide-to-merge-code.md'
 const imageDir = 'images/'
 const imageSuffix = 'png'
 
@@ -98,6 +98,7 @@ async function replaceImagesInMarkdown(isLocal) {
   }
   let markdownContent = fs.readFileSync(pathToMarkdownFile).toString()
   const imageUrls = extractImageUrls(markdownContent)
+  const directoryPath = path.join(__dirname, imageDir);
   const localImages = fs.readdirSync(directoryPath)
 
   for (let i = 0; i < imageUrls.length; i++) {
@@ -113,7 +114,6 @@ async function replaceImagesInMarkdown(isLocal) {
         }
         else {
           console.log('Using local image file...')
-          const directoryPath = path.join(__dirname, imageDir);
           if (localImages[i]) {
             githubImageUrl = githubPrefix + getDirWithForwardSlash(pathToMarkdownFile) + getFileName(localImages[i])
           }
@@ -121,6 +121,8 @@ async function replaceImagesInMarkdown(isLocal) {
             break;
           }
         }
+        // use proxy address
+        githubImageUrl = githubImageUrl.replace('githubusercontent', 'gitmirror')
         markdownContent = markdownContent.replace(imageUrl, githubImageUrl)
       } catch(e) {
         console.error(e)
