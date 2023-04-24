@@ -9,7 +9,7 @@ const repo = 'image-holder'
 const githubPrefix = `https://raw.githubusercontent.com/${owner}/${repo}/main/`
 
 const sourcePrefix = 'https://cdn.nlark.com'
-const pathToMarkdownFile = 'docs/git/git-definitive-guide-to-merge-code.md'
+const pathToMarkdownFile = 'docs/git/git-best-pratices.md'
 const imageDir = 'images/'
 const imageSuffix = 'png'
 
