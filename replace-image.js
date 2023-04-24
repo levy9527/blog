@@ -6,7 +6,7 @@ const chromium = playwright.chromium
 
 const owner = 'levy9527'
 const repo = 'image-holder'
-const githubPrefix = `https://raw.githubusercontent.com/${owner}/${repo}/main/`
+const githubPrefix = `https://raw.gitmirror.com/${owner}/${repo}/main/`
 
 const sourcePrefix = 'https://cdn.nlark.com'
 const pathToMarkdownFile = 'docs/tools/how-to-connect-to-internet.md'
