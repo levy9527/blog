@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git常用命令 | Levy&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="https://avatars3.githubusercontent.com/u/39977793?s=200&amp;v=4">
+    <style>img { display: block; }</style>
+    <meta name="description" content="think, speak, practice, create">
+    
+    <link rel="preload" href="/assets/css/0.styles.e8e4f3a3.css" as="style"><link rel="preload" href="/assets/js/app.64f64c08.js" as="script"><link rel="preload" href="/assets/js/2.733019b2.js" as="script"><link rel="preload" href="/assets/js/11.2197c8e5.js" as="script"><link rel="prefetch" href="/assets/js/10.ccf6235b.js"><link rel="prefetch" href="/assets/js/12.8a4289b2.js"><link rel="prefetch" href="/assets/js/13.01992950.js"><link rel="prefetch" href="/assets/js/3.7c0fc0d6.js"><link rel="prefetch" href="/assets/js/4.d12742be.js"><link rel="prefetch" href="/assets/js/5.216cae74.js"><link rel="prefetch" href="/assets/js/6.2d0a63f8.js"><link rel="prefetch" href="/assets/js/7.f45d822c.js"><link rel="prefetch" href="/assets/js/8.e2874173.js"><link rel="prefetch" href="/assets/js/9.25b4e579.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.e8e4f3a3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Levy's blog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Git实用知识</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/git/git-best-pratices.html" class="sidebar-link">Git最佳实践</a></li><li><a href="/docs/git/git-definitive-guide-to-merge-code.html" class="sidebar-link">Git代码合并指南</a></li><li><a href="/docs/git/git-useful-commands.html" aria-current="page" class="active sidebar-link">Git常用命令</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/docs/git/git-useful-commands.html#前言" class="sidebar-link">前言</a></li><li class="sidebar-sub-header"><a href="/docs/git/git-useful-commands.html#配置" class="sidebar-link">配置</a></li><li class="sidebar-sub-header"><a href="/docs/git/git-useful-commands.html#增强" class="sidebar-link">增强</a></li><li class="sidebar-sub-header"><a href="/docs/git/git-useful-commands.html#记住账号密码" class="sidebar-link">记住账号密码</a></li><li class="sidebar-sub-header"><a href="/docs/git/git-useful-commands.html#本地提交" class="sidebar-link">本地提交</a></li><li class="sidebar-sub-header"><a href="/docs/git/git-useful-commands.html#分支管理" class="sidebar-link">分支管理</a></li><li class="sidebar-sub-header"><a href="/docs/git/git-useful-commands.html#标签管理" class="sidebar-link">标签管理</a></li><li class="sidebar-sub-header"><a href="/docs/git/git-useful-commands.html#" class="sidebar-link"></a></li><li class="sidebar-sub-header"><a href="/docs/git/git-useful-commands.html#远程仓库" class="sidebar-link">远程仓库</a></li><li class="sidebar-sub-header"><a href="/docs/git/git-useful-commands.html#其他" class="sidebar-link">其他</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>必备工具</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/docs/tools/how-to-connect-to-internet.html" class="sidebar-link">科学上网</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="git常用命令"><a href="#git常用命令" class="header-anchor">#</a> Git常用命令</h1> <h2 id="前言"><a href="#前言" class="header-anchor">#</a> 前言</h2> <p>这里列举常见场景，并给出相应解决方案
+约定： 下文代码块中<code>${}</code>里面表示的是变量，具体值视情况而定，其余的都是正确可执行的命令。</p> <h2 id="配置"><a href="#配置" class="header-anchor">#</a> 配置</h2> <p>Mac/Linux 用户 执行以下操作</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">vi</span> ~/.gitconfig
+</code></pre></div><p>Windows用户在桌面用户文件夹下有个.gitconfig隐藏文件，直接修改即可
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682343376774.png" alt="">
+补充以下内容</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token punctuation">[</span>alias<span class="token punctuation">]</span>
+  st <span class="token operator">=</span> status
+  cm <span class="token operator">=</span> commit
+  br <span class="token operator">=</span> branch
+  co <span class="token operator">=</span> checkout
+  <span class="token function">ps</span> <span class="token operator">=</span> push
+</code></pre></div><h2 id="增强"><a href="#增强" class="header-anchor">#</a> 增强</h2> <p>Mac或Linux用户，推荐安装<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener noreferrer">https://github.com/robbyrussell/oh-my-zsh<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>，增强命令行体验。</p> <h2 id="记住账号密码"><a href="#记住账号密码" class="header-anchor">#</a> 记住账号密码</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 输入下列命令后，再输入一次账号密码即可</span>
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> credential.helper store
+</code></pre></div><h2 id="本地提交"><a href="#本地提交" class="header-anchor">#</a> 本地提交</h2> <h3 id="取消未暂存的修改"><a href="#取消未暂存的修改" class="header-anchor">#</a> 取消未暂存的修改</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 恢复单个文件</span>
+<span class="token function">git</span> checkout -- <span class="token variable">${file}</span>
+
+<span class="token comment"># 恢复目录下所有文件</span>
+<span class="token function">git</span> checkout -- <span class="token builtin class-name">.</span>
+</code></pre></div><h3 id="取消add"><a href="#取消add" class="header-anchor">#</a> 取消add</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> reset HEAD
+</code></pre></div><h3 id="取消提交"><a href="#取消提交" class="header-anchor">#</a> 取消提交</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> reset HEAD^1
+</code></pre></div><p>或者</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 查看提交的hash</span>
+<span class="token function">git</span> log
+<span class="token comment"># 使用相应的hash回滚</span>
+<span class="token function">git</span> reset <span class="token variable">${hash}</span>
+</code></pre></div><h3 id="修正提交"><a href="#修正提交" class="header-anchor">#</a> 修正提交</h3> <p>适用于提交信息有误或有遗漏，需要修正最新提交信息的场景。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> commit <span class="token parameter variable">--amend</span>
+</code></pre></div><h3 id="stash修改"><a href="#stash修改" class="header-anchor">#</a> stash修改</h3> <p>适用于当前功能开发并不完整，不能产生一次提交，但却要开发另外功能的场景</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> stash save <span class="token string">'${msg}'</span>
+</code></pre></div><h3 id="恢复stash"><a href="#恢复stash" class="header-anchor">#</a> 恢复stash</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> stash pop
+</code></pre></div><h2 id="分支管理"><a href="#分支管理" class="header-anchor">#</a> 分支管理</h2> <h3 id="创建分支"><a href="#创建分支" class="header-anchor">#</a> 创建分支</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> checkout <span class="token parameter variable">-b</span> <span class="token variable">${branch}</span>
+<span class="token comment"># 根据commit hash 创建分支</span>
+<span class="token function">git</span> checkout <span class="token parameter variable">-b</span> <span class="token variable">${branch}</span> <span class="token variable">${commit_hash}</span>
+<span class="token comment"># 切出远程分支到本地</span>
+<span class="token function">git</span> checkout <span class="token parameter variable">--track</span> origin/<span class="token punctuation">{</span>branch<span class="token punctuation">}</span>
+</code></pre></div><h3 id="查看远程分支"><a href="#查看远程分支" class="header-anchor">#</a> 查看远程分支</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> branch <span class="token parameter variable">--remote</span>
+<span class="token comment"># 或者</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-r</span>
+如果上述命令看不到所有的远程分支，可以使用以下命令
+<span class="token function">git</span> ls-remote <span class="token parameter variable">--heads</span>
+</code></pre></div><h3 id="创建干净历史分支"><a href="#创建干净历史分支" class="header-anchor">#</a> 创建干净历史分支</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> checkout <span class="token parameter variable">--orphan</span> <span class="token variable">${branch}</span>
+</code></pre></div><h3 id="删除分支"><a href="#删除分支" class="header-anchor">#</a> 删除分支</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 删除本地分支</span>
+<span class="token function">git</span> branch <span class="token parameter variable">-d</span> <span class="token variable">${local_branch}</span>
+<span class="token comment"># 删除远程分支</span>
+<span class="token function">git</span> push origin <span class="token parameter variable">-d</span> <span class="token variable">${remote_branch}</span>
+<span class="token comment"># 或</span>
+<span class="token function">git</span> push origin <span class="token builtin class-name">:</span><span class="token variable">${remote_branch}</span>
+</code></pre></div><h2 id="标签管理"><a href="#标签管理" class="header-anchor">#</a> 标签管理</h2> <h3 id="新建本地标签"><a href="#新建本地标签" class="header-anchor">#</a> 新建本地标签</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> tag <span class="token variable">${tag_name}</span>
+</code></pre></div><h3 id="删除本地标签"><a href="#删除本地标签" class="header-anchor">#</a> 删除本地标签</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> tag <span class="token parameter variable">-d</span> <span class="token variable">${tag_name}</span>
+</code></pre></div><h3 id="查看本地所有标签"><a href="#查看本地所有标签" class="header-anchor">#</a> 查看本地所有标签</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> tag <span class="token parameter variable">-l</span>
+</code></pre></div><h3 id="推送本地标签"><a href="#推送本地标签" class="header-anchor">#</a> 推送本地标签</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> push origin <span class="token variable">${tag_name}</span>
+<span class="token comment"># 推送所有标签</span>
+<span class="token function">git</span> push origin <span class="token parameter variable">--tags</span>
+<span class="token comment"># 同时推送提交记录以及本分支的所有标签</span>
+<span class="token function">git</span> push --follow-tags
+</code></pre></div><h3 id="获取远程标签"><a href="#获取远程标签" class="header-anchor">#</a> 获取远程标签</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> fetch origin tag
+</code></pre></div><h3 id="删除远程标签"><a href="#删除远程标签" class="header-anchor">#</a> 删除远程标签</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> push origin <span class="token parameter variable">-d</span> tag <span class="token variable">${tag_name}</span>
+</code></pre></div><h2 id=""><a href="#" class="header-anchor">#</a></h2> <h2 id="远程仓库"><a href="#远程仓库" class="header-anchor">#</a> 远程仓库</h2> <h3 id="浅克隆"><a href="#浅克隆" class="header-anchor">#</a> 浅克隆</h3> <p>适用于仓库很大，对过往历史不关心，想快速克隆的场景。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> clone <span class="token parameter variable">--depth</span><span class="token operator">=</span><span class="token number">1</span> <span class="token variable">${repo_url}</span>
+</code></pre></div><h3 id="克隆指定分支"><a href="#克隆指定分支" class="header-anchor">#</a> 克隆指定分支</h3> <p>适用于只想要某一分支代码的场景。</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> clone <span class="token parameter variable">-b</span> <span class="token variable">${branch}</span> <span class="token variable">${repo_url}</span>
+</code></pre></div><h3 id="克隆失败因为文件名太长"><a href="#克隆失败因为文件名太长" class="header-anchor">#</a> 克隆失败因为文件名太长</h3> <p>报错信息为：<code>error: unable to create file xxx.java: Filename too long</code></p> <div class="language-sql extra-class"><pre class="language-sql"><code>git clone <span class="token operator">-</span>c core<span class="token punctuation">.</span>longpaths<span class="token operator">=</span><span class="token boolean">true</span> ${repo_url}
+</code></pre></div><p>注意，如果是使用 IDEA 进行克隆，很可能会看忽略该报错，但可以根据以下经验加以验证：如果 git clone 完成后，工作区并不干净（可以用 git status 检查）、不能切换分支，说明很可能就是上述情况。</p> <h3 id="强行推送"><a href="#强行推送" class="header-anchor">#</a> 强行推送</h3> <p>适用于本地开发了一段时间，最近才在代码托管平台上初始化远程仓库的场景</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 谨慎：本地master分支会覆盖远程master分支！</span>
+<span class="token function">git</span> push <span class="token parameter variable">--force</span>
+</code></pre></div><h3 id="-2"><a href="#-2" class="header-anchor">#</a></h3> <h3 id="取消错误的推送"><a href="#取消错误的推送" class="header-anchor">#</a> 取消错误的推送</h3> <p>适用于推送了错误的提交后, 想取消该推送的场景</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token comment"># 更新代码</span>
+<span class="token comment"># 一定要更新最新的代码! 以免覆盖掉其他协作者的推送!</span>
+<span class="token function">git</span> pull
+<span class="token comment"># 查看提交的hash</span>
+<span class="token function">git</span> log
+<span class="token comment"># 使用相应的hash回滚</span>
+<span class="token comment"># 注意: 回滚后 在${hash}之后提交的代码 都会在 Changes to be committed 中</span>
+<span class="token function">git</span> reset <span class="token variable">${hash}</span>
+<span class="token comment"># 覆盖远程仓库的代码</span>
+<span class="token function">git</span> push <span class="token parameter variable">--force</span>
+</code></pre></div><h2 id="其他"><a href="#其他" class="header-anchor">#</a> 其他</h2> <h3 id="cherry-pick"><a href="#cherry-pick" class="header-anchor">#</a> cherry-pick</h3> <p>方法一：</p> <ol><li>checkout目标分支(target branch)</li> <li>选中相应的提交记录，右键</li> <li>点击Cherry-pick<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682343384184.png" alt="image.png"></li> <li>则相应的提交记录就会合并到目标分支</li></ol> <p>方法二：</p> <ol><li>checkout目标分支(target branch)</li> <li>在源分支(source  branch)获取revision number<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682343389693.png" alt="">3.开始cherry-pick。输入命令</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> cherry-pick df2612cf167ebaf5e743042477942b95bf15f33d b910c946f8d3dedbb33c2478fceda53867e77000 0737f6f4eb35cf79a3d775f7e05f39a2e1bd65d9 f99c68db44102f28a2a3652103ad94733092c788 9c5cba2ac3ba9b9870d57ac8a59d83333b6a3623 2659bfeae32bd3ca6a574669359248e631e750fd 4d7fa72438d20d1c5917dc9b234d90ea791fd7c5
+</code></pre></div><ol start="4"><li>解决冲突。遇到冲突，会提示，解决冲突后</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> <span class="token function">add</span> <span class="token variable">${冲突的文件}</span>
+</code></pre></div><ol start="5"><li>继续cherry-pick。之后会提示，继续操作</li></ol> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> cherry-pick <span class="token parameter variable">--continue</span>
+</code></pre></div><p>如再遇到冲突，重复4，5</p> <ol start="6"><li>则相应的提交记录就会合并到目标分支</li></ol> <h3 id="merge-unrelated-histories"><a href="#merge-unrelated-histories" class="header-anchor">#</a> merge unrelated histories</h3> <p>遇到上述问题时，可以使用 <code>--allow-unrelated-histories</code> ，如</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> merge --allow-unrelated-histories
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> pull origin <span class="token variable">${branch}</span> --allow-unrelated-histories
+</code></pre></div><h3 id="查看分支创建时间"><a href="#查看分支创建时间" class="header-anchor">#</a> 查看分支创建时间</h3> <div class="language-shell extra-class"><pre class="language-shell"><code><span class="token comment"># 查看本地当前分支</span>
+<span class="token function">git</span> reflog <span class="token parameter variable">--date</span><span class="token operator">=</span>iso 
+
+<span class="token comment"># 查看本地指定分支</span>
+<span class="token function">git</span> reflog <span class="token parameter variable">--date</span><span class="token operator">=</span>iso <span class="token variable">${branch}</span>
+
+<span class="token comment"># 查看远程指定分支</span>
+<span class="token function">git</span> reflog <span class="token parameter variable">--date</span><span class="token operator">=</span>iso origin/<span class="token variable">${branch}</span>
+</code></pre></div><p>注意，本地分支可以查看到 clone 或 create 的日期：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>fe8f41af <span class="token punctuation">(</span>origin/master, origin/HEAD, master<span class="token punctuation">)</span> HEAD@<span class="token punctuation">{</span><span class="token number">2022</span>-05-23 09:38:28 +0800<span class="token punctuation">}</span>: merge origin/master: Fast-forward
+7f2bfaa1 HEAD@<span class="token punctuation">{</span><span class="token number">2022</span>-05-07 <span class="token number">14</span>:30:04 +0800<span class="token punctuation">}</span>: clone: from https://gitlab.com/
+
+</code></pre></div><div class="language-shell extra-class"><pre class="language-shell"><code>d149ade1 feat/name@<span class="token punctuation">{</span><span class="token number">2022</span>-07-14 <span class="token number">11</span>:35:49 +0800<span class="token punctuation">}</span>: commit: refactor: 修改变量名 
+fcecacd7 feat/name@<span class="token punctuation">{</span><span class="token number">2022</span>-07-13 <span class="token number">17</span>:26:16 +0800<span class="token punctuation">}</span>: branch: Created from HEAD
+</code></pre></div><p>但远程分支，并不能确切地知道分支创建的日期：</p> <div class="language-shell extra-class"><pre class="language-shell"><code>c93e70dc refs/remotes/origin/feat/name@<span class="token punctuation">{</span><span class="token number">2022</span>-07-18 <span class="token number">17</span>:35:27 +0800<span class="token punctuation">}</span>: update by push
+dcea169b refs/remotes/origin/feat/name@<span class="token punctuation">{</span><span class="token number">2022</span>-07-18 <span class="token number">16</span>:50:20 +0800<span class="token punctuation">}</span>: update by push
+336190dc refs/remotes/origin/feat/name@<span class="token punctuation">{</span><span class="token number">2022</span>-07-18 <span class="token number">16</span>:17:57 +0800<span class="token punctuation">}</span>: update by push
+</code></pre></div><h3 id="根据文件搜索历史"><a href="#根据文件搜索历史" class="header-anchor">#</a> 根据文件搜索历史</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> log <span class="token parameter variable">--all</span> --full-history -- package-lock.json
+</code></pre></div><h3 id="-3"><a href="#-3" class="header-anchor">#</a></h3> <h3 id="从所有提交中删除一个文件"><a href="#从所有提交中删除一个文件" class="header-anchor">#</a> 从所有提交中删除一个文件</h3> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> filter-branch --tree-filter <span class="token string">&quot;rm -rf package-lock.json&quot;</span> --prune-empty -- <span class="token parameter variable">--all</span>
+</code></pre></div><p>如果代码已经推送到了远程仓库，还需要强制推送</p> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">git</span> push <span class="token parameter variable">-f</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/docs/git/git-definitive-guide-to-merge-code.html" class="prev">
+        Git代码合并指南
+      </a></span> <span class="next"><a href="/docs/tools/how-to-connect-to-internet.html">
+        科学上网
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.64f64c08.js" defer></script><script src="/assets/js/2.733019b2.js" defer></script><script src="/assets/js/11.2197c8e5.js" defer></script>
+  </body>
+</html>
