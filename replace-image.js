@@ -30,6 +30,7 @@ if (!fs.existsSync(pathToMarkdownFile)) {
 console.log('Processing ', pathToMarkdownFile)
 
 async function downloadImage(imageUrl, imagePath) {
+  // 有时debug需要 headless: false
   const browser = await chromium.launch({headless: true});
   const context = await browser.newContext();
   const page = await context.newPage();
@@ -92,6 +93,10 @@ async function uploadImage(imagePath, pathToMarkdownFile) {
 
 function extractImageUrls (markdownContent) {
   const imageMarks = markdownContent.match(/!\[.*\]\((.+)\)/g)
+  if (!imageMarks) {
+    console.log('No image needs to be replaced!')
+    process.exit(0)
+  }
 
   return imageMarks.map(mark => {
     // mark format: ![](url)
@@ -118,12 +123,12 @@ async function replaceImagesInMarkdown(isLocal) {
       try {
         let githubImageUrl = ''
         if (!isLocal) {
-          console.log('Downloading image file...')
+          console.log('Downloading image: ', imageUrl)
           await downloadImage(imageUrl, imagePath)
           githubImageUrl = await uploadImage(imagePath, pathToMarkdownFile)
         }
         else {
-          console.log('Using local image file...')
+          console.log('Using local image...')
           if (localImages[i]) {
             githubImageUrl = githubPrefix + getDirWithForwardSlash(pathToMarkdownFile) + getFileName(localImages[i])
           }
@@ -145,7 +150,7 @@ async function replaceImagesInMarkdown(isLocal) {
     }
   }
 
-  console.log('replacing images done!')
+  console.log('replacing all images done!')
 }
 
 function getDirWithForwardSlash(path) {
