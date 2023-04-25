@@ -122,7 +122,6 @@ git fetch origin tag
 ```bash
 git push origin -d tag ${tag_name}
 ```
-## 
 ## 远程仓库
 ### 浅克隆
 适用于仓库很大，对过往历史不关心，想快速克隆的场景。
@@ -150,7 +149,6 @@ git clone -c core.longpaths=true ${repo_url}
 # 谨慎：本地master分支会覆盖远程master分支！
 git push --force
 ```
-### 
 ### 取消错误的推送
 适用于推送了错误的提交后, 想取消该推送的场景
 ```bash
