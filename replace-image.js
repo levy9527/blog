@@ -9,8 +9,7 @@ const repo = 'image-holder'
 const githubPrefix = `https://raw.githubusercontent.com/${owner}/${repo}/main/`
 
 const sourcePrefix = 'https://cdn.nlark.com'
-const pathToMarkdownFile = 'docs/git/git-best-pratices.md'
-const imageDir = 'images/'
+const imageDir = 'download-images/'
 const imageSuffix = 'png'
 
 const accessToken = process.env.GITHUB_TOKEN
@@ -18,6 +17,17 @@ if (!accessToken) {
   console.error('GITHUB_TOKEN is undefined')
   process.exit(1)
 }
+let pathToMarkdownFile
+if (process.argv.length < 3) {
+  console.error('Markdown file is not specified')
+  process.exit(1)
+}
+pathToMarkdownFile = process.argv[2]
+if (!fs.existsSync(pathToMarkdownFile)) {
+  console.error('Markdown file is not exist')
+  process.exit(1)
+}
+console.log('Processing ', pathToMarkdownFile)
 
 async function downloadImage(imageUrl, imagePath) {
   const browser = await chromium.launch({headless: true});
@@ -124,6 +134,10 @@ async function replaceImagesInMarkdown(isLocal) {
         // use proxy address
         githubImageUrl = githubImageUrl.replace('githubusercontent', 'gitmirror')
         markdownContent = markdownContent.replace(imageUrl, githubImageUrl)
+
+        // save ASAP, in case of that github api connected timeout
+        console.log('rewriting md file...')
+        fs.writeFileSync(pathToMarkdownFile, markdownContent)
       } catch(e) {
         console.error(e)
         process.exit(1)
@@ -131,8 +145,6 @@ async function replaceImagesInMarkdown(isLocal) {
     }
   }
 
-  console.log('rewriting md file...')
-  fs.writeFileSync(pathToMarkdownFile, markdownContent)
   console.log('replacing images done!')
 }
 
