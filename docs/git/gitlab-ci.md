@@ -65,7 +65,7 @@ maven:3.6.3-openjdk-8
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387122013.png)
 
 勾选流水线必须成功。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1673329651713-0c2f18eb-a5f6-4f14-82ed-362db248ab3b.png#averageHue=%23fbf7f6&clientId=uabd60c1e-ce42-4&from=paste&height=184&id=ue2096c74&name=image.png&originHeight=276&originWidth=959&originalType=binary&ratio=1&rotation=0&showTitle=false&size=40434&status=done&style=none&taskId=u2296112c-32fc-4d84-a677-fcb6f262636&title=&width=639.3333333333334)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388470210.png)
 ### 配置.gitlab-ci.yml
 简单示例如下，根据实际情况修改：
 ```yaml
@@ -95,16 +95,16 @@ build:
 上述示例要设置成功，还要确保 .m2/settings.xml 文件存在。
 
 建议提前 yml 文件前，在 Gitlab 先进行语法校验。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1673331451327-46e51978-4c37-425c-97bc-f818f3cab590.png#averageHue=%23f8f5f4&clientId=uabd60c1e-ce42-4&from=paste&height=265&id=u08bf33a0&name=image.png&originHeight=397&originWidth=1641&originalType=binary&ratio=1&rotation=0&showTitle=false&size=65391&status=done&style=none&taskId=u49b3dd37-963e-42e4-9b63-0532733a8e3&title=&width=1094)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388474604.png)
 
 如果错误，会有提示。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1673331494517-7c7c73ac-61e0-461d-b230-e165f6dfe0b9.png#averageHue=%23f8f5f4&clientId=uabd60c1e-ce42-4&from=paste&height=240&id=u31debb0b&name=image.png&originHeight=360&originWidth=1407&originalType=binary&ratio=1&rotation=0&showTitle=false&size=61920&status=done&style=none&taskId=ue2184cd7-be02-4e6e-a3e0-752d9fb3212&title=&width=938)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png)
 ### 效果
 当流水线还未结束时，不能提前合并代码，只能等待流水线成功。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1673329314006-83f6b5c1-1303-438f-bde0-1c35b3bbce20.png#averageHue=%23f8f7f7&clientId=uabd60c1e-ce42-4&from=paste&height=424&id=uaf501364&name=image.png&originHeight=636&originWidth=927&originalType=binary&ratio=1&rotation=0&showTitle=false&size=57583&status=done&style=none&taskId=u3472b021-e293-405f-8f32-20571636e6f&title=&width=618)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388481821.png)
 
 如果流水线失败了，不能合并。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1673329359156-9a31f533-0f5b-47ec-83c8-92530c915bdd.png#averageHue=%23faf7f7&clientId=uabd60c1e-ce42-4&from=paste&height=209&id=u9aa5ab65&name=image.png&originHeight=313&originWidth=1124&originalType=binary&ratio=1&rotation=0&showTitle=false&size=36849&status=done&style=none&taskId=u173a6200-f7d6-474d-8fab-724d57e9648&title=&width=749.3333333333334)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388485568.png)
 ## 线上发布 jar
 可以在前文的基础上，设置流水线自动发布 jar。
 ### Maven配置
@@ -144,7 +144,7 @@ deploy:
 
 ```
 代码合并或有新的 commit 时，会执行流水线：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1677664204516-ace835ee-5009-4649-9dd7-74c42849e568.png#averageHue=%23f5f5f4&clientId=u21e60999-d9ea-4&from=paste&height=405&id=ub43b127a&name=image.png&originHeight=405&originWidth=732&originalType=binary&ratio=1&rotation=0&showTitle=false&size=31345&status=done&style=none&taskId=u5b1df318-d7b0-4342-ac0c-aa021860622&title=&width=732)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388489368.png)
 ### 拉取最新的jar
 在B项目中，如果要引用A项目打出来的 jar，记得拉取最新的版本，pom.xml 设置如下：
 ```xml
