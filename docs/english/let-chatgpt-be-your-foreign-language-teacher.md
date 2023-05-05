@@ -13,8 +13,10 @@
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211581972.png)
 ## 进行对话
 第一句话，是设置好 AI 的角色，让它扮演口语考官。
+
+可以使用 prompt: act as an English teacher/English speaking test examiner:
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211593449.png)
-可以看出，语音转文字出现错误，IELTS 始终未能正确识别，但 ChatGPT 却能明白其中的意思。
+可以看出，语音转文字出现错误，单词 IELTS 始终未能正确识别，但 ChatGPT 却能明白其中的意思。
 
 开启语音插件的意义在于，如果语音识别不了自己说的话，很有可能是自己的发音有问题，起到提醒自己纠正发音的作用。另外，ChatGPT 回复的文字，也会转换成语音输出，顺便练习了听力。
 
