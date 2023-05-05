@@ -51,7 +51,7 @@ yarn playwright codegen
 注意到可以生成 Pytest 的代码，对测试工程师来说，简直是福音。这也提示我们，Playwright 既可以由前端研发来使用，也可以由测试人员来使用，并不限制使用者的职业身份。
 
 点击"Copy"按钮
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682587794091-7b18eb16-0d94-4028-9a9f-81949a626d95.png#averageHue=%23a8cc95&clientId=u082820f0-a203-4&from=paste&height=67&id=ua9bb483a&originHeight=101&originWidth=307&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=7311&status=done&style=none&taskId=ua0ef4d8d-332c-48f0-8b03-a8695eb4a27&title=&width=204.66666666666666)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683276292010.png)
 然后打开代码编辑器，把代码复制进去即可。
 
 点击"Clear"按钮，

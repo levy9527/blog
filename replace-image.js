@@ -29,9 +29,11 @@ if (!fs.existsSync(pathToMarkdownFile)) {
 }
 console.log('Processing ', pathToMarkdownFile)
 
+const args = require('minimist')(process.argv.slice(2))
+
+
 async function downloadImage(imageUrl, imagePath) {
-  // 有时debug需要 headless: false
-  const browser = await chromium.launch({headless: true});
+  const browser = await chromium.launch({headless: !args['headed']});
   const context = await browser.newContext();
   const page = await context.newPage();
 
