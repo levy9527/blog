@@ -55,11 +55,11 @@ yarn playwright codegen
 然后打开代码编辑器，把代码复制进去即可。
 
 点击"Clear"按钮，
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682587892731-b15fd6e7-7ed9-4e80-af0d-8d9548548486.png#averageHue=%23c3d5aa&clientId=u082820f0-a203-4&from=paste&height=66&id=ua346f946&originHeight=99&originWidth=858&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=11379&status=done&style=none&taskId=u511e3601-1af0-4aa6-ba7c-74b50e22577&title=&width=572)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277483800.png)
 可以清空本次操作生成的代码，从而开始进行下一次操作的代码生成。
 
 如果是使用 VS Code 插件，点击"Record new"即可。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682681963102-fe8eaa5b-3d09-47f7-bf4b-91a97d993e63.png#averageHue=%23352f30&clientId=u29341808-56fa-4&from=paste&height=131&id=ud7e6d183&originHeight=196&originWidth=468&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=21361&status=done&style=none&taskId=u9a7d1a38-6b67-4f50-8b7f-071847d0729&title=&width=312)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277490131.png)
 ### 修改代码
 生成的代码，最好还是检查一下，也许需要去掉一些多余的操作记录。
 如下面的代码，`Tab`的操作只是人工操作时为了方便而进行的按键，对机器而言，是多余的，应该去掉。
@@ -82,21 +82,21 @@ test('login', async ({ page }) => {
 - 把光标放到测试用例的最后一行
 - 点击"Record at cursor"，即可继续录制
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682681748045-7649ce34-b3ec-4742-a167-8f791b58f4d2.png#averageHue=%237f9764&clientId=u29341808-56fa-4&from=paste&height=405&id=uf03aea4a&originHeight=608&originWidth=964&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=61464&status=done&style=none&taskId=u15a65cc0-e512-4b14-977d-d90b4c927d3&title=&width=642.6666666666666)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277555357.png)
 ### 执行用例
 ```shell
 yarn playwright test
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682588728053-347cd0a7-b3a9-490d-95fe-7804adaaa231.png#averageHue=%232e2d2d&clientId=u082820f0-a203-4&from=paste&height=57&id=u53918bf0&originHeight=86&originWidth=365&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=7133&status=done&style=none&taskId=u2f759634-3cdf-48a3-9214-dcf77cd9be5&title=&width=243.33333333333334)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277566741.png)
 如果用例失败了，想查看到底哪里错了，可以用以下命令显示浏览器，查看用例执行过程：
 ```bash
 yarn playwright test --headed
 ```
 
 如果是使用 VS Code，直接点击运行用例即可。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682863323501-96652720-6a3f-4a23-9e96-ac9cc8626bb0.png#averageHue=%23868063&clientId=ud1f06ed4-27a0-4&from=paste&height=331&id=u5d055039&originHeight=662&originWidth=2720&originalType=binary&ratio=2&rotation=0&showTitle=false&size=371500&status=done&style=none&taskId=u3310dba0-334d-4769-a254-57b18e4cad2&title=&width=1360)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277575650.png)
 勾选左下角的"Show broswer"，即可显示浏览器。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682679338226-a45a9688-cba4-4f07-9c30-b0ce2561c775.png#averageHue=%232a2a2b&clientId=u29341808-56fa-4&from=paste&height=144&id=u5b7f0b4c&originHeight=216&originWidth=403&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=16601&status=done&style=none&taskId=u756266fd-637a-448c-b323-4013bb1110d&title=&width=268.6666666666667)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277598218.png)
 ### 调试用例
 对于失败的用例，如何 debug呢？添加 --debug 参数即可。
 ```shell
@@ -104,16 +104,16 @@ yarn playwright test --debug
 ```
 
 点击"Step over" 即可执行下一行代码。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682683188360-8e42b434-0dd7-41d0-bb58-fc5afa9bcc19.png#averageHue=%23dcd4c2&clientId=u29341808-56fa-4&from=paste&height=152&id=u31d38880&originHeight=252&originWidth=878&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=63167&status=done&style=none&taskId=ub67f2e36-a4f8-4cd8-aeb2-06402032402&title=&width=529.3333740234375)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277605265.png)
 
 如果是使用 VS Code，找到相应的用例，右键出现"Debug Test"，点击即可。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682681870122-600a5bd8-8101-467e-bfb5-2e4262c89227.png#averageHue=%23222a30&clientId=u29341808-56fa-4&from=paste&height=186&id=u4f968aab&originHeight=279&originWidth=363&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=19195&status=done&style=none&taskId=uc7a96187-c4cd-45c7-999b-7311182a66f&title=&width=242)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277678957.png)
 ### 查看报告
 在执行完用例后，本地会生成目录 `playwright-report`，可以通过以下命令查看测试报告
 ```shell
 yarn playwright show-report
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682661061910-0a1a50e6-73b2-4f99-83af-b73f88306260.png#averageHue=%23ead4ab&clientId=u950a8797-5d6a-4&from=paste&height=173&id=u98384ca5&originHeight=260&originWidth=1493&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=24949&status=done&style=none&taskId=u764cb478-f038-461a-b2e3-a678ec57d62&title=&width=995.3333333333334)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277713874.png)
 ## 常见场景与解决方案
 ### 应用登录
 下面给出一个自动登录、并保存用户数据的解决方案。
@@ -177,7 +177,7 @@ await page.getByTestId('my-div').click()
 ```
 
 当然，这种方式会对源代码有侵入。更为折衷的方式是，使用下列[官方推荐的方法](https://playwright.dev/docs/locators#locate-by-role)进行元素选择， 直到最后没办法了，才使用 CSS。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682869270701-398ea1c1-1737-4530-a523-215f0ba2df05.png#averageHue=%23fefefe&clientId=uddf58bbe-eaae-4&from=paste&height=173&id=u773c456d&originHeight=346&originWidth=360&originalType=binary&ratio=2&rotation=0&showTitle=false&size=30575&status=done&style=none&taskId=u07a6f422-b061-42d4-b0ae-12f563cc9b3&title=&width=180)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277746417.png)
 ### 声明断言 && 检查元素是否存在
 生成的代码是没有断言的，因此，很有可能页面报错了，用例执行报告仍然显示成功。为避免这种情况，每个用例至少要有一句断言。
 
@@ -223,15 +223,15 @@ await page.locator('.my-class .hover-element').click() // 点击悬浮后显示�
 2. 打开网页控制台（按F12)
 3. 鼠标悬浮在目标元素上面，然后右键，如下图所示
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682683588831-69da3284-a41b-4409-b79a-2ea38e4a7936.png#averageHue=%23edca93&clientId=u29341808-56fa-4&from=paste&height=272&id=u72809035&originHeight=408&originWidth=577&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=40844&status=done&style=none&taskId=ucf66fb0a-7750-4259-b45f-46c38ed424c&title=&width=384.6666666666667)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277759344.png)
 
 4. 点击控制台内部，则此时元素不会丢失 hover 状态，如下图所示
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682683682443-ae142404-4c0f-42ea-aaf3-6bae7e3c0064.png#averageHue=%23c8cfb4&clientId=u29341808-56fa-4&from=paste&height=135&id=u2b583631&originHeight=203&originWidth=1283&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=47640&status=done&style=none&taskId=u8de05041-b901-4ee2-8b16-a83bf38a9f6&title=&width=855.3333333333334)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277780882.png)
 
 5. 切换到 VS Code
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682683882857-d3336350-6ebe-4d07-92fc-7421e04ab019.png#averageHue=%233d3634&clientId=u29341808-56fa-4&from=paste&height=121&id=u8b8364e0&originHeight=182&originWidth=1366&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=45647&status=done&style=none&taskId=u0aa0b7b2-ae3c-472f-9932-51cb3c87872&title=&width=910.6666666666666)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277793308.png)
 
 ## CI 集成
 以 Gitlab CI 为例，说明 Playwright 如何集成进 CI 流水线中。其他方式如 Jenkins，请[参考文档](https://playwright.dev/docs/ci#jenkins)。
@@ -273,10 +273,10 @@ vi /srv/gitlab-runner/config/config.toml
 ```
 
 根据 token 找到对应的 Runner 配置，按照下图所示，把红框处的值设置成 `true`
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1683188233773-e01005ac-69e8-4c8b-8e8d-94eed1bc8bfe.png#averageHue=%232e2826&clientId=u2e6ce88a-b573-4&from=paste&height=308&id=u17426074&originHeight=462&originWidth=466&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=36932&status=done&style=none&taskId=uf273d5f3-82d7-40e0-bc21-34e5ad4af88&title=&width=310.6666666666667)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277800200.png)
 config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一个呢？
 可以在项目界面，根据下图所示的 token（w8exPBfA） 去查找。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1683188182326-5fdd5051-71f2-4a68-97ed-10ec7a262476.png#averageHue=%23f5eeed&clientId=u2e6ce88a-b573-4&from=paste&height=225&id=u429ec37e&originHeight=337&originWidth=1042&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=43490&status=done&style=none&taskId=ub2627d21-98a6-4338-86bd-ef3ef938475&title=&width=694.6666666666666)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277808112.png)
 
 修改完后，重启 Gitlab Runner
 ```shell
