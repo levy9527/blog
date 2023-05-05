@@ -13,7 +13,7 @@ Playwright 是微软于 2020 年发布的一款 E2E testing 工具，跟社区�
 yarn create playwright
 ```
 根据命令提示，输入如下：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682583539639-102ce298-492d-4f93-bf49-8188809b0f5e.png#averageHue=%230e0b08&clientId=u082820f0-a203-4&from=paste&height=133&id=u093ed00c&originHeight=200&originWidth=880&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=25585&status=done&style=none&taskId=ud944b4da-cc1f-43a4-81fd-f0e1304c1fb&title=&width=586.6666666666666)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683274667037.png)
 默认会下载所有浏览器，如果没有浏览器兼容性测试的需求，推荐如上图所示，手动安装一个浏览器。
 
 以安装 chromium 为例，相应操作步骤如下：
@@ -23,14 +23,14 @@ yarn create playwright
 vi playwright.config.ts
 ```
 注释掉以下内容：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682583882950-cafa14a0-a55b-4b5e-af88-f0a4c31eb023.png#averageHue=%23080000&clientId=u082820f0-a203-4&from=paste&height=227&id=ue9a0318b&originHeight=341&originWidth=576&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=20123&status=done&style=none&taskId=ub0478de5-7b8e-4fc1-aef9-c7a419109ba&title=&width=384)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683274759403.png)
 
 2. 安装浏览器
 ```shell
 yarn playwright install --with-deps chromium
 ```
 等待一段时间即可，如果失败，请重试。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682584355986-ad840b32-7fba-4a75-b3b7-f2735d9d61d7.png#averageHue=%230a0807&clientId=u082820f0-a203-4&from=paste&height=143&id=u0c6cab2b&originHeight=214&originWidth=880&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=23077&status=done&style=none&taskId=uce1816c3-6d58-4f33-a380-900371de827&title=&width=586.6666666666666)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683274769748.png)
 
 推荐再安装 [VS Code 插件](https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright)，获取更好的使用体验。
 ## 使用
@@ -45,9 +45,9 @@ yarn playwright codegen
 1. 一个是普通的浏览器界面
 2. 另一个是代码生成界面，在前一个窗口进行的任何操作，都会生成相应的代码
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682586488888-df48780c-393b-4deb-9200-a51b56942fdb.png#averageHue=%237cad80&clientId=u082820f0-a203-4&from=paste&height=499&id=u58582544&originHeight=748&originWidth=1596&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=116706&status=done&style=none&taskId=u449cd803-7169-4b0a-b8c8-22ba8f85b21&title=&width=1064)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683275050705.png)
 虽然默认生成代码是 Javascript，但可以选择切换语言：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1682586618511-c65db4e7-c37b-4a86-aacd-dcccef61d02d.png#averageHue=%23faf8f7&clientId=u082820f0-a203-4&from=paste&height=279&id=u2965b958&originHeight=419&originWidth=846&originalType=binary&ratio=1.5&rotation=0&showTitle=false&size=82830&status=done&style=none&taskId=ucab89b17-17da-4f57-969f-e020b89d733&title=&width=564)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683275136008.png)
 注意到可以生成 Pytest 的代码，对测试工程师来说，简直是福音。这也提示我们，Playwright 既可以由前端研发来使用，也可以由测试人员来使用，并不限制使用者的职业身份。
 
 点击"Copy"按钮
