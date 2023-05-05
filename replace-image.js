@@ -127,7 +127,16 @@ async function replaceImagesInMarkdown(isLocal) {
         if (!isLocal) {
           console.log('Downloading image: ', imageUrl)
           await downloadImage(imageUrl, imagePath)
-          githubImageUrl = await uploadImage(imagePath, pathToMarkdownFile)
+
+          let retry = true
+	  while (retry)	{
+            try {
+              githubImageUrl = await uploadImage(imagePath, pathToMarkdownFile)
+	      retry = false
+	    } catch(e) {
+	      console.log(e, '\nRetry uploading')
+	    }
+	  }
         }
         else {
           console.log('Using local image...')
@@ -143,7 +152,7 @@ async function replaceImagesInMarkdown(isLocal) {
         markdownContent = markdownContent.replace(imageUrl, githubImageUrl)
 
         // save ASAP, in case of that github api connected timeout
-        console.log('rewriting md file...')
+        console.log('Rewriting md file...\n')
         fs.writeFileSync(pathToMarkdownFile, markdownContent)
       } catch(e) {
         console.error(e)
