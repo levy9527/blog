@@ -161,7 +161,7 @@ async function replaceImagesInMarkdown(isLocal) {
     }
   }
 
-  console.log('replacing all images done!')
+  console.log('Replacing all images done!')
 }
 
 function getDirWithForwardSlash(path) {

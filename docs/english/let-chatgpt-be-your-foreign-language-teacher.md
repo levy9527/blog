@@ -48,7 +48,13 @@ please rate my answer after I answer the question each time
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211955902.png)
 有所进步！
 
-重复上述过程，不断练习即可。
+有时对话长了，AI 会“糊涂”如下所示：
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683373370527.png)
+此时要重新强调它扮演的角色，让其回忆起上下文。
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683373376359.png)
+
+除此之外，就没啥值得注意的了。重复上述过程，不断练习即可。
+
 ## 记录回答
 做完了练习，还要作笔记。但在记录回答之前，还要润色一下，毕竟口语表达的时候，可能会存在语法错误。
 
