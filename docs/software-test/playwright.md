@@ -260,7 +260,18 @@ await page.locator('.my-class .hover-element').click() // 点击悬浮后显示�
 
 首先确保已安装 Gitlab Runner 并成功注册，具体操作可以参考[安装文档](https://levy.vip/docs/git/gitlab-ci.html#%E5%AE%89%E8%A3%85gitlab-runner)。
 
-前面的操作执行完毕后，可以开始编写 .gitlab-ci.yml，下面只给出测试相关的配置。
+端对端的测试耗时较长，并且对环境的稳定性有要求，作为回归测试的实践时，一般倾向于借助定时任务跑测试用例。
+
+新建调度：
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683436020492.png)
+设置调度时间及环境变量：
+
+- 每 6 小时跑一次
+- e2e 环境变量的值为 true
+
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683436027996.png)
+
+现在可以开始编写 .gitlab-ci.yml，下面只给出测试相关的配置。
 ```yaml
 image: node:lts # it doesn't matter because playwright will use another image
 
@@ -275,6 +286,8 @@ e2e:
   stage: test
   tags:
     - your-runner-name
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule" && $e2e'
   image:
     name: mcr.microsoft.com/playwright:v1.33.0-jammy
     entrypoint: ['/bin/bash', '-c', 'ln -snf /bin/bash /bin/sh && /bin/bash -c $0' ]
@@ -284,10 +297,12 @@ e2e:
     - yarn playwright test
 ```
 
+
 注意点：
 
 1. entrypoint 解决的是 [shell not found](https://gitlab.com/gitlab-org/gitlab-runner/-/issues/27614) 问题
 2. --ignore-engines 可以在不修改源码的情况下避免安装失败
+3. 只有定时调度才会触发该任务的执行
 
 再修改 Gitlab Runner 的配置，解决[yarn命令无法运行](https://github.com/nodejs/help/issues/1754#issuecomment-1260462271)的问题：
 ```shell
