@@ -241,6 +241,20 @@ await page.locator('.my-class .hover-element').click() // 点击悬浮后显示�
 
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277793308.png)
 
+### 操作剪贴板
+读写剪贴板需要设置权限，下面给出一个判断是否成功从剪贴板获取特定文本的测试用例：
+
+```javascript
+  test('clipboard', async ({page, context}) => {
+    context.grantPermissions(['clipboard-read'])
+    await page.goto('www.my-home.com');
+
+    await page.getByRole('button', { name: 'Copy' }).click()
+    const copyText = await page.evaluate(() => navigator.clipboard.readText())
+    await expect(copyText.indexOf('text from copy!') > -1).toBeTruthy()
+  })
+```
+
 ## CI 集成
 以 Gitlab CI 为例，说明 Playwright 如何集成进 CI 流水线中。其他方式如 Jenkins，请[参考文档](https://playwright.dev/docs/ci#jenkins)。
 
