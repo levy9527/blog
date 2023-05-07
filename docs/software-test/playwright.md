@@ -178,6 +178,14 @@ await page.getByTestId('my-div').click()
 
 当然，这种方式会对源代码有侵入。更为折衷的方式是，使用下列[官方推荐的方法](https://playwright.dev/docs/locators#locate-by-role)进行元素选择， 直到最后没办法了，才使用 CSS。
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277746417.png)
+
+如果是使用 VS Code，有更方便的办法：
+1. 点击“Pick locator”
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683421157907.png)
+2. 切换到浏览器界面，点击目标元素
+3. 切回 VS Code，即可看到相应的元素选择代码
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683421163861.png)
+
 ### 声明断言 && 检查元素是否存在
 生成的代码是没有断言的，因此，很有可能页面报错了，用例执行报告仍然显示成功。为避免这种情况，每个用例至少要有一句断言。
 
