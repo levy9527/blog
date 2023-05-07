@@ -255,7 +255,7 @@ await page.locator('.my-class .hover-element').click() // 点击悬浮后显示�
   })
 ```
 
-## CI 集成
+## 持续集成
 以 Gitlab CI 为例，说明 Playwright 如何集成进 CI 流水线中。其他方式如 Jenkins，请[参考文档](https://playwright.dev/docs/ci#jenkins)。
 
 首先确保已安装 Gitlab Runner 并成功注册，具体操作可以参考[安装文档](https://levy.vip/docs/git/gitlab-ci.html#%E5%AE%89%E8%A3%85gitlab-runner)。
