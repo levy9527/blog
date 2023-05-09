@@ -219,6 +219,13 @@ for (const row of await page.getByRole('listitem').all())
 ```javascript
 await page.getAttribute('href')
 ```
+### 判断子元素数量
+使用 `$` 及 `$$` [元素选择器](https://playwright.dev/docs/api/class-elementhandle#element-handle-query-selector)
+```javascript
+const hiddenColumns = await page.$('.table-section .hidden-columns');
+expect(await hiddenColumns.$$('*')).toHaveLength(0)
+```
+
 ### 鼠标悬浮
 有些元素是在鼠标悬浮时才显示或创建的，可以使用以下代码
 ```javascript
