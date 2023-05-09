@@ -171,6 +171,13 @@ deploy:
 ```shell
 docker restart gitlab-runner
 ```
+
+如果上述方法不行，可尝试重启 docker
+```shell
+sudo systemctl stop docker
+sudo systemctl start docker
+sudo systemctl status docker
+```
 ### 本地成功，流水线失败
 如果流水线编译报错，本地编译通过，不用怀疑，一定是本地的问题。
 
