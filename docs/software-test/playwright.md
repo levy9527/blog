@@ -166,6 +166,31 @@ export default defineConfig({
   ]
 })
 ```
+### 本地测试与线上CI
+使用环境变量配置 baseURL 即可。
+
+修改 playwright.config.ts
+```javascript
+require('dotenv').config()
+
+export default defineConfig({
+  use: {
+    baseURL: process.env.PLAYWRIGHT_BASE_URL ? process.env.PLAYWRIGHT_BASE_URL : 'http://127.0.0.1:3000',
+  },
+})
+```
+### 超时时间
+默认的超时时间不太够用，建议修改 playwright.config.ts:
+```javascript
+export default defineConfig({
+  timeout: 5 * 60 * 1000, // 单个用例的超时时间
+  expect: {
+    timeout: 10 * 1000, // expect 语句的超时时间
+  },
+})
+```
+同时要注意拆分用例，没有依赖关系的用例建议拆分开来，避免用例执行时间过长超时。
+
 ### 元素选择
 人们对元素选择的第一反应是使用 CSS 或 XPath，但 Playwright 并不鼓励这样使用，因为这些选择器容易改变。较为好的办法是，为测试元素添加专门的属性 testid，如下所示：
 ```html
@@ -176,10 +201,12 @@ export default defineConfig({
 await page.getByTestId('my-div').click()
 ```
 
-当然，这种方式会对源代码有侵入。更为折衷的方式是，使用下列[官方推荐的方法](https://playwright.dev/docs/locators#locate-by-role)进行元素选择， 直到最后没办法了，才使用 CSS。
+当然，这种方式会对源代码有侵入。更为折衷的方式是，优先使用下列[官方推荐的方法](https://playwright.dev/docs/locators#locate-by-role)进行元素选择，最后再使用业务 class，
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277746417.png)
 
-如果是使用 VS Code，有更方便的办法：
+这里值得一提的是，业务class是针对 Tailwind CSS 这种“解构主义”的纯样式class而言的。你会发现，如果全是 Tailwind 的class，没有业务样式，E2E测试代码很不好写。
+
+如果是使用 VS Code，有辅助办法：
 1. 点击“Pick locator”
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683421157907.png)
 2. 切换到浏览器界面，点击目标元素
