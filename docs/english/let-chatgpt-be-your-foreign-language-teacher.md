@@ -14,7 +14,7 @@
 ## 进行对话
 第一句话，是设置好 AI 的角色，让它扮演口语考官。
 
-可以使用 prompt: 
+可以使用以下 prompt: 
 ```markdown
 act as an [English teacher | English speaking test examiner]
 ```
@@ -25,7 +25,7 @@ act as an [English teacher | English speaking test examiner]
 
 根据练习材料，让 AI 问自己问题。
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211601688.png)
-记得让 AI 对自己的回答评分，可以使用以下提示：
+记得让 AI 对自己的回答评分，可以使用以下 prompt：
 ```markdown
 please rate my answer after I answer the question each time
 ```
@@ -53,7 +53,11 @@ please rate my answer after I answer the question each time
 
 有时对话长了，AI 会“糊涂”如下所示：
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683373370527.png)
-此时要重新强调它扮演的角色，让其回忆起上下文。
+
+此时要重新强调它扮演的角色，让其回忆起上下文，可以使用以下 prompt:
+```markdown
+focus on the speaking test and assume that you ask me this question
+```
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683373376359.png)
 
 除此之外，就没啥值得注意的了。重复上述过程，不断练习即可。
