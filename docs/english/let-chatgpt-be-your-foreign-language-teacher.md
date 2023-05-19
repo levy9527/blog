@@ -14,7 +14,10 @@
 ## 进行对话
 第一句话，是设置好 AI 的角色，让它扮演口语考官。
 
-可以使用 prompt: act as an English teacher/English speaking test examiner:
+可以使用 prompt: 
+```markdown
+act as an [English teacher | English speaking test examiner]
+```
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211593449.png)
 可以看出，语音转文字出现错误，单词 IELTS 始终未能正确识别，但 ChatGPT 却能明白其中的意思。
 
