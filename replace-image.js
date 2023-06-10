@@ -151,7 +151,7 @@ async function replaceImagesInMarkdown(isLocal) {
         githubImageUrl = githubImageUrl.replace('githubusercontent', 'gitmirror')
         markdownContent = markdownContent.replace(imageUrl, githubImageUrl)
 
-        // save ASAP, in case of that github api connected timeout
+        // save ASAP, in case of github api connecting timeout
         console.log('Rewriting md file...\n')
         fs.writeFileSync(pathToMarkdownFile, markdownContent)
       } catch(e) {
