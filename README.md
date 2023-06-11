@@ -8,4 +8,4 @@ Javascript/Java/Python 都能撸的“全干工程师”。
 
 在新技术层出不穷、旧技术不断被淘汰的时代，我期望寻找更经得起时间考验的内容，记录在这里。
 
-个人邮箱：levy5421@foxmail.com
+个人邮箱：897895407@qq.com Github: https://github.com/levy9527
