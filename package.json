@@ -4,9 +4,11 @@
     "dev": "vuepress dev .",
     "build": "vuepress build ."
   },
-  "devDependencies": {
-    "playwright": "^1.32.3",
+  "dependencies": {
     "fast-glob": "^2.2.6",
     "vuepress": "^1.0.0-alpha.44"
+  },
+  "devDependencies": {
+    "playwright": "^1.32.3"
   }
 }
