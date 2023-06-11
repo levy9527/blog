@@ -52,7 +52,7 @@ module.exports = {
   ],
   //base: '/blog/',
   themeConfig: {
-    //repo: 'FEMessage/blog',
+    repo: 'levy9527/blog',
     //editLinks: true,
     //editLinkText: '帮助我们完善此页面',
     sidebar // 传入配置项
