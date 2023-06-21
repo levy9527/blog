@@ -12,20 +12,25 @@ AI时代，学会正确上网是必备的技能。不然，谷歌用不了你还
 
 点击购买产品，就会出现查看产品列表面（为什么要这么绕，因为这是保护措施，避免产品主页被黑）。
 
-![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172127595.png)
-产品支持支付宝，购买非常方便。
+推荐购买 Basic 套餐，一个人用的话，学习工作、娱乐看视频，每月 50GB 足够了。多个客户端可以同时在线，反正就是随便玩！算下来，一天不到7毛钱，很划算了。
+![image.png](../../download-images/img.png)
 
-如果只是上网搜索、学习，一般而言 Mini 套餐就够用了，每月 10GB，也可以与朋友、同事共用，反正不限制同时在线，随便玩！算下来，一天不到0.5元，很划算了。
+点击购买后，选择包年，即可享受优惠价格，如下图所示：
+![image.png](../../download-images/img_1.png)
 
-如果是要看视频如上 YouTube，可能要选择其他套餐。
+支持支付宝，购买非常方便。
+
 ## 客户端
+
 支持全平台客户端：
 
 - Mac 推荐 [ClashX](https://github.com/yichengchen/clashX/releases)
 - Windows 推荐 [Shadowsocks](https://github.com/shadowsocks/shadowsocks-windows/releases)
 - Android 推荐 V2ray
 - iOS 推荐 Shadowrocket（花点小钱，使用美区 apple id——文末有分享如何申请）
+
 ## 导入配置
+
 以 Shadowsocks 为例。
 
 根据客户端复制相应的订阅地址:
