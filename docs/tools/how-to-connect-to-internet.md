@@ -4,18 +4,20 @@ AI时代，学会正确上网是必备的技能。不然，谷歌用不了你还
 
 本文讲教大家如何购买稳定的包年上网套餐，为使用各种 AI 工具打下基础。
 ## 购买指南
-[点击进入服务页面](https://cp.cloudnx.cc/aff.php?aff=22930)
+[点击进入服务页面](https://cp.cloudnx.cc/aff.php?aff=22930), 看到如下页面：
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172119852.png)
-先点击注册账户
-![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172124456.png)
-再点击购买产品，查看产品列表（为什么要这么绕，因为这是保护措施，避免产品主页被黑）。
 
-支持支付宝，购买非常方便。
+点击注册账户, 会出现如图提示：
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172124456.png)
+
+点击购买产品，就会出现查看产品列表面（为什么要这么绕，因为这是保护措施，避免产品主页被黑）。
 
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172127595.png)
+产品支持支付宝，购买非常方便。
+
 如果只是上网搜索、学习，一般而言 Mini 套餐就够用了，每月 10GB，也可以与朋友、同事共用，反正不限制同时在线，随便玩！算下来，一天不到0.5元，很划算了。
 
-如果是要看电影的话，可能要选择其他套餐。
+如果是要看视频如上 YouTube，可能要选择其他套餐。
 ## 客户端
 支持全平台客户端：
 
