@@ -24,31 +24,33 @@ AI时代，学会正确上网是必备的技能。不然，谷歌用不了你还
 - Android 推荐 V2ray
 - iOS 推荐 Shadowrocket（花点小钱，使用美区 apple id——文末有分享如何申请）
 ## 导入配置
-以 Shadowsocks 为例：
-#### 根据客户端复制相应的订阅地址
+以 Shadowsocks 为例。
+
+根据客户端复制相应的订阅地址:
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172131049.png)
 
-#### 先禁用系统代理
+先禁用系统代理:
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172136278.png)
 
-#### 点击在线配置
+点击在线配置:
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172141931.png)
 
-#### 输入URL，点击更新
+输入URL，点击更新:
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172145950.png)
 
-#### 选择一个服务器
-#### ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172149930.png)
+选择一个服务器:
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172149930.png)
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172155098.png)
 
-#### 再恢复系统代理，选择PAC模式
+再恢复系统代理，选择PAC模式:
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172160264.png)
 
 就可以愉快地上网啦！
 ## 其他
 ### 500 内部代理错误 
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172164184.png)
-出现此问题时，一般是内网自定义域名不允许走代理，需要禁用掉系统代理
+
+出现此问题时，一般是内网自定义域名不允许走代理，需要禁用掉系统代理:
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172170331.png)
 
 ### 修改PAC文件
@@ -59,26 +61,24 @@ PAC模式是指：根据规则识别某网站是否需要使用代理访问。
 - 当某个网站不想走代理
 - 设置某网站一定走代理
 
-操作如下（以Shadowsocks为例）：
+操作如下（以Shadowsocks为例）:
 ![](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172175096.png)
 
-按下图所示，模仿添加，即可实现遇到下列网站时选择直连。。
-
+按下图所示，模仿添加，即可实现遇到下列网站时选择直连:
 ![](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172179825.png)
 
-示例修改：
+直连示例修改:
 ```shell
  "@@||company.yuque.com",
 ```
 
-```java
+一定走代理示例悠:
+```shell
 "*.openai.com",
 "*.bing.com",
 ```
 
 保存后记得重启软件。
-
----
 
 ### 使用 New Bing
 再给一个配置 Clash 使用 New Bing 的示例：
