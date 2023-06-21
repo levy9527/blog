@@ -9,7 +9,7 @@ const repo = 'image-holder'
 const githubPrefix = `https://raw.githubusercontent.com/${owner}/${repo}/main/`
 
 const sourcePrefix = 'https://cdn.nlark.com'
-const imageDir = 'download-images/'
+const imageDir = 'download-images'
 const imageSuffix = 'png'
 
 const accessToken = process.env.GITHUB_TOKEN
@@ -27,9 +27,82 @@ if (!fs.existsSync(pathToMarkdownFile)) {
   console.error('Markdown file is not exist')
   process.exit(1)
 }
+const args = require('minimist')(process.argv.slice(2))
+
 console.log('Processing ', pathToMarkdownFile)
 
-const args = require('minimist')(process.argv.slice(2))
+replaceLocalImagesInMarkdown()
+replaceYuqueImagesInMarkdown()
+
+/**
+ upload download-images/img*.png
+ get its github url
+ find local images by startWiths(../)
+ replace to
+*/
+async function replaceLocalImagesInMarkdown() {
+}
+
+async function replaceYuqueImagesInMarkdown(isLocal) {
+  if (!fs.existsSync(imageDir)) {
+    fs.mkdirSync(imageDir);
+  }
+  let markdownContent = fs.readFileSync(pathToMarkdownFile).toString()
+  const imageUrls = extractImageUrls(markdownContent)
+  const directoryPath = path.join(__dirname, imageDir);
+  const localImages = fs.readdirSync(directoryPath)
+
+  //if (!imageUrls.length) {
+  //  console.log("No Yuque images need to be replaced!")
+  //  return
+  //}
+
+  for (let i = 0; i < imageUrls.length; i++) {
+    const imageUrl = imageUrls[i]
+    if (imageUrl.startsWith(sourcePrefix)) {
+      const imagePath = imageDir + '/' + new Date().getTime() + '.' + imageSuffix
+      try {
+        let githubImageUrl = ''
+        if (!isLocal) {
+          console.log('Downloading image: ', imageUrl)
+          await downloadImage(imageUrl, imagePath)
+
+          let retry = true
+          while (retry)	{
+                  try {
+                    githubImageUrl = await uploadImage(imagePath, pathToMarkdownFile)
+              retry = false
+            } catch(e) {
+              console.log(e, '\nRetry uploading')
+            }
+          }
+        }
+        else {
+          console.log('Using local image...')
+          if (localImages[i]) {
+            githubImageUrl = githubPrefix + getDirWithForwardSlash(pathToMarkdownFile) + getFileName(localImages[i])
+          }
+          else {
+            break;
+          }
+        }
+        // use proxy address
+        githubImageUrl = githubImageUrl.replace('githubusercontent', 'gitmirror')
+        markdownContent = markdownContent.replace(imageUrl, githubImageUrl)
+
+        // save ASAP, in case of github api connecting timeout
+        console.log('Rewriting md file...\n')
+        fs.writeFileSync(pathToMarkdownFile, markdownContent)
+      } catch(e) {
+        console.error(e)
+        process.exit(1)
+      }
+    }
+  }
+
+  // TODO remove all local images
+  console.log('Replacing all images done!')
+}
 
 
 async function downloadImage(imageUrl, imagePath) {
@@ -109,61 +182,6 @@ function extractImageUrls (markdownContent) {
   })
 }
 
-async function replaceImagesInMarkdown(isLocal) {
-  if (!fs.existsSync(imageDir)) {
-    fs.mkdirSync(imageDir);
-  }
-  let markdownContent = fs.readFileSync(pathToMarkdownFile).toString()
-  const imageUrls = extractImageUrls(markdownContent)
-  const directoryPath = path.join(__dirname, imageDir);
-  const localImages = fs.readdirSync(directoryPath)
-
-  for (let i = 0; i < imageUrls.length; i++) {
-    const imageUrl = imageUrls[i]
-    if (imageUrl.startsWith(sourcePrefix)) {
-      const imagePath = imageDir + new Date().getTime() + '.' + imageSuffix
-      try {
-        let githubImageUrl = ''
-        if (!isLocal) {
-          console.log('Downloading image: ', imageUrl)
-          await downloadImage(imageUrl, imagePath)
-
-          let retry = true
-	  while (retry)	{
-            try {
-              githubImageUrl = await uploadImage(imagePath, pathToMarkdownFile)
-	      retry = false
-	    } catch(e) {
-	      console.log(e, '\nRetry uploading')
-	    }
-	  }
-        }
-        else {
-          console.log('Using local image...')
-          if (localImages[i]) {
-            githubImageUrl = githubPrefix + getDirWithForwardSlash(pathToMarkdownFile) + getFileName(localImages[i])
-          }
-          else {
-            break;
-          }
-        }
-        // use proxy address
-        githubImageUrl = githubImageUrl.replace('githubusercontent', 'gitmirror')
-        markdownContent = markdownContent.replace(imageUrl, githubImageUrl)
-
-        // save ASAP, in case of github api connecting timeout
-        console.log('Rewriting md file...\n')
-        fs.writeFileSync(pathToMarkdownFile, markdownContent)
-      } catch(e) {
-        console.error(e)
-        process.exit(1)
-      }
-    }
-  }
-
-  console.log('Replacing all images done!')
-}
-
 function getDirWithForwardSlash(path) {
   if (!path) return ''
   let lastSlashIndex = path.lastIndexOf('/');
@@ -176,6 +194,3 @@ function getFileName(path) {
   let lastSlashIndex = path.lastIndexOf('/');
   return path.substring(lastSlashIndex + 1);
 }
-
-replaceImagesInMarkdown()
-
