@@ -1,6 +1,8 @@
 # 科学上网
-## 产品优势
-安全稳定（全年可用），可支付宝支付，最重要的是：可以使用 chatGPT 及 New Bing！
+## 说明
+AI时代，学会正确上网是必备的技能。不然，谷歌用不了你还能忍，但 New Bing 跟 chatGPT 都用不了，你还能忍？
+
+本文讲教大家如何购买稳定的包年上网套餐，为使用各种 AI 工具打下基础。
 ## 购买指南
 [点击进入服务页面](https://cp.cloudnx.cc/aff.php?aff=22930)
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172119852.png)
@@ -8,7 +10,7 @@
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172124456.png)
 再点击购买产品，查看产品列表（为什么要这么绕，因为这是保护措施，避免产品主页被黑）。
 
-可以先订阅一个月，支持支付宝，觉得不错后，再来个包年，更划算。
+支持支付宝，购买非常方便。
 
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172127595.png)
 如果只是上网搜索、学习，一般而言 Mini 套餐就够用了，每月 10GB，也可以与朋友、同事共用，反正不限制同时在线，随便玩！算下来，一天不到0.5元，很划算了。
