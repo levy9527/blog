@@ -3,9 +3,11 @@
 有了 ChatGPT 后，练习外语口语的门槛再次降低，没有外语环境再也不是问题了——AI 就是你的专属私教。
 
 本文将分享借助 AI 进行口语练习的一些工具、方法与实践经验，仅供参考。
-## 准备工作
-在开始之前，要准备好两样东西：
 
+## 准备工作
+在开始之前，要准备好几样东西：
+
+0. [ChatGPT](https://chat.openai.com/), 如果没有账号或不能上网，请查看[上网教程](../tools/how-to-connect-to-internet.md)
 1. [Chrome 浏览器插件 voice-control-for-chatgpt](https://chrome.google.com/webstore/detail/voice-control-for-chatgpt/eollffkcakegifhacjnlnegohfdlidhn)
 2. 口语练习题，根据个人需求查找即可，下文将以[雅思](https://liuxue.koolearn.com/ielts/speak-1-44-0/)为例进行说明
 
