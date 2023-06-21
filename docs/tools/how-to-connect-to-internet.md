@@ -13,10 +13,10 @@ AI时代，学会正确上网是必备的技能。不然，谷歌用不了你还
 点击购买产品，就会出现查看产品列表面（为什么要这么绕，因为这是保护措施，避免产品主页被黑）。
 
 推荐购买 Basic 套餐，一个人用的话，学习工作、娱乐看视频，每月 50GB 足够了。多个客户端可以同时在线，反正就是随便玩！算下来，一天不到7毛钱，很划算了。
-![image.png](../../download-images/img.png)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/img.png)
 
 点击购买后，选择包年，即可享受优惠价格，如下图所示：
-![image.png](../../download-images/img_1.png)
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/img_1.png)
 
 支持支付宝，购买非常方便。
 

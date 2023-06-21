@@ -8,7 +8,7 @@ const owner = 'levy9527'
 const repo = 'image-holder'
 const githubPrefix = `https://raw.githubusercontent.com/${owner}/${repo}/main/`
 
-const sourcePrefix = 'https://cdn.nlark.com'
+const yuquePrefix = 'https://cdn.nlark.com'
 const imageDir = 'download-images'
 const imageSuffix = 'png'
 
@@ -27,6 +27,10 @@ if (!fs.existsSync(pathToMarkdownFile)) {
   console.error('Markdown file is not exist')
   process.exit(1)
 }
+
+if (!fs.existsSync(imageDir)) {
+  fs.mkdirSync(imageDir);
+}
 const args = require('minimist')(process.argv.slice(2))
 
 console.log('Processing ', pathToMarkdownFile)
@@ -38,28 +42,58 @@ replaceYuqueImagesInMarkdown()
  upload download-images/img*.png
  get its github url
  find local images by startWiths(../)
- replace to
+ replace
+ remove local images
 */
 async function replaceLocalImagesInMarkdown() {
-}
-
-async function replaceYuqueImagesInMarkdown(isLocal) {
-  if (!fs.existsSync(imageDir)) {
-    fs.mkdirSync(imageDir);
-  }
   let markdownContent = fs.readFileSync(pathToMarkdownFile).toString()
-  const imageUrls = extractImageUrls(markdownContent)
+  let imageUrls = extractImageUrls(markdownContent, '../')
+  if (!imageUrls.length) {
+    console.log('No local image need to be replaced!')
+    return
+  }
+
   const directoryPath = path.join(__dirname, imageDir);
   const localImages = fs.readdirSync(directoryPath)
 
-  //if (!imageUrls.length) {
-  //  console.log("No Yuque images need to be replaced!")
-  //  return
-  //}
+  if (imageUrls.length !== localImages.length) {
+    console.error('Markdown images count is not equal to local images count', imageUrls.length, localImages.length)
+    process.exit(1)
+  }
+  for (let i = 0; i < localImages.length; i++) {
+    const imageUrl = imageUrls[i]
+    const imagePath = imageDir + '/' + localImages[i]
+
+    let retry = true
+    while (retry)	{
+      try {
+        githubImageUrl = await uploadImage(imagePath, pathToMarkdownFile)
+        retry = false
+      } catch(e) {
+        console.log(e, '\nRetry uploading')
+      }
+    }
+
+    githubImageUrl = githubImageUrl.replace('githubusercontent', 'gitmirror')
+    markdownContent = markdownContent.replace(imageUrl, githubImageUrl)
+
+    console.log('Rewriting md file...\n')
+    fs.writeFileSync(pathToMarkdownFile, markdownContent)
+  }
+
+  // TODO delete images
+  console.log('Replacing local images is done!')
+}
+
+async function replaceYuqueImagesInMarkdown(isLocal) {
+  let markdownContent = fs.readFileSync(pathToMarkdownFile).toString()
+  const imageUrls = extractImageUrls(markdownContent, yuquePrefix)
+  const directoryPath = path.join(__dirname, imageDir);
+  const localImages = fs.readdirSync(directoryPath)
 
   for (let i = 0; i < imageUrls.length; i++) {
     const imageUrl = imageUrls[i]
-    if (imageUrl.startsWith(sourcePrefix)) {
+    if (imageUrl.startsWith(yuquePrefix)) {
       const imagePath = imageDir + '/' + new Date().getTime() + '.' + imageSuffix
       try {
         let githubImageUrl = ''
@@ -69,8 +103,8 @@ async function replaceYuqueImagesInMarkdown(isLocal) {
 
           let retry = true
           while (retry)	{
-                  try {
-                    githubImageUrl = await uploadImage(imagePath, pathToMarkdownFile)
+            try {
+              githubImageUrl = await uploadImage(imagePath, pathToMarkdownFile)
               retry = false
             } catch(e) {
               console.log(e, '\nRetry uploading')
@@ -101,7 +135,7 @@ async function replaceYuqueImagesInMarkdown(isLocal) {
   }
 
   // TODO remove all local images
-  console.log('Replacing all images done!')
+  console.log('Replacing all images is done!')
 }
 
 
@@ -166,7 +200,7 @@ async function uploadImage(imagePath, pathToMarkdownFile) {
   })
 }
 
-function extractImageUrls (markdownContent) {
+function extractImageUrls (markdownContent, imagePrefix) {
   const imageMarks = markdownContent.match(/!\[.*\]\((.+)\)/g)
   if (!imageMarks) {
     console.log('No image needs to be replaced!')
@@ -179,7 +213,7 @@ function extractImageUrls (markdownContent) {
     const imgFullUrl = array[1].substring(0, array[1].length - 1)
     return imgFullUrl
     //return imgFullUrl.split('#')[0]
-  })
+  }).filter(v => v.startsWith(imagePrefix))
 }
 
 function getDirWithForwardSlash(path) {
