@@ -276,7 +276,7 @@ public void downloadLicense(){
 ```
 
 看到全部用例断言成功，非常爽快！
-![resetassured-download](../../download-images/resetassured-download.png)
+![resetassured-download](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/resetassured-download.png)
 
 ## 其他问题
 
