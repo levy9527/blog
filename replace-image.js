@@ -44,6 +44,9 @@ replaceYuqueImagesInMarkdown()
  find local images by startWiths(../)
  replace
  remove local images
+ // this function can be combined into another function
+ // the difference lies in checking url counts equality and use another name to upload
+ // after upload, remove file
 */
 async function replaceLocalImagesInMarkdown() {
   let markdownContent = fs.readFileSync(pathToMarkdownFile).toString()
