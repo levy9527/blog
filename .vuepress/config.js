@@ -37,6 +37,7 @@ function generateSidebar() {
 // 初始化sidebar
 sidebar = generateSidebar()
 
+GA = 'G-6HEW6B1S6B'
 module.exports = {
   title: "Levy's blog",
   description: 'think, speak, practice, create',
@@ -48,7 +49,21 @@ module.exports = {
         href: 'https://avatars3.githubusercontent.com/u/39977793?s=200&v=4'
       }
     ],
-    ['style', {}, 'img { display: block; }']
+    ['style', {}, 'img { display: block; }'],
+    [
+        'script',
+        {
+            async: true,
+            src: 'https://www.googletagmanager.com/gtag/js?id='+GA,
+        },
+    ],
+    [
+        'script',
+        {},
+        [
+            "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config',"+GA+");",
+        ],
+    ],
   ],
   //base: '/blog/',
   themeConfig: {
@@ -64,12 +79,6 @@ module.exports = {
       {
         align: 'top'
       },
-      [
-        '@vuepress/google-analytics',
-        {
-          'ga': 'G-6HEW6B1S6B'
-        }
-      ]
     ]
   ]
 }
