@@ -61,7 +61,7 @@ module.exports = {
         'script',
         {},
         [
-            "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config',"+GA+");",
+            "window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag('js', new Date());\ngtag('config','"+GA+"');",
         ],
     ],
   ],
