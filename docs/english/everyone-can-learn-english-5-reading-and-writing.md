@@ -69,7 +69,7 @@
 
 读书笔记示例：
 
-![indispensable-opposition.png](../../download-images/indispensable-opposition.png)
+![indispensable-opposition.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/indispensable-opposition.png)
 
 这是我购买 eslpod.com 教材时发的邮件：
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427508571.png)
