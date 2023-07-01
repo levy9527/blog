@@ -58,5 +58,18 @@ module.exports = {
     sidebar // 传入配置项
   },
   // 站点配置
-  plugins: []
+  plugins: [
+    [
+      'vuepress-plugin-code-copy',
+      {
+        align: 'top'
+      },
+      [
+        '@vuepress/google-analytics',
+        {
+          'ga': 'G-6HEW6B1S6B'
+        }
+      ]
+    ]
+  ]
 }

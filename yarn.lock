@@ -1407,6 +1407,13 @@
     "@vuepress/types" "1.9.9"
     lodash.debounce "^4.0.8"
 
+"@vuepress/plugin-google-analytics@^1.9.9":
+  version "1.9.9"
+  resolved "https://registry.yarnpkg.com/@vuepress/plugin-google-analytics/-/plugin-google-analytics-1.9.9.tgz#78805e7d9a376667adff3ddd0986badfeb2a480f"
+  integrity sha512-GxrM4BopPqTiGAq2ku5HqInha6uQZePxdGpU8etTbM6hhaxZAev4HehrtHISAJm5dVptbFFJl3sNGQBnw2deFQ==
+  dependencies:
+    "@vuepress/types" "1.9.9"
+
 "@vuepress/plugin-last-updated@1.9.9":
   version "1.9.9"
   resolved "https://registry.npmmirror.com/@vuepress/plugin-last-updated/-/plugin-last-updated-1.9.9.tgz#a7cb5f39b2793c8d113de08a514c316c26cc38c1"
@@ -2425,7 +2432,7 @@ chalk@^4.1.2:
     ansi-styles "^4.1.0"
     supports-color "^7.1.0"
 
-chokidar@^2.0.3, chokidar@^2.1.6, chokidar@^2.1.8:
+chokidar@^2.0.3, chokidar@^2.1.8:
   version "2.1.8"
   resolved "https://registry.npmmirror.com/chokidar/-/chokidar-2.1.8.tgz#804b3a7b6a99358c3c5c61e71d8728f041cff917"
   integrity sha512-ZmZUazfOzf0Nve7duiCKD23PFSCs4JPoYyccjUFF3aQkQadqBhfzhjkwBH2mNOG9cTBwhamM37EIsIkZw3nRgg==
@@ -2812,13 +2819,6 @@ create-hmac@^1.1.0, create-hmac@^1.1.4, create-hmac@^1.1.7:
     ripemd160 "^2.0.0"
     safe-buffer "^5.0.1"
     sha.js "^2.4.8"
-
-cross-env@^5.2.0:
-  version "5.2.1"
-  resolved "https://registry.npmmirror.com/cross-env/-/cross-env-5.2.1.tgz#b2c76c1ca7add66dc874d11798466094f551b34d"
-  integrity sha512-1yHhtcfAd1r4nwQgknowuUNfIT9E8dOMMspC36g45dN+iD1blloi7xp8X/xAIDnjHWyt1uQ8PHk2fkNaym7soQ==
-  dependencies:
-    cross-spawn "^6.0.5"
 
 cross-spawn@^6.0.0, cross-spawn@^6.0.5:
   version "6.0.5"
@@ -3333,11 +3333,6 @@ dot-prop@^5.2.0:
   integrity sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==
   dependencies:
     is-obj "^2.0.0"
-
-dotenv@^8.0.0:
-  version "8.6.0"
-  resolved "https://registry.npmmirror.com/dotenv/-/dotenv-8.6.0.tgz#061af664d19f7f4d8fc6e4ff9b584ce237adcb8b"
-  integrity sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==
 
 duplexer3@^0.1.4:
   version "0.1.5"
@@ -6249,6 +6244,18 @@ pkg-dir@^4.1.0:
   dependencies:
     find-up "^4.0.0"
 
+playwright-core@1.35.1:
+  version "1.35.1"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.35.1.tgz#52c1e6ffaa6a8c29de1a5bdf8cce0ce290ffb81d"
+  integrity sha512-pNXb6CQ7OqmGDRspEjlxE49w+4YtR6a3X6mT1hZXeJHWmsEz7SunmvZeiG/+y1yyMZdHnnn73WKYdtV1er0Xyg==
+
+playwright@^1.32.3:
+  version "1.35.1"
+  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.35.1.tgz#f991d0c76ae517d4a0023d9428b09d19d5e87128"
+  integrity sha512-NbwBeGJLu5m7VGM0+xtlmLAH9VUfWwYOhUi/lSEDyGg46r1CA9RWlvoc5yywxR9AzQb0mOCm7bWtOXV7/w43ZA==
+  dependencies:
+    playwright-core "1.35.1"
+
 portfinder@^1.0.13, portfinder@^1.0.26:
   version "1.0.32"
   resolved "https://registry.npmmirror.com/portfinder/-/portfinder-1.0.32.tgz#2fe1b9e58389712429dc2bea5beb2146146c7f81"
@@ -8288,6 +8295,11 @@ vuepress-html-webpack-plugin@^3.2.0:
     toposort "^1.0.0"
     util.promisify "1.0.0"
 
+vuepress-plugin-code-copy@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/vuepress-plugin-code-copy/-/vuepress-plugin-code-copy-1.0.6.tgz#6431dab764b48b5b203e4936d98b1943651ce4ad"
+  integrity sha512-FiqwMtlb4rEsOI56O6sSkekcd3SlESxbkR2IaTIQxsMOMoalKfW5R9WlR1Pjm10v6jmU661Ex8MR11k9IzrNUg==
+
 vuepress-plugin-container@^2.0.2:
   version "2.1.5"
   resolved "https://registry.npmmirror.com/vuepress-plugin-container/-/vuepress-plugin-container-2.1.5.tgz#37fff05662fedbd63ffd3a5463b2592c7a7f3133"
@@ -8303,9 +8315,9 @@ vuepress-plugin-smooth-scroll@^0.0.3:
   dependencies:
     smoothscroll-polyfill "^0.4.3"
 
-vuepress@^1.0.0-alpha.44:
+vuepress@^1.9.9:
   version "1.9.9"
-  resolved "https://registry.npmmirror.com/vuepress/-/vuepress-1.9.9.tgz#75b313f48a21b2eeb435cad52333f26b3b8a7404"
+  resolved "https://registry.yarnpkg.com/vuepress/-/vuepress-1.9.9.tgz#75b313f48a21b2eeb435cad52333f26b3b8a7404"
   integrity sha512-CU94W3EdWaCavGx2VSvQJMI/hyv+m/YMdrvJJw67EVfmmJJDb1iTGrilDgLd0qsyrXzBy0Ru9Qi6rkf4IwcOTg==
   dependencies:
     "@vuepress/core" "1.9.9"

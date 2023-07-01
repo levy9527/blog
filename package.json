@@ -5,8 +5,10 @@
     "build": "vuepress build ."
   },
   "dependencies": {
+    "@vuepress/plugin-google-analytics": "^1.9.9",
     "fast-glob": "^2.2.6",
-    "vuepress": "^1.0.0-alpha.44"
+    "vuepress": "^1.9.9",
+    "vuepress-plugin-code-copy": "^1.0.6"
   },
   "devDependencies": {
     "playwright": "^1.32.3"
