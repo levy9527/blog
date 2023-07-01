@@ -5,6 +5,7 @@
 本文将分享借助 AI 进行口语练习的一些工具、方法与实践经验，仅供参考。
 
 ## 准备工作
+
 在开始之前，要准备好几样东西：
 
 0. [ChatGPT](https://chat.openai.com/), 如果没有账号或不能上网，请查看[上网教程](../tools/how-to-connect-to-internet.md)
@@ -13,13 +14,40 @@
 
 安装好插件后，打开 chatGPT 界面，下方就会出现语音输入按钮。
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211581972.png)
+
+## 常用Prompt
+
+下面总结了常用的 Prompt，可以有根据需要进行使用或调整。
+
+设置角色：
+
+1. Please act as an English teacher.
+2. Please act as an English-speaking test examiner.
+3. Please act as IELTS speaking test examiner.
+
+进入一问一答模式：
+
+1. You're supposed to asked me questions and wait for my answer. The next question is: xxx
+
+对回答进行完善：
+
+1. Please revise my answer
+2. Please modify my answer to make it more fluent
+
+对回答进行评分：
+
+1. Please rate my answer
+
 ## 进行对话
+
 第一句话，是设置好 AI 的角色，让它扮演口语考官。
 
-可以使用以下 prompt: 
+可以使用以下 prompt:
+
 ```markdown
-act as an [English teacher | English speaking test examiner]
+act as an English-speaking test examiner
 ```
+
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211593449.png)
 可以看出，语音转文字出现错误，单词 IELTS 始终未能正确识别，但 ChatGPT 却能明白其中的意思。
 
