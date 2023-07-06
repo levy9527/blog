@@ -96,11 +96,11 @@ Postman 在实践过程中，最大的问题在于，无法将测试用例有效
 
 ```xml
 given()  // 设置请求信息
-        .log().all() // 输出请求日志
+        .log().body() // 输出请求日志
         .when()
         .get() // 发送请求
         .then()
-        .log().all() // 输出响应日志
+        .log().body() // 输出响应日志
         .statusCode(200) // 断言响应
         ;
 ```
@@ -120,6 +120,7 @@ public void init(){
 
     // 设置请求头
     RequestSpecBuilder builder=new RequestSpecBuilder();
+    // 也可以改成调用登录接口，动态获取 token
     String token=System.getenv("TOKEN");
     builder.addHeader("Authorization",token); // jwt
     // 在 give().spec() 中使用即可
@@ -139,17 +140,17 @@ public void init(){
 ```java
   @Test
 public void test(){
-    Workflow workflow=new Workflow();
+    Workflow workflow = new Workflow();
     workflow.setWorkflowId(1643167159934930966L);
     workflow.setWorkflowName("flow");
-    List<Workflow> body=new ArrayList<>();
+    List<Workflow> body = new ArrayList<>();
     body.add(workflow);
 
     given()
     .spec(requestSpec)
     .queryParam("query","value")
     .body(JSON.toJSONString(body))
-    .log().all()
+    .log().body()
     .when()
     .post("/api/v1/your-api?t=1")
     .then()
@@ -175,7 +176,7 @@ public void test(){
   @Test
 public void test(){
     // 发送第一个请求
-    List<Map<String, String>>workflowList=getWorkflowList();
+    List<Map<String, String>>workflowList = getWorkflowList();
     if (workflowList.isEmpty()) {
       System.out.println("workflowList  empty, test not execute");
       return;
@@ -183,7 +184,7 @@ public void test(){
 
     // 返回的数据结构是个 Map
     // 也可以是　Map<String, Object>，这取决于你实际的数据结构
-    Map<String, String> target=workflowList.get(0);
+    Map<String, String> target = workflowList.get(0);
 
     WorkflowRunVO workflow = new WorkflowRunVO();
     workflow.setWorkflowId(Long.valueOf(target.get("workflowId")));
@@ -193,7 +194,7 @@ public void test(){
 
     // 在第二个请求中断言
     given()
-            .spec(requestSpec)
+    .spec(requestSpec)
     .body(JSON.toJSONString(body))
     .log().body()
     .when()
@@ -224,7 +225,7 @@ RestAssured 很强大，还能处理上传与下载的请求，简直让人“�
   @Test
 public void upload(){
     // 需要本地有文件
-    File file=new File("src/test/fixtures/txt-success");
+    File file = new File("src/test/fixtures/txt-success");
 
     getImportResp(file)
     .assertThat().body("code",org.hamcrest.Matchers.equalTo("0"))
@@ -243,24 +244,57 @@ private ValidatableResponse getImportResp(File file){
     }
 ```
 
+如果想在传文件的基础上，还传其他参数，可以这样写：
+```java
+private ValidatableResponse getImportResp(File file) {
+    return given()
+    .spec(requestSpec)
+    .multiPart("file", file, "application/json")
+    .multiPart("extraParam", "value")
+    .when()
+    .post("/v1/upload")
+    .then()
+    .statusCode(200);
+    }
+```
+
+为对应的前端请求代码为：
+```javascript
+import axios from 'axios';
+
+function getImportResp(file) {
+  const formData = new FormData();
+  formData.append('file', file, 'application/json');
+  formData.append('extraParam', 'value');
+
+  return axios.post('/v1/upload', formData)
+    .then(response => {
+      return response;
+    })
+    .catch(error => {
+      throw error;
+    });
+}
+```
+
 ## 下载示例
 
 ```java
   @Test
 public void download(){
-    Map<String, Object> license=getLicenseList().get(0);
+    Map<String, Object> license = getLicenseList().get(0);
     if(Objects.isNull(license))return;
 
     // 因为设置的请求头跟默认的不一样，所以单独设置
-    RequestSpecBuilder builder=new RequestSpecBuilder();
+    RequestSpecBuilder builder = new RequestSpecBuilder();
     String token=System.getenv("TOKEN");
     builder.addQueryParam("token",token.replace("Bearer ",""));
     builder.addHeader("Content-Type","application/json;charset=UTF-8");
     requestSpec=builder.build();
 
-    String result=given()
+    String result = given()
     .spec(requestSpec)
-    .log().all()
+    .log().body()
     .when()
     .get("/api/v1/download/"+license.get("id"))
     .then()
