@@ -1,4 +1,4 @@
-# 下一代 E2E 测试工具 Playwright
+# 下一代 UI 自动化测试工具 Playwright
 ## 前言
 Playwright 是微软于 2020 年发布的一款 E2E testing 工具，跟社区成熟的 Cypress 相比，稍显年轻。然而 Playwright 的主要优势有：
 
