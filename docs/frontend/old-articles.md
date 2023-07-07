@@ -1,5 +1,4 @@
 # 旧文章精选
-- [✅使用jest进行测试驱动开发](https://github.com/levy9527/blog/issues/13)
 - [📦vue组件发布npm最佳实践](https://github.com/levy9527/blog/issues/2)
 - [🔨揭秘vue-sfc-cli：组件研发利器](https://github.com/levy9527/blog/issues/7)
 - [🚀Github集成TravisCI：自动发布](https://github.com/levy9527/blog/issues/1)
