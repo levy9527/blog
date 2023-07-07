@@ -120,13 +120,32 @@ public void init(){
 
     // 设置请求头
     RequestSpecBuilder builder=new RequestSpecBuilder();
-    // 也可以改成调用登录接口，动态获取 token
     String token=System.getenv("TOKEN");
+    // 也可以改成调用登录接口，动态获取 token
+    // String token = getToken();
     builder.addHeader("Authorization",token); // jwt
     // 在 give().spec() 中使用即可
     requestSpec=builder.build();
-    }
+}
 
+```
+
+动态获取 token 示例代码：
+```java
+public static String getToken() {
+    Map<String, String> params = new HashMap<>();
+    params.put("username", "");
+    params.put("password", "");
+    return given()
+            .spec(new RequestSpecBuilder().addHeader("Content-Type", "application/json;charset=UTF-8").build())
+            .body(JSONObject.toJSONString(params))
+        .when()
+            .post("/api/v1/login")
+        .then()
+            .statusCode(200).assertThat().body("code", equalTo("0"))
+            .extract().path("payload.access_token");
+
+}
 ```
 
 ## 请求示例
@@ -158,7 +177,7 @@ public void test(){
     .statusCode(200)
     .assertThat().body("code",equalTo("0"))
     ;
-    }
+}
 ```
 
 提醒，在运行测试代码前，需要做两件事：
@@ -203,7 +222,7 @@ public void test(){
     .statusCode(200)
     .assertThat().body("code",equalTo("0")) // org.hamcrest.Matchers.equalTo
     .log().body();
-    }
+}
 
 private List<Map<String, String>>getWorkflowList(){
     return given()
@@ -214,7 +233,7 @@ private List<Map<String, String>>getWorkflowList(){
     .statusCode(200)
     .extract()
     .path("payload.content");
-    }
+}
 ```
 
 ## 上传示例
@@ -231,7 +250,7 @@ public void upload(){
     .assertThat().body("code",org.hamcrest.Matchers.equalTo("0"))
     .assertThat().body("payload",equalTo(true))
     ;
-    }
+}
 
 private ValidatableResponse getImportResp(File file){
     return given()
@@ -241,7 +260,7 @@ private ValidatableResponse getImportResp(File file){
     .post("/api/v1/upload")
     .then()
     .statusCode(200);
-    }
+}
 ```
 
 如果想在传文件的基础上，还传其他参数，可以这样写：
@@ -255,7 +274,7 @@ private ValidatableResponse getImportResp(File file) {
     .post("/v1/upload")
     .then()
     .statusCode(200);
-    }
+}
 ```
 
 对应的前端请求代码为(记录一下，以备不时之需😃)：
@@ -306,7 +325,7 @@ public void download(){
 
     System.out.println(result);
     Assert.assertEquals(5,result.split("\n").length);
-    }
+}
 ```
 
 看到全部用例都执行成功，非常爽快！
