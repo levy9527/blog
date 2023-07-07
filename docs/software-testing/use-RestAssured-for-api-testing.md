@@ -109,7 +109,7 @@ given()  // 设置请求信息
 
 以下代码可直接复制到 Java 测试类中。
 
-```
+```java
 private RequestSpecification requestSpec;
 
 // @BeforeEach // JUnit5 
@@ -137,7 +137,7 @@ public void init(){
 - 设置query
 - 判断响应体的数据结构
 
-```
+```java
   @Test
 public void test(){
     Workflow workflow = new Workflow();
@@ -172,7 +172,7 @@ public void test(){
 
 此时可以使用 extract() 及 path() 获取请求 A 返回的数据。
 
-```
+```java
   @Test
 public void test(){
     // 发送第一个请求
@@ -221,7 +221,7 @@ private List<Map<String, String>>getWorkflowList(){
 
 RestAssured 很强大，还能处理上传与下载的请求，简直让人“爱了爱了”。 下面是具体的示例：
 
-```
+```java
   @Test
 public void upload(){
     // 需要本地有文件
@@ -245,7 +245,7 @@ private ValidatableResponse getImportResp(File file){
 ```
 
 如果想在传文件的基础上，还传其他参数，可以这样写：
-```
+```java
 private ValidatableResponse getImportResp(File file) {
     return given()
     .spec(requestSpec)
@@ -259,7 +259,7 @@ private ValidatableResponse getImportResp(File file) {
 ```
 
 对应的前端请求代码为(记录一下，以备不时之需😃)：
-```
+```javascript
 import axios from 'axios';
 
 function getImportResp(file) {
@@ -279,7 +279,7 @@ function getImportResp(file) {
 
 ## 下载示例
 
-```
+```java
   @Test
 public void download(){
     Map<String, Object> license = getLicenseList().get(0);
