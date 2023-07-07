@@ -49,7 +49,7 @@ module.exports = {
         href: 'https://avatars3.githubusercontent.com/u/39977793?s=200&v=4'
       }
     ],
-    ['style', {}, 'img { display: block; } .code-copy-added:hover>.code-copy svg{top: 20px !important;}'],
+    ['style', {}, 'img { display: block; } .code-copy-added:hover>.code-copy svg{top: 32px !important;}'],
     [
         'script',
         {
