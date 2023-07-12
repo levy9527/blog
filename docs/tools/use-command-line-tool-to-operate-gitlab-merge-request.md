@@ -10,6 +10,10 @@
 对此，有人问你代码到底合并了没，你怎么确认？一个个项目去相应的主干分支里查看提交历史吗？就是因为不想再这样做了，这个工具便应运而生。
 ## 安装
 ### 解压zip
+下载并解压文件:
+- [Windows](https://r0e715v8ejr.feishu.cn/file/IxH4bYAOkowK08xSid1crXcSnRo)
+- [Linux](https://r0e715v8ejr.feishu.cn/file/ORa3buA3donF3TxxPVwcHSYnnQb)
+- 
 ### 安装git bash
 Windows系统才要安装。
 如果 git bash 版本不足 2.41.0，最好安装最新版本。
