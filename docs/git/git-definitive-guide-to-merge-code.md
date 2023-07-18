@@ -23,8 +23,12 @@
 
 1. 因为合并的方向是 feat -> dev，所以解决冲突应该是在本地 dev 合并 feat
 2. 又因为本地 dev 不能向远程推送，因而需要基于 dev 切一个新分支 conflict/resolved
-3. 推送 conflict/resolved 分支
-4. 提交 MR：conflict/resolved -> dev
+3. 基于 conflict/resolved 分支合并 feat
+4. 推送 conflict/resolved 分支
+5. 提交 MR：conflict/resolved -> dev
+
+上述步骤操作烦琐，推荐直接使用我写的[命令行工具](./use-command-line-tool-to-operate-gitlab-merge-request.md)，使用 mr merge 命令即可。
+
 ### 操作步骤
 
 1. 本地切换到 dev 分支，更新代码
