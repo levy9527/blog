@@ -27,7 +27,7 @@
 4. 推送 conflict/resolved 分支
 5. 提交 MR：conflict/resolved -> dev
 
-上述步骤操作烦琐，推荐直接使用我写的[命令行工具](./use-command-line-tool-to-operate-gitlab-merge-request.md)，使用 mr merge 命令即可。
+上述步骤操作烦琐，推荐直接使用我写的[命令行工具](../tools/use-command-line-tool-to-operate-gitlab-merge-request.md)，使用 mr merge 命令即可。
 
 ### 操作步骤
 
