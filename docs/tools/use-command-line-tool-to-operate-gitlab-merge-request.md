@@ -109,6 +109,9 @@ mr.exe create
 创建成功： 
 ![ae115431acc7c0b9275c158fb99e3eaa.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154116622.png)
 
+可以处理同名项目的情况：
+![dealing-with-same-name-projects.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/dealing-with-same-name-projects.png)
+
 MR 不会重复创建：
 ![ab7d3ea5177726bbab0ccbcd870d0044.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154120100.png)
 
