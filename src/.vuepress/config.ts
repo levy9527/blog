@@ -8,7 +8,7 @@ export default defineUserConfig({
 
   lang: "zh-CN",
   title: "levy",
-  description: "levy 的个人客",
+  description: "levy's blog",
 
   theme,
 
