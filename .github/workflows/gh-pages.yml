@@ -15,12 +15,7 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
       - name: Setting Up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '14.17.6'
-          cache: 'pnpm'
-      - name: Install pnpm
-        run: npm install -g pnpm
+        uses: pnpm/action-setup@v2
       - name: Install dependencies
         run: pnpm install --immutable --ignore-engines
       - name: Build
