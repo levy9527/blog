@@ -19,7 +19,7 @@ jobs:
         with:
           version: 8
       - name: Install dependencies
-        run: pnpm install --immutable --ignore-engines
+        run: pnpm install --lockfile-only
       - name: Build
         run: pnpm build
       - name: Deploy 🚀

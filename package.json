@@ -4,6 +4,7 @@
   "description": "levy's personal blog",
   "license": "MIT",
   "type": "module",
+  "engineStrict": false,
   "scripts": {
     "build": "vuepress build src",
     "clean-dev": "vuepress dev src --clean-cache",
