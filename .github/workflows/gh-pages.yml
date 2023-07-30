@@ -14,15 +14,16 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
-      - name: Setting Up Node.js 
-        uses: actions/setup-node@v2.4.0
+      - name: Setting Up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: '14.17.6'
-          cache: 'yarn'
+          usePnpm: true
+          cache: 'pnpm'
       - name: Install dependencies
-        run: yarn install --immutable --ignore-engines
+        run: pnpm install --immutable --ignore-engines
       - name: Build
-        run: yarn build
+        run: pnpm build
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
