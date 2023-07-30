@@ -20,8 +20,6 @@ jobs:
           version: 8
       - name: Install dependencies
         run: pnpm install
-      - name: Upgrade dependencies
-        run: pnpm dlx vp-update
       - name: Build
         run: pnpm build
       - name: Deploy 🚀
