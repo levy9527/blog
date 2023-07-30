@@ -20,7 +20,7 @@ jobs:
           node-version: '14.17.6'
           cache: 'yarn'
       - name: Install dependencies
-        run: yarn install --immutable --production --ignore-engines
+        run: yarn install --immutable --ignore-engines
       - name: Build
         run: yarn build
       - name: Deploy 🚀
