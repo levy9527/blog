@@ -10,6 +10,9 @@
     "dev": "vuepress dev src",
     "update-package": "yarn dlx vp-update"
   },
+  "onlyAllow": {
+    "yarn": true
+  },
   "devDependencies": {
   },
   "dependencies": {
