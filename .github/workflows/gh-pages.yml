@@ -19,7 +19,7 @@ jobs:
         with:
           version: 8
       - name: Install dependencies
-        run: pnpm install --no-frozen-lockfile
+        run: pnpm install
       - name: Upgrade dependencies
         run: pnpm dlx vp-update
       - name: Build
