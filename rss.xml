@@ -6,10 +6,22 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 01 Aug 2023 01:07:54 GMT</pubDate>
-    <lastBuildDate>Tue, 01 Aug 2023 01:07:54 GMT</lastBuildDate>
+    <pubDate>Tue, 01 Aug 2023 01:26:50 GMT</pubDate>
+    <lastBuildDate>Tue, 01 Aug 2023 01:26:50 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <item>
+      <title>来自Navicat的侵权警告</title>
+      <link>https://levy.vip/daily/a-warning-from-navicat.html</link>
+      <guid>https://levy.vip/daily/a-warning-from-navicat.html</guid>
+      <source url="https://levy.vip/rss.xml">来自Navicat的侵权警告</source>
+      <description>来自Navicat的侵权警告 公司收到了Navicat的侵权警告, 很有可能要吃官司。在此还是呼吁大家使用正版，拒绝使用盗版软件。 另外，开发者常用的软件的合法替代品，视频中也有推荐。</description>
+      <pubDate>Mon, 31 Jul 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 来自Navicat的侵权警告</h1>
+<p>公司收到了Navicat的侵权警告, 很有可能要吃官司。在此还是呼吁大家使用正版，拒绝使用盗版软件。</p>
+<p>另外，开发者常用的软件的合法替代品，视频中也有推荐。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>对Vue不得不吐槽的事</title>
       <link>https://levy.vip/daily/things-I-have-to-vent-about-vue.html</link>
