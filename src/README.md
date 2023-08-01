@@ -2,7 +2,7 @@
 home: true
 layout: BlogHome
 icon: home
-title: 博客主页
+title: levy's blog
 #heroImage: /logo.png
 heroText: levy's blog
 heroFullScreen: true
