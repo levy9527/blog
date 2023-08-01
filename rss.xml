@@ -6,10 +6,26 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 30 Jul 2023 11:54:06 GMT</pubDate>
-    <lastBuildDate>Sun, 30 Jul 2023 11:54:06 GMT</lastBuildDate>
+    <pubDate>Tue, 01 Aug 2023 01:07:54 GMT</pubDate>
+    <lastBuildDate>Tue, 01 Aug 2023 01:07:54 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <item>
+      <title>对Vue不得不吐槽的事</title>
+      <link>https://levy.vip/daily/things-I-have-to-vent-about-vue.html</link>
+      <guid>https://levy.vip/daily/things-I-have-to-vent-about-vue.html</guid>
+      <source url="https://levy.vip/rss.xml">对Vue不得不吐槽的事</source>
+      <description>对Vue不得不吐槽的事 为了完善博客，不得不升级至 Vuepress2。期间开发层面的各种问题我都忍了，但最终CI环节报错，我真的受不了了！ 总结一下，我对Vue生态不满的地方在于： Vue总是破坏性升级，新技术完全不管旧用户的体验 你要新技术可以，别逼我跟着用，我不想破坏 CI 的稳定性</description>
+      <pubDate>Sun, 30 Jul 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 对Vue不得不吐槽的事</h1>
+<p>为了完善博客，不得不升级至 Vuepress2。期间开发层面的各种问题我都忍了，但最终CI环节报错，我真的受不了了！</p>
+<p>总结一下，我对Vue生态不满的地方在于：</p>
+<ol>
+<li>Vue总是破坏性升级，新技术完全不管旧用户的体验</li>
+<li>你要新技术可以，别逼我跟着用，我不想破坏 CI 的稳定性</li>
+</ol>
+]]></content:encoded>
+    </item>
     <item>
       <title>现代大学英语精读(第2版)第一册</title>
       <link>https://levy.vip/english/contemporary-college-english-1.html</link>
