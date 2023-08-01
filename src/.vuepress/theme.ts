@@ -70,6 +70,10 @@ export default hopeTheme({
       //serverURL: "https://waline-comment.vuejs.press",
     },
 
+    components: {
+      components: ["BiliBili"],
+    },
+
     // all features are enabled for demo, only preserve features you need here
     mdEnhance: {
       delay: 300,

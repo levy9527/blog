@@ -58,4 +58,5 @@ export default sidebar({
       children: ["old-articles"]
     }
   ],
+  "/daily/": "structure",
 });
