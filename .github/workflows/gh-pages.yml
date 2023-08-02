@@ -14,14 +14,19 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
-      - name: Setting Up Node.js
-        uses: pnpm/action-setup@v2
+     
+      - name: Set Node.js 16.x
+        uses: actions/setup-node@v3
         with:
-          version: 8
+          node-version: 16.x
+          cache: yarn
+
       - name: Install dependencies
-        run: pnpm install
+        run: yarn install --immutable --production --ignore-engines
+
       - name: Build
-        run: pnpm build
+        run: yarn build
+        
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
