@@ -38,9 +38,9 @@ export default hopeTheme({
     intro: "/about.html",
     medias: {
       GitHub: "https://github.com/levy9527",
+      BiliBili: "https://search.bilibili.com/video?keyword=levydotvip&from_source=webtop_search",
       Email: "mailto:info@897895407@qq.com",
       Rss: hostname + "/rss.xml",
-      //BiliBili: "https://example.com",
       //Youtube: "https://example.com",
       //Discord: "https://example.com",
       //Facebook: "https://example.com",

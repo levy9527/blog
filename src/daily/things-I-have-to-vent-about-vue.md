@@ -3,6 +3,7 @@ date: 2023-07-30
 tag: 
 - Frontend
 - Daily
+- Video
 ---
 
 # 对Vue不得不吐槽的事

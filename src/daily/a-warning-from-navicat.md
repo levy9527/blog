@@ -2,6 +2,7 @@
 date: 2023-07-31
 tag:
   - Daily
+  - Video
 ---
 # 来自Navicat的侵权警告
 
