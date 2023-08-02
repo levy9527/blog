@@ -6,10 +6,21 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 01 Aug 2023 01:45:11 GMT</pubDate>
-    <lastBuildDate>Tue, 01 Aug 2023 01:45:11 GMT</lastBuildDate>
+    <pubDate>Wed, 02 Aug 2023 02:25:04 GMT</pubDate>
+    <lastBuildDate>Wed, 02 Aug 2023 02:25:04 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+    <item>
+      <title>VuePress2 娱乐视频</title>
+      <link>https://levy.vip/daily/a-vuepress2-entertaining-video.html</link>
+      <guid>https://levy.vip/daily/a-vuepress2-entertaining-video.html</guid>
+      <source url="https://levy.vip/rss.xml">VuePress2 娱乐视频</source>
+      <description>VuePress2 娱乐视频 参考《原神，启动》的梗，做的一个娱乐向视频。</description>
+      <pubDate>Tue, 01 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> VuePress2 娱乐视频</h1>
+<p>参考《原神，启动》的梗，做的一个娱乐向视频。</p>
+]]></content:encoded>
+    </item>
     <item>
       <title>来自Navicat的侵权警告</title>
       <link>https://levy.vip/daily/a-warning-from-navicat.html</link>
