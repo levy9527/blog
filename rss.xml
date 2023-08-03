@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 02 Aug 2023 02:25:04 GMT</pubDate>
-    <lastBuildDate>Wed, 02 Aug 2023 02:25:04 GMT</lastBuildDate>
+    <pubDate>Thu, 03 Aug 2023 01:04:07 GMT</pubDate>
+    <lastBuildDate>Thu, 03 Aug 2023 01:04:07 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -31,6 +31,23 @@
       <content:encoded><![CDATA[<h1> 来自Navicat的侵权警告</h1>
 <p>公司收到了Navicat的侵权警告, 很有可能要吃官司。在此还是呼吁大家使用正版，拒绝使用盗版软件。</p>
 <p>另外，开发者常用的软件的合法替代品，视频中也有推荐。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>关于 Arm 你需要了解的三件事</title>
+      <link>https://levy.vip/daily/about-arm-things-you-need-to-know.html</link>
+      <guid>https://levy.vip/daily/about-arm-things-you-need-to-know.html</guid>
+      <source url="https://levy.vip/rss.xml">关于 Arm 你需要了解的三件事</source>
+      <description>关于 Arm 你需要了解的三件事 Arm 是另一种CPU架构（CISC），与常见的 x86 有所不同（RISC）。 跟我们有什么关系呢？ MacOS 的 M1 芯片是基于 Arm 的 云厂商及生态都在积极与 Arm 进行合作 Docker 镜像的构建有注意事项</description>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 关于 Arm 你需要了解的三件事</h1>
+<p>Arm 是另一种CPU架构（CISC），与常见的 x86 有所不同（RISC）。</p>
+<p>跟我们有什么关系呢？</p>
+<ol>
+<li>MacOS 的 M1 芯片是基于 Arm 的</li>
+<li>云厂商及生态都在积极与 Arm 进行合作</li>
+<li>Docker 镜像的构建有注意事项</li>
+</ol>
 ]]></content:encoded>
     </item>
     <item>
