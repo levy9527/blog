@@ -20,6 +20,13 @@ export default defineUserConfig({
 
   head: [
     [
+        'meta',
+        {
+            name: 'google-site-verification',
+            content:  'XSoaUnV59ACn-fVEvYre2y_5mka_7o_wEoMPBQpwo2M'
+        }
+    ],
+    [
         'script',
         {
             async: true,
