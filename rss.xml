@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 04 Aug 2023 09:16:39 GMT</pubDate>
-    <lastBuildDate>Fri, 04 Aug 2023 09:16:39 GMT</lastBuildDate>
+    <pubDate>Sat, 05 Aug 2023 06:34:00 GMT</pubDate>
+    <lastBuildDate>Sat, 05 Aug 2023 06:34:00 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -75,17 +75,15 @@
       <pubDate>Thu, 03 Aug 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> sh与bash的区别</h1>
 <p>结论：如果可移植性很重要，那么应该使用 sh！</p>
-<!--more-->
-<!--
-以下是 ChatGPT 的回答：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1691066962763-bfbe3c1a-cb4f-43bc-b181-062eabee9529.png#averageHue=%23e4e5e7&clientId=ue1ff8f12-10ba-4&from=paste&height=196&id=u6521b3f3&originHeight=392&originWidth=1428&originalType=binary&ratio=2&rotation=0&showTitle=false&size=235208&status=done&style=none&taskId=uef2009af-bd00-4e0e-a215-9cca4c37ed2&title=&width=714)
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1691067007160-ec9a619b-be1c-4947-9dfc-6578d7b95003.png#averageHue=%23e5e6e8&clientId=ue1ff8f12-10ba-4&from=paste&height=116&id=u443ed474&originHeight=232&originWidth=1354&originalType=binary&ratio=2&rotation=0&showTitle=false&size=75155&status=done&style=none&taskId=u999f43f5-eb71-425d-8651-fbe5098a7c9&title=&width=677)
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1691067065982-c0370621-ff74-41e2-a435-b21973c64be4.png#averageHue=%23e3e4e6&clientId=ue1ff8f12-10ba-4&from=paste&height=170&id=u00ae3745&originHeight=340&originWidth=1382&originalType=binary&ratio=2&rotation=0&showTitle=false&size=116797&status=done&style=none&taskId=u563107c4-dbc5-464b-bb87-ab1c1dea427&title=&width=691)
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1691067101217-a60e6bd8-600c-4c68-89d0-53675a11442c.png#averageHue=%23e5e5e8&clientId=ue1ff8f12-10ba-4&from=paste&height=118&id=u1559e5c7&originHeight=236&originWidth=1370&originalType=binary&ratio=2&rotation=0&showTitle=false&size=77383&status=done&style=none&taskId=u846749a0-6dcb-429b-ad44-0d6e77dea00&title=&width=685)
--->
+<!-- more -->
+<p>以下是 ChatGPT 的回答：<br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691066962763-bfbe3c1a-cb4f-43bc-b181-062eabee9529.png#averageHue=%23e4e5e7&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=196&amp;id=u6521b3f3&amp;originHeight=392&amp;originWidth=1428&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=235208&amp;status=done&amp;style=none&amp;taskId=uef2009af-bd00-4e0e-a215-9cca4c37ed2&amp;title=&amp;width=714" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691067007160-ec9a619b-be1c-4947-9dfc-6578d7b95003.png#averageHue=%23e5e6e8&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=116&amp;id=u443ed474&amp;originHeight=232&amp;originWidth=1354&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=75155&amp;status=done&amp;style=none&amp;taskId=u999f43f5-eb71-425d-8651-fbe5098a7c9&amp;title=&amp;width=677" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691067065982-c0370621-ff74-41e2-a435-b21973c64be4.png#averageHue=%23e3e4e6&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=170&amp;id=u00ae3745&amp;originHeight=340&amp;originWidth=1382&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=116797&amp;status=done&amp;style=none&amp;taskId=u563107c4-dbc5-464b-bb87-ab1c1dea427&amp;title=&amp;width=691" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691067101217-a60e6bd8-600c-4c68-89d0-53675a11442c.png#averageHue=%23e5e5e8&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=118&amp;id=u1559e5c7&amp;originHeight=236&amp;originWidth=1370&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=77383&amp;status=done&amp;style=none&amp;taskId=u846749a0-6dcb-429b-ad44-0d6e77dea00&amp;title=&amp;width=685" alt="" loading="lazy"></p>
 <p>视频里有实战演示：</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.nlark.com/yuque/0/2023/png/160590/1691066962763-bfbe3c1a-cb4f-43bc-b181-062eabee9529.png#averageHue=%23e4e5e7&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=196&amp;id=u6521b3f3&amp;originHeight=392&amp;originWidth=1428&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=235208&amp;status=done&amp;style=none&amp;taskId=uef2009af-bd00-4e0e-a215-9cca4c37ed2&amp;title=&amp;width=714" type="image/"/>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691066962763-bfbe3c1a-cb4f-43bc-b181-062eabee9529.png#averageHue=%23e4e5e7&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=196&amp;id=u6521b3f3&amp;originHeight=392&amp;originWidth=1428&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=235208&amp;status=done&amp;style=none&amp;taskId=uef2009af-bd00-4e0e-a215-9cca4c37ed2&amp;title=&amp;width=714" type="image/"/>
     </item>
     <item>
       <title>现代大学英语精读(第2版)第一册</title>
