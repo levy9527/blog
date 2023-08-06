@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 05 Aug 2023 07:44:24 GMT</pubDate>
-    <lastBuildDate>Sat, 05 Aug 2023 07:44:24 GMT</lastBuildDate>
+    <pubDate>Sun, 06 Aug 2023 14:29:40 GMT</pubDate>
+    <lastBuildDate>Sun, 06 Aug 2023 14:29:40 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -106,6 +106,19 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <li>Vue总是破坏性升级，新技术完全不管旧用户的体验</li>
 <li>你要新技术可以，别逼我跟着用，我不想破坏 CI 的稳定性</li>
 </ol>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Vim 作者离世</title>
+      <link>https://levy.vip/daily/vim-creator-pass-away.html</link>
+      <guid>https://levy.vip/daily/vim-creator-pass-away.html</guid>
+      <source url="https://levy.vip/rss.xml">Vim 作者离世</source>
+      <description>Vim 作者离世 R.I.P 🙏 Vim是我入行以来，一直在用的工具，可以说整个编程生涯都离不开它。 这几天听闻Vim作者离世了，便想来聊聊我与Vim的故事，以表纪念。</description>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Vim 作者离世</h1>
+<p>R.I.P 🙏</p>
+<p>Vim是我入行以来，一直在用的工具，可以说整个编程生涯都离不开它。</p>
+<p>这几天听闻Vim作者离世了，便想来聊聊我与Vim的故事，以表纪念。</p>
 ]]></content:encoded>
     </item>
     <item>
