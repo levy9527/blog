@@ -51,9 +51,9 @@ Claude 2 有着超长的token，100K。
 并且与其他AI相比呢，它有一个特点是比较的健谈。也就是说回答了你一个问题后，他会说，In more detail，接着用更丰富的语言去回答一遍，这其实是一个很好的特性。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691141062860-cc38cc84-9ef8-4daa-ad11-8c1c28ae3059.png)
 
-那么有没有一款软件，它拥有上述AI的所有的优点呢？有啊，那就是[poe.com](http://www.google.com/url?q=http%3A%2F%2Fpoe.com&sa=D&sntz=1&usg=AOvVaw3Y6qR69nWHmGJYljGz8eK4)。对于还没有使用AI或者还在使用国产AI的同学呢，我非常推荐使用它，用谷歌账号即可注册使用。
+那么有没有一款软件，它拥有上述AI的所有的优点呢？有啊，那就是[poe.com](https://poe.com/login)。对于还没有使用AI或者还在使用国产AI的同学呢，我非常推荐使用它，用谷歌账号即可注册使用。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691497388132-d255ee3f-f1e8-4ae7-8870-5cf51d9906a9.png)
-这里面有各种的AI任你挑选。同时呢，他也集成了 New Bing 的快捷回复的选项。所以说，我认为当前最佳的组合就是[poe.com](http://www.google.com/url?q=http%3A%2F%2Fpoe.com&sa=D&sntz=1&usg=AOvVaw3Y6qR69nWHmGJYljGz8eK4) + claude2，这将是一个体验极佳的使用方案。
+这里面有各种的AI任你挑选。同时呢，他也集成了 New Bing 的快捷回复的选项。所以说，我认为当前最佳的组合就是[poe.com](https://poe.com/login) + claude2，这将是一个体验极佳的使用方案。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691141726927-7d6cb97a-8e17-4687-abe1-22e46ed3945a.png)
 
 最后，来看看面对恶意提问，Claude2是如何回答的：
