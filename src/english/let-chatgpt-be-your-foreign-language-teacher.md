@@ -1,6 +1,8 @@
 ---
 date: 2023-05-06
-tag: English
+tag: 
+- English
+- AI
 ---
 
 # 让 ChatGPT 成为你的外语私教
