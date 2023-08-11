@@ -30,6 +30,7 @@ export default sidebar({
       prefix: "/git/",
       children: [
         "git-definitive-guide-to-merge-code",
+        "git-history-two-tricks-in-idea",
         "gitlab-ci",
         "git-useful-commands",
         "rethinking-git-flow",

@@ -3,7 +3,7 @@ date: 2023-08-11
 tag:
 - Git
 ---
-# 在IDEA查看Git历史记录的小技巧
+# Git历史记录小技巧
 
 分享两个Git的小技巧， 都是关于在 IDEA 里查看Git的历史记录的。
 
@@ -12,13 +12,16 @@ tag:
 <!-- more -->
 
 第一个是叫 `annotate with git blame`。 
-在Idea的行号这个位置，右键，再点击即可。如图所示：
+在IDEA的行号这个位置，右键，再点击即可。如图所示：
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img.PNG)
 
 效果就是，每一行代码都会显示，该行代码是由谁提交的、 什么时候提交的。
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_1.PNG)
 
 在合并冲突的时候也可以用这个技巧。
 
 对左右两边进行`git blame`一下， 然后就可以看到如图所示的情况：
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_2.PNG)
 
 这样就能提供更多的信息帮助解决冲突。 
 
@@ -39,8 +42,10 @@ tag:
 这就引出了第二个小技巧了: `git show history`。
 
 点击IDEA某个文件的空白处，然后右键，选择git，然后点击 show history。
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_3.PNG)
 
 就会出现如图所示的这样的一个 git log的 界面。
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_4.PNG)
 
 那么这样就可以看到这个文件从最初到至今经历过了怎样的修改、 有过哪些人在上面修改， 从而更好的进行记录追踪。
 
