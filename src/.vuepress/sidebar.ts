@@ -49,6 +49,13 @@ export default sidebar({
       ]
     },
     {
+      text: "Java",
+      prefix: "/java",
+      children: [
+        "how-to-convert-snapshot-into-release-jar-without-source-code"
+      ]
+    },
+    {
       text: "Python",
       prefix: "/python",
       children: ["export-mysql-table-into-excel"]
