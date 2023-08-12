@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 11 Aug 2023 17:27:35 GMT</pubDate>
-    <lastBuildDate>Fri, 11 Aug 2023 17:27:35 GMT</lastBuildDate>
+    <pubDate>Sat, 12 Aug 2023 07:07:05 GMT</pubDate>
+    <lastBuildDate>Sat, 12 Aug 2023 07:07:05 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1343,21 +1343,24 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344287512.png" type="image/png"/>
     </item>
     <item>
-      <title>在IDEA查看Git历史记录的小技巧</title>
-      <link>https://levy.vip/git/git-two-tricks-in-idea.html</link>
-      <guid>https://levy.vip/git/git-two-tricks-in-idea.html</guid>
-      <source url="https://levy.vip/rss.xml">在IDEA查看Git历史记录的小技巧</source>
-      <description>在IDEA查看Git历史记录的小技巧 分享两个Git的小技巧， 都是关于在 IDEA 里查看Git的历史记录的。 这两个技巧，简单却实用。面对年代久远、团队人员流失严重的代码，靠的就是这两个技巧, 从提交记录里品读岁月史书，从蛛丝马迹中寻找遗失的真相。</description>
+      <title>Git历史记录小技巧</title>
+      <link>https://levy.vip/git/git-history-two-tricks-in-idea.html</link>
+      <guid>https://levy.vip/git/git-history-two-tricks-in-idea.html</guid>
+      <source url="https://levy.vip/rss.xml">Git历史记录小技巧</source>
+      <description>Git历史记录小技巧 分享两个Git的小技巧， 都是关于在 IDEA 里查看Git的历史记录的。 这两个技巧，简单却实用。面对年代久远、团队人员流失严重的代码，靠的就是这两个技巧, 从提交记录里品读岁月史书，从蛛丝马迹中寻找遗失的真相。</description>
       <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 在IDEA查看Git历史记录的小技巧</h1>
+      <content:encoded><![CDATA[<h1> Git历史记录小技巧</h1>
 <p>分享两个Git的小技巧， 都是关于在 IDEA 里查看Git的历史记录的。</p>
 <p>这两个技巧，简单却实用。面对年代久远、团队人员流失严重的代码，靠的就是这两个技巧, 从提交记录里品读岁月史书，从蛛丝马迹中寻找遗失的真相。</p>
 <!-- more -->
 <p>第一个是叫 <code>annotate with git blame</code>。<br>
-在Idea的行号这个位置，右键，再点击即可。如图所示：</p>
-<p>效果就是，每一行代码都会显示，该行代码是由谁提交的、 什么时候提交的。</p>
+在IDEA的行号这个位置，右键，再点击即可。如图所示：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img.PNG" alt="" loading="lazy"></p>
+<p>效果就是，每一行代码都会显示，该行代码是由谁提交的、 什么时候提交的。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_1.PNG" alt="" loading="lazy"></p>
 <p>在合并冲突的时候也可以用这个技巧。</p>
-<p>对左右两边进行<code>git blame</code>一下， 然后就可以看到如图所示的情况：</p>
+<p>对左右两边进行<code>git blame</code>一下， 然后就可以看到如图所示的情况：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_2.PNG" alt="" loading="lazy"></p>
 <p>这样就能提供更多的信息帮助解决冲突。</p>
 <p>就算冲突无法自己解决，也至少能知道提交代码的是谁，可以找到作者去进行沟通。</p>
 <p>当然<code>git blame</code> 是有一些注意点的。因为它本质上显示的是某一行代码的最后提交人， 也就是last modified的一个概念，而有些时候这并不意味着最后的修改人就是代码的原作者。</p>
@@ -1370,11 +1373,14 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>上述操作都会改变最后修改人的这个属性，但此时显然最后修改人并非原作者。</p>
 <p>这说明，有时候仅知道了某一行代码是由谁最近修改的还不够，还需要知道某一个文件经过了怎么样的修改。</p>
 <p>这就引出了第二个小技巧了: <code>git show history</code>。</p>
-<p>点击IDEA某个文件的空白处，然后右键，选择git，然后点击 show history。</p>
-<p>就会出现如图所示的这样的一个 git log的 界面。</p>
+<p>点击IDEA某个文件的空白处，然后右键，选择git，然后点击 show history。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_3.PNG" alt="" loading="lazy"></p>
+<p>就会出现如图所示的这样的一个 git log的 界面。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_4.PNG" alt="" loading="lazy"></p>
 <p>那么这样就可以看到这个文件从最初到至今经历过了怎样的修改、 有过哪些人在上面修改， 从而更好的进行记录追踪。</p>
 <p>这两个技巧， 其实是越有经验就对你帮助越大的。因为你，年限越长，你看别人的代码的机会就越； 而如果你年限尚浅的话，更多的是你的代码被别人 review。</p>
 ]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img.PNG" type="image/"/>
     </item>
     <item>
       <title>Git常用命令</title>
@@ -1764,6 +1770,54 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154158111.png" alt="52fee749bc6d270f9ccab3eb0e04208b.png" loading="lazy"></p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154008266.png" type="image/png"/>
+    </item>
+    <item>
+      <title>奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</title>
+      <link>https://levy.vip/java/how-to-convert-snapshot-into-release-jar-without-source-code.html</link>
+      <guid>https://levy.vip/java/how-to-convert-snapshot-into-release-jar-without-source-code.html</guid>
+      <source url="https://levy.vip/rss.xml">奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</source>
+      <description>奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包 背景 项目中依赖了一个旧的 snapshot.jar，有人提出要求必须使用 release.jar，不能使用 snapshot。 问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</description>
+      <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</h1>
+<h2> 背景</h2>
+<p>项目中依赖了一个旧的 snapshot.jar，有人提出要求必须使用 release.jar，不能使用 snapshot。</p>
+<p>问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</p>
+<!-- more -->
+<h2> 下载</h2>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" alt="" loading="lazy"><br>
+首先我们登录仓库，输入　ArtifactId，找到对应的 snapshot jar 包，并点击进入详情。</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748125239-9f38e77c-e2a9-4cb9-a5ae-663d1cbdbc5a.png" alt="" loading="lazy"><br>
+找到关键的三个 jar:</p>
+<ul>
+<li>x.jar</li>
+<li>x-sources.jar</li>
+<li>x.pom</li>
+</ul>
+<p>分别点击进入详情<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748130574-143b17a9-4ecc-4543-8802-d51b14f43651.png" alt="" loading="lazy"><br>
+依次点击　Path，下载到本地。</p>
+<h2> 修改</h2>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748138424-a8260207-8884-4054-8b86-c247b3766a3b.png" alt="" loading="lazy"><br>
+首先修改名字，如图所示。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748145414-f10b3b8a-9f57-493e-ae78-978b80e41dcd.png" alt="" loading="lazy"><br>
+再使用任意工具解压 x.jar，提取出两个文件夹。进入　META-INF</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748152420-1e600d70-ff87-4962-844f-021fe5288aa2.png" alt="" loading="lazy"><br>
+修改　MANIFEST.MF，把里面的 snapshot 字符串去掉（如果有的话）</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748159789-a1ebe8eb-231f-435c-aabb-0c2fb06f93db.png" alt="" loading="lazy"><br>
+再点击　maven　文件夹</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748164871-77ab05e9-480f-4afb-9f48-6dba9b89a49a.png" alt="" loading="lazy"><br>
+修改　pom.xml、pom.properties　文件，把里面的 snapshot 字符串去掉。</p>
+<h2> 上传</h2>
+<p>把前面解压出来的文件重新打包成 jar</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后上传仓库<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748169575-27ed04cd-a4c5-4956-b8fc-9e7acb9b7f42.png" alt="" loading="lazy"><br>
+在Upload中，点击　maven-releases</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748175045-badb4fa7-8d30-45ad-8707-d096da6a28ec.png" alt="" loading="lazy"><br>
+把三个文件添加上去，点击　Upload。</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748258011-2fef169f-82c0-41c4-a7f7-d7bca0065b25.png" alt="" loading="lazy"><br>
+可以看到，新的 release 版本的 jar 包已经在仓库中了，可以被安装使用了。</p>
+]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" type="image/png"/>
     </item>
     <item>
       <title>Python 导出 MySQL 库表信息到 Excel</title>
