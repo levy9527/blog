@@ -13,6 +13,9 @@ tag:
 <!-- more -->
 
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691497563137-33a17053-c9a2-47bf-bc2e-25f4d567d406.jpeg =200x)
+
+<BiliBili bvid="BV1yj411z7zr" />
+
 现在来看呢，没有当初那么惊艳了，因为已经有很多的平替了，甚至是超替了。当然现在我还会用它的唯一原因呢，就是这个Voice Control插件。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691496708600-bf176d70-9764-44bf-acef-ec12d9a11dfc.png)
 它不但可以让我进行语音输入，还可以让ChatGPT变成语音输出，那这一点很方便我进行英语口语练习。
