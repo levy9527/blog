@@ -182,14 +182,14 @@ public void test(){
     .then()
     .log().body()
     .statusCode(200)
-    .assertThat().body("code",equalTo("0"))
+    .assertThat().body("code",org.hamcrest.Matchers.equalTo("0"))
     ;
 }
 ```
 
 提醒，在运行测试代码前，需要做两件事：
 
-- 一定保证 Web 服务已请求，因为这不是 Mock，而是会发送真实的请求。
+- 一定保证 Web 服务已启动，因为这不是 Mock，而是会发送真实的请求。
 - 正确配置了环境变量 TOKEN。如果使用 IDEA，可以编辑运行配置，在环境变量里注入类似代码：TOKEN=Bearer xxx
 
 ## 接口依赖
