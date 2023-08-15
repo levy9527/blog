@@ -209,7 +209,8 @@ public void test(){
     }
 
     // 返回的数据结构是个 Map
-    // 也可以是　Map<String, Object>，这取决于你实际的数据结构
+    // 一般而言　Map<String, Object> 最通用，布尔值、数字会自动转换。
+    // 不过这里接口返回的全是字符串，所以就 Map<String, String> 了
     Map<String, String> target = workflowList.get(0);
 
     WorkflowRunVO workflow = new WorkflowRunVO();
