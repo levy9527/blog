@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 15 Aug 2023 05:58:30 GMT</pubDate>
-    <lastBuildDate>Tue, 15 Aug 2023 05:58:30 GMT</lastBuildDate>
+    <pubDate>Tue, 15 Aug 2023 09:07:38 GMT</pubDate>
+    <lastBuildDate>Tue, 15 Aug 2023 09:07:38 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1905,7 +1905,7 @@ sheet的名字不能超过 31 个字符。<br>
 </ul>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>提醒，在运行测试代码前，需要做两件事：</p>
 <ul>
-<li>一定保证 Web 服务已请求，因为这不是 Mock，而是会发送真实的请求。</li>
+<li>一定保证 Web 服务已启动，因为这不是 Mock，而是会发送真实的请求。</li>
 <li>正确配置了环境变量 TOKEN。如果使用 IDEA，可以编辑运行配置，在环境变量里注入类似代码：TOKEN=Bearer xxx</li>
 </ul>
 <h2> 接口依赖</h2>
