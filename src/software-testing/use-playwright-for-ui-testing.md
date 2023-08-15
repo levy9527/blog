@@ -214,6 +214,17 @@ await page.getByTestId('my-div').click()
 
 这里值得一提的是，业务class是针对 Tailwind CSS 这种“解构主义”的纯样式class而言的。你会发现，如果全是 Tailwind 的class，没有业务样式，E2E测试代码很不好写。
 
+更复杂的示例：
+```javascript
+await page.locator('.el-table__row').first().locator('.el-table_1_column_1').click();
+
+await page.locator('.indicator-explore-chart-dlg .el-button').last().click();
+
+let treeRow = page.locator('.el-tree-node__content', { hasText: '全部' }).first()
+let checkAllElement = treeRow.locator('label.is-checked')
+await expect(checkAllElement).toHaveCount(1)
+```
+
 如果是使用 VS Code，有辅助办法：
 1. 点击“Pick locator”
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683421157907.png)
@@ -233,7 +244,7 @@ await expect(page.locator('.selected-item')).toHaveCount(1) // 1 代表相应的
 await expect(page.locator('.selected-item')).toBeVisible() 
 ```
 
-注意，Node.js 才可以在 locator 里写 CSS 选择器，如果是 Python, 需要这样写：
+注意，Node.js 才可以在 locator 里写 CSS 选择器，如果是 Python, 需要使用`query_selector`：
 ```python
 await expect(page.query_selector('.selected-item')).toBeVisible() 
 ```
@@ -376,21 +387,22 @@ Python安装时，可能会再现此错误。解决方案如下：
 pip install cmake
 # or 
 pip3 install cmake
-
 ```
+
 之后，再安装
 ```python
 pip install wheel setuptools --upgrade
 # or
 pip3 install wheel setuptools --upgrade
 ```
+
 最后，重新安装Playwright即可
 ```python
 pip install playwright
 # or
 pip3 install playwright
-
 ```
+
 ```python
 playwright install --with-deps chromium
 ```
