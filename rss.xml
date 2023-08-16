@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 16 Aug 2023 13:30:16 GMT</pubDate>
-    <lastBuildDate>Wed, 16 Aug 2023 13:30:16 GMT</lastBuildDate>
+    <pubDate>Wed, 16 Aug 2023 14:10:55 GMT</pubDate>
+    <lastBuildDate>Wed, 16 Aug 2023 14:10:55 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -111,14 +111,14 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
       <link>https://levy.vip/daily/mysql-data-migration-case-study-add-auto-increment.html</link>
       <guid>https://levy.vip/daily/mysql-data-migration-case-study-add-auto-increment.html</guid>
       <source url="https://levy.vip/rss.xml">数据迁移案例：表AUTO_INCREMENT加10w</source>
-      <description>数据迁移案例：表AUTO_INCREMENT加10w 背景 项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。 问题分析： 两个 mysql 实例的表的主键都是自动，若直接合并，必然造成主键冲突。 可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。 迁移思路: 由于 mysql-b 的数据更重要，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条） mysql-b 的相应的表 AUTO_INCREMENT 加 10w</description>
+      <description>数据迁移案例：表AUTO_INCREMENT加10w 背景 项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。 问题分析： 两个 mysql 实例的表的主键都是自增的，若直接合并，必然造成主键冲突。 可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。 迁移思路: 由于 mysql-b 的数据更重要，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条） mysql-b 的相应的表 AUTO_INCREMENT 加 10w</description>
       <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 数据迁移案例：表AUTO_INCREMENT加10w</h1>
 <h2> 背景</h2>
 <p>项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。</p>
 <p>问题分析：</p>
 <ol>
-<li>两个 mysql 实例的表的主键都是自动，若直接合并，必然造成主键冲突。</li>
+<li>两个 mysql 实例的表的主键都是自增的，若直接合并，必然造成主键冲突。</li>
 <li>可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。</li>
 </ol>
 <p>迁移思路:</p>
