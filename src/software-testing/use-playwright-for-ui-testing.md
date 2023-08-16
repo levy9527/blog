@@ -249,7 +249,8 @@ await expect(page.locator('.selected-item')).toBeVisible()
 await expect(page.query_selector('.selected-item')).toBeVisible() 
 ```
 
-更多断言写法，参考[官方文档](https://playwright.dev/docs/writing-tests#assertions)。
+更多断言写法，参考官方文档(https://playwright.dev/docs/test-assertions#auto-retrying-assertions)。
+
 ### 获取第n个元素
 通过定位器得到的元素可能不止一个，可以使用以下代码获得具体某一个元素：
 ```javascript
