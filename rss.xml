@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 16 Aug 2023 03:48:49 GMT</pubDate>
-    <lastBuildDate>Wed, 16 Aug 2023 03:48:49 GMT</lastBuildDate>
+    <pubDate>Wed, 16 Aug 2023 06:10:03 GMT</pubDate>
+    <lastBuildDate>Wed, 16 Aug 2023 06:10:03 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2265,7 +2265,7 @@ sheet的名字不能超过 31 个字符。<br>
 <p>常用的断言是，检查某一元素是否存在：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>当然也可以用以下方法，这取决于元素是否可见（元素存在，未必可见）。</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>注意，Node.js 才可以在 locator 里写 CSS 选择器，如果是 Python, 需要使用<code>query_selector</code>：</p>
-<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>更多断言写法，参考<a href="https://playwright.dev/docs/writing-tests#assertions" target="_blank" rel="noopener noreferrer">官方文档</a>。</p>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>更多断言写法，参考官方文档(<a href="https://playwright.dev/docs/test-assertions#auto-retrying-assertions" target="_blank" rel="noopener noreferrer">https://playwright.dev/docs/test-assertions#auto-retrying-assertions</a>)。</p>
 <h3> 获取第n个元素</h3>
 <p>通过定位器得到的元素可能不止一个，可以使用以下代码获得具体某一个元素：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 遍历元素</h3>
