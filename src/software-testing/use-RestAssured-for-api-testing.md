@@ -156,23 +156,41 @@ public static String getToken() {
 ```
 
 ## 请求示例
-下面是一个较完整的示例，包含了：
+下面是一个 GET 请求示例，根据响应体进行断言：
 
+```java
+@Test
+public void getUser() {
+  Map<String, Object> payload = given()
+        .spec(requestSpec)
+        .log().all()
+        .when()
+        .get("/v1/user/1386156540454400")
+        .then()
+        .log().body()
+        .statusCode(200)
+        .extract().path("payload");
+
+  assertEquals(true, payload.get("isMain"));
+}
+```
+
+下面是一个更完整的POST示例，包含了：
 - 设置请求头
 - 设置请求体
 - 设置query
 - 判断响应体的数据结构
 
 ```java
-  @Test
+@Test
 public void test(){
-    Workflow workflow = new Workflow();
-    workflow.setWorkflowId(1643167159934930966L);
-    workflow.setWorkflowName("flow");
-    List<Workflow> body = new ArrayList<>();
-    body.add(workflow);
+  Workflow workflow = new Workflow();
+  workflow.setWorkflowId(1643167159934930966L);
+  workflow.setWorkflowName("flow");
+  List<Workflow> body = new ArrayList<>();
+  body.add(workflow);
 
-    given()
+  given()
     .spec(requestSpec)
     .queryParam("query","value")
     .body(JSON.toJSONString(body))
