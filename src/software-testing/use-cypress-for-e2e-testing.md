@@ -185,10 +185,10 @@ describe('', () => {
     let apps = resp.payload.rows.filter(item => item.language == 'Java8' && ['job', 'scheduler', 'openresty'].every(name => !item.name.includes(name)))
     
     apps.forEach(item => {
-      let url = `https://dev-dbi.deepexi.com/${item.name}/v2/api-docs`;
+      let url = `https://dev.domain.com/${item.name}/v2/api-docs`;
 
-      let dapi = 'https://dapi.deepexi.com/group/2120'
-      cy.visit(dapi)
+      let yapi = 'https://yapi.domain.com/group/2120'
+      cy.visit(yapi)
       cy.wait(1000)
 
       // cy.contains(item.name).click()
