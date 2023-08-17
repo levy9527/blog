@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 17 Aug 2023 01:56:30 GMT</pubDate>
-    <lastBuildDate>Thu, 17 Aug 2023 01:56:30 GMT</lastBuildDate>
+    <pubDate>Thu, 17 Aug 2023 15:51:34 GMT</pubDate>
+    <lastBuildDate>Thu, 17 Aug 2023 15:51:34 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -107,11 +107,85 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 ]]></content:encoded>
     </item>
     <item>
+      <title>数据备份案例：mysqldump实战</title>
+      <link>https://levy.vip/daily/mysql-backup-case-study-mysqldump-in-action.html</link>
+      <guid>https://levy.vip/daily/mysql-backup-case-study-mysqldump-in-action.html</guid>
+      <source url="https://levy.vip/rss.xml">数据备份案例：mysqldump实战</source>
+      <description>数据备份案例：mysqldump实战 背景 前面有讲数据迁移的案例(mysql-a -&amp;gt; mysql-b)，其实在迁移前还少不了备份。 并且，因为不想停机迁移，因此还要新起一个数据库实例，记为 mysql-b&amp;apos;，复制 mysql-b 的相关数据。这样就能在 mysql-b&amp;apos; 里验证迁移SQL的正确性，以确保 mysql-b 能不宕机完成数据迁移。 在这种情况下，就需要用到我们今天的主角，数据备份工具 mysqldump。</description>
+      <pubDate>Thu, 17 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 数据备份案例：mysqldump实战</h1>
+<h2> 背景</h2>
+<p>前面有讲<a href="./mysql-data-migration-case-study-add-auto-increment">数据迁移的案例</a>(mysql-a -&gt; mysql-b)，其实在迁移前还少不了备份。</p>
+<p>并且，因为不想停机迁移，因此还要新起一个数据库实例，记为 mysql-b'，复制 mysql-b 的相关数据。这样就能在 mysql-b' 里验证迁移SQL的正确性，以确保 mysql-b 能不宕机完成数据迁移。</p>
+<p>在这种情况下，就需要用到我们今天的主角，数据备份工具 mysqldump。</p>
+<!-- more -->
+<h2> 架构</h2>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692280572283-08eb507c-00b6-446b-bd37-cb5ecbe59531.jpeg" alt="" loading="lazy"><br>
+注意到：</p>
+<ol>
+<li>从 mysql-b -&gt; mysql-b'，就要用到工具 mysqldump</li>
+<li>关于 sql 的编写在另一文中已有提及，就不重复了</li>
+<li>只能通过跳板机在终端连接数据库实例，因此无法使用图例界面操作。</li>
+</ol>
+<h2> 安装</h2>
+<p>首先要在跳板机安装 mysqldump。</p>
+<p>如果够幸运，可以用包管理工具安装：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果配置有问题安装不了，可以直接下载 mysql 二进制包：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果还不行，那就本地下载，然后把 mysqldump 压缩通过 scp 上传到跳板机。</p>
+<p>有人会想，这么麻烦，为何不直接复制 mysql-b 的数据文件？这是因为：</p>
+<ol>
+<li>没有进入 mysql-b 宿主机的权限</li>
+<li>复制磁盘文件更麻烦，后面会讲</li>
+</ol>
+<h2> 导出</h2>
+<p>导出命令很简单的，类似 mysql 客户端连接，指定用户名、表名、导出文件，再根据提示输入密码即可。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692281767457-f40d7db4-c2d9-4589-ac46-cbea320266da.png" alt="" loading="lazy"><br>
+然而命令行的提示，暗示事情令有玄机：</p>
+<ol>
+<li>首先，这样简单的命令，只能导出表数据，其他数据如触发器则并没导出</li>
+<li>其次，由于目标数据库开启了 GTID 模式(gtid_mode=ON)，导出的文件会有相关的设置</li>
+</ol>
+<h3> --set-gtid-purged=OFF</h3>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692281766948-704c4a90-c575-4340-b596-281c74de5c44.png" alt="" loading="lazy"><br>
+打开 dump.sql 的前 30 行，可以看到 GTIDs 的相关内容。</p>
+<p>Here's a quick overview of how GTIDs(Global Transaction Identifiers) work in MySQL：</p>
+<ul>
+<li>GTIDs uniquely identify every transaction.</li>
+<li>Allow replicas to track replication positions.</li>
+<li>Enable failover and repointing replication.</li>
+</ul>
+<p>因为 mysql-b 是主从架构的，开启 GTIDs 很正常，但我们要用来测试的 mysql-b' 是单实例的，并不需要它。<br>
+如果未正确设置，导入的时候是会报错的。</p>
+<p>因此，在这种情况下，导出语句可以添加以下参数：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>也即命令变成：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>当然，也可以修改 dump.sql，把 GTIDs 相关的语句删除掉。</p>
+<h3> --ignore-table</h3>
+<p>导出的文件可能会很大，而如果我们要把文件在不同的机器之间传输，这就会让过程变得很慢。此时，我们希望导出的文件越小越好。</p>
+<p>我们利用以下 SQL来确认下，目标库中到底是哪些表占据了较大的存储空间：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>接着我们根据业务，分析哪些表的数据是必要的，哪些表的数据可以不用导出。添加以下参数把不需要导出的表忽略掉：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>示例命令：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>注意：该参数一次只能忽略一张表，故忽略多张表需要声明多次。</p>
+<h2> 导入</h2>
+<p>导入命令类似导出，只不过此时使用的是 mysql　客户端，并且重定向符号不同。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 为什么不?</h2>
+<p>现在来回答为什么不直接复制MySQL的磁盘文件。</p>
+<p>根据前面我们知道，也许我们的需求是部分备份，而不是全量备份，则直接拷贝磁盘文件，在数据量大的情况下，只会造成传输负担，反而“欲速则不达”。</p>
+<p>另外，复制磁盘文件，为保证数据一致性，要求MySQL必须停止运行。主要有以下原因：</p>
+<ol>
+<li><strong>Ative Transactions:</strong> Copying database files directly may lead to data inconsistency if there are active transactions or changes happening in the database while the files are being copied.</li>
+<li><strong>Flush and Sync:</strong> The MySQL server may buffer data in memory and write it to disk periodically. When you copy files directly, you may capture data that is in memory and not yet written to disk.</li>
+<li><strong>File Locks:</strong> Some storage engines, such as MyISAM, may use file-level locks, which can prevent you from copying files while the server is running. InnoDB, on the other hand, uses a different mechanism (tablespace files), but copying InnoDB files still carries the risk of data inconsistency.</li>
+</ol>
+<p>因此，纵然有直接复制MySQL磁盘文件的奇技淫巧，还是不建议使用，我就也不向大家展示了。</p>
+]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692280572283-08eb507c-00b6-446b-bd37-cb5ecbe59531.jpeg" type="image/jpeg"/>
+    </item>
+    <item>
       <title>数据迁移案例：表AUTO_INCREMENT加10w</title>
       <link>https://levy.vip/daily/mysql-data-migration-case-study-add-auto-increment.html</link>
       <guid>https://levy.vip/daily/mysql-data-migration-case-study-add-auto-increment.html</guid>
       <source url="https://levy.vip/rss.xml">数据迁移案例：表AUTO_INCREMENT加10w</source>
-      <description>数据迁移案例：表AUTO_INCREMENT加10w 背景 项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。 问题分析： 两个 mysql 实例的表的主键都是自增的，若直接合并，必然造成主键冲突。 可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。 迁移思路: 由于 mysql-b 的数据更重要、且数据量更大，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条） mysql-b 的相应的表 AUTO_INCREMENT 加 10w 注意：mysql-b的数据量比mysql-a的大，所以 mysql-b也直接设置AUTO_INCREMENT 加10w。 但如果mysql-a的数量比较大，那是不可行的，此时mysql-b 需要先select 出每张表的最大id，作为需要增加的AUTO_INCREMENT。</description>
+      <description>数据迁移案例：表AUTO_INCREMENT加10w 背景 项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。 问题分析： 两个 mysql 实例的表的主键都是自增的，若直接合并，必然造成主键冲突。 可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。 迁移思路: 由于 mysql-b 的数据更重要、且数据量更大，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条） mysql-b 的相应的表 AUTO_INCREMENT 加 10w 记得动手前先确保数据已备份 注意：mysql-b的数据量比mysql-a的大，所以 mysql-b也直接设置AUTO_INCREMENT 加10w。 但如果mysql-a的数量比较大，那是不可行的，此时mysql-b 需要先select 出每张表的最大id，作为需要增加的AUTO_INCREMENT。</description>
       <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 数据迁移案例：表AUTO_INCREMENT加10w</h1>
 <h2> 背景</h2>
@@ -125,10 +199,13 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <ol>
 <li>由于 mysql-b 的数据更重要、且数据量更大，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条）</li>
 <li>mysql-b 的相应的表 AUTO_INCREMENT 加 10w</li>
+<li>记得动手前先确保数据已备份</li>
 </ol>
 <p>注意：mysql-b的数据量比mysql-a的大，所以 mysql-b也直接设置AUTO_INCREMENT 加10w。<br>
 但如果mysql-a的数量比较大，那是不可行的，此时mysql-b 需要先select 出每张表的最大id，作为需要增加的AUTO_INCREMENT。</p>
 <!-- more -->
+<h2> 备份</h2>
+<p>迁移前一定要做好备份。备份的技巧在<a href="./mysql-backup-case-study-mysqldump-in-action">另一篇文章</a>里有讲，就不在此赘述了。</p>
 <h2> SQL编写</h2>
 <p>mysql-a 可以先 insert：</p>
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>再导出新增的数据：</p>
