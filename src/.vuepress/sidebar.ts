@@ -29,10 +29,10 @@ export default sidebar({
       text: "Git相关",
       prefix: "/git/",
       children: [
+        "git-useful-commands",
         "git-definitive-guide-to-merge-code",
         "git-history-two-tricks-in-idea",
         "gitlab-ci",
-        "git-useful-commands",
         "rethinking-git-flow",
         "git-best-pratices",
         "use-command-line-tool-to-manage-gitlab-merge-request",
