@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 19 Aug 2023 14:41:02 GMT</pubDate>
-    <lastBuildDate>Sat, 19 Aug 2023 14:41:02 GMT</lastBuildDate>
+    <pubDate>Mon, 21 Aug 2023 14:23:39 GMT</pubDate>
+    <lastBuildDate>Mon, 21 Aug 2023 14:23:39 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -350,6 +350,23 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>视频里有实战演示：</p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691066962763-bfbe3c1a-cb4f-43bc-b181-062eabee9529.png#averageHue=%23e4e5e7&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=196&amp;id=u6521b3f3&amp;originHeight=392&amp;originWidth=1428&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=235208&amp;status=done&amp;style=none&amp;taskId=uef2009af-bd00-4e0e-a215-9cca4c37ed2&amp;title=&amp;width=714" type="image/"/>
+    </item>
+    <item>
+      <title>用什么jackson，fastjson不香吗？</title>
+      <link>https://levy.vip/daily/why-i-prefer-fastjson-instead-of-jackson.html</link>
+      <guid>https://levy.vip/daily/why-i-prefer-fastjson-instead-of-jackson.html</guid>
+      <source url="https://levy.vip/rss.xml">用什么jackson，fastjson不香吗？</source>
+      <description>用什么jackson，fastjson不香吗？ Jackson　经典错误：UnrecognizedPropertyException。 原因是 json 字段，多于 Java 实体类的 字段。 解决方法很简单： new ObjectMapper() .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false) 或者为相关实体添加注解： @JsonIgnoreProperties(ignoreUnknown = true) public class ObjectParseFromJsonString { }</description>
+      <pubDate>Mon, 21 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 用什么jackson，fastjson不香吗？</h1>
+<p>Jackson　经典错误：UnrecognizedPropertyException。</p>
+<p>原因是 json 字段，多于 Java 实体类的 字段。</p>
+<p>解决方法很简单：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>或者为相关实体添加注解：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><!-- more -->
+<p>可是，如果用 fastjson，根本不会有这种错误。使用起来也简单，<a href="https://github.com/alibaba/fastjson/wiki/Samples-DataBind" target="_blank" rel="noopener noreferrer">文档在这里</a>。</p>
+<p>所以，为什么不用　fastjson　呢？</p>
+]]></content:encoded>
     </item>
     <item>
       <title>现代大学英语精读(第2版)第一册</title>
