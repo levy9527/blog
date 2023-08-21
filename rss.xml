@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 21 Aug 2023 14:47:25 GMT</pubDate>
-    <lastBuildDate>Mon, 21 Aug 2023 14:47:25 GMT</lastBuildDate>
+    <pubDate>Mon, 21 Aug 2023 14:51:10 GMT</pubDate>
+    <lastBuildDate>Mon, 21 Aug 2023 14:51:10 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -107,189 +107,6 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 ]]></content:encoded>
     </item>
     <item>
-      <title>数据备份案例：mysqldump实战</title>
-      <link>https://levy.vip/daily/mysql-backup-case-study-mysqldump-in-action.html</link>
-      <guid>https://levy.vip/daily/mysql-backup-case-study-mysqldump-in-action.html</guid>
-      <source url="https://levy.vip/rss.xml">数据备份案例：mysqldump实战</source>
-      <description>数据备份案例：mysqldump实战 背景 前面有讲数据迁移的案例(mysql-a -&amp;gt; mysql-b)，其实在迁移前还少不了备份。 并且，因为不想停机迁移，因此还要新起一个数据库实例，记为 mysql-b&amp;apos;，复制 mysql-b 的相关数据。这样就能在 mysql-b&amp;apos; 里验证迁移SQL的正确性，以确保 mysql-b 能不宕机完成数据迁移。 在这种情况下，就需要用到我们今天的主角，数据备份工具 mysqldump。</description>
-      <pubDate>Thu, 17 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 数据备份案例：mysqldump实战</h1>
-<h2> 背景</h2>
-<p>前面有讲<a href="./mysql-data-migration-case-study-add-auto-increment">数据迁移的案例</a>(mysql-a -&gt; mysql-b)，其实在迁移前还少不了备份。</p>
-<p>并且，因为不想停机迁移，因此还要新起一个数据库实例，记为 mysql-b'，复制 mysql-b 的相关数据。这样就能在 mysql-b' 里验证迁移SQL的正确性，以确保 mysql-b 能不宕机完成数据迁移。</p>
-<p>在这种情况下，就需要用到我们今天的主角，数据备份工具 mysqldump。</p>
-<!-- more -->
-<h2> 架构</h2>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692280572283-08eb507c-00b6-446b-bd37-cb5ecbe59531.jpeg" alt="" loading="lazy"><br>
-注意到：</p>
-<ol>
-<li>从 mysql-b -&gt; mysql-b'，就要用到工具 mysqldump</li>
-<li>关于 sql 的编写在另一文中已有提及，就不重复了</li>
-<li>只能通过跳板机在终端连接数据库实例，因此无法使用图例界面操作。</li>
-</ol>
-<h2> 安装</h2>
-<p>首先要在跳板机安装 mysqldump。</p>
-<p>如果够幸运，可以用包管理工具安装：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果配置有问题安装不了，可以直接下载 mysql 二进制包：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果还不行，那就本地下载，然后把 mysqldump 压缩通过 scp 上传到跳板机。</p>
-<p>有人会想，这么麻烦，为何不直接复制 mysql-b 的数据文件？这是因为：</p>
-<ol>
-<li>没有进入 mysql-b 宿主机的权限</li>
-<li>复制磁盘文件更麻烦，后面会讲</li>
-</ol>
-<h2> 导出</h2>
-<p>导出命令很简单的，类似 mysql 客户端连接，指定用户名、表名、导出文件，再根据提示输入密码即可。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692281767457-f40d7db4-c2d9-4589-ac46-cbea320266da.png" alt="" loading="lazy"><br>
-然而命令行的提示，暗示事情令有玄机：</p>
-<ol>
-<li>首先，这样简单的命令，只能导出表数据，其他数据如触发器则并没导出</li>
-<li>其次，由于目标数据库开启了 GTID 模式(gtid_mode=ON)，导出的文件会有相关的设置</li>
-</ol>
-<h3> --set-gtid-purged=OFF</h3>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692281766948-704c4a90-c575-4340-b596-281c74de5c44.png" alt="" loading="lazy"><br>
-打开 dump.sql 的前 30 行，可以看到 GTIDs 的相关内容。</p>
-<p>Here's a quick overview of how GTIDs(Global Transaction Identifiers) work in MySQL：</p>
-<ul>
-<li>GTIDs uniquely identify every transaction.</li>
-<li>Allow replicas to track replication positions.</li>
-<li>Enable failover and repointing replication.</li>
-</ul>
-<p>因为 mysql-b 是主从架构的，开启 GTIDs 很正常，但我们要用来测试的 mysql-b' 是单实例的，并不需要它。<br>
-如果未正确设置，导入的时候是会报错的。</p>
-<p>因此，在这种情况下，导出语句可以添加以下参数：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>也即命令变成：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>当然，也可以修改 dump.sql，把 GTIDs 相关的语句删除掉。</p>
-<h3> --ignore-table</h3>
-<p>导出的文件可能会很大，而如果我们要把文件在不同的机器之间传输，这就会让过程变得很慢。此时，我们希望导出的文件越小越好。</p>
-<p>我们利用以下 SQL来确认下，目标库中到底是哪些表占据了较大的存储空间：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>接着我们根据业务，分析哪些表的数据是必要的，哪些表的数据可以不用导出。添加以下参数把不需要导出的表忽略掉：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>示例命令：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>注意：该参数一次只能忽略一张表，故忽略多张表需要声明多次。</p>
-<h2> 导入</h2>
-<p>导入命令类似导出，只不过此时使用的是 mysql　客户端，并且重定向符号不同。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 为什么不?</h2>
-<p>现在来回答为什么不直接复制MySQL的磁盘文件。</p>
-<p>根据前面我们知道，也许我们的需求是部分备份，而不是全量备份，则直接拷贝磁盘文件，在数据量大的情况下，只会造成传输负担，反而“欲速则不达”。</p>
-<p>另外，复制磁盘文件，为保证数据一致性，要求MySQL必须停止运行。主要有以下原因：</p>
-<ol>
-<li><strong>Ative Transactions:</strong> Copying database files directly may lead to data inconsistency if there are active transactions or changes happening in the database while the files are being copied.</li>
-<li><strong>Flush and Sync:</strong> The MySQL server may buffer data in memory and write it to disk periodically. When you copy files directly, you may capture data that is in memory and not yet written to disk.</li>
-<li><strong>File Locks:</strong> Some storage engines, such as MyISAM, may use file-level locks, which can prevent you from copying files while the server is running. InnoDB, on the other hand, uses a different mechanism (tablespace files), but copying InnoDB files still carries the risk of data inconsistency.</li>
-</ol>
-<p>因此，纵然有直接复制MySQL磁盘文件的奇技淫巧，还是不建议使用，我就也不向大家展示了。</p>
-]]></content:encoded>
-      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692280572283-08eb507c-00b6-446b-bd37-cb5ecbe59531.jpeg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>数据迁移案例：表AUTO_INCREMENT加10w</title>
-      <link>https://levy.vip/daily/mysql-data-migration-case-study-add-auto-increment.html</link>
-      <guid>https://levy.vip/daily/mysql-data-migration-case-study-add-auto-increment.html</guid>
-      <source url="https://levy.vip/rss.xml">数据迁移案例：表AUTO_INCREMENT加10w</source>
-      <description>数据迁移案例：表AUTO_INCREMENT加10w 背景 项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。 问题分析： 两个 mysql 实例的表的主键都是自增的，若直接合并，必然造成主键冲突。 可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。 迁移思路: 由于 mysql-b 的数据更重要、且数据量更大，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条） mysql-b 的相应的表 AUTO_INCREMENT 加 10w 记得动手前先确保数据已备份 注意：mysql-b的数据量比mysql-a的大，所以 mysql-b也直接设置AUTO_INCREMENT 加10w。 但如果mysql-a的数量比较大，那是不可行的，此时mysql-b 需要先select 出每张表的最大id，作为需要增加的AUTO_INCREMENT。</description>
-      <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 数据迁移案例：表AUTO_INCREMENT加10w</h1>
-<h2> 背景</h2>
-<p>项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。</p>
-<p>问题分析：</p>
-<ol>
-<li>两个 mysql 实例的表的主键都是自增的，若直接合并，必然造成主键冲突。</li>
-<li>可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。</li>
-</ol>
-<p>迁移思路:</p>
-<ol>
-<li>由于 mysql-b 的数据更重要、且数据量更大，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条）</li>
-<li>mysql-b 的相应的表 AUTO_INCREMENT 加 10w</li>
-<li>记得动手前先确保数据已备份</li>
-</ol>
-<p>注意：mysql-b的数据量比mysql-a的大，所以 mysql-b也直接设置AUTO_INCREMENT 加10w。<br>
-但如果mysql-a的数量比较大，那是不可行的，此时mysql-b 需要先select 出每张表的最大id，作为需要增加的AUTO_INCREMENT。</p>
-<!-- more -->
-<h2> 备份</h2>
-<p>迁移前一定要做好备份。备份的技巧在<a href="./mysql-backup-case-study-mysqldump-in-action">另一篇文章</a>里有讲，就不在此赘述了。</p>
-<h2> SQL编写</h2>
-<p>mysql-a 可以先 insert：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>再导出新增的数据：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>也可以先备份 mysql-a，然后直接 update：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>再导出。</p>
-<p>对于 mysql-b，需要编写的SQL很简单：</p>
-<ol>
-<li>先把当前表的主键自增值找出来</li>
-<li>再加 10w</li>
-</ol>
-<p>理想中SQL如下：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然而，报错如下：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>原因是： The <strong>AUTO_INCREMENT</strong> value must be a constant or a specific integer value in the <strong>ALTER TABLE</strong> statement.</p>
-<p>那怎么办呢？存储过程就派上用场了。思路是使用存储过程来拼接 alter table 语句，绕过 MySQL 的限制。</p>
-<h2> 存储过程（可复用</h2>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>上述代码可复用，直接复制粘贴即可，有需要的请自取。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>MySQL 命令行执行SQL的细节</title>
-      <link>https://levy.vip/daily/mysql-details-you-should-know-when-execute-sql-in-command-line.html</link>
-      <guid>https://levy.vip/daily/mysql-details-you-should-know-when-execute-sql-in-command-line.html</guid>
-      <source url="https://levy.vip/rss.xml">MySQL 命令行执行SQL的细节</source>
-      <description>MySQL 命令行执行SQL的细节 背景 经过调试与验证，我们可以确信自己编写的SQL是正确的，是时候到目标库执行SQL了！ 但要小心，在正式环境中执行 SQL，也许会有意想不到的坑！ 环境说明 先说明下我们的环境信息。 我们只能通过跳板机的终端连接 mysql、执行SQL，没有DBeaver、Navicat等工具可用。</description>
-      <pubDate>Sat, 19 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> MySQL 命令行执行SQL的细节</h1>
-<h2> 背景</h2>
-<p>经过调试与验证，我们可以确信自己编写的SQL是正确的，是时候到目标库执行SQL了！</p>
-<p>但要小心，在正式环境中执行 SQL，也许会有意想不到的坑！</p>
-<h2> 环境说明</h2>
-<p>先说明下我们的环境信息。<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/jpeg/160590/1692321838318-b353f14d-13d0-432e-a05b-9fbcd3c1dd1f.jpeg" alt="" loading="lazy"><br>
-我们只能通过跳板机的终端连接 mysql、执行SQL，没有DBeaver、Navicat等工具可用。</p>
-<p>则我们执行SQL语句的方式有两种：</p>
-<ol>
-<li>执行导出的SQL语句文件</li>
-<li>复制粘贴SQL语句执行</li>
-</ol>
-<p>当然，在执行前，我们要确保已进行了数据备份。</p>
-<h2> 执行SQL文件</h2>
-<p>执行SQL文件是最简单的，一般实践也是在命令行批量执行SQL文件。</p>
-<p>相关的命令与恢复备份的命令一致：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这是推荐的方式，因为执行语句一旦出错，就会停下，并告知是第几行的语句出错。</p>
-<p>但出于某些原因，你可能不想把所有SQL语句都合并到一个 script.sql 文件中。<br>
-另外，上传文件到跳板机，可能也比较麻烦，于是，你想采用第二种方式。</p>
-<h2> 复制粘贴执行</h2>
-<p>通过 mysql 客户端直接上 MySQL 后，在命令上执行 SQL 语句会有一个问题：错误的语句不会中断后续的执行。</p>
-<p>更可怕的是在命令行里，很可能你SQL语句包括的中文字符串会被过滤掉，变成空字符串。如：</p>
-<ul>
-<li>'创建人' -&gt; ''</li>
-<li>'中英en混杂' -&gt; 'en'</li>
-</ul>
-<p>这真是血的教训😭。</p>
-<p>我们先来看下错误是否中断的实验。</p>
-<p>新建一个只有两行的SQL文件，其中第一行语句是错误的。</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><figure><img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692263770642-5487130c-27ed-4e08-9e89-24755194f7ed.png#averageHue=%2325201f&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=95&amp;id=u7d36cf79&amp;originHeight=95&amp;originWidth=711&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=17911&amp;status=done&amp;style=none&amp;taskId=uf9a5b8a2-43eb-430b-8369-b75ec29e464&amp;title=&amp;width=711" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
-<p>使用导入命令：</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>提示第一行有错误，第二行未执行。这是符合期望的。<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692263858957-62a01998-d47a-4fa9-b2a9-b83c5a3be764.png#averageHue=%232b2524&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=114&amp;id=u47128a74&amp;originHeight=114&amp;originWidth=1411&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=73161&amp;status=done&amp;style=none&amp;taskId=u28bab588-0fbf-4d2c-9492-bfbd78a6d1c&amp;title=&amp;width=1411" alt="image.png" loading="lazy"></p>
-<p>但如果连接 mysql 后，在交互式命令行里执行 source 命令：<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692263665731-d9bdde27-6522-4cd3-9c82-4f5c7a0ead79.png#averageHue=%23231e1e&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=289&amp;id=u80ad833f&amp;originHeight=289&amp;originWidth=1438&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=108938&amp;status=done&amp;style=none&amp;taskId=u7b6c2e62-1f4f-4f95-8735-5ca1a6bc86a&amp;title=&amp;width=1438" alt="image.png" loading="lazy"><br>
-错误出现并不会中断SQL的执行。<br>
-复制语句，粘贴到命令行，表现也是如此：错误只提示，不中断执行。</p>
-<p>那么，能否在交互式命令行里执行SQL语句，一旦错误就中断呢？</p>
-<p>我们在MySQL官方论坛里找到了相关的<a href="https://bugs.mysql.com/bug.php?id=35634" target="_blank" rel="noopener noreferrer">帖子</a>：<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692262908887-64d86cd8-c2e9-4b50-b341-75a28a509d94.png#averageHue=%23fdfbfa&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=811&amp;id=z6mwq&amp;originHeight=811&amp;originWidth=1120&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=130390&amp;status=done&amp;style=none&amp;taskId=u8c60f521-0a35-4921-8c57-daa61948532&amp;title=&amp;width=1120" alt="1692262647895_F45C973B-8BA2-40e2-8D84-ECADF931CF32.png" loading="lazy"></p>
-<p>最终得到的答案是，使用：\e。<br>
-进行类vi界面，在这里粘贴 SQL（这里就不会有中文被过滤的问题）<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692263386275-ba3e4365-f45e-435e-a269-05c5d92dfa16.png#averageHue=%231f1b1b&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=709&amp;id=udf4b87ef&amp;originHeight=709&amp;originWidth=979&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=25751&amp;status=done&amp;style=none&amp;taskId=u8cd47126-86db-4f11-ad2b-d5995131e1e&amp;title=&amp;width=979" alt="image.png" loading="lazy"><br>
-保存退出后，输入 <code>;</code>则执行 SQL 语句，Ctrl + C　则不执行。<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692263595582-2f5a733e-ea75-47b1-b128-f76ecf7a1cda.png#averageHue=%23282221&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=278&amp;id=u194bf767&amp;originHeight=278&amp;originWidth=1422&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=122860&amp;status=done&amp;style=none&amp;taskId=uaa27006c-7ef1-48b4-b2b9-a3a75620766&amp;title=&amp;width=1422" alt="image.png" loading="lazy"><br>
-可以看到，这种方式执行 SQL 语句，也是可以遇到错误就中断的。</p>
-<h2> 如果要删除错误的数据怎么办？</h2>
-<p>尽管经过测试，但也不敢说语句的执行能百分之分成功，因此，这里给个温馨提醒。</p>
-<p>如果插入、更新了错误的数据，确实要执行 DELETE 语句，那么请做好以下 checklist:</p>
-<ol>
-<li>确保已备份数据</li>
-<li>删除前先查询，也即先写 select from，确认一下是目标数据，再改写成 select 改写成 delete</li>
-<li>一定要写 where 语句，并且精确到主键，最好只写类似这种语句 where id = 1 或者 where id in (1,2)</li>
-</ol>
-]]></content:encoded>
-      <enclosure url="https://cdn.nlark.com/yuque/0/2023/jpeg/160590/1692321838318-b353f14d-13d0-432e-a05b-9fbcd3c1dd1f.jpeg" type="image/jpeg"/>
-    </item>
-    <item>
       <title>对Vue不得不吐槽的事</title>
       <link>https://levy.vip/daily/things-I-have-to-vent-about-vue.html</link>
       <guid>https://levy.vip/daily/things-I-have-to-vent-about-vue.html</guid>
@@ -350,23 +167,6 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>视频里有实战演示：</p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691066962763-bfbe3c1a-cb4f-43bc-b181-062eabee9529.png#averageHue=%23e4e5e7&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=196&amp;id=u6521b3f3&amp;originHeight=392&amp;originWidth=1428&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=235208&amp;status=done&amp;style=none&amp;taskId=uef2009af-bd00-4e0e-a215-9cca4c37ed2&amp;title=&amp;width=714" type="image/"/>
-    </item>
-    <item>
-      <title>用什么jackson，fastjson不香吗？</title>
-      <link>https://levy.vip/daily/why-i-prefer-fastjson-instead-of-jackson.html</link>
-      <guid>https://levy.vip/daily/why-i-prefer-fastjson-instead-of-jackson.html</guid>
-      <source url="https://levy.vip/rss.xml">用什么jackson，fastjson不香吗？</source>
-      <description>用什么jackson，fastjson不香吗？ Jackson　经典错误：UnrecognizedPropertyException。 原因是 json 字段，多于 Java 实体类的 字段。 解决方法很简单： new ObjectMapper() .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false) 或者为相关实体添加注解： @JsonIgnoreProperties(ignoreUnknown = true) public class ObjectParseFromJsonString { }</description>
-      <pubDate>Mon, 21 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 用什么jackson，fastjson不香吗？</h1>
-<p>Jackson　经典错误：UnrecognizedPropertyException。</p>
-<p>原因是 json 字段，多于 Java 实体类的 字段。</p>
-<p>解决方法很简单：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>或者为相关实体添加注解：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><!-- more -->
-<p>可是，如果用 fastjson，根本不会有这种错误。使用起来也简单，<a href="https://github.com/alibaba/fastjson/wiki/Samples-DataBind" target="_blank" rel="noopener noreferrer">文档在这里</a>。</p>
-<p>所以，为什么不用　fastjson　呢？</p>
-]]></content:encoded>
     </item>
     <item>
       <title>现代大学英语精读(第2版)第一册</title>
@@ -1333,6 +1133,71 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 ]]></content:encoded>
     </item>
     <item>
+      <title>奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</title>
+      <link>https://levy.vip/java/how-to-convert-snapshot-into-release-jar-without-source-code.html</link>
+      <guid>https://levy.vip/java/how-to-convert-snapshot-into-release-jar-without-source-code.html</guid>
+      <source url="https://levy.vip/rss.xml">奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</source>
+      <description>奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包 背景 项目中依赖了一个旧的 snapshot.jar，有人提出要求必须使用 release.jar，不能使用 snapshot。 问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</description>
+      <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</h1>
+<h2> 背景</h2>
+<p>项目中依赖了一个旧的 snapshot.jar，有人提出要求必须使用 release.jar，不能使用 snapshot。</p>
+<p>问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</p>
+<!-- more -->
+<h2> 下载</h2>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" alt="" loading="lazy"><br>
+首先我们登录仓库，输入　ArtifactId，找到对应的 snapshot jar 包，并点击进入详情。</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748125239-9f38e77c-e2a9-4cb9-a5ae-663d1cbdbc5a.png" alt="" loading="lazy"><br>
+找到关键的三个 jar:</p>
+<ul>
+<li>x.jar</li>
+<li>x-sources.jar</li>
+<li>x.pom</li>
+</ul>
+<p>分别点击进入详情<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748130574-143b17a9-4ecc-4543-8802-d51b14f43651.png" alt="" loading="lazy"><br>
+依次点击　Path，下载到本地。</p>
+<h2> 修改</h2>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748138424-a8260207-8884-4054-8b86-c247b3766a3b.png" alt="" loading="lazy"><br>
+首先修改名字，如图所示。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748145414-f10b3b8a-9f57-493e-ae78-978b80e41dcd.png" alt="" loading="lazy"><br>
+再使用任意工具解压 x.jar，提取出两个文件夹。进入　META-INF</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748152420-1e600d70-ff87-4962-844f-021fe5288aa2.png" alt="" loading="lazy"><br>
+修改　MANIFEST.MF，把里面的 snapshot 字符串去掉（如果有的话）</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748159789-a1ebe8eb-231f-435c-aabb-0c2fb06f93db.png" alt="" loading="lazy"><br>
+再点击　maven　文件夹</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748164871-77ab05e9-480f-4afb-9f48-6dba9b89a49a.png" alt="" loading="lazy"><br>
+修改　pom.xml、pom.properties　文件，把里面的 snapshot 字符串去掉。</p>
+<h2> 上传</h2>
+<p>把前面解压出来的文件重新打包成 jar</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后上传仓库<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748169575-27ed04cd-a4c5-4956-b8fc-9e7acb9b7f42.png" alt="" loading="lazy"><br>
+在Upload中，点击　maven-releases</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748175045-badb4fa7-8d30-45ad-8707-d096da6a28ec.png" alt="" loading="lazy"><br>
+把三个文件添加上去，点击　Upload。</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748258011-2fef169f-82c0-41c4-a7f7-d7bca0065b25.png" alt="" loading="lazy"><br>
+可以看到，新的 release 版本的 jar 包已经在仓库中了，可以被安装使用了。</p>
+]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" type="image/png"/>
+    </item>
+    <item>
+      <title>用什么jackson，fastjson不香吗？</title>
+      <link>https://levy.vip/java/why-i-prefer-fastjson-instead-of-jackson.html</link>
+      <guid>https://levy.vip/java/why-i-prefer-fastjson-instead-of-jackson.html</guid>
+      <source url="https://levy.vip/rss.xml">用什么jackson，fastjson不香吗？</source>
+      <description>用什么jackson，fastjson不香吗？ Jackson　经典错误：UnrecognizedPropertyException。 原因是 json 字段，多于 Java 实体类的字段。 解决方法很简单： new ObjectMapper() .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false) 或者为相关实体添加注解： @JsonIgnoreProperties(ignoreUnknown = true) public class ObjectParseFromJsonString { }</description>
+      <pubDate>Mon, 21 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 用什么jackson，fastjson不香吗？</h1>
+<p>Jackson　经典错误：UnrecognizedPropertyException。</p>
+<p>原因是 json 字段，多于 Java 实体类的字段。</p>
+<p>解决方法很简单：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>或者为相关实体添加注解：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><!-- more -->
+<p>可是，如果用 fastjson，根本不会有这种错误。使用起来也简单，<a href="https://github.com/alibaba/fastjson/wiki/Samples-DataBind" target="_blank" rel="noopener noreferrer">文档在这里</a>。</p>
+<p>所以，为什么不用　fastjson　呢？</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>Git最佳实践</title>
       <link>https://levy.vip/git/git-best-pratices.html</link>
       <guid>https://levy.vip/git/git-best-pratices.html</guid>
@@ -1951,52 +1816,187 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154008266.png" type="image/png"/>
     </item>
     <item>
-      <title>奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</title>
-      <link>https://levy.vip/java/how-to-convert-snapshot-into-release-jar-without-source-code.html</link>
-      <guid>https://levy.vip/java/how-to-convert-snapshot-into-release-jar-without-source-code.html</guid>
-      <source url="https://levy.vip/rss.xml">奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</source>
-      <description>奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包 背景 项目中依赖了一个旧的 snapshot.jar，有人提出要求必须使用 release.jar，不能使用 snapshot。 问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</description>
-      <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</h1>
+      <title>数据备份案例：mysqldump实战</title>
+      <link>https://levy.vip/mysql/mysql-backup-case-study-mysqldump-in-action.html</link>
+      <guid>https://levy.vip/mysql/mysql-backup-case-study-mysqldump-in-action.html</guid>
+      <source url="https://levy.vip/rss.xml">数据备份案例：mysqldump实战</source>
+      <description>数据备份案例：mysqldump实战 背景 前面有讲数据迁移的案例(mysql-a -&amp;gt; mysql-b)，其实在迁移前还少不了备份。 并且，因为不想停机迁移，因此还要新起一个数据库实例，记为 mysql-b&amp;apos;，复制 mysql-b 的相关数据。这样就能在 mysql-b&amp;apos; 里验证迁移SQL的正确性，以确保 mysql-b 能不宕机完成数据迁移。 在这种情况下，就需要用到我们今天的主角，数据备份工具 mysqldump。</description>
+      <pubDate>Thu, 17 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 数据备份案例：mysqldump实战</h1>
 <h2> 背景</h2>
-<p>项目中依赖了一个旧的 snapshot.jar，有人提出要求必须使用 release.jar，不能使用 snapshot。</p>
-<p>问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</p>
+<p>前面有讲<a href="/mysql/mysql-data-migration-case-study-add-auto-increment.html" target="blank">数据迁移的案例</a>(mysql-a -&gt; mysql-b)，其实在迁移前还少不了备份。</p>
+<p>并且，因为不想停机迁移，因此还要新起一个数据库实例，记为 mysql-b'，复制 mysql-b 的相关数据。这样就能在 mysql-b' 里验证迁移SQL的正确性，以确保 mysql-b 能不宕机完成数据迁移。</p>
+<p>在这种情况下，就需要用到我们今天的主角，数据备份工具 mysqldump。</p>
 <!-- more -->
-<h2> 下载</h2>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" alt="" loading="lazy"><br>
-首先我们登录仓库，输入　ArtifactId，找到对应的 snapshot jar 包，并点击进入详情。</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748125239-9f38e77c-e2a9-4cb9-a5ae-663d1cbdbc5a.png" alt="" loading="lazy"><br>
-找到关键的三个 jar:</p>
+<h2> 架构</h2>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692280572283-08eb507c-00b6-446b-bd37-cb5ecbe59531.jpeg" alt="" loading="lazy"><br>
+注意到：</p>
+<ol>
+<li>从 mysql-b -&gt; mysql-b'，就要用到工具 mysqldump</li>
+<li>关于 sql 的编写在另一文中已有提及，就不重复了</li>
+<li>只能通过跳板机在终端连接数据库实例，因此无法使用图例界面操作。</li>
+</ol>
+<h2> 安装</h2>
+<p>首先要在跳板机安装 mysqldump。</p>
+<p>如果够幸运，可以用包管理工具安装：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果配置有问题安装不了，可以直接下载 mysql 二进制包：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果还不行，那就本地下载，然后把 mysqldump 压缩通过 scp 上传到跳板机。</p>
+<p>有人会想，这么麻烦，为何不直接复制 mysql-b 的数据文件？这是因为：</p>
+<ol>
+<li>没有进入 mysql-b 宿主机的权限</li>
+<li>复制磁盘文件更麻烦，后面会讲</li>
+</ol>
+<h2> 导出</h2>
+<p>导出命令很简单的，类似 mysql 客户端连接，指定用户名、表名、导出文件，再根据提示输入密码即可。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692281767457-f40d7db4-c2d9-4589-ac46-cbea320266da.png" alt="" loading="lazy"><br>
+然而命令行的提示，暗示事情令有玄机：</p>
+<ol>
+<li>首先，这样简单的命令，只能导出表数据，其他数据如触发器则并没导出</li>
+<li>其次，由于目标数据库开启了 GTID 模式(gtid_mode=ON)，导出的文件会有相关的设置</li>
+</ol>
+<h3> --set-gtid-purged=OFF</h3>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692281766948-704c4a90-c575-4340-b596-281c74de5c44.png" alt="" loading="lazy"><br>
+打开 dump.sql 的前 30 行，可以看到 GTIDs 的相关内容。</p>
+<p>Here's a quick overview of how GTIDs(Global Transaction Identifiers) work in MySQL：</p>
 <ul>
-<li>x.jar</li>
-<li>x-sources.jar</li>
-<li>x.pom</li>
+<li>GTIDs uniquely identify every transaction.</li>
+<li>Allow replicas to track replication positions.</li>
+<li>Enable failover and repointing replication.</li>
 </ul>
-<p>分别点击进入详情<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748130574-143b17a9-4ecc-4543-8802-d51b14f43651.png" alt="" loading="lazy"><br>
-依次点击　Path，下载到本地。</p>
-<h2> 修改</h2>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748138424-a8260207-8884-4054-8b86-c247b3766a3b.png" alt="" loading="lazy"><br>
-首先修改名字，如图所示。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748145414-f10b3b8a-9f57-493e-ae78-978b80e41dcd.png" alt="" loading="lazy"><br>
-再使用任意工具解压 x.jar，提取出两个文件夹。进入　META-INF</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748152420-1e600d70-ff87-4962-844f-021fe5288aa2.png" alt="" loading="lazy"><br>
-修改　MANIFEST.MF，把里面的 snapshot 字符串去掉（如果有的话）</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748159789-a1ebe8eb-231f-435c-aabb-0c2fb06f93db.png" alt="" loading="lazy"><br>
-再点击　maven　文件夹</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748164871-77ab05e9-480f-4afb-9f48-6dba9b89a49a.png" alt="" loading="lazy"><br>
-修改　pom.xml、pom.properties　文件，把里面的 snapshot 字符串去掉。</p>
-<h2> 上传</h2>
-<p>把前面解压出来的文件重新打包成 jar</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后上传仓库<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748169575-27ed04cd-a4c5-4956-b8fc-9e7acb9b7f42.png" alt="" loading="lazy"><br>
-在Upload中，点击　maven-releases</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748175045-badb4fa7-8d30-45ad-8707-d096da6a28ec.png" alt="" loading="lazy"><br>
-把三个文件添加上去，点击　Upload。</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748258011-2fef169f-82c0-41c4-a7f7-d7bca0065b25.png" alt="" loading="lazy"><br>
-可以看到，新的 release 版本的 jar 包已经在仓库中了，可以被安装使用了。</p>
+<p>因为 mysql-b 是主从架构的，开启 GTIDs 很正常，但我们要用来测试的 mysql-b' 是单实例的，并不需要它。<br>
+如果未正确设置，导入的时候是会报错的。</p>
+<p>因此，在这种情况下，导出语句可以添加以下参数：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>也即命令变成：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>当然，也可以修改 dump.sql，把 GTIDs 相关的语句删除掉。</p>
+<h3> --ignore-table</h3>
+<p>导出的文件可能会很大，而如果我们要把文件在不同的机器之间传输，这就会让过程变得很慢。此时，我们希望导出的文件越小越好。</p>
+<p>我们利用以下 SQL来确认下，目标库中到底是哪些表占据了较大的存储空间：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>接着我们根据业务，分析哪些表的数据是必要的，哪些表的数据可以不用导出。添加以下参数把不需要导出的表忽略掉：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>示例命令：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>注意：该参数一次只能忽略一张表，故忽略多张表需要声明多次。</p>
+<h2> 导入</h2>
+<p>导入命令类似导出，只不过此时使用的是 mysql　客户端，并且重定向符号不同。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 为什么不?</h2>
+<p>现在来回答为什么不直接复制MySQL的磁盘文件。</p>
+<p>根据前面我们知道，也许我们的需求是部分备份，而不是全量备份，则直接拷贝磁盘文件，在数据量大的情况下，只会造成传输负担，反而“欲速则不达”。</p>
+<p>另外，复制磁盘文件，为保证数据一致性，要求MySQL必须停止运行。主要有以下原因：</p>
+<ol>
+<li><strong>Ative Transactions:</strong> Copying database files directly may lead to data inconsistency if there are active transactions or changes happening in the database while the files are being copied.</li>
+<li><strong>Flush and Sync:</strong> The MySQL server may buffer data in memory and write it to disk periodically. When you copy files directly, you may capture data that is in memory and not yet written to disk.</li>
+<li><strong>File Locks:</strong> Some storage engines, such as MyISAM, may use file-level locks, which can prevent you from copying files while the server is running. InnoDB, on the other hand, uses a different mechanism (tablespace files), but copying InnoDB files still carries the risk of data inconsistency.</li>
+</ol>
+<p>因此，纵然有直接复制MySQL磁盘文件的奇技淫巧，还是不建议使用，我就也不向大家展示了。</p>
 ]]></content:encoded>
-      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" type="image/png"/>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692280572283-08eb507c-00b6-446b-bd37-cb5ecbe59531.jpeg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>数据迁移案例：表AUTO_INCREMENT加10w</title>
+      <link>https://levy.vip/mysql/mysql-data-migration-case-study-add-auto-increment.html</link>
+      <guid>https://levy.vip/mysql/mysql-data-migration-case-study-add-auto-increment.html</guid>
+      <source url="https://levy.vip/rss.xml">数据迁移案例：表AUTO_INCREMENT加10w</source>
+      <description>数据迁移案例：表AUTO_INCREMENT加10w 背景 项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。 问题分析： 两个 mysql 实例的表的主键都是自增的，若直接合并，必然造成主键冲突。 可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。 迁移思路: 由于 mysql-b 的数据更重要、且数据量更大，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条） mysql-b 的相应的表 AUTO_INCREMENT 加 10w 记得动手前先确保数据已备份 注意：mysql-b的数据量比mysql-a的大，所以 mysql-b也直接设置AUTO_INCREMENT 加10w。 但如果mysql-a的数量比较大，那是不可行的，此时mysql-b 需要先select 出每张表的最大id，作为需要增加的AUTO_INCREMENT。</description>
+      <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 数据迁移案例：表AUTO_INCREMENT加10w</h1>
+<h2> 背景</h2>
+<p>项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。</p>
+<p>问题分析：</p>
+<ol>
+<li>两个 mysql 实例的表的主键都是自增的，若直接合并，必然造成主键冲突。</li>
+<li>可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。</li>
+</ol>
+<p>迁移思路:</p>
+<ol>
+<li>由于 mysql-b 的数据更重要、且数据量更大，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条）</li>
+<li>mysql-b 的相应的表 AUTO_INCREMENT 加 10w</li>
+<li>记得动手前先确保数据已备份</li>
+</ol>
+<p>注意：mysql-b的数据量比mysql-a的大，所以 mysql-b也直接设置AUTO_INCREMENT 加10w。<br>
+但如果mysql-a的数量比较大，那是不可行的，此时mysql-b 需要先select 出每张表的最大id，作为需要增加的AUTO_INCREMENT。</p>
+<!-- more -->
+<h2> 备份</h2>
+<p>迁移前一定要做好备份。备份的技巧在<a href="/mysql/mysql-backup-case-study-mysqldump-in-action.html" target="blank">另一篇文章</a>里有讲，就不在此赘述了。</p>
+<h2> SQL编写</h2>
+<p>mysql-a 可以先 insert：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>再导出新增的数据：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>也可以先备份 mysql-a，然后直接 update：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>再导出。</p>
+<p>对于 mysql-b，需要编写的SQL很简单：</p>
+<ol>
+<li>先把当前表的主键自增值找出来</li>
+<li>再加 10w</li>
+</ol>
+<p>理想中SQL如下：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然而，报错如下：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>原因是： The <strong>AUTO_INCREMENT</strong> value must be a constant or a specific integer value in the <strong>ALTER TABLE</strong> statement.</p>
+<p>那怎么办呢？存储过程就派上用场了。思路是使用存储过程来拼接 alter table 语句，绕过 MySQL 的限制。</p>
+<h2> 存储过程（可复用</h2>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>上述代码可复用，直接复制粘贴即可，有需要的请自取。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>MySQL 命令行执行SQL的细节</title>
+      <link>https://levy.vip/mysql/mysql-details-you-should-know-when-execute-sql-in-command-line.html</link>
+      <guid>https://levy.vip/mysql/mysql-details-you-should-know-when-execute-sql-in-command-line.html</guid>
+      <source url="https://levy.vip/rss.xml">MySQL 命令行执行SQL的细节</source>
+      <description>MySQL 命令行执行SQL的细节 背景 经过调试与验证，我们可以确信自己编写的SQL是正确的，是时候到目标库执行SQL了！ 但要小心，在正式环境中执行 SQL，也许会有意想不到的坑！ 环境说明 先说明下我们的环境信息。 我们只能通过跳板机的终端连接 mysql、执行SQL，没有DBeaver、Navicat等工具可用。</description>
+      <pubDate>Sat, 19 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> MySQL 命令行执行SQL的细节</h1>
+<h2> 背景</h2>
+<p>经过调试与验证，我们可以确信自己编写的SQL是正确的，是时候到目标库执行SQL了！</p>
+<p>但要小心，在正式环境中执行 SQL，也许会有意想不到的坑！</p>
+<h2> 环境说明</h2>
+<p>先说明下我们的环境信息。<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/jpeg/160590/1692321838318-b353f14d-13d0-432e-a05b-9fbcd3c1dd1f.jpeg" alt="" loading="lazy"><br>
+我们只能通过跳板机的终端连接 mysql、执行SQL，没有DBeaver、Navicat等工具可用。</p>
+<p>则我们执行SQL语句的方式有两种：</p>
+<ol>
+<li>执行导出的SQL语句文件</li>
+<li>复制粘贴SQL语句执行</li>
+</ol>
+<p>当然，在执行前，我们要确保已进行了数据备份。</p>
+<h2> 执行SQL文件</h2>
+<p>执行SQL文件是最简单的，一般实践也是在命令行批量执行SQL文件。</p>
+<p>相关的命令与恢复备份的命令一致：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>这是推荐的方式，因为执行语句一旦出错，就会停下，并告知是第几行的语句出错。</p>
+<p>但出于某些原因，你可能不想把所有SQL语句都合并到一个 script.sql 文件中。<br>
+另外，上传文件到跳板机，可能也比较麻烦，于是，你想采用第二种方式。</p>
+<h2> 复制粘贴执行</h2>
+<p>通过 mysql 客户端直接上 MySQL 后，在命令上执行 SQL 语句会有一个问题：错误的语句不会中断后续的执行。</p>
+<p>更可怕的是在命令行里，很可能你SQL语句包括的中文字符串会被过滤掉，变成空字符串。如：</p>
+<ul>
+<li>'创建人' -&gt; ''</li>
+<li>'中英en混杂' -&gt; 'en'</li>
+</ul>
+<p>这真是血的教训😭。</p>
+<p>我们先来看下错误是否中断的实验。</p>
+<p>新建一个只有两行的SQL文件，其中第一行语句是错误的。</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><figure><img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692263770642-5487130c-27ed-4e08-9e89-24755194f7ed.png#averageHue=%2325201f&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=95&amp;id=u7d36cf79&amp;originHeight=95&amp;originWidth=711&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=17911&amp;status=done&amp;style=none&amp;taskId=uf9a5b8a2-43eb-430b-8369-b75ec29e464&amp;title=&amp;width=711" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<p>使用导入命令：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>提示第一行有错误，第二行未执行。这是符合期望的。<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692263858957-62a01998-d47a-4fa9-b2a9-b83c5a3be764.png#averageHue=%232b2524&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=114&amp;id=u47128a74&amp;originHeight=114&amp;originWidth=1411&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=73161&amp;status=done&amp;style=none&amp;taskId=u28bab588-0fbf-4d2c-9492-bfbd78a6d1c&amp;title=&amp;width=1411" alt="image.png" loading="lazy"></p>
+<p>但如果连接 mysql 后，在交互式命令行里执行 source 命令：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692263665731-d9bdde27-6522-4cd3-9c82-4f5c7a0ead79.png#averageHue=%23231e1e&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=289&amp;id=u80ad833f&amp;originHeight=289&amp;originWidth=1438&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=108938&amp;status=done&amp;style=none&amp;taskId=u7b6c2e62-1f4f-4f95-8735-5ca1a6bc86a&amp;title=&amp;width=1438" alt="image.png" loading="lazy"><br>
+错误出现并不会中断SQL的执行。<br>
+复制语句，粘贴到命令行，表现也是如此：错误只提示，不中断执行。</p>
+<p>那么，能否在交互式命令行里执行SQL语句，一旦错误就中断呢？</p>
+<p>我们在MySQL官方论坛里找到了相关的<a href="https://bugs.mysql.com/bug.php?id=35634" target="_blank" rel="noopener noreferrer">帖子</a>：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692262908887-64d86cd8-c2e9-4b50-b341-75a28a509d94.png#averageHue=%23fdfbfa&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=811&amp;id=z6mwq&amp;originHeight=811&amp;originWidth=1120&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=130390&amp;status=done&amp;style=none&amp;taskId=u8c60f521-0a35-4921-8c57-daa61948532&amp;title=&amp;width=1120" alt="1692262647895_F45C973B-8BA2-40e2-8D84-ECADF931CF32.png" loading="lazy"></p>
+<p>最终得到的答案是，使用：\e。<br>
+进行类vi界面，在这里粘贴 SQL（这里就不会有中文被过滤的问题）<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692263386275-ba3e4365-f45e-435e-a269-05c5d92dfa16.png#averageHue=%231f1b1b&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=709&amp;id=udf4b87ef&amp;originHeight=709&amp;originWidth=979&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=25751&amp;status=done&amp;style=none&amp;taskId=u8cd47126-86db-4f11-ad2b-d5995131e1e&amp;title=&amp;width=979" alt="image.png" loading="lazy"><br>
+保存退出后，输入 <code>;</code>则执行 SQL 语句，Ctrl + C　则不执行。<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1692263595582-2f5a733e-ea75-47b1-b128-f76ecf7a1cda.png#averageHue=%23282221&amp;clientId=u8518c5e1-f517-4&amp;from=paste&amp;height=278&amp;id=u194bf767&amp;originHeight=278&amp;originWidth=1422&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=122860&amp;status=done&amp;style=none&amp;taskId=uaa27006c-7ef1-48b4-b2b9-a3a75620766&amp;title=&amp;width=1422" alt="image.png" loading="lazy"><br>
+可以看到，这种方式执行 SQL 语句，也是可以遇到错误就中断的。</p>
+<h2> 如果要删除错误的数据怎么办？</h2>
+<p>尽管经过测试，但也不敢说语句的执行能百分之分成功，因此，这里给个温馨提醒。</p>
+<p>如果插入、更新了错误的数据，确实要执行 DELETE 语句，那么请做好以下 checklist:</p>
+<ol>
+<li>确保已备份数据</li>
+<li>删除前先查询，也即先写 select from，确认一下是目标数据，再改写成 select 改写成 delete</li>
+<li>一定要写 where 语句，并且精确到主键，最好只写类似这种语句 where id = 1 或者 where id in (1,2)</li>
+</ol>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2023/jpeg/160590/1692321838318-b353f14d-13d0-432e-a05b-9fbcd3c1dd1f.jpeg" type="image/jpeg"/>
     </item>
     <item>
       <title>Python 导出 MySQL 库表信息到 Excel</title>
