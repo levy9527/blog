@@ -10,7 +10,7 @@ tag:
 
 Jackson　经典错误：UnrecognizedPropertyException。
 
-原因是 json　字段，多于　Java 实体类的 字段。
+原因是 json 字段，多于 Java 实体类的 字段。
 
 解决方法很简单：
 ```java
@@ -23,6 +23,8 @@ new ObjectMapper()
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ObjectParseFromJsonString {  }
 ```
+
+<!-- more -->
 
 可是，如果用 fastjson，根本不会有这种错误。使用起来也简单，[文档在这里](https://github.com/alibaba/fastjson/wiki/Samples-DataBind)。
 
