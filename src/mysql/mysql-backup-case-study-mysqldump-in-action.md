@@ -7,7 +7,7 @@ tag:
 
 # 数据备份案例：mysqldump实战
 ## 背景
-前面有讲[数据迁移的案例](./mysql-data-migration-case-study-add-auto-increment)(mysql-a -> mysql-b)，其实在迁移前还少不了备份。
+前面有讲[数据迁移的案例](mysql-data-migration-case-study-add-auto-increment.md)(mysql-a -> mysql-b)，其实在迁移前还少不了备份。
 
 并且，因为不想停机迁移，因此还要新起一个数据库实例，记为 mysql-b'，复制 mysql-b 的相关数据。这样就能在 mysql-b' 里验证迁移SQL的正确性，以确保 mysql-b 能不宕机完成数据迁移。
 

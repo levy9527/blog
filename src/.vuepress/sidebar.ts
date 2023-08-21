@@ -49,10 +49,20 @@ export default sidebar({
       ]
     },
     {
+      text: "MySQL",
+      prefix: "/mysql",
+      children: [
+        "mysql-backup-case-study-mysqldump-in-action",
+        "mysql-data-migration-case-study-add-auto-increment",
+        "mysql-details-you-should-know-when-execute-sql-in-command-line",
+      ]
+    },
+    {
       text: "Java",
       prefix: "/java",
       children: [
-        "how-to-convert-snapshot-into-release-jar-without-source-code"
+        "how-to-convert-snapshot-into-release-jar-without-source-code",
+        "why-i-prefer-fastjson-instead-of-jackson",
       ]
     },
     {

@@ -10,7 +10,7 @@ tag:
 
 Jackson　经典错误：UnrecognizedPropertyException。
 
-原因是 json 字段，多于 Java 实体类的 字段。
+原因是 json 字段，多于 Java 实体类的字段。
 
 解决方法很简单：
 ```java
