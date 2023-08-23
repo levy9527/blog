@@ -61,6 +61,7 @@ Postman 在实践过程中，最大的问题在于，无法将测试用例有效
 复制以下内容到 pom.xml 即可。
 
 ```xml
+    <!-- RestAssured for api testing -->
     <dependency>
         <groupId>io.rest-assured</groupId>
         <artifactId>rest-assured</artifactId>
@@ -131,6 +132,7 @@ public void init(){
     // 也可以改成调用登录接口，动态获取 token
     // String token = getToken();
     builder.addHeader("Authorization",token); // jwt
+    builder.addHeader("Content-Type", "application/json;charset=UTF-8")
     // 在 give().spec() 中使用即可
     requestSpec=builder.build();
 }
@@ -176,8 +178,8 @@ public void getUser() {
 ```
 
 下面是一个更完整的POST示例，包含了：
-- 设置请求头
-- 设置请求体
+- 组装数据
+- 设置body
 - 设置query
 - 判断响应体的数据结构
 

@@ -6,9 +6,7 @@ tag:
 - Video
 ---
 
-# 用什么jackson，fastjson不香吗？
-
-Jackson　经典错误：UnrecognizedPropertyException。
+# Jackson 经典异常 UnrecognizedPropertyException。
 
 原因是 json 字段，多于 Java 实体类的字段。
 
