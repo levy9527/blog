@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 21 Aug 2023 14:51:10 GMT</pubDate>
-    <lastBuildDate>Mon, 21 Aug 2023 14:51:10 GMT</lastBuildDate>
+    <pubDate>Sat, 26 Aug 2023 12:32:55 GMT</pubDate>
+    <lastBuildDate>Sat, 26 Aug 2023 12:32:55 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1133,71 +1133,6 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 ]]></content:encoded>
     </item>
     <item>
-      <title>奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</title>
-      <link>https://levy.vip/java/how-to-convert-snapshot-into-release-jar-without-source-code.html</link>
-      <guid>https://levy.vip/java/how-to-convert-snapshot-into-release-jar-without-source-code.html</guid>
-      <source url="https://levy.vip/rss.xml">奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</source>
-      <description>奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包 背景 项目中依赖了一个旧的 snapshot.jar，有人提出要求必须使用 release.jar，不能使用 snapshot。 问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</description>
-      <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</h1>
-<h2> 背景</h2>
-<p>项目中依赖了一个旧的 snapshot.jar，有人提出要求必须使用 release.jar，不能使用 snapshot。</p>
-<p>问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</p>
-<!-- more -->
-<h2> 下载</h2>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" alt="" loading="lazy"><br>
-首先我们登录仓库，输入　ArtifactId，找到对应的 snapshot jar 包，并点击进入详情。</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748125239-9f38e77c-e2a9-4cb9-a5ae-663d1cbdbc5a.png" alt="" loading="lazy"><br>
-找到关键的三个 jar:</p>
-<ul>
-<li>x.jar</li>
-<li>x-sources.jar</li>
-<li>x.pom</li>
-</ul>
-<p>分别点击进入详情<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748130574-143b17a9-4ecc-4543-8802-d51b14f43651.png" alt="" loading="lazy"><br>
-依次点击　Path，下载到本地。</p>
-<h2> 修改</h2>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748138424-a8260207-8884-4054-8b86-c247b3766a3b.png" alt="" loading="lazy"><br>
-首先修改名字，如图所示。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748145414-f10b3b8a-9f57-493e-ae78-978b80e41dcd.png" alt="" loading="lazy"><br>
-再使用任意工具解压 x.jar，提取出两个文件夹。进入　META-INF</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748152420-1e600d70-ff87-4962-844f-021fe5288aa2.png" alt="" loading="lazy"><br>
-修改　MANIFEST.MF，把里面的 snapshot 字符串去掉（如果有的话）</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748159789-a1ebe8eb-231f-435c-aabb-0c2fb06f93db.png" alt="" loading="lazy"><br>
-再点击　maven　文件夹</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748164871-77ab05e9-480f-4afb-9f48-6dba9b89a49a.png" alt="" loading="lazy"><br>
-修改　pom.xml、pom.properties　文件，把里面的 snapshot 字符串去掉。</p>
-<h2> 上传</h2>
-<p>把前面解压出来的文件重新打包成 jar</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后上传仓库<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748169575-27ed04cd-a4c5-4956-b8fc-9e7acb9b7f42.png" alt="" loading="lazy"><br>
-在Upload中，点击　maven-releases</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748175045-badb4fa7-8d30-45ad-8707-d096da6a28ec.png" alt="" loading="lazy"><br>
-把三个文件添加上去，点击　Upload。</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748258011-2fef169f-82c0-41c4-a7f7-d7bca0065b25.png" alt="" loading="lazy"><br>
-可以看到，新的 release 版本的 jar 包已经在仓库中了，可以被安装使用了。</p>
-]]></content:encoded>
-      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" type="image/png"/>
-    </item>
-    <item>
-      <title>用什么jackson，fastjson不香吗？</title>
-      <link>https://levy.vip/java/why-i-prefer-fastjson-instead-of-jackson.html</link>
-      <guid>https://levy.vip/java/why-i-prefer-fastjson-instead-of-jackson.html</guid>
-      <source url="https://levy.vip/rss.xml">用什么jackson，fastjson不香吗？</source>
-      <description>用什么jackson，fastjson不香吗？ Jackson　经典错误：UnrecognizedPropertyException。 原因是 json 字段，多于 Java 实体类的字段。 解决方法很简单： new ObjectMapper() .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false) 或者为相关实体添加注解： @JsonIgnoreProperties(ignoreUnknown = true) public class ObjectParseFromJsonString { }</description>
-      <pubDate>Mon, 21 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 用什么jackson，fastjson不香吗？</h1>
-<p>Jackson　经典错误：UnrecognizedPropertyException。</p>
-<p>原因是 json 字段，多于 Java 实体类的字段。</p>
-<p>解决方法很简单：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>或者为相关实体添加注解：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><!-- more -->
-<p>可是，如果用 fastjson，根本不会有这种错误。使用起来也简单，<a href="https://github.com/alibaba/fastjson/wiki/Samples-DataBind" target="_blank" rel="noopener noreferrer">文档在这里</a>。</p>
-<p>所以，为什么不用　fastjson　呢？</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>Git最佳实践</title>
       <link>https://levy.vip/git/git-best-pratices.html</link>
       <guid>https://levy.vip/git/git-best-pratices.html</guid>
@@ -1816,6 +1751,70 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154008266.png" type="image/png"/>
     </item>
     <item>
+      <title>奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</title>
+      <link>https://levy.vip/java/how-to-convert-snapshot-into-release-jar-without-source-code.html</link>
+      <guid>https://levy.vip/java/how-to-convert-snapshot-into-release-jar-without-source-code.html</guid>
+      <source url="https://levy.vip/rss.xml">奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</source>
+      <description>奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包 背景 项目中依赖了一个旧的 snapshot.jar，有人提出要求必须使用 release.jar，不能使用 snapshot。 问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</description>
+      <pubDate>Sat, 12 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 奇技淫巧：在没有源码的情况下，把 snapshot 转成 release 包</h1>
+<h2> 背景</h2>
+<p>项目中依赖了一个旧的 snapshot.jar，有人提出要求必须使用 release.jar，不能使用 snapshot。</p>
+<p>问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</p>
+<!-- more -->
+<h2> 下载</h2>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" alt="" loading="lazy"><br>
+首先我们登录仓库，输入　ArtifactId，找到对应的 snapshot jar 包，并点击进入详情。</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748125239-9f38e77c-e2a9-4cb9-a5ae-663d1cbdbc5a.png" alt="" loading="lazy"><br>
+找到关键的三个 jar:</p>
+<ul>
+<li>x.jar</li>
+<li>x-sources.jar</li>
+<li>x.pom</li>
+</ul>
+<p>分别点击进入详情<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748130574-143b17a9-4ecc-4543-8802-d51b14f43651.png" alt="" loading="lazy"><br>
+依次点击　Path，下载到本地。</p>
+<h2> 修改</h2>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748138424-a8260207-8884-4054-8b86-c247b3766a3b.png" alt="" loading="lazy"><br>
+首先修改名字，如图所示。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748145414-f10b3b8a-9f57-493e-ae78-978b80e41dcd.png" alt="" loading="lazy"><br>
+再使用任意工具解压 x.jar，提取出两个文件夹。进入　META-INF</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748152420-1e600d70-ff87-4962-844f-021fe5288aa2.png" alt="" loading="lazy"><br>
+修改　MANIFEST.MF，把里面的 snapshot 字符串去掉（如果有的话）</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748159789-a1ebe8eb-231f-435c-aabb-0c2fb06f93db.png" alt="" loading="lazy"><br>
+再点击　maven　文件夹</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748164871-77ab05e9-480f-4afb-9f48-6dba9b89a49a.png" alt="" loading="lazy"><br>
+修改　pom.xml、pom.properties　文件，把里面的 snapshot 字符串去掉。</p>
+<h2> 上传</h2>
+<p>把前面解压出来的文件重新打包成 jar</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后上传仓库<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748169575-27ed04cd-a4c5-4956-b8fc-9e7acb9b7f42.png" alt="" loading="lazy"><br>
+在Upload中，点击　maven-releases</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748175045-badb4fa7-8d30-45ad-8707-d096da6a28ec.png" alt="" loading="lazy"><br>
+把三个文件添加上去，点击　Upload。</p>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748258011-2fef169f-82c0-41c4-a7f7-d7bca0065b25.png" alt="" loading="lazy"><br>
+可以看到，新的 release 版本的 jar 包已经在仓库中了，可以被安装使用了。</p>
+]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Jackson 经典异常 UnrecognizedPropertyException。</title>
+      <link>https://levy.vip/java/why-i-prefer-fastjson-instead-of-jackson.html</link>
+      <guid>https://levy.vip/java/why-i-prefer-fastjson-instead-of-jackson.html</guid>
+      <source url="https://levy.vip/rss.xml">Jackson 经典异常 UnrecognizedPropertyException。</source>
+      <description>Jackson 经典异常 UnrecognizedPropertyException。 原因是 json 字段，多于 Java 实体类的字段。 解决方法很简单： new ObjectMapper() .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false) 或者为相关实体添加注解： @JsonIgnoreProperties(ignoreUnknown = true) public class ObjectParseFromJsonString { }</description>
+      <pubDate>Mon, 21 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Jackson 经典异常 UnrecognizedPropertyException。</h1>
+<p>原因是 json 字段，多于 Java 实体类的字段。</p>
+<p>解决方法很简单：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>或者为相关实体添加注解：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><!-- more -->
+<p>可是，如果用 fastjson，根本不会有这种错误。使用起来也简单，<a href="https://github.com/alibaba/fastjson/wiki/Samples-DataBind" target="_blank" rel="noopener noreferrer">文档在这里</a>。</p>
+<p>所以，为什么不用　fastjson　呢？</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>数据备份案例：mysqldump实战</title>
       <link>https://levy.vip/mysql/mysql-backup-case-study-mysqldump-in-action.html</link>
       <guid>https://levy.vip/mysql/mysql-backup-case-study-mysqldump-in-action.html</guid>
@@ -2063,7 +2062,7 @@ sheet的名字不能超过 31 个字符。<br>
 <h2> 安装</h2>
 <p>下面将介绍如何用 Maven 安装 RestAssured。</p>
 <p>复制以下内容到 pom.xml 即可。</p>
-<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>安装完成后，重启 Spring 容器。</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>安装完成后，重启 Spring 容器。</p>
 <p>如果安装依赖不成功，可以进行以下检查：</p>
 <ul>
 <li>显式指定 json-path 与 xml-path 的版本，并排除其他测试包(如 sping-boot-starter-test) 对 json-path 的依赖</li>
@@ -2073,13 +2072,13 @@ sheet的名字不能超过 31 个字符。<br>
 <p>语法结构为： given()、when()、then()</p>
 <div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 通用设置</h2>
 <p>以下代码可直接复制到 Java 测试类中。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>动态获取 token 示例代码：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>动态获取 token 示例代码：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 请求示例</h2>
 <p>下面是一个 GET 请求示例，根据响应体进行断言：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>下面是一个更完整的POST示例，包含了：</p>
 <ul>
-<li>设置请求头</li>
-<li>设置请求体</li>
+<li>组装数据</li>
+<li>设置body</li>
 <li>设置query</li>
 <li>判断响应体的数据结构</li>
 </ul>
