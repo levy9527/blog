@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 26 Aug 2023 12:32:55 GMT</pubDate>
-    <lastBuildDate>Sat, 26 Aug 2023 12:32:55 GMT</lastBuildDate>
+    <pubDate>Sat, 26 Aug 2023 12:40:06 GMT</pubDate>
+    <lastBuildDate>Sat, 26 Aug 2023 12:40:06 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -61,6 +61,18 @@
 <h2> Background</h2>
 <p>Look at the DDL below, can you tell the meaning of <code>CHARSET=utf8mb4</code> and <code>COLLATE=utf8mb4_general_ci</code>?</p>
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>That is the knowledge that today I want to share with you.</p>
+<!-- more -->
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Claude AI应用案例，从HTML中抽取文本</title>
+      <link>https://levy.vip/daily/claude-ai-in-action-extract-info-from-html.html</link>
+      <guid>https://levy.vip/daily/claude-ai-in-action-extract-info-from-html.html</guid>
+      <source url="https://levy.vip/rss.xml">Claude AI应用案例，从HTML中抽取文本</source>
+      <description>Claude AI应用案例，从HTML中抽取文本 今天跟大家分享AI使用心得：不再是让AI帮我们写代码，而是直接帮我们干活！</description>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Claude AI应用案例，从HTML中抽取文本</h1>
+<p>今天跟大家分享AI使用心得：不再是让AI帮我们写代码，而是直接帮我们干活！</p>
 <!-- more -->
 ]]></content:encoded>
     </item>
@@ -1799,14 +1811,14 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" type="image/png"/>
     </item>
     <item>
-      <title>Jackson 经典异常 UnrecognizedPropertyException。</title>
+      <title>Jackson 经典异常 UnrecognizedPropertyException</title>
       <link>https://levy.vip/java/why-i-prefer-fastjson-instead-of-jackson.html</link>
       <guid>https://levy.vip/java/why-i-prefer-fastjson-instead-of-jackson.html</guid>
-      <source url="https://levy.vip/rss.xml">Jackson 经典异常 UnrecognizedPropertyException。</source>
-      <description>Jackson 经典异常 UnrecognizedPropertyException。 原因是 json 字段，多于 Java 实体类的字段。 解决方法很简单： new ObjectMapper() .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false) 或者为相关实体添加注解： @JsonIgnoreProperties(ignoreUnknown = true) public class ObjectParseFromJsonString { }</description>
+      <source url="https://levy.vip/rss.xml">Jackson 经典异常 UnrecognizedPropertyException</source>
+      <description>Jackson 经典异常 UnrecognizedPropertyException 原因是 json 包含的字段，多于 Java 实体类定义的字段。 解决方法很简单： new ObjectMapper() .configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false) 或者为相关实体添加注解： @JsonIgnoreProperties(ignoreUnknown = true) public class ObjectParseFromJsonString { }</description>
       <pubDate>Mon, 21 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> Jackson 经典异常 UnrecognizedPropertyException。</h1>
-<p>原因是 json 字段，多于 Java 实体类的字段。</p>
+      <content:encoded><![CDATA[<h1> Jackson 经典异常 UnrecognizedPropertyException</h1>
+<p>原因是 json 包含的字段，多于 Java 实体类定义的字段。</p>
 <p>解决方法很简单：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>或者为相关实体添加注解：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><!-- more -->
