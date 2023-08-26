@@ -63,6 +63,7 @@ export default sidebar({
       children: [
         "how-to-convert-snapshot-into-release-jar-without-source-code",
         "why-i-prefer-fastjson-instead-of-jackson",
+        "why-is-it-so-hard-to-upgrade-dependencies",
       ]
     },
     {
