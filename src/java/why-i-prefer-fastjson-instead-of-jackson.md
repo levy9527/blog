@@ -6,9 +6,9 @@ tag:
 - Video
 ---
 
-# Jackson 经典异常 UnrecognizedPropertyException。
+# Jackson 经典异常 UnrecognizedPropertyException
 
-原因是 json 字段，多于 Java 实体类的字段。
+原因是 json 包含的字段，多于 Java 实体类定义的字段。
 
 解决方法很简单：
 ```java
