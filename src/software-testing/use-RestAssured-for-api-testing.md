@@ -122,26 +122,31 @@ private RequestSpecification requestSpec;
 
 // @BeforeEach // JUnit5 
 @Before // JUnit4
-public void init(){
-    // 如果是本地调试 domain 就是 localhost
-    RestAssured.baseURI="http://your-domain.com:port/context-path";
+public void init() {
+    String env = System.getenv("GITLAB_CI");
+    if("true".equals(env)) {
+        // Running in GitLab CI
+        RestAssured.baseURI = "http://dev-domain.company.com";
+    } else {
+        // 本地调试 
+        RestAssured.baseURI = "http://localhost:9402";
+    }
 
     // 设置请求头
-    RequestSpecBuilder builder=new RequestSpecBuilder();
-    String token=System.getenv("TOKEN");
-    // 也可以改成调用登录接口，动态获取 token
-    // String token = getToken();
-    builder.addHeader("Authorization",token); // jwt
-    builder.addHeader("Content-Type", "application/json;charset=UTF-8")
+    RequestSpecBuilder builder = new RequestSpecBuilder();
+    String token = getToken();
+    builder.addHeader("Authorization", "bearer " + token); // jwt
+    builder.addHeader("Content-Type", "application/json;charset=UTF-8");
     // 在 give().spec() 中使用即可
-    requestSpec=builder.build();
-}
+    requestSpec = builder.build();
+    }
 
 ```
 
-动态获取 token 示例代码：
+getToken方法的示例代码：
 ```java
 public static String getToken() {
+    //return System.getenv("TOKEN");
     Map<String, String> params = new HashMap<>();
     params.put("username", "");
     params.put("password", "");
@@ -151,9 +156,8 @@ public static String getToken() {
         .when()
             .post("/api/v1/login")
         .then()
-            .statusCode(200).assertThat().body("code", equalTo("0"))
+            .statusCode(200)
             .extract().path("payload.access_token");
-
 }
 ```
 
@@ -358,6 +362,9 @@ public void download(){
 
 看到全部用例都执行成功，非常爽快！
 ![resetassured-download](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/resetassured-download.png)
+
+## 持续集成
+如果是使用 Gitlab CI, 可以参考笔者的[另一篇文章](../git/gitlab-ci#回归测试)。
 
 ## 其他问题
 
