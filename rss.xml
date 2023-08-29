@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 27 Aug 2023 13:59:57 GMT</pubDate>
-    <lastBuildDate>Sun, 27 Aug 2023 13:59:57 GMT</lastBuildDate>
+    <pubDate>Tue, 29 Aug 2023 10:57:02 GMT</pubDate>
+    <lastBuildDate>Tue, 29 Aug 2023 10:57:02 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1605,7 +1605,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388489368.png" alt="image.png" loading="lazy"></p>
 <h3> 拉取最新的jar</h3>
 <p>在B项目中，如果要引用A项目打出来的 jar，记得拉取最新的版本，pom.xml 设置如下：</p>
-<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 报错</h2>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 常见问题与解决方案</h2>
 <h3> 创建不了容器</h3>
 <blockquote>
 <p>ERROR: Preparation failed: adding cache volume: set volume permissions: running permission container "d1574748b77fc73a4319a45341af1f0eab983900d81885a02c017ff6c5559f28" for volume "runner-bzsttzs-project-2271-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70": starting permission container: Error response from daemon: OCI runtime create failed: container_linux.go:349: starting container process caused "process_linux.go:319: getting the final child's pid from pipe caused "EOF"": unknown (linux_set.go:105:0s)</p>
@@ -2223,7 +2223,7 @@ sheet的名字不能超过 31 个字符。<br>
 <p>语法结构为： given()、when()、then()</p>
 <div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 通用设置</h2>
 <p>以下代码可直接复制到 Java 测试类中。</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>动态获取 token 示例代码：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>getToken方法的示例代码：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 请求示例</h2>
 <p>下面是一个 GET 请求示例，根据响应体进行断言：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>下面是一个更完整的POST示例，包含了：</p>
@@ -2248,6 +2248,26 @@ sheet的名字不能超过 31 个字符。<br>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 下载示例</h2>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>看到全部用例都执行成功，非常爽快！<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/resetassured-download.png" alt="resetassured-download" loading="lazy"></p>
+<h2> 持续集成</h2>
+<p>以集成 Gitlab CI 为例，其核心思路就是在 CI 环境运行 <code>mvn test</code>。</p>
+<p>可能遇到的问题在于，由于项目依赖关系：</p>
+<ol>
+<li>旧代码中运行不通过的测试影响到了 <code>mvn test</code> 的结果</li>
+<li>pom.xml 无法读取相关的配置</li>
+</ol>
+<p>首先，假设根目录为 parent，其下有三个子模块：</p>
+<ul>
+<li>a</li>
+<li>b</li>
+<li>common</li>
+</ul>
+<p>每个目录都有 pom.xml，其中所有子模块的属性值都来自于 parent 目录的 pom.xml。</p>
+<p>而我们需要进行持续集成的模块是 b，则 maven 命令应该如下：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>则此时就跳过了子模块 a。</p>
+<p>但如果子模块 b 又依赖了 common，此时 common 的遗留的测试用例报错了，那我们的解决办法只能是：一个个地解决报错。</p>
+<p>当上述 maven 命令可以运行后，就可以修改 Gitlab CI 的配置，然后设置调度任务，让 Gitlab 每天都跑测试用例。一旦用例执行不通过，就会发邮件通知到我们。</p>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683436020492.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>更多关于 Gitlab CI 的配置, 可以参考笔者的<a href="../git/gitlab-ci">另一篇文章</a>。</p>
 <h2> 其他问题</h2>
 <h3> 为什么不用 Pytest</h3>
 <p>如果编码代码的人员是测试人员，那可能首选 Pytest。但本文面向的读者的 Java 研发——既写 API，也写相应的测试代码。故选型理由参考前面 为什么不用Postman 的回答。</p>
