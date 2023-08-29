@@ -3,6 +3,7 @@ date: 2023-01-10
 tag: 
 - Git
 - Gitlab
+- Java
 ---
 
 # Gitlab CI
@@ -169,7 +170,7 @@ deploy:
 </repositories>
 ```
 
-## 报错
+## 常见问题与解决方案
 ### 创建不了容器
 > ERROR: Preparation failed: adding cache volume: set volume permissions: running permission container "d1574748b77fc73a4319a45341af1f0eab983900d81885a02c017ff6c5559f28" for volume "runner-bzsttzs-project-2271-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70": starting permission container: Error response from daemon: OCI runtime create failed: container_linux.go:349: starting container process caused "process_linux.go:319: getting the final child's pid from pipe caused \"EOF\"": unknown (linux_set.go:105:0s)
 
