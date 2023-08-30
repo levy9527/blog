@@ -174,19 +174,37 @@ export default defineConfig({
   ]
 })
 ```
-### 本地测试与线上CI
-使用环境变量配置 baseURL 即可。
+### 环境变量
+通常不同的环境 url 前缀是不同的，我们希望通过变量注入的方式来适配不同的环境，而不是硬编码在测试用例里。
+
+我们可以借助模块 `dotenv`， 来配置 baseURL。
+
+在项目根目录新建 `.env` 文件：
+```shell
+vi .env
+```
+
+输入以下内容：
+```shell
+BASE_URL=http://dev-domain.company.com
+```
 
 修改 playwright.config.ts
 ```javascript
+# 加载配置
 require('dotenv').config()
 
 export default defineConfig({
   use: {
-    baseURL: process.env.PLAYWRIGHT_BASE_URL ? process.env.PLAYWRIGHT_BASE_URL : 'http://127.0.0.1:3000',
+    baseURL: process.env.BASE_URL ? process.env.BASE_URL : 'http://127.0.0.1:3000', // 如果没有设置 .env，就默认使用本地路径
   },
 })
 ```
+
+然后，测试用例里，url 路径只写相对路径 `/path`，程序会自动拼接成完整的路径：`http://dev-domain.company.com/path`
+
+以后要测试不同的环境时，只需要修改 `.env` 的变量值即可。
+
 ### 超时时间
 默认的超时时间不太够用，建议修改 playwright.config.ts:
 ```javascript
