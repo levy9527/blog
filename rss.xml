@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 29 Aug 2023 10:57:02 GMT</pubDate>
-    <lastBuildDate>Tue, 29 Aug 2023 10:57:02 GMT</lastBuildDate>
+    <pubDate>Wed, 30 Aug 2023 02:20:26 GMT</pubDate>
+    <lastBuildDate>Wed, 30 Aug 2023 02:20:26 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2609,10 +2609,16 @@ sheet的名字不能超过 31 个字符。<br>
 <p>先创建文件夹，并让 git 忽略它</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>创建 login.ts</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>修改 playwright.config.ts</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 本地测试与线上CI</h3>
-<p>使用环境变量配置 baseURL 即可。</p>
-<p>修改 playwright.config.ts</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 超时时间</h3>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 环境变量</h3>
+<p>通常不同的环境 url 前缀是不同的，我们希望通过变量注入的方式来适配不同的环境，而不是硬编码在测试用例里。</p>
+<p>我们可以借助模块 <code>dotenv</code>， 来配置 baseURL。</p>
+<p>首先安装该模块：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>在项目根目录新建 <code>.env</code> 文件：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>输入以下内容：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>修改 playwright.config.ts</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后，测试用例里，url 路径只写相对路径 <code>/path</code>，程序会自动拼接成完整的路径：<code>http://dev-domain.company.com/path</code></p>
+<p>以后要测试不同的环境时，只需要修改 <code>.env</code> 的变量值即可。</p>
+<h3> 超时时间</h3>
 <p>默认的超时时间不太够用，建议修改 playwright.config.ts:</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>同时要注意拆分用例，没有依赖关系的用例建议拆分开来，避免用例执行时间过长超时。</p>
 <h3> 元素选择</h3>
