@@ -179,6 +179,11 @@ export default defineConfig({
 
 我们可以借助模块 `dotenv`， 来配置 baseURL。
 
+首先安装该模块：
+```shell
+yarn add dotenv
+```
+
 在项目根目录新建 `.env` 文件：
 ```shell
 vi .env
@@ -191,7 +196,7 @@ BASE_URL=http://dev-domain.company.com
 
 修改 playwright.config.ts
 ```javascript
-# 加载配置
+// 加载配置
 require('dotenv').config()
 
 export default defineConfig({
