@@ -74,7 +74,7 @@ export default sidebar({
     {
       text: "前端技术",
       prefix: "/frontend",
-      children: ["old-articles"]
+      children: ["old-articles", "performance-optimization-in-action"]
     }
   ],
   "/daily/": "structure",
