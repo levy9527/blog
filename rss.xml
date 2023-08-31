@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 30 Aug 2023 02:20:26 GMT</pubDate>
-    <lastBuildDate>Wed, 30 Aug 2023 02:20:26 GMT</lastBuildDate>
+    <pubDate>Thu, 31 Aug 2023 07:39:20 GMT</pubDate>
+    <lastBuildDate>Thu, 31 Aug 2023 07:39:20 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1533,12 +1533,17 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 </ol>
 <h3> merge unrelated histories</h3>
 <p>遇到上述问题时，可以使用 <code>--allow-unrelated-histories</code>&nbsp;，如</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 查看分支创建时间</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> git log 丢失最新提交</h3>
+<p>有 commit 从旧到新示意如下： c1 &lt;- c2 &lt;- c3(HEAD)</p>
+<p>可能因为误操作，git reset 或 git checkout 到了 c2，此时再使用 git log，发现看不见 c3，怎么办？</p>
+<p>可以使用</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>会显示出 HEAD 指针的变动轨迹，最新的变动在前面：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>找到 c3 对应的 hash，checkout 即可：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 查看分支创建时间</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注意，本地分支可以查看到 clone 或 create 的日期：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>但远程分支，并不能确切地知道分支创建的日期：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 根据文件搜索历史</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> </h3>
-<h3> 从所有提交中删除一个文件</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 从所有提交中删除一个文件</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果代码已经推送到了远程仓库，还需要强制推送</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div>]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682343376774.png" type="image/png"/>
