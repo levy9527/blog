@@ -184,6 +184,31 @@ git merge --allow-unrelated-histories
 ```bash
 git pull origin ${branch} --allow-unrelated-histories
 ```
+
+### git log 丢失最新提交
+有 commit 从旧到新示意如下： c1 <- c2 <- c3(HEAD)
+
+可能因为误操作，git reset 或 git checkout 到了 c2，此时再使用 git log，发现看不见 c3，怎么办？
+
+可以使用
+```shell
+git reflog
+```
+
+会显示出 HEAD 指针的变动轨迹，最新的变动在前面：
+```shell
+df123ba HEAD@{0}: change HEAD
+ef123ab HEAD@{1}: commit: c3
+c456df7 HEAD@{2}: commit: c2
+a789ccd HEAD@{3}: commit: c1
+```
+
+找到 c3 对应的 hash，checkout 即可：
+
+```shell
+git checkout ef123ab 
+```
+
 ### 查看分支创建时间
 ```shell
 # 查看本地当前分支
@@ -216,8 +241,6 @@ dcea169b refs/remotes/origin/feat/name@{2022-07-18 16:50:20 +0800}: update by pu
 ```bash
 git log --all --full-history -- package-lock.json
 ```
-### 
-
 ### 从所有提交中删除一个文件
 ```bash
 git filter-branch --tree-filter "rm -rf package-lock.json" --prune-empty -- --all
