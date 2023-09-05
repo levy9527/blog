@@ -133,6 +133,11 @@ git remote add gitlab ${gitlab_repo_url}
 git push gitlab ${current_branch}
 ```
 
+使用以下命令查看所有远程仓库
+```shell
+git remote -v
+```
+
 ### 浅克隆
 适用于仓库很大，对过往历史不关心，想快速克隆的场景。
 ```bash
