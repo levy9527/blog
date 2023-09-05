@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 31 Aug 2023 12:36:40 GMT</pubDate>
-    <lastBuildDate>Thu, 31 Aug 2023 12:36:40 GMT</lastBuildDate>
+    <pubDate>Tue, 05 Sep 2023 02:50:52 GMT</pubDate>
+    <lastBuildDate>Tue, 05 Sep 2023 02:50:52 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1565,12 +1565,13 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <link>https://levy.vip/git/git-useful-commands.html</link>
       <guid>https://levy.vip/git/git-useful-commands.html</guid>
       <source url="https://levy.vip/rss.xml">Git常用命令</source>
-      <description>Git常用命令 前言 这里列举常见场景，并给出相应解决方案 约定： 下文代码块中${}里面表示的是变量，具体值视情况而定，其余的都是正确可执行的命令。 配置 Mac/Linux 用户 执行以下操作 vi ~/.gitconfig</description>
+      <description>Git常用命令 前言 本文将列举Git常见场景，并给出相应解决方案。 约定： 下文代码块中${}里面表示的是变量，具体值视情况而定，其余的都是正确可执行的命令。 推荐： 图形化交互式Git教程 配置 Mac/Linux 用户 执行以下操作 vi ~/.gitconfig</description>
       <pubDate>Mon, 21 Sep 2020 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Git常用命令</h1>
 <h2> 前言</h2>
-<p>这里列举常见场景，并给出相应解决方案<br>
-约定： 下文代码块中<code>${}</code>里面表示的是变量，具体值视情况而定，其余的都是正确可执行的命令。</p>
+<p>本文将列举Git常见场景，并给出相应解决方案。</p>
+<p>约定： 下文代码块中<code>${}</code>里面表示的是变量，具体值视情况而定，其余的都是正确可执行的命令。</p>
+<p>推荐： <a href="https://learngitbranching.js.org/?locale=zh_CN" target="_blank" rel="noopener noreferrer">图形化交互式Git教程</a></p>
 <h2> 配置</h2>
 <p>Mac/Linux 用户 执行以下操作</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>Windows用户在桌面用户文件夹下有个.gitconfig隐藏文件，直接修改即可<br>
@@ -1579,7 +1580,10 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 增强</h2>
 <p>Mac或Linux用户，推荐安装<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener noreferrer">https://github.com/robbyrussell/oh-my-zsh</a>，增强命令行体验。</p>
 <h2> 记住账号密码</h2>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 本地提交</h2>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 初始化</h2>
+<p>在项目根目录，执行以下命令</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>或克隆远程仓库到本地，自动初始化</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 本地提交</h2>
 <h3> 取消未暂存的修改</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 取消add</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 取消提交</h3>
@@ -1594,15 +1598,12 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 查看远程分支</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 创建干净历史分支</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 删除分支</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 标签管理</h2>
-<h3> 新建本地标签</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 删除本地标签</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 查看本地所有标签</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 推送本地标签</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 获取远程标签</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 删除远程标签</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 远程仓库</h2>
-<h3> 浅克隆</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 远程仓库</h2>
+<h3> 远程仓库管理</h3>
+<p>一般而言，称默认远程仓库为 origin，如果是通过本地 <code>git init</code> 初始化的，需要手动添加远程仓库</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果有多个远程仓库，为之取不同的名字即可。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>之后用以下命令进行推送：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 浅克隆</h3>
 <p>适用于仓库很大，对过往历史不关心，想快速克隆的场景。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 克隆指定分支</h3>
 <p>适用于只想要某一分支代码的场景。</p>
@@ -1613,7 +1614,14 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>适用于本地开发了一段时间，最近才在代码托管平台上初始化远程仓库的场景</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 取消错误的推送</h3>
 <p>适用于推送了错误的提交后, 想取消该推送的场景</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他</h2>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 标签管理</h2>
+<h3> 新建本地标签</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 删除本地标签</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 查看本地所有标签</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 推送本地标签</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 获取远程标签</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 删除远程标签</h3>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 其他</h2>
 <h3> cherry-pick</h3>
 <ol>
 <li>checkout目标分支(target branch)</li>
