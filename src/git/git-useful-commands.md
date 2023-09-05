@@ -5,8 +5,12 @@ tag: Git
 
 # Git常用命令
 ## 前言
-这里列举常见场景，并给出相应解决方案
+本文将列举Git常见场景，并给出相应解决方案。
+
 约定： 下文代码块中`${}`里面表示的是变量，具体值视情况而定，其余的都是正确可执行的命令。
+
+推荐： [图形化交互式Git教程](https://learngitbranching.js.org/?locale=zh_CN)
+
 ## 配置
 Mac/Linux 用户 执行以下操作
 ```bash
@@ -30,6 +34,17 @@ Mac或Linux用户，推荐安装[https://github.com/robbyrussell/oh-my-zsh](http
 # 输入下列命令后，再输入一次账号密码即可
 git config --global credential.helper store
 ```
+## 初始化
+在项目根目录，执行以下命令
+```shell
+git init
+```
+
+或克隆远程仓库到本地，自动初始化
+```shell
+git clone ${repo_url}
+```
+
 ## 本地提交
 ### 取消未暂存的修改
 ```bash
@@ -98,36 +113,26 @@ git push origin -d ${remote_branch}
 # 或
 git push origin :${remote_branch}
 ```
-## 标签管理
-### 新建本地标签
-```bash
-git tag ${tag_name}
-```
-### 删除本地标签
-```bash
-git tag -d ${tag_name}
-```
-### 查看本地所有标签
-```bash
-git tag -l
-```
-### 推送本地标签
-```bash
-git push origin ${tag_name}
-# 推送所有标签
-git push origin --tags
-# 同时推送提交记录以及本分支的所有标签
-git push --follow-tags
-```
-### 获取远程标签
-```bash
-git fetch origin tag
-```
-### 删除远程标签
-```bash
-git push origin -d tag ${tag_name}
-```
+
 ## 远程仓库
+### 远程仓库管理
+一般而言，称默认远程仓库为 origin，如果是通过本地 `git init` 初始化的，需要手动添加远程仓库
+```shell
+git remote add origin ${repo_url}
+```
+
+如果有多个远程仓库，为之取不同的名字即可。
+```shell
+git remote add github ${github_repo_url}
+
+git remote add gitlab ${gitlab_repo_url}
+```
+
+之后用以下命令进行推送：
+```shell
+git push gitlab ${current_branch}
+```
+
 ### 浅克隆
 适用于仓库很大，对过往历史不关心，想快速克隆的场景。
 ```bash
@@ -168,6 +173,37 @@ git reset ${hash}
 # 覆盖远程仓库的代码
 git push --force
 ```
+
+## 标签管理
+### 新建本地标签
+```bash
+git tag ${tag_name}
+```
+### 删除本地标签
+```bash
+git tag -d ${tag_name}
+```
+### 查看本地所有标签
+```bash
+git tag -l
+```
+### 推送本地标签
+```bash
+git push origin ${tag_name}
+# 推送所有标签
+git push origin --tags
+# 同时推送提交记录以及本分支的所有标签
+git push --follow-tags
+```
+### 获取远程标签
+```bash
+git fetch origin tag
+```
+### 删除远程标签
+```bash
+git push origin -d tag ${tag_name}
+```
+
 ## 其他
 ### cherry-pick
 
