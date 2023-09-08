@@ -24,6 +24,7 @@ export default hopeTheme({
 
   // sidebar
   sidebar,
+  sidebarSorter: ['date-desc'],
 
   //footer: "默认页脚",
 
