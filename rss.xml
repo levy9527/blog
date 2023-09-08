@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 07 Sep 2023 12:34:13 GMT</pubDate>
-    <lastBuildDate>Thu, 07 Sep 2023 12:34:13 GMT</lastBuildDate>
+    <pubDate>Fri, 08 Sep 2023 02:21:44 GMT</pubDate>
+    <lastBuildDate>Fri, 08 Sep 2023 02:21:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -120,8 +120,8 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
     </item>
     <item>
       <title>都什么年代了，还在用传统方式写代码？</title>
-      <link>https://levy.vip/daily/leverage-ai-to-boost-coding-productivity..html</link>
-      <guid>https://levy.vip/daily/leverage-ai-to-boost-coding-productivity..html</guid>
+      <link>https://levy.vip/daily/leverage-ai-to-boost-coding-productivity.html</link>
+      <guid>https://levy.vip/daily/leverage-ai-to-boost-coding-productivity.html</guid>
       <source url="https://levy.vip/rss.xml">都什么年代了，还在用传统方式写代码？</source>
       <description>都什么年代了，还在用传统方式写代码？ 前言 还在把 AI 当作搜索引擎的替代品，有问题才问 AI，没问题就在那边吭哧吭哧地撸代码？如果是这样，那你真的 OUT了！现在正经人谁还自己一行行地写代码啊，都是 AI 生成的代码——没有 AI 我不写（手动滑稽）。 本文将搁置争议，秉持实用主义，讨论在 AI 可以辅助我们编码的情况下，应采取什么样的实践，从而利用好工具，提高工作效率。 本文将分享 AI 时代的编程新实践，教你如何从一个 &amp;quot;Ctrl + C&amp;quot;、 &amp;quot;Ctrl + V&amp;quot; 工程师，变成一个 &amp;quot;Tab + Enter&amp;quot; 工程师🤣。</description>
       <pubDate>Sat, 26 Aug 2023 00:00:00 GMT</pubDate>
