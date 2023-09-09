@@ -20,7 +20,6 @@
     "@vuepress/plugin-search": "^2.0.0-beta.66",
     "vue": "^3.3.4",
     "vuepress": "2.0.0-beta.66",
-    "vuepress-plugin-auto-catalog": "^2.0.0-beta.237",
     "vuepress-theme-hope": "2.0.0-beta.233"
   }
 }

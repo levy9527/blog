@@ -1,6 +1,5 @@
 import { searchPlugin } from '@vuepress/plugin-search'
 import { defineUserConfig } from "vuepress";
-import { autoCatalogPlugin } from "vuepress-plugin-auto-catalog";
 import theme from "./theme.js";
 
 const GA = 'G-6HEW6B1S6B'
@@ -16,12 +15,6 @@ export default defineUserConfig({
   plugins: [
     searchPlugin({
       // options
-    }),
-    autoCatalogPlugin({
-      orderGetter: page => {
-        let date = new Date(page.date)
-        return -(date ? date.getTime() : 1)
-      }
     }),
   ],
 
