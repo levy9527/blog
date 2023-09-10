@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 09 Sep 2023 03:02:36 GMT</pubDate>
-    <lastBuildDate>Sat, 09 Sep 2023 03:02:36 GMT</lastBuildDate>
+    <pubDate>Sun, 10 Sep 2023 08:39:10 GMT</pubDate>
+    <lastBuildDate>Sun, 10 Sep 2023 08:39:10 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -252,6 +252,18 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371897998-369e984e-f5b8-4c4b-bc56-897015092549.png" alt="" loading="lazy"></p>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689239437556-36a14986-6114-44e1-b07c-c38a288874db.png" type="image/png"/>
+    </item>
+    <item>
+      <title>微软中国CTO演讲观后感</title>
+      <link>https://levy.vip/daily/reflections-on-a-speech-by-cto-of-microsoft-china.html</link>
+      <guid>https://levy.vip/daily/reflections-on-a-speech-by-cto-of-microsoft-china.html</guid>
+      <source url="https://levy.vip/rss.xml">微软中国CTO演讲观后感</source>
+      <description>微软中国CTO演讲观后感 看看大佬的演讲，还是有很多启发的。别的不说，推荐的书单就很有价值。</description>
+      <pubDate>Sun, 10 Sep 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 微软中国CTO演讲观后感</h1>
+<p>看看大佬的演讲，还是有很多启发的。别的不说，推荐的书单就很有价值。</p>
+<!-- more -->
+]]></content:encoded>
     </item>
     <item>
       <title>对Vue不得不吐槽的事</title>
