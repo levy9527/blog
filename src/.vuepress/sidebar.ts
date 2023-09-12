@@ -1,6 +1,7 @@
 import { sidebar } from "vuepress-theme-hope";
 
 export default sidebar({
+  "/daily/": "structure",
   "/english": [
     "let-chatgpt-be-your-foreign-language-teacher",
     "how-to-self-evaluate-english-level",
@@ -77,5 +78,4 @@ export default sidebar({
       children: ["old-articles", "performance-optimization-in-action"]
     }
   ],
-  "/daily/": "structure",
 });

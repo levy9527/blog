@@ -12,7 +12,7 @@ tag:
 但要小心，在正式环境中执行 SQL，也许会有意想不到的坑！
 ## 环境说明
 先说明下我们的环境信息。
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/160590/1692321838318-b353f14d-13d0-432e-a05b-9fbcd3c1dd1f.jpeg)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692321838318-b353f14d-13d0-432e-a05b-9fbcd3c1dd1f.jpeg)
 我们只能通过跳板机的终端连接 mysql、执行SQL，没有DBeaver、Navicat等工具可用。
 
 则我们执行SQL语句的方式有两种：
@@ -50,7 +50,7 @@ mysql -h your-ip -u your-username -p${password} your-database <  script.sql
 ss;
 select 1;
 ```
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1692263770642-5487130c-27ed-4e08-9e89-24755194f7ed.png#averageHue=%2325201f&clientId=u8518c5e1-f517-4&from=paste&height=95&id=u7d36cf79&originHeight=95&originWidth=711&originalType=binary&ratio=1&rotation=0&showTitle=false&size=17911&status=done&style=none&taskId=uf9a5b8a2-43eb-430b-8369-b75ec29e464&title=&width=711)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263770642-5487130c-27ed-4e08-9e89-24755194f7ed.png)
 
 使用导入命令：
 ```sql
@@ -58,23 +58,23 @@ mysql -h your-ip -u your-username -p${password} your-database < test.sql
 ```
 
 提示第一行有错误，第二行未执行。这是符合期望的。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1692263858957-62a01998-d47a-4fa9-b2a9-b83c5a3be764.png#averageHue=%232b2524&clientId=u8518c5e1-f517-4&from=paste&height=114&id=u47128a74&originHeight=114&originWidth=1411&originalType=binary&ratio=1&rotation=0&showTitle=false&size=73161&status=done&style=none&taskId=u28bab588-0fbf-4d2c-9492-bfbd78a6d1c&title=&width=1411)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263858957-62a01998-d47a-4fa9-b2a9-b83c5a3be764.png)
 
 但如果连接 mysql 后，在交互式命令行里执行 source 命令：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1692263665731-d9bdde27-6522-4cd3-9c82-4f5c7a0ead79.png#averageHue=%23231e1e&clientId=u8518c5e1-f517-4&from=paste&height=289&id=u80ad833f&originHeight=289&originWidth=1438&originalType=binary&ratio=1&rotation=0&showTitle=false&size=108938&status=done&style=none&taskId=u7b6c2e62-1f4f-4f95-8735-5ca1a6bc86a&title=&width=1438)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263665731-d9bdde27-6522-4cd3-9c82-4f5c7a0ead79.png)
 错误出现并不会中断SQL的执行。
 复制语句，粘贴到命令行，表现也是如此：错误只提示，不中断执行。
 
 那么，能否在交互式命令行里执行SQL语句，一旦错误就中断呢？
 
 我们在MySQL官方论坛里找到了相关的[帖子](https://bugs.mysql.com/bug.php?id=35634)：
-![1692262647895_F45C973B-8BA2-40e2-8D84-ECADF931CF32.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1692262908887-64d86cd8-c2e9-4b50-b341-75a28a509d94.png#averageHue=%23fdfbfa&clientId=u8518c5e1-f517-4&from=paste&height=811&id=z6mwq&originHeight=811&originWidth=1120&originalType=binary&ratio=1&rotation=0&showTitle=false&size=130390&status=done&style=none&taskId=u8c60f521-0a35-4921-8c57-daa61948532&title=&width=1120)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692262908887-64d86cd8-c2e9-4b50-b341-75a28a509d94.png)
 
 最终得到的答案是，使用：\e。
 进行类vi界面，在这里粘贴 SQL（这里就不会有中文被过滤的问题）
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1692263386275-ba3e4365-f45e-435e-a269-05c5d92dfa16.png#averageHue=%231f1b1b&clientId=u8518c5e1-f517-4&from=paste&height=709&id=udf4b87ef&originHeight=709&originWidth=979&originalType=binary&ratio=1&rotation=0&showTitle=false&size=25751&status=done&style=none&taskId=u8cd47126-86db-4f11-ad2b-d5995131e1e&title=&width=979)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263386275-ba3e4365-f45e-435e-a269-05c5d92dfa16.png)
 保存退出后，输入 `;`则执行 SQL 语句，Ctrl + C　则不执行。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1692263595582-2f5a733e-ea75-47b1-b128-f76ecf7a1cda.png#averageHue=%23282221&clientId=u8518c5e1-f517-4&from=paste&height=278&id=u194bf767&originHeight=278&originWidth=1422&originalType=binary&ratio=1&rotation=0&showTitle=false&size=122860&status=done&style=none&taskId=uaa27006c-7ef1-48b4-b2b9-a3a75620766&title=&width=1422)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263595582-2f5a733e-ea75-47b1-b128-f76ecf7a1cda.png)
 可以看到，这种方式执行 SQL 语句，也是可以遇到错误就中断的。
 ## 如果要删除错误的数据怎么办？
 尽管经过测试，但也不敢说语句的执行能百分之分成功，因此，这里给个温馨提醒。

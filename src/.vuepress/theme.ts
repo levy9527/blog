@@ -24,6 +24,7 @@ export default hopeTheme({
 
   // sidebar
   sidebar,
+  sidebarSorter: ['date-desc'],
 
   //footer: "默认页脚",
 
@@ -59,6 +60,12 @@ export default hopeTheme({
   },
 
   plugins: {
+    autoCatalog: {
+      orderGetter: page => {
+        let date = new Date(page.date)
+        return -(date ? date.getTime() : 1)
+      },
+    },
     blog: true,
     feed: {
       rss: true,

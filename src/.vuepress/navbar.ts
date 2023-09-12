@@ -11,14 +11,19 @@ export default navbar([
     icon: "list",
     children: [
       {
-        text: "英语学习",
-        icon: "globe",
-        link: "/english",
-      },
-      {
         text: "软件研发",
         icon: "code",
         link: "/tools/how-to-connect-to-internet",
+      },
+      {
+        text: "工作日常",
+        icon: "briefcase",
+        link: "/daily",
+      },
+      {
+        text: "英语学习",
+        icon: "globe",
+        link: "/english",
       },
     ],
   },
