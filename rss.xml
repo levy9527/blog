@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 10 Sep 2023 08:39:10 GMT</pubDate>
-    <lastBuildDate>Sun, 10 Sep 2023 08:39:10 GMT</lastBuildDate>
+    <pubDate>Tue, 12 Sep 2023 07:21:12 GMT</pubDate>
+    <lastBuildDate>Tue, 12 Sep 2023 07:21:12 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1653,6 +1653,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>一般而言，称默认远程仓库为 origin，如果是通过本地 <code>git init</code> 初始化的，需要手动添加远程仓库</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果有多个远程仓库，为之取不同的名字即可。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>之后用以下命令进行推送：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>使用以下命令查看所有远程仓库</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 浅克隆</h3>
 <p>适用于仓库很大，对过往历史不关心，想快速克隆的场景。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 克隆指定分支</h3>
@@ -2059,6 +2060,65 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 可以看到，新的 release 版本的 jar 包已经在仓库中了，可以被安装使用了。</p>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" type="image/png"/>
+    </item>
+    <item>
+      <title>根据时间范围查询推荐实践</title>
+      <link>https://levy.vip/java/recommend-practices-for-query-by-date-range.html</link>
+      <guid>https://levy.vip/java/recommend-practices-for-query-by-date-range.html</guid>
+      <source url="https://levy.vip/rss.xml">根据时间范围查询推荐实践</source>
+      <description>根据时间范围查询推荐实践 背景 不敢说是最佳实践，因为受限于特定技术、框架，并且带上了个人偏好。 虽然原理简单，但细节很多，不想每次搞来搞去，因此还是有记录的价值。 本文用到的技术栈为：MySQL、MyBatis、Java 8、Jackson</description>
+      <pubDate>Tue, 12 Sep 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 根据时间范围查询推荐实践</h1>
+<h2> 背景</h2>
+<p>不敢说是最佳实践，因为受限于特定技术、框架，并且带上了个人偏好。</p>
+<p>虽然原理简单，但细节很多，不想每次搞来搞去，因此还是有记录的价值。</p>
+<p>本文用到的技术栈为：MySQL、MyBatis、Java 8、Jackson</p>
+<!-- more -->
+<h2> 需求</h2>
+<p>删除某个时间段以前的日志。类似于消除浏览记录：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1694499288408-aaec3b0c-9d06-43c1-849b-7af4ec9eb01a.png" alt="image.png" loading="lazy"></p>
+<h2> 分析</h2>
+<p>上图只是UI示例，为了适应UI的变化，最好把接口设置成接收两个参数：</p>
+<ul>
+<li>开始时间</li>
+<li>结束时间</li>
+</ul>
+<p>如果UI如上图所示，则选择过去 7 天时，开始时间就是 1970 年 1 月 1 日，结束时间就是过去第 7 天。</p>
+<h2> 实现</h2>
+<h3> MySQL</h3>
+<p>对于 MySQL，推荐使用，因为简单直观，且方便：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>另一种方式：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>上面是时间精确到秒的设计思路，逻辑上没有问题，但体验会有问题：如果是查询某个时间范围的日志还好，精确一点；现在需要是删除日志，谁还关心到秒啊！</p>
+<p>通常人们只会关心到天，则考虑一种情况：开始时间与结束时间是同一天，下面的语句无法删除任何记录：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>那么现在，就是分歧点了，有两种方案：</p>
+<ol>
+<li>程序为开始时间、结束时间填充时分秒：</li>
+</ol>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><ol start="2">
+<li>结束时间 +1 天：</li>
+</ol>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>两种方案都是可以行，我推荐的是第二种。并且，由后端处理，不需要前端拼接字符串。</p>
+<h3> MyBatis</h3>
+<p>如果使用的是 <code>&gt;=</code> 这种要SQL写法，MyBatis 就需要转义：</p>
+<ul>
+<li>
+<blockquote>
+<p>转成 &gt;</p>
+</blockquote>
+</li>
+<li>&lt; 转成 &lt;</li>
+</ul>
+<p>这就是不推荐这种写法的原因之一。</p>
+<h3> Java 8</h3>
+<p>都已经 Java 8 了，就不要使用 java.util.Date 了，使用 java.time.LocalDate 吧。方便应对后续的时间操作。</p>
+<p>结束时间+1天，非常简单：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> Jackson</h3>
+<p>如果不设置反序列化，请求数据无法转换成 LocalDate。既然要设置反序列化，那序列化也少不了。我把全部设置的代码放下面了，有需要复制即可：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 结语</h2>
+<p>好了，终于搞完了，我的评价是：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1694501621853-c16a33fa-68e7-4aba-a72e-a9907793b564.png" alt="image.png" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2023/png/160590/1694499288408-aaec3b0c-9d06-43c1-849b-7af4ec9eb01a.png" type="image/png"/>
     </item>
     <item>
       <title>Jackson 经典异常 UnrecognizedPropertyException</title>
