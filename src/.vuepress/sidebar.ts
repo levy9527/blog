@@ -62,6 +62,8 @@ export default sidebar({
       text: "Java",
       prefix: "/java",
       children: [
+        "recommend-practices-for-query-by-date-range",
+        "common-practices-for-handling-excel",
         "how-to-convert-snapshot-into-release-jar-without-source-code",
         "why-i-prefer-fastjson-instead-of-jackson",
         "why-is-it-so-hard-to-upgrade-dependencies",
