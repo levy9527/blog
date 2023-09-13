@@ -43,6 +43,7 @@ export default sidebar({
       text: "软件测试",
       prefix: "/software-testing/",
       children: [
+        "use-postman-for-api-testing",
         "use-RestAssured-for-api-testing",
         "use-jest-for-test-driven-development",
         "use-playwright-for-ui-testing",
