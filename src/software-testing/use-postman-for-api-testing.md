@@ -28,6 +28,8 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 笔者实在忍不住吐槽了一番：
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694596433278-eb3e5566-0126-4e93-9dfe-a9c4d8edae51.png)
 
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694596460562-b472ca9d-8b73-4e1f-b5a5-7c9c1fb8253a.png)
+
 笔者思前想后，最终还是放弃测试代码要与源码使用统一技术栈的构想，再次搬出 Postman 作为接口自动化测试的工具。
 ## 本地调试
 
