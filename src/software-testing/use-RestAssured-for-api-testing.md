@@ -366,31 +366,7 @@ public void download(){
 ## 持续集成
 以集成 Gitlab CI 为例，其核心思路就是在 CI 环境运行 `mvn test`。
 
-可能遇到的问题在于，由于项目依赖关系：
-1. 旧代码中运行不通过的测试影响到了 `mvn test` 的结果
-2. pom.xml 无法读取相关的配置
-
-首先，假设根目录为 parent，其下有三个子模块：
-- a
-- b
-- common
-
-每个目录都有 pom.xml，其中所有子模块的属性值都来自于 parent 目录的 pom.xml。
-
-而我们需要进行持续集成的模块是 b，则 maven 命令应该如下：
-```shell
-mvn --also-make -pl b test
-```
-
-则此时就跳过了子模块 a。
-
-但如果子模块 b 又依赖了 common，此时 common 的遗留的测试用例报错了，那我们的解决办法只能是：一个个地解决报错。
-
-当上述 maven 命令可以运行后，就可以修改 Gitlab CI 的配置，然后设置调度任务，让 Gitlab 每天都跑测试用例。一旦用例执行不通过，就会发邮件通知到我们。
-
-![](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683436020492.png)
-
-更多关于 Gitlab CI 的配置, 可以参考笔者的[另一篇文章](../git/gitlab-ci)。
+具体做法可以参考笔者的[Gitlab CI文章](../git/gitlab-ci#%E9%9B%86%E6%88%90%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95)。
 ## 其他问题
 
 ### 为什么不用 Pytest
