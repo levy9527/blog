@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 13 Sep 2023 11:29:15 GMT</pubDate>
-    <lastBuildDate>Wed, 13 Sep 2023 11:29:15 GMT</lastBuildDate>
+    <pubDate>Wed, 13 Sep 2023 11:34:00 GMT</pubDate>
+    <lastBuildDate>Wed, 13 Sep 2023 11:34:00 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2985,6 +2985,7 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <!-- more -->
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>笔者实在忍不住吐槽了一番：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694596433278-eb3e5566-0126-4e93-9dfe-a9c4d8edae51.png" alt="" loading="lazy"></p>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694596460562-b472ca9d-8b73-4e1f-b5a5-7c9c1fb8253a.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>笔者思前想后，最终还是放弃测试代码要与源码使用统一技术栈的构想，再次搬出 Postman 作为接口自动化测试的工具。</p>
 <h2> 本地调试</h2>
 <h3> 接口集合</h3>
