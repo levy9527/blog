@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 13 Sep 2023 09:27:05 GMT</pubDate>
-    <lastBuildDate>Wed, 13 Sep 2023 09:27:05 GMT</lastBuildDate>
+    <pubDate>Wed, 13 Sep 2023 09:34:16 GMT</pubDate>
+    <lastBuildDate>Wed, 13 Sep 2023 09:34:16 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2976,7 +2976,7 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
       <guid>https://levy.vip/software-testing/use-postman-for-api-testing.html</guid>
       <source url="https://levy.vip/rss.xml">使用postman进行接口测试</source>
       <description>使用postman进行接口测试 前言 虽然之前分享过 RestAssured 进行接口测试的教程，但实践起来，会有阻碍：研发同学还是对 Postman 更熟悉，更倾向于使用 Postman 调试接口，而不是写 Java 代码对 Controller 层进行测试。 而笔者在针对旧的 Java 项目添加接口测试时，又遇到了另一个问题：那就是由于模块依赖，进行接口测试时，还在把旧的测试代码一并带上。虽然说有办法解决，但究竟是麻烦不断。 还有就是，Java 的类型检查，在写接口测试时十分束缚手脚。如下述代码：</description>
-      <pubDate>Tue, 12 Sep 2023 00:00:00 GMT</pubDate>
+      <pubDate>Wed, 13 Sep 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 使用postman进行接口测试</h1>
 <h2> 前言</h2>
 <p>虽然之前分享过 RestAssured 进行接口测试的教程，但实践起来，会有阻碍：研发同学还是对 Postman 更熟悉，更倾向于使用 Postman 调试接口，而不是写 Java 代码对 Controller 层进行测试。</p>
