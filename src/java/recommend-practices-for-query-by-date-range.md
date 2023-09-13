@@ -17,7 +17,7 @@ tag:
 
 ## 需求
 删除某个时间段以前的日志。类似于消除浏览记录：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1694499288408-aaec3b0c-9d06-43c1-849b-7af4ec9eb01a.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694499288408-aaec3b0c-9d06-43c1-849b-7af4ec9eb01a.png)
 
 ## 分析
 上图只是UI示例，为了适应UI的变化，最好把接口设置成接收两个参数：
@@ -129,4 +129,4 @@ public class JacksonConfig {
 
 ## 结语
 好了，终于搞完了，我的评价是：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1694501621853-c16a33fa-68e7-4aba-a72e-a9907793b564.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694501621853-c16a33fa-68e7-4aba-a72e-a9907793b564.png)
