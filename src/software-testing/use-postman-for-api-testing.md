@@ -18,9 +18,9 @@ tag:
 
 ```javascript
 // 为什么不设置 Map<String, String> ? 
-// 因为 menu 有个字段的值是数字，使用 String 接收运行时会报错！
+// 因为 menu 有个字段的类型是 Integer，使用 String 接收运行时会报错。
 Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
-  String code = (String) v.get("name");
+  String code = (String) v.get("name"); // 这种类型转换代码实在多余！
   return code.contains("管理员");
 }).findFirst();
 ```
@@ -48,7 +48,6 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 
 1. 一般设置 initial value 即可
 2. 如果设置了 current value，则运行 postman 时使用的是 current value
-3. 建议只针对线上环境做相应的 environment 管理，本地开发环境通过 current value 设置即可
 
 如果有多套环境，就点击复制，再修改环境名及包含变量的 initial value 即可。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747475793-1f85e976-8189-44b7-9667-f1a195ff8c35.png)
@@ -74,11 +73,11 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 
 示例接口的测试用例分别如下：
 
-- POST请求
+- 这是最简单的测试用例，判断接口响应码 200
 
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748404916-daf8d633-1a35-48f8-a652-cc13c16244b5.png)
 
-- GET请求：请求成功后，取第一个数组，并把其 id 设置到环境变量中
+- 请求成功后，取数组的第一个元素，并把其 id 设置到环境变量中
 ```javascript
 pm.test("Status code is 200", function () {
   pm.response.to.have.status(200);
@@ -87,7 +86,11 @@ pm.test("Status code is 200", function () {
 });
 ```
 
-或者确保返回的数据里没有特定的数据：
+- 从环境变量中取值, 作为请求参数
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602752518841-f3717ddd-fbee-428f-a34f-794a8ab1ac0e.png)
+
+
+- 再复杂一点的示例：确保返回的数据里没有特定的数据
 ```javascript
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
@@ -98,34 +101,33 @@ pm.test("Status code is 200", function () {
 });
 ```
 
-- DELETE请求：从环境变量中取值，判断接口响应码是否 200 即可
-
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602752518841-f3717ddd-fbee-428f-a34f-794a8ab1ac0e.png)
-
 ### 运行集合
 
-本地调试好了，上线开发环境后，可以使用 postman 对线上接口进行测试
+本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了
 
-记得先恢复变量当前值
+记得先重置变量当前值
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1603339930271-36e9f9e5-8013-40fa-9fac-e7cb642ba451.png)
 
 再选择集合，点击运行
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747943902-be50a347-cf3d-417c-9bed-e8d8abbb520d.png)
-点击如图所示内容。
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748072901-4d49553d-bf78-4276-baee-6b8e84c83951.png)
-在弹出的窗口中，选择环境，再把下面的四个 checkbox 取消勾选，一般而言，这样不会错。
 
-点击执行，可以看到集合内所有接口的执行结果。
+点击如图所示内容：
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748072901-4d49553d-bf78-4276-baee-6b8e84c83951.png)
+在弹出的窗口中，选择环境，再把下面的四个 checkbox 取消勾选。一般而言，这样不会容易出错。
+
+点击执行，可以看到集合内所有接口的执行结果：
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png)
 
 ## 持续集成
 ### 导出数据
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png)
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594460053-8cf994d3-a2fa-4dbc-a6da-911ae41a8e35.png)
-这会导出一个 json 文件。
+这样会导出一个 json 文件。
+
 ### 提交到Git
 把 json 文件放到项目中，并提交到 Git
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594578211-b381d377-f6a5-4dd2-be82-0c9295f10fc6.png)
+
 ### 建立CI任务
 以 Gitlab 为例，修改 .gitlab-ci.yml，增加以下内容：
 ```java
@@ -133,16 +135,16 @@ newman:
   stage: test
   image: node:lts
   script:
-    - node --version
-    - npm --version
+    - node -v
+    - npm -v
     - npm install -g newman
     - newman run export.postman_collection.json
   tags:
     - gitlab-runner
   only:
-    - /develop|test|uat/
-
+    - /dev|test|uat/
 ```
+
 推送代码，即可看到流水线
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594759551-cb5a8564-cf20-4491-9378-3b6408e2c9fc.png)
 
