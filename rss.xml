@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 13 Sep 2023 11:34:00 GMT</pubDate>
-    <lastBuildDate>Wed, 13 Sep 2023 11:34:00 GMT</lastBuildDate>
+    <pubDate>Wed, 13 Sep 2023 12:06:01 GMT</pubDate>
+    <lastBuildDate>Wed, 13 Sep 2023 12:06:01 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -3000,7 +3000,6 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <ol>
 <li>一般设置 initial value 即可</li>
 <li>如果设置了 current value，则运行 postman 时使用的是 current value</li>
-<li>建议只针对线上环境做相应的 environment 管理，本地开发环境通过 current value 设置即可</li>
 </ol>
 <p>如果有多套环境，就点击复制，再修改环境名及包含变量的 initial value 即可。<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747475793-1f85e976-8189-44b7-9667-f1a195ff8c35.png" alt="" loading="lazy"></p>
@@ -3018,39 +3017,43 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <p>在 Tests 标签页里，即可编写测试，在 SNIPPETS 里会有相应的示例。</p>
 <p>示例接口的测试用例分别如下：</p>
 <ul>
-<li>POST请求</li>
+<li>这是最简单的测试用例，判断接口响应码 200</li>
 </ul>
 <figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748404916-daf8d633-1a35-48f8-a652-cc13c16244b5.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <ul>
-<li>GET请求：请求成功后，取第一个数组，并把其 id 设置到环境变量中</li>
+<li>请求成功后，取数组的第一个元素，并把其 id 设置到环境变量中</li>
 </ul>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>或者确保返回的数据里没有特定的数据：</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>DELETE请求：从环境变量中取值，判断接口响应码是否 200 即可</li>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>
+<p>从环境变量中取值, 作为请求参数<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602752518841-f3717ddd-fbee-428f-a34f-794a8ab1ac0e.png" alt="" loading="lazy"></p>
+</li>
+<li>
+<p>再复杂一点的示例：确保返回的数据里没有特定的数据</p>
+</li>
 </ul>
-<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602752518841-f3717ddd-fbee-428f-a34f-794a8ab1ac0e.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<h3> 运行集合</h3>
-<p>本地调试好了，上线开发环境后，可以使用 postman 对线上接口进行测试</p>
-<p>记得先恢复变量当前值<br>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 运行集合</h3>
+<p>本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了</p>
+<p>记得先重置变量当前值<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1603339930271-36e9f9e5-8013-40fa-9fac-e7cb642ba451.png" alt="" loading="lazy"></p>
 <p>再选择集合，点击运行<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747943902-be50a347-cf3d-417c-9bed-e8d8abbb520d.png" alt="" loading="lazy"><br>
-点击如图所示内容。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747943902-be50a347-cf3d-417c-9bed-e8d8abbb520d.png" alt="" loading="lazy"></p>
+<p>点击如图所示内容：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748072901-4d49553d-bf78-4276-baee-6b8e84c83951.png" alt="" loading="lazy"><br>
-在弹出的窗口中，选择环境，再把下面的四个 checkbox 取消勾选，一般而言，这样不会错。</p>
-<p>点击执行，可以看到集合内所有接口的执行结果。<br>
+在弹出的窗口中，选择环境，再把下面的四个 checkbox 取消勾选。一般而言，这样不会容易出错。</p>
+<p>点击执行，可以看到集合内所有接口的执行结果：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png" alt="" loading="lazy"></p>
 <h2> 持续集成</h2>
 <h3> 导出数据</h3>
 <p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png" alt="" loading="lazy"><br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594460053-8cf994d3-a2fa-4dbc-a6da-911ae41a8e35.png" alt="" loading="lazy"><br>
-这会导出一个 json 文件。</p>
+这样会导出一个 json 文件。</p>
 <h3> 提交到Git</h3>
 <p>把 json 文件放到项目中，并提交到 Git<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594578211-b381d377-f6a5-4dd2-be82-0c9295f10fc6.png" alt="" loading="lazy"></p>
 <h3> 建立CI任务</h3>
 <p>以 Gitlab 为例，修改 .gitlab-ci.yml，增加以下内容：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>推送代码，即可看到流水线<br>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>推送代码，即可看到流水线<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594759551-cb5a8564-cf20-4491-9378-3b6408e2c9fc.png" alt="" loading="lazy"></p>
 <p>结果如下：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594789278-08b7d7e5-397b-47a9-9cbe-2f989a357ae1.png" alt="" loading="lazy"></p>
