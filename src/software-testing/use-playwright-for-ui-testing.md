@@ -362,7 +362,7 @@ stages:
 e2e:
   stage: test
   tags:
-    - your-runner-name
+    - your-runner-name # 把这里修改成实际的 gitlab runner 对应的 tag
   rules:
     - if: '$CI_PIPELINE_SOURCE == "schedule" && $e2e'
   image:
