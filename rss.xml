@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 14 Sep 2023 08:19:46 GMT</pubDate>
-    <lastBuildDate>Thu, 14 Sep 2023 08:19:46 GMT</lastBuildDate>
+    <pubDate>Fri, 15 Sep 2023 02:47:35 GMT</pubDate>
+    <lastBuildDate>Fri, 15 Sep 2023 02:47:35 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2992,6 +2992,13 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <p>新建一个 collection，然后再在里面新建接口。</p>
 <p>新建方法多种多样，可以手工新建，也可以 curl 导入，也可以从 swagger 导入。<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694595120400-0e37bf26-405b-412c-b54f-7057cf49ab20.png" alt="" loading="lazy"></p>
+<h3> 从 cURL 导入</h3>
+<p>对于已经上线的接口，使用 cURL 导入非常方便，省去了拼接参数的过程。</p>
+<p>下面以获取 token 接口为例进行说明。</p>
+<p>打开登录页面，打开浏览器控制台（按 F12），点击登录按钮，找到获取 token 的接口，然后右键 -&gt; Copy -&gt; Copy as cURL（bash）。<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1694737892655-0ebc74d0-17de-4972-9411-e36697fd5637.png" alt="image.png" loading="lazy"><br>
+再打开 Postman，点击 Import -&gt; Raw text -&gt; 粘贴，即可导入接口。</p>
+<figure><img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1694738073586-9de6f40e-6ddd-4b0a-b330-b807f9cb851b.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
 <h3> 环境变量</h3>
 <p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602746875957-dc9090e7-900e-4352-91f7-039792e2a9e0.png" alt="" loading="lazy"><br>
 点击右上角红框处，即可设置变量，需要先设置环境名。<br>
