@@ -46,10 +46,10 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 下面以获取 token 接口为例进行说明。
 
 打开登录页面，打开浏览器控制台（按 F12），点击登录按钮，找到获取 token 的接口，然后右键 -> Copy -> Copy as cURL（bash）。
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1694737892655-0ebc74d0-17de-4972-9411-e36697fd5637.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694737892655-0ebc74d0-17de-4972-9411-e36697fd5637.png)
 再打开 Postman，点击 Import -> Raw text -> 粘贴，即可导入接口。
 
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1694738073586-9de6f40e-6ddd-4b0a-b330-b807f9cb851b.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694738073586-9de6f40e-6ddd-4b0a-b330-b807f9cb851b.png)
 
 ### 环境变量
 
