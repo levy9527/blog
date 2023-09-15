@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 15 Sep 2023 02:47:35 GMT</pubDate>
-    <lastBuildDate>Fri, 15 Sep 2023 02:47:35 GMT</lastBuildDate>
+    <pubDate>Fri, 15 Sep 2023 06:47:53 GMT</pubDate>
+    <lastBuildDate>Fri, 15 Sep 2023 06:47:53 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -3052,9 +3052,8 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png" alt="" loading="lazy"></p>
 <h2> 持续集成</h2>
 <h3> 导出数据</h3>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png" alt="" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594460053-8cf994d3-a2fa-4dbc-a6da-911ae41a8e35.png" alt="" loading="lazy"><br>
-这样会导出一个 json 文件。</p>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>使用推荐的格式，导出一个 json 文件。</p>
 <h3> 提交到Git</h3>
 <p>把 json 文件放到项目中，并提交到 Git<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594578211-b381d377-f6a5-4dd2-be82-0c9295f10fc6.png" alt="" loading="lazy"></p>
