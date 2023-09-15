@@ -133,8 +133,8 @@ pm.test("Status code is 200", function () {
 ## 持续集成
 ### 导出数据
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png)
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594460053-8cf994d3-a2fa-4dbc-a6da-911ae41a8e35.png)
-这样会导出一个 json 文件。
+
+使用推荐的格式，导出一个 json 文件。
 
 ### 提交到Git
 把 json 文件放到项目中，并提交到 Git
