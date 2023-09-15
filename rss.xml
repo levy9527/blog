@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 15 Sep 2023 06:47:53 GMT</pubDate>
-    <lastBuildDate>Fri, 15 Sep 2023 06:47:53 GMT</lastBuildDate>
+    <pubDate>Fri, 15 Sep 2023 14:39:24 GMT</pubDate>
+    <lastBuildDate>Fri, 15 Sep 2023 14:39:24 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2250,6 +2250,25 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1693060849195-8f65efab-8c15-4731-bf8e-10645785f0f5.jpeg" type="image/jpeg"/>
     </item>
     <item>
+      <title>Python 导出 MySQL 库表信息到 Excel</title>
+      <link>https://levy.vip/python/export-mysql-table-into-excel.html</link>
+      <guid>https://levy.vip/python/export-mysql-table-into-excel.html</guid>
+      <source url="https://levy.vip/rss.xml">Python 导出 MySQL 库表信息到 Excel</source>
+      <description>Python 导出 MySQL 库表信息到 Excel 需求 查询 MySQL 某个库的全部表的元信息，输出成 Excel，每一张表一个 sheet。</description>
+      <pubDate>Sun, 05 Mar 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Python 导出 MySQL 库表信息到 Excel</h1>
+<h2> 需求</h2>
+<p>查询 MySQL 某个库的全部表的元信息，输出成 Excel，每一张表一个 sheet。</p>
+<!-- more -->
+<h2> 代码</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他细节</h2>
+<p>上述代码由于库的原因，只能生成新文件或覆盖文件，不能修改原有文件。<br>
+执行代码时必须关闭生成的文件，否则报错。<br>
+sheet的名字不能超过 31 个字符。<br>
+<a href="https://www.rapidtables.com/convert/color/rgb-to-hex.html" target="_blank" rel="noopener noreferrer">RBG 转 Hex 工具</a>，给单元格、文字上颜色时会用到，因为 Excel 显示的是 RBG，但代码里是 Hex。</p>
+]]></content:encoded>
+    </item>
+    <item>
       <title>数据备份案例：mysqldump实战</title>
       <link>https://levy.vip/mysql/mysql-backup-case-study-mysqldump-in-action.html</link>
       <guid>https://levy.vip/mysql/mysql-backup-case-study-mysqldump-in-action.html</guid>
@@ -2431,25 +2450,6 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 </ol>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692321838318-b353f14d-13d0-432e-a05b-9fbcd3c1dd1f.jpeg" type="image/jpeg"/>
-    </item>
-    <item>
-      <title>Python 导出 MySQL 库表信息到 Excel</title>
-      <link>https://levy.vip/python/export-mysql-table-into-excel.html</link>
-      <guid>https://levy.vip/python/export-mysql-table-into-excel.html</guid>
-      <source url="https://levy.vip/rss.xml">Python 导出 MySQL 库表信息到 Excel</source>
-      <description>Python 导出 MySQL 库表信息到 Excel 需求 查询 MySQL 某个库的全部表的元信息，输出成 Excel，每一张表一个 sheet。</description>
-      <pubDate>Sun, 05 Mar 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> Python 导出 MySQL 库表信息到 Excel</h1>
-<h2> 需求</h2>
-<p>查询 MySQL 某个库的全部表的元信息，输出成 Excel，每一张表一个 sheet。</p>
-<!-- more -->
-<h2> 代码</h2>
-<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他细节</h2>
-<p>上述代码由于库的原因，只能生成新文件或覆盖文件，不能修改原有文件。<br>
-执行代码时必须关闭生成的文件，否则报错。<br>
-sheet的名字不能超过 31 个字符。<br>
-<a href="https://www.rapidtables.com/convert/color/rgb-to-hex.html" target="_blank" rel="noopener noreferrer">RBG 转 Hex 工具</a>，给单元格、文字上颜色时会用到，因为 Excel 显示的是 RBG，但代码里是 Hex。</p>
-]]></content:encoded>
     </item>
     <item>
       <title>使用 RestAssured 进行 API 测试</title>
@@ -2996,9 +2996,9 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <p>对于已经上线的接口，使用 cURL 导入非常方便，省去了拼接参数的过程。</p>
 <p>下面以获取 token 接口为例进行说明。</p>
 <p>打开登录页面，打开浏览器控制台（按 F12），点击登录按钮，找到获取 token 的接口，然后右键 -&gt; Copy -&gt; Copy as cURL（bash）。<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1694737892655-0ebc74d0-17de-4972-9411-e36697fd5637.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694737892655-0ebc74d0-17de-4972-9411-e36697fd5637.png" alt="" loading="lazy"><br>
 再打开 Postman，点击 Import -&gt; Raw text -&gt; 粘贴，即可导入接口。</p>
-<figure><img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1694738073586-9de6f40e-6ddd-4b0a-b330-b807f9cb851b.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694738073586-9de6f40e-6ddd-4b0a-b330-b807f9cb851b.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 环境变量</h3>
 <p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602746875957-dc9090e7-900e-4352-91f7-039792e2a9e0.png" alt="" loading="lazy"><br>
 点击右上角红框处，即可设置变量，需要先设置环境名。<br>
