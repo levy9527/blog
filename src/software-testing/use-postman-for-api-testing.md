@@ -39,6 +39,18 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 
 新建方法多种多样，可以手工新建，也可以 curl 导入，也可以从 swagger 导入。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694595120400-0e37bf26-405b-412c-b54f-7057cf49ab20.png)
+
+### 从 cURL 导入
+对于已经上线的接口，使用 cURL 导入非常方便，省去了拼接参数的过程。
+
+下面以获取 token 接口为例进行说明。
+
+打开登录页面，打开浏览器控制台（按 F12），点击登录按钮，找到获取 token 的接口，然后右键 -> Copy -> Copy as cURL（bash）。
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1694737892655-0ebc74d0-17de-4972-9411-e36697fd5637.png)
+再打开 Postman，点击 Import -> Raw text -> 粘贴，即可导入接口。
+
+![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1694738073586-9de6f40e-6ddd-4b0a-b330-b807f9cb851b.png)
+
 ### 环境变量
 
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602746875957-dc9090e7-900e-4352-91f7-039792e2a9e0.png)
@@ -138,7 +150,7 @@ newman:
     - node -v
     - npm -v
     - npm install -g newman
-    - newman run export.postman_collection.json
+    - newman run export.postman_collection.json --reporter-cli-exit-code
   tags:
     - gitlab-runner
   only:
