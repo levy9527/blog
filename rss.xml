@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 24 Sep 2023 07:56:56 GMT</pubDate>
-    <lastBuildDate>Sun, 24 Sep 2023 07:56:56 GMT</lastBuildDate>
+    <pubDate>Sun, 24 Sep 2023 07:58:56 GMT</pubDate>
+    <lastBuildDate>Sun, 24 Sep 2023 07:58:56 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -92,6 +92,7 @@
 <p>而现在：代码其实也没那么重要；某些情况下复制粘贴是可以接受的。</p>
 <p>编码经过七个年头，我思想上为何会有如此改变？难道这就是传说中的七年之痒?</p>
 <!-- more -->
+<h2> 正文</h2>
 <p>我总结了一下，主要有以下三个原因：<br>
 1.深刻地理解了源码与测试用例之间的关系。只相信测试用例，而不是相信源码。如果你只改源码而不是补充相应的测试代码，那所谓的有追求是盲目、片面的。<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128677-28080825-d512-41fe-85e4-6a56553d25f1.jpeg" alt="" loading="lazy"></p>
