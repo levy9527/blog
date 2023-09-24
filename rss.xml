@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 15 Sep 2023 14:39:24 GMT</pubDate>
-    <lastBuildDate>Fri, 15 Sep 2023 14:39:24 GMT</lastBuildDate>
+    <pubDate>Sun, 24 Sep 2023 07:34:57 GMT</pubDate>
+    <lastBuildDate>Sun, 24 Sep 2023 07:34:57 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -75,6 +75,28 @@
 <p>今天跟大家分享AI使用心得：不再是让AI帮我们写代码，而是直接帮我们干活！</p>
 <!-- more -->
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>复制代码也许不是罪</title>
+      <link>https://levy.vip/daily/copy-code-may-not-be-guilty.html</link>
+      <guid>https://levy.vip/daily/copy-code-may-not-be-guilty.html</guid>
+      <source url="https://levy.vip/rss.xml">复制代码也许不是罪</source>
+      <description>复制代码也许不是罪 前言 熟悉我的人都知道，我对代码是有追求的。 正式参考工作后，我就知道，复制粘贴是坏的实践，自己一直极力避免做这样的事。要是遇到了别人复制粘贴，要么喷，要么自己改。 我早期认为：复制代码就是菜。 后来认为：复制代码可能不是菜，而是懒，没有素养，自我要求。 而现在：代码其实也没那么重要；某些情况下复制粘贴是可以接受的。 编码经过七个年头，我思想上为何会有如此改变？难道这就是传说中的七年之痒?</description>
+      <pubDate>Sun, 24 Sep 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 复制代码也许不是罪</h1>
+<h2> 前言</h2>
+<p>熟悉我的人都知道，我对代码是有追求的。</p>
+<p>正式参考工作后，我就知道，复制粘贴是坏的实践，自己一直极力避免做这样的事。要是遇到了别人复制粘贴，要么喷，要么自己改。</p>
+<p>我早期认为：复制代码就是菜。</p>
+<p>后来认为：复制代码可能不是菜，而是懒，没有素养，自我要求。</p>
+<p>而现在：代码其实也没那么重要；某些情况下复制粘贴是可以接受的。</p>
+<p>编码经过七个年头，我思想上为何会有如此改变？难道这就是传说中的七年之痒?</p>
+<!-- more -->
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539182620-f3e4d2e3-bd24-4211-bb61-f5104b0e7ef3.jpeg" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539182844-04210738-e753-43c8-8917-a1c98e8f4d77.jpeg" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128677-28080825-d512-41fe-85e4-6a56553d25f1.jpeg" alt="" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539182620-f3e4d2e3-bd24-4211-bb61-f5104b0e7ef3.jpeg" type="image/jpeg"/>
     </item>
     <item>
       <title>不要与傻逼进行争吵</title>
@@ -326,6 +348,38 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>视频里有实战演示：</p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691066962763-bfbe3c1a-cb4f-43bc-b181-062eabee9529.png#averageHue=%23e4e5e7&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=196&amp;id=u6521b3f3&amp;originHeight=392&amp;originWidth=1428&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=235208&amp;status=done&amp;style=none&amp;taskId=uef2009af-bd00-4e0e-a215-9cca4c37ed2&amp;title=&amp;width=714" type="image/"/>
+    </item>
+    <item>
+      <title>技术点评：别每张表都加tenant_id</title>
+      <link>https://levy.vip/daily/you-dont-need-to-add-tenant_id-to-every-table.html</link>
+      <guid>https://levy.vip/daily/you-dont-need-to-add-tenant_id-to-every-table.html</guid>
+      <source url="https://levy.vip/rss.xml">技术点评：别每张表都加tenant_id</source>
+      <description>技术点评：别每张表都加tenant_id 前言 系统满足多租户需求，是很常见的场景。本文主要聊一下在维护旧系统过程中，发现的前人多租户方案中设计、实现不合理的地方。</description>
+      <pubDate>Mon, 18 Sep 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 技术点评：别每张表都加tenant_id</h1>
+<h2> 前言</h2>
+<p>系统满足多租户需求，是很常见的场景。本文主要聊一下在维护旧系统过程中，发现的前人多租户方案中设计、实现不合理的地方。</p>
+<!-- more -->
+<h2> 背景</h2>
+<p>在维护旧系统时，踩了各种坑，终于忍不住在群里吐槽了下，于是有以下对话。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128515-cca8f7a3-6846-48ca-9eef-d7395c186ae2.jpeg" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128672-66e5d124-51c2-4327-b9c2-a0e72c1ba9f4.jpeg" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128413-7a5ccc98-e7ec-4fb7-94ee-d78bdc5b0bcf.jpeg" alt="" loading="lazy"><br>
+既然群友有疑问，我索性就整理了一下，把前因后果清楚。</p>
+<h2> 正文</h2>
+<p>1.首先，租户数据隔离级别应该如何，没有唯一标准，评价只有是否合适。因此，逻辑隔离、物理隔离，都不是吐槽点。</p>
+<p>2.原来的设计是，采取逻辑隔离方案，具体做法是，给每一张表都加上了tenant_id字段。问题就在于，有必要每一张表加吗？系统的权限设计是：先有租户，再有应用，用户、角色、资源、权限设置等内容都挂在应用下，所以，应用下的内容，关联 app_id 就行了，根本不需要tenant_id。</p>
+<p>3.冗余多一个字段，会出现什么问题呢？先不提查询性能、存储空间等细节，就说很实际的场景：<br>
+3.1 每张表都加 tenant_id，几乎每条 sql 都要加 where tenant_id = ? ，那程序员会怎么做？首先想到的是用框架自动注入 sql<br>
+3.2 在后台管理端，有一个超级管理员，能够查询出所有租户的内容，也就是说，此时查询不能带 where tenant_id = ?，也即不能让框架注入 sql</p>
+<p>要同时兼容上述逻辑，程序员又会怎么做呢？于是就引入了万恶的全局变量，类似于 injectSql = true，就添加 tenant_id 作为过滤条件。但默认是不是要 injectSql = true 呢？每个项目代码又不一样，你不运行，你都不知道。</p>
+<p>更恶心的是，需求变化后，是否需要带上 tenant_id 的逻辑与原来不一致时，你得在某行代码执行前，手动设置 inejctSql 的值，在该行代码之后，再手动复原——因为如果不复原，作为全局变量，会影响到后面的代码！</p>
+<p>md，这时候后你才会知道，还不如老老实实地设置 tenant_id，显示地设置，好过这种隐蔽的依赖。</p>
+<p>4.但这还不是最难搞的。因为上述的是代码问题，真正难搞的是数据问题。考虑一种场景：超级管理员在后台管理某租户的应用，手动为租户添加数据，请问，新增的数据 tenant_id 的值是什么，某租户的 id，还是超级管理员的id？按逻辑来说，应该是某租户的 tenant_id。但问题在于，由于理解不同，或由于疏忽让框架自动注入了 tenant_id，导致上述场景，有些数据的 tenant_id 是超级管理员的id。而又因为超级管理员进行查询时，是不带 tenant_id 作为过滤条件的，因此即使 tenant_id 的值设置错误，依然在界面上能显示，使得这个问题一直存在着，旧数据一直被保留并使用。</p>
+<p>5.现在，有需求要导出某个租户下的数据，结果发现 tenant_id 乱七八糟，你难不难受？</p>
+<p>6.那么，梳理完逻辑链条，我认为，虽然某些程序员的在实现上犯了低级错误，但不是主要原因，罪魁祸首应该是设计上的懒惰。设计精细一点，明确好 tenant_id 到哪张表为止，也就没有后面的 sql 注入、数据错误那么多事了。所以，我才说，给租户隔离等于给每张表加 tenant_id 的设计很傻逼！</p>
+]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128515-cca8f7a3-6846-48ca-9eef-d7395c186ae2.jpeg" type="image/jpeg"/>
     </item>
     <item>
       <title>现代大学英语精读(第2版)第一册</title>
@@ -2250,25 +2304,6 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1693060849195-8f65efab-8c15-4731-bf8e-10645785f0f5.jpeg" type="image/jpeg"/>
     </item>
     <item>
-      <title>Python 导出 MySQL 库表信息到 Excel</title>
-      <link>https://levy.vip/python/export-mysql-table-into-excel.html</link>
-      <guid>https://levy.vip/python/export-mysql-table-into-excel.html</guid>
-      <source url="https://levy.vip/rss.xml">Python 导出 MySQL 库表信息到 Excel</source>
-      <description>Python 导出 MySQL 库表信息到 Excel 需求 查询 MySQL 某个库的全部表的元信息，输出成 Excel，每一张表一个 sheet。</description>
-      <pubDate>Sun, 05 Mar 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> Python 导出 MySQL 库表信息到 Excel</h1>
-<h2> 需求</h2>
-<p>查询 MySQL 某个库的全部表的元信息，输出成 Excel，每一张表一个 sheet。</p>
-<!-- more -->
-<h2> 代码</h2>
-<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他细节</h2>
-<p>上述代码由于库的原因，只能生成新文件或覆盖文件，不能修改原有文件。<br>
-执行代码时必须关闭生成的文件，否则报错。<br>
-sheet的名字不能超过 31 个字符。<br>
-<a href="https://www.rapidtables.com/convert/color/rgb-to-hex.html" target="_blank" rel="noopener noreferrer">RBG 转 Hex 工具</a>，给单元格、文字上颜色时会用到，因为 Excel 显示的是 RBG，但代码里是 Hex。</p>
-]]></content:encoded>
-    </item>
-    <item>
       <title>数据备份案例：mysqldump实战</title>
       <link>https://levy.vip/mysql/mysql-backup-case-study-mysqldump-in-action.html</link>
       <guid>https://levy.vip/mysql/mysql-backup-case-study-mysqldump-in-action.html</guid>
@@ -2450,6 +2485,105 @@ sheet的名字不能超过 31 个字符。<br>
 </ol>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692321838318-b353f14d-13d0-432e-a05b-9fbcd3c1dd1f.jpeg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>Python 导出 MySQL 库表信息到 Excel</title>
+      <link>https://levy.vip/python/export-mysql-table-into-excel.html</link>
+      <guid>https://levy.vip/python/export-mysql-table-into-excel.html</guid>
+      <source url="https://levy.vip/rss.xml">Python 导出 MySQL 库表信息到 Excel</source>
+      <description>Python 导出 MySQL 库表信息到 Excel 需求 查询 MySQL 某个库的全部表的元信息，输出成 Excel，每一张表一个 sheet。</description>
+      <pubDate>Sun, 05 Mar 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Python 导出 MySQL 库表信息到 Excel</h1>
+<h2> 需求</h2>
+<p>查询 MySQL 某个库的全部表的元信息，输出成 Excel，每一张表一个 sheet。</p>
+<!-- more -->
+<h2> 代码</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他细节</h2>
+<p>上述代码由于库的原因，只能生成新文件或覆盖文件，不能修改原有文件。<br>
+执行代码时必须关闭生成的文件，否则报错。<br>
+sheet的名字不能超过 31 个字符。<br>
+<a href="https://www.rapidtables.com/convert/color/rgb-to-hex.html" target="_blank" rel="noopener noreferrer">RBG 转 Hex 工具</a>，给单元格、文字上颜色时会用到，因为 Excel 显示的是 RBG，但代码里是 Hex。</p>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>单元测试概述</title>
+      <link>https://levy.vip/software-testing/unit-testing-overview.html</link>
+      <guid>https://levy.vip/software-testing/unit-testing-overview.html</guid>
+      <source url="https://levy.vip/rss.xml">单元测试概述</source>
+      <description>单元测试概述 Why 为什么要做单元测试？或者说，为什么要写测试代码？ 个人总结为以下两点： 测试左移，降低修复bug的成本 形成资产，方便回归测试，后续迭代重构、维护有保障</description>
+      <pubDate>Fri, 28 Jul 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 单元测试概述</h1>
+<h2> Why</h2>
+<p>为什么要做单元测试？或者说，为什么要写测试代码？</p>
+<p>个人总结为以下两点：</p>
+<ol>
+<li><a href="https://www.stickyminds.com/article/shift-left-approach-software-testing" target="_blank" rel="noopener noreferrer">测试左移</a>，降低修复bug的成本<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1690532448643-e09bebb0-66f2-49f9-8686-d4a8c6b5d590.png" alt="" loading="lazy"></li>
+<li>形成资产，方便回归测试，后续迭代重构、维护有保障</li>
+</ol>
+<!-- more -->
+<p>以上两点，是研发人员写测试代码的本质理由，无论什么类型的测试代码、研发人员用的什么语言、框架都适用。</p>
+<h2> What</h2>
+<p>写测试代码究竟是写什么？</p>
+<p>个人认为测试代码主要是为了搞清楚两件事：</p>
+<ol>
+<li>源码到底会不会在目标环境执行？</li>
+<li>源码的执行结果是否符合预期？</li>
+</ol>
+<p>第一件事，引出了 code coverage 代码覆盖率的概念；第二件事，则引出了 assert 断言的概念。</p>
+<h2> How</h2>
+<h3> 测试代码的风格</h3>
+<p><a href="https://medium.com/@pjbgf/title-testing-code-ocd-and-the-aaa-pattern-df453975ab80" target="_blank" rel="noopener noreferrer">AAA</a> 风格：</p>
+<ol>
+<li>组装参数</li>
+<li>执行目标方法</li>
+<li>执行断言</li>
+</ol>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>尤其注意最后的断言，如果没有断言，不叫测试。</p>
+<p>常见的错误就是，不写断言，而使用 <code>System.out.println()</code>来判断执行结果。<br>
+这样做无法结合 CI 形成有效的自动化测试。 因为这种做法只能让编译通过，源码逻辑也许已经错误了，但测试结果仍然 100% 通过，这是没有意义的。</p>
+<h3> 测试难点</h3>
+<p>以函数的观点来看。</p>
+<p>输入：</p>
+<ol>
+<li>内存数据</li>
+<li>外部数据</li>
+</ol>
+<p>输出：</p>
+<ol>
+<li>内存数据</li>
+<li>数据库</li>
+<li>文件系统</li>
+<li>网络调用</li>
+</ol>
+<p>单元测试从严格意义上来说需要满足三个No：</p>
+<ol>
+<li>No DB</li>
+<li>No Network</li>
+<li>No I/O</li>
+</ol>
+<p>由此，引出了 Mock 的概念及技术。作为单元测试，需要 Mock 依赖，准备好输入数据，并想办法在内存中验证外部输出。</p>
+<p>也即，重要的是隔离依赖，让测试可重复执行。</p>
+<h3> 常用工具</h3>
+<ol>
+<li><a href="https://junit.org/junit5/" target="_blank" rel="noopener noreferrer">Junit</a></li>
+<li><a href="https://site.mockito.org/" target="_blank" rel="noopener noreferrer">Mocktio</a></li>
+<li><a href="https://plugins.jetbrains.com/plugin/9471-testme" target="_blank" rel="noopener noreferrer">TestMe</a></li>
+</ol>
+<h2> Bad Examples</h2>
+<p>以下是常见的错误测试示例，它们都不是合格的单元测试。</p>
+<h3> 没有测试类</h3>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>经典错误：写一个 main 方法，把所有测试代码都放进去。这样做的后果是，无论是人还是机器，都不知道原来这里还有测试代码。</p>
+<h3> 没有断言</h3>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>经典错误：（很可能是单纯地把测试代码从 main 方法移过来）没有断言，依赖人用肉眼判断输出正确与否。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这个例子虽然用上了 Mock 技术，但依赖掩盖不了没有断言的事实。这也许是为了达到测试覆盖率百分百而进行的投机取巧。</p>
+<h3> 无法重复执行</h3>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果代码 Linux 环境运行怎么办？哪里来的 D 盘？</p>
+<p>这种情况，正确的做法应该是把依赖的文件作为测试夹具，与测试代码一起放入版本控制中。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695537638532-e8092338-3de2-4019-99a2-03bfb98f781f.png" alt="" loading="lazy"><br>
+参考代码如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1690532448643-e09bebb0-66f2-49f9-8686-d4a8c6b5d590.png" type="image/png"/>
     </item>
     <item>
       <title>使用 RestAssured 进行 API 测试</title>
