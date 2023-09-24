@@ -20,6 +20,18 @@ tag:
 
 <!-- more -->
 
+我总结了一下，主要有以下三个原因：
+1.深刻地理解了源码与测试用例之间的关系。只相信测试用例，而不是相信源码。如果你只改源码而不是补充相应的测试代码，那所谓的有追求是盲目、片面的。
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128677-28080825-d512-41fe-85e4-6a56553d25f1.jpeg)
+
+2.对具体的编码实现已经缺乏兴致了。尤其是有AI的情况下，真的是有手就会，何必要我来写呢？我负责设计，再进行 Code Review　不是更好吗？
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-09-24-IMG_2577.jpg)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-09-24-IMG_2578.jpg)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-09-24-IMG_2579.jpg)
+
+3.要考虑时间成本。如果别人已经做了一大半，我何必重头开始？
+
+4.提升对质量的认知。聚集于产出质量，而不仅仅是代码质量，那么你就会发现，要做的事还挺多，再考虑时间成本，需要做一个权衡取舍。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539182620-f3e4d2e3-bd24-4211-bb61-f5104b0e7ef3.jpeg)
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539182844-04210738-e753-43c8-8917-a1c98e8f4d77.jpeg)
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128677-28080825-d512-41fe-85e4-6a56553d25f1.jpeg)
+
