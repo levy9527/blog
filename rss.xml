@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 25 Sep 2023 01:46:12 GMT</pubDate>
-    <lastBuildDate>Mon, 25 Sep 2023 01:46:12 GMT</lastBuildDate>
+    <pubDate>Mon, 25 Sep 2023 01:49:33 GMT</pubDate>
+    <lastBuildDate>Mon, 25 Sep 2023 01:49:33 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1634,13 +1634,13 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344287512.png" type="image/png"/>
     </item>
     <item>
-      <title>Git历史记录小技巧</title>
+      <title>Git查看历史记录小技巧</title>
       <link>https://levy.vip/git/git-history-two-tricks-in-idea.html</link>
       <guid>https://levy.vip/git/git-history-two-tricks-in-idea.html</guid>
-      <source url="https://levy.vip/rss.xml">Git历史记录小技巧</source>
-      <description>Git历史记录小技巧 分享两个Git的小技巧， 都是关于在 IDEA 里查看Git的历史记录的。 这两个技巧，简单却实用。面对年代久远、团队人员流失严重的代码，靠的就是这两个技巧, 从提交记录里品读岁月史书，从蛛丝马迹中寻找遗失的真相。</description>
+      <source url="https://levy.vip/rss.xml">Git查看历史记录小技巧</source>
+      <description>Git查看历史记录小技巧 分享两个Git的小技巧， 都是关于在 IDEA 里查看Git的历史记录的。 这两个技巧，简单却实用。面对年代久远、团队人员流失严重的代码，靠的就是这两个技巧, 从提交记录里品读岁月史书，从蛛丝马迹中寻找遗失的真相。</description>
       <pubDate>Fri, 11 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> Git历史记录小技巧</h1>
+      <content:encoded><![CDATA[<h1> Git查看历史记录小技巧</h1>
 <p>分享两个Git的小技巧， 都是关于在 IDEA 里查看Git的历史记录的。</p>
 <p>这两个技巧，简单却实用。面对年代久远、团队人员流失严重的代码，靠的就是这两个技巧, 从提交记录里品读岁月史书，从蛛丝马迹中寻找遗失的真相。</p>
 <!-- more -->
