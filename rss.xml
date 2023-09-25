@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sun, 24 Sep 2023 08:14:41 GMT</pubDate>
-    <lastBuildDate>Sun, 24 Sep 2023 08:14:41 GMT</lastBuildDate>
+    <pubDate>Mon, 25 Sep 2023 01:46:12 GMT</pubDate>
+    <lastBuildDate>Mon, 25 Sep 2023 01:46:12 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -81,12 +81,12 @@
       <link>https://levy.vip/daily/copy-code-may-not-be-guilty.html</link>
       <guid>https://levy.vip/daily/copy-code-may-not-be-guilty.html</guid>
       <source url="https://levy.vip/rss.xml">复制代码也许不是罪</source>
-      <description>复制代码也许不是罪 前言 熟悉我的人都知道，我对代码是有追求的。 正式参考工作后，我就知道，复制粘贴是坏的实践，自己一直极力避免做这样的事。要是遇到了别人复制粘贴，要么喷，要么自己改。 我早期认为：复制代码就是菜。 后来认为：复制代码可能不是菜，而是懒，没有素养，自我要求。 而现在：代码其实也没那么重要；某些情况下复制粘贴是可以接受的。 编码经过七个年头，我思想上为何会有如此改变？难道这就是传说中的七年之痒?</description>
+      <description>复制代码也许不是罪 前言 熟悉我的人都知道，我对代码是有追求的。 正式参加工作后，我就知道，复制粘贴是坏的实践，自己一直极力避免做这样的事。要是遇到了别人复制粘贴，要么喷，要么自己改。 我早期认为：复制代码就是菜。 后来认为：复制代码可能不是菜，而是懒，没有素养，自我要求。 而现在：代码其实也没那么重要；某些情况下复制粘贴是可以接受的。 编码经过七个年头，我思想上为何会有如此改变？难道这就是传说中的七年之痒?</description>
       <pubDate>Sun, 24 Sep 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 复制代码也许不是罪</h1>
 <h2> 前言</h2>
 <p>熟悉我的人都知道，我对代码是有追求的。</p>
-<p>正式参考工作后，我就知道，复制粘贴是坏的实践，自己一直极力避免做这样的事。要是遇到了别人复制粘贴，要么喷，要么自己改。</p>
+<p>正式参加工作后，我就知道，复制粘贴是坏的实践，自己一直极力避免做这样的事。要是遇到了别人复制粘贴，要么喷，要么自己改。</p>
 <p>我早期认为：复制代码就是菜。</p>
 <p>后来认为：复制代码可能不是菜，而是懒，没有素养，自我要求。</p>
 <p>而现在：代码其实也没那么重要；某些情况下复制粘贴是可以接受的。</p>
