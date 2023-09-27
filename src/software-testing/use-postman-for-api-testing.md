@@ -5,7 +5,7 @@ tag:
 - Daily
 ---
 
-# 使用 Postman 进行接口测试
+# 使用 Postman 进行 API 测试
 ## 前言
 
 虽然之前分享过 RestAssured 进行接口测试的教程，但实践起来，会有阻碍：研发同学还是对 Postman 更熟悉，更倾向于使用 Postman 调试接口，而不是写 Java 代码对 Controller 层进行测试。
@@ -84,9 +84,9 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 - 本地环境接口路径为：/v1/api-name，也即线上环境接口地址多了两个前缀
 
 观察请求在 Postman 中的数据结构如下：
-![1695721937921_5DCC7E0E-BD5A-4691-BC49-9888F06E7062.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1695779354530-f92268b0-1294-4ff7-b9d0-7a4cdd48bb4d.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695779354530-f92268b0-1294-4ff7-b9d0-7a4cdd48bb4d.png)
 则可以编写前置脚本如下：
-![1695721917742_55B735F2-C2D4-4742-A6C1-5352A3D36EFC.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1695779446073-c53065f9-07a8-4fd5-a062-390282dfd91e.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695779446073-c53065f9-07a8-4fd5-a062-390282dfd91e.png)
 
 ```javascript
 if (pm.environment.name.includes("local")) {
@@ -189,9 +189,9 @@ pm.test("Status code is 200", function () {
 使用推荐的格式，导出一个 json 文件。
 
 ### 导出环境变量
-![环境变量](https://cdn.nlark.com/yuque/0/2023/png/160590/1695779153775-1cc9a182-a8e2-4b52-baf5-34e9c3173dc3.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695779153775-1cc9a182-a8e2-4b52-baf5-34e9c3173dc3.png)
 
-![导出环境变量](https://cdn.nlark.com/yuque/0/2023/png/160590/1695779160975-7a625a91-bd51-45c5-b095-d89529b8ef51.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695779160975-7a625a91-bd51-45c5-b095-d89529b8ef51.png)
 
 ### 提交到Git
 把 json 文件放到项目中，并提交到 Git
