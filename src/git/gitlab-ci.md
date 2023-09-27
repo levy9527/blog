@@ -112,6 +112,12 @@ build:
 
 如果错误，会有提示。
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png)
+
+如果配置成功，会看到 GitLab 的图标：
+![](https://cdn.nlark.com/yuque/0/2023/png/160590/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png)
+
+如果图标如下所示，说明文件有误，比如文件名开头多了个空格🤦‍♂️：
+![](https://cdn.nlark.com/yuque/0/2023/png/160590/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png)
 ### 效果
 当流水线还未结束时，不能提前合并代码，只能等待流水线成功。
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388481821.png)
