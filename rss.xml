@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 25 Sep 2023 01:49:33 GMT</pubDate>
-    <lastBuildDate>Mon, 25 Sep 2023 01:49:33 GMT</lastBuildDate>
+    <pubDate>Wed, 27 Sep 2023 02:18:19 GMT</pubDate>
+    <lastBuildDate>Wed, 27 Sep 2023 02:18:19 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1765,9 +1765,12 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <link>https://levy.vip/git/gitlab-ci.html</link>
       <guid>https://levy.vip/git/gitlab-ci.html</guid>
       <source url="https://levy.vip/rss.xml">Gitlab CI</source>
-      <description>Gitlab CI 合并代码前进行检查 背景 有的产品线使用 Jenkins 进行 CI，但又没设置好相应的 GitLab 插件，于是会形成这样一个流程： feature 分支发起 Merge Request 合并至受保护的分支 登录 Jenkins，点击构建 构建失败，原因：编译报错 最后一点，非常难以忍受，因为代码已经合并进去了，木已成舟。此时面对编译报错，第一反应是解决报错，重新编译。但有没有一种可能，我根本不想要这些编译报错的代码呢？</description>
+      <description>Gitlab CI 前言 Gitlab 在私企内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。</description>
       <pubDate>Tue, 10 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Gitlab CI</h1>
+<h2> 前言</h2>
+<p>Gitlab 在私企内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。</p>
+<!-- more -->
 <h2> 合并代码前进行检查</h2>
 <h3> 背景</h3>
 <p>有的产品线使用 Jenkins 进行 CI，但又没设置好相应的 GitLab 插件，于是会形成这样一个流程：</p>
@@ -1841,9 +1844,17 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388489368.png" alt="image.png" loading="lazy"></p>
 <h3> 拉取最新的jar</h3>
 <p>在B项目中，如果要引用A项目打出来的 jar，记得拉取最新的版本，pom.xml 设置如下：</p>
-<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他问题与解决方案</h2>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 保存中间产物</h2>
+<p>需要保存中间产物的一个场景是，流水线分多个阶段，后一个阶段依赖前一个阶段的产物。</p>
+<p>举个例子：某个 java 项目，需要先编译输出 jar，再基于 jar 构建镜像。</p>
+<p>相关示例代码如下：</p>
+<div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他问题与解决方案</h2>
 <h3> Node.js</h3>
-<p>本文主要以 Java 项目为例进行 Gitlab CI 相关的讲解，如果需要 Node.js 项目的示例，可以查看<a href="/software-testing/use-playwright-for-ui-testing.html#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90" target="blank">另一篇文章</a>。</p>
+<p>本文主要以 Java 项目为例进行 Gitlab CI 相关的讲解，如果需要 Node.js 项目的示例，可以查看另外两篇文章：</p>
+<ul>
+<li><a href="/software-testing/use-playwright-for-ui-testing.html#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90" target="blank">Playwright UI自动化测试</a></li>
+<li><a href="/software-testing/use-postman-for-api-testing.html#%E5%BB%BA%E7%AB%8Bci%E4%BB%BB%E5%8A%A1" target="blank">Postman API自动化测试</a></li>
+</ul>
 <h3> 创建不了容器</h3>
 <blockquote>
 <p>ERROR: Preparation failed: adding cache volume: set volume permissions: running permission container "d1574748b77fc73a4319a45341af1f0eab983900d81885a02c017ff6c5559f28" for volume "runner-bzsttzs-project-2271-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70": starting permission container: Error response from daemon: OCI runtime create failed: container_linux.go:349: starting container process caused "process_linux.go:319: getting the final child's pid from pipe caused "EOF"": unknown (linux_set.go:105:0s)</p>
@@ -1856,7 +1867,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>清除缓存拉取最新的包即可。</p>
 <div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 参考文档</h2>
 <ul>
-<li><a href="https://docs.gitlab.com/ee/ci/examples/" target="_blank" rel="noopener noreferrer">Gitlab CI 示例 </a></li>
+<li><a href="https://docs.gitlab.com/ee/ci/examples/" target="_blank" rel="noopener noreferrer">Gitlab CI 示例</a></li>
 <li><a href="https://docs.gitlab.com/ee/ci/variables/predefined_variables.html" target="_blank" rel="noopener noreferrer">预设的环境变量</a></li>
 <li><a href="https://docs.gitlab.com/ee/ci/jobs/job_control.html#specify-when-jobs-run-with-rules" target="_blank" rel="noopener noreferrer">rules规则说明</a></li>
 </ul>
@@ -3140,7 +3151,7 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <p>下面以获取 token 接口为例进行说明。</p>
 <p>打开登录页面，打开浏览器控制台（按 F12），点击登录按钮，找到获取 token 的接口，然后右键 -&gt; Copy -&gt; Copy as cURL（bash）。<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694737892655-0ebc74d0-17de-4972-9411-e36697fd5637.png" alt="" loading="lazy"><br>
-再打开 Postman，点击 Import -&gt; Raw text -&gt; 粘贴，即可导入接口。</p>
+再打开 Postman，点击 Import 即可导入接口。</p>
 <figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694738073586-9de6f40e-6ddd-4b0a-b330-b807f9cb851b.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h3> 环境变量</h3>
 <p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602746875957-dc9090e7-900e-4352-91f7-039792e2a9e0.png" alt="" loading="lazy"><br>
@@ -3153,36 +3164,49 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 </ol>
 <p>如果有多套环境，就点击复制，再修改环境名及包含变量的 initial value 即可。<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747475793-1f85e976-8189-44b7-9667-f1a195ff8c35.png" alt="" loading="lazy"></p>
-<p>使用 {{var}} 的形式引用变量，可在 url 及 body 处引用。<br>
+<p>使用 <code>{{var}}</code> 的形式引用变量，可在 url 及 body 处引用环境变量 <code>var</code>。<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602746808280-6743bf6c-34b5-402a-abe6-397eb76c5380.png" alt="" loading="lazy"></p>
 <p>环境变量还可以在测试用例里去修改值：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694424229773-4c83c6cf-0640-4c8a-aa33-38097d84f0cd.png" alt="" loading="lazy"></p>
 <h3> 请求设置</h3>
-<p>对于请求体的发送，一般进行如下设置<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747761421-f2c415ec-1b1c-48f6-976d-fbc958fdcbf3.png" alt="" loading="lazy"><br>
-如果要上传文件，则一般进行如下设置<br>
+<p>对于请求体的发送，一般进行如下设置：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747761421-f2c415ec-1b1c-48f6-976d-fbc958fdcbf3.png" alt="" loading="lazy"></p>
+<p>如果要上传文件，则一般进行如下设置：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747847485-5d86f2f6-18cc-4262-b5fd-69349feb4bbe.png" alt="" loading="lazy"></p>
-<h2> 接口测试</h2>
+<p>还可以利用 Pre-request Script， 在请求前动态修改请求设置。<br>
+比如有以下场景：</p>
+<ul>
+<li>线上环境接口路径为：/app-name/api/v1/api-name</li>
+<li>本地环境接口路径为：/v1/api-name，也即线上环境接口地址多了两个前缀</li>
+</ul>
+<p>观察请求在 Postman 中的数据结构如下：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695779354530-f92268b0-1294-4ff7-b9d0-7a4cdd48bb4d.png" alt="1695721937921_5DCC7E0E-BD5A-4691-BC49-9888F06E7062.png" loading="lazy"><br>
+则可以编写前置脚本如下：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695779446073-c53065f9-07a8-4fd5-a062-390282dfd91e.png" alt="1695721917742_55B735F2-C2D4-4742-A6C1-5352A3D36EFC.png" loading="lazy"></p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 接口测试</h2>
 <h3> 编写用例</h3>
 <p>在 Tests 标签页里，即可编写测试，在 SNIPPETS 里会有相应的示例。</p>
-<p>示例接口的测试用例分别如下：</p>
-<ul>
-<li>这是最简单的测试用例，判断接口响应码 200</li>
-</ul>
 <figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748404916-daf8d633-1a35-48f8-a652-cc13c16244b5.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>下面给出常用CRUD相关接口的测试用例代码：</p>
 <ul>
-<li>请求成功后，取数组的第一个元素，并把其 id 设置到环境变量中</li>
+<li>设置 jwt</li>
 </ul>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
-<li>
-<p>从环境变量中取值, 作为请求参数<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602752518841-f3717ddd-fbee-428f-a34f-794a8ab1ac0e.png" alt="" loading="lazy"></p>
-</li>
-<li>
-<p>再复杂一点的示例：确保返回的数据里没有特定的数据</p>
-</li>
+<li>创建</li>
 </ul>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 运行集合</h3>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>修改</li>
+</ul>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>查询</li>
+</ul>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>删除</li>
+</ul>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>确保返回的数据里没有特定的数据</li>
+</ul>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 运行集合</h3>
 <p>本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了</p>
 <p>记得先重置变量当前值<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1603339930271-36e9f9e5-8013-40fa-9fac-e7cb642ba451.png" alt="" loading="lazy"></p>
@@ -3194,9 +3218,12 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <p>点击执行，可以看到集合内所有接口的执行结果：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png" alt="" loading="lazy"></p>
 <h2> 持续集成</h2>
-<h3> 导出数据</h3>
+<h3> 导出接口</h3>
 <figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>使用推荐的格式，导出一个 json 文件。</p>
+<h3> 导出环境变量</h3>
+<figure><img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695779153775-1cc9a182-a8e2-4b52-baf5-34e9c3173dc3.png" alt="环境变量" tabindex="0" loading="lazy"><figcaption>环境变量</figcaption></figure>
+<figure><img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695779160975-7a625a91-bd51-45c5-b095-d89529b8ef51.png" alt="导出环境变量" tabindex="0" loading="lazy"><figcaption>导出环境变量</figcaption></figure>
 <h3> 提交到Git</h3>
 <p>把 json 文件放到项目中，并提交到 Git<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594578211-b381d377-f6a5-4dd2-be82-0c9295f10fc6.png" alt="" loading="lazy"></p>
