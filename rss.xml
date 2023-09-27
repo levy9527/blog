@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 27 Sep 2023 02:18:19 GMT</pubDate>
-    <lastBuildDate>Wed, 27 Sep 2023 02:18:19 GMT</lastBuildDate>
+    <pubDate>Wed, 27 Sep 2023 02:29:17 GMT</pubDate>
+    <lastBuildDate>Wed, 27 Sep 2023 02:29:17 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1765,11 +1765,11 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <link>https://levy.vip/git/gitlab-ci.html</link>
       <guid>https://levy.vip/git/gitlab-ci.html</guid>
       <source url="https://levy.vip/rss.xml">Gitlab CI</source>
-      <description>Gitlab CI 前言 Gitlab 在私企内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。</description>
+      <description>Gitlab CI 前言 Gitlab 在企业内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。</description>
       <pubDate>Tue, 10 Jan 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Gitlab CI</h1>
 <h2> 前言</h2>
-<p>Gitlab 在私企内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。</p>
+<p>Gitlab 在企业内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。</p>
 <!-- more -->
 <h2> 合并代码前进行检查</h2>
 <h3> 背景</h3>
