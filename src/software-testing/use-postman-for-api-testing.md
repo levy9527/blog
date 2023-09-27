@@ -47,7 +47,7 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 
 打开登录页面，打开浏览器控制台（按 F12），点击登录按钮，找到获取 token 的接口，然后右键 -> Copy -> Copy as cURL（bash）。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694737892655-0ebc74d0-17de-4972-9411-e36697fd5637.png)
-再打开 Postman，点击 Import -> Raw text -> 粘贴，即可导入接口。
+再打开 Postman，点击 Import 即可导入接口。
 
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694738073586-9de6f40e-6ddd-4b0a-b330-b807f9cb851b.png)
 
@@ -64,7 +64,7 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 如果有多套环境，就点击复制，再修改环境名及包含变量的 initial value 即可。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747475793-1f85e976-8189-44b7-9667-f1a195ff8c35.png)
 
-使用 {{var}} 的形式引用变量，可在 url 及 body 处引用。
+使用 `{{var}}` 的形式引用变量，可在 url 及 body 处引用环境变量 `var`。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602746808280-6743bf6c-34b5-402a-abe6-397eb76c5380.png)
 
 环境变量还可以在测试用例里去修改值：
@@ -72,10 +72,28 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 
 ### 请求设置
 
-对于请求体的发送，一般进行如下设置
+对于请求体的发送，一般进行如下设置：
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747761421-f2c415ec-1b1c-48f6-976d-fbc958fdcbf3.png)
-如果要上传文件，则一般进行如下设置
+
+如果要上传文件，则一般进行如下设置：
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747847485-5d86f2f6-18cc-4262-b5fd-69349feb4bbe.png)
+
+还可以利用 Pre-request Script， 在请求前动态修改请求设置。
+比如有以下场景：
+- 线上环境接口路径为：/app-name/api/v1/api-name
+- 本地环境接口路径为：/v1/api-name，也即线上环境接口地址多了两个前缀
+
+观察请求在 Postman 中的数据结构如下：
+![1695721937921_5DCC7E0E-BD5A-4691-BC49-9888F06E7062.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1695779354530-f92268b0-1294-4ff7-b9d0-7a4cdd48bb4d.png)
+则可以编写前置脚本如下：
+![1695721917742_55B735F2-C2D4-4742-A6C1-5352A3D36EFC.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1695779446073-c53065f9-07a8-4fd5-a062-390282dfd91e.png)
+
+```javascript
+if (pm.environment.name.includes("local")) {
+    pm.request.url.path.shift()
+    pm.request.url.path.shift()
+}
+```
 
 ## 接口测试
 
@@ -83,31 +101,65 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 
 在 Tests 标签页里，即可编写测试，在 SNIPPETS 里会有相应的示例。
 
-示例接口的测试用例分别如下：
-
-- 这是最简单的测试用例，判断接口响应码 200
-
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748404916-daf8d633-1a35-48f8-a652-cc13c16244b5.png)
 
-- 请求成功后，取数组的第一个元素，并把其 id 设置到环境变量中
+下面给出常用CRUD相关接口的测试用例代码：
+
+- 设置 jwt
+```javascript
+pm.test('Response status code is 200', function () {
+    pm.response.to.have.status(200);
+    resp = pm.response.json()
+    pm.environment.set('jwt', "Bearer " + resp.payload.access_token)
+})
+```
+
+- 创建
 ```javascript
 pm.test("Status code is 200", function () {
-  pm.response.to.have.status(200);
-  let resp = let payload = pm.response.json();
-  pm.environment.set('feedback_id', resp.payload[0].id)
+    pm.response.to.have.status(200);
+    const resp = pm.response.json();
+    pm.expect(resp.code == "0").to.be.true // 如果报错，后面就不会执行
+    
+    pm.expect(resp.payload.name == "新增").to.be.true
+    pm.environment.set("id", resp.payload.id)
 });
 ```
 
-- 从环境变量中取值, 作为请求参数
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602752518841-f3717ddd-fbee-428f-a34f-794a8ab1ac0e.png)
+- 修改
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+    const resp = pm.response.json();
+    pm.expect(resp.code == "0").to.be.true
+});
+```
+
+- 查询
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+    const resp = pm.response.json();
+    pm.expect(resp.code == "0").to.be.true
+    pm.expect(resp.payload.length > 0).to.be.true
+});
+```
+
+- 删除
+```javascript
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+    const resp = pm.response.json();
+    pm.expect(resp.code == "0").to.be.true
+});
+```
 
 
-- 再复杂一点的示例：确保返回的数据里没有特定的数据
+- 确保返回的数据里没有特定的数据
 ```javascript
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
     let payload = pm.response.json().payload;
-    // 在这里写 node.js 代码
     let found = payload.content.some(v => v.username.includes('unwanted'))
     pm.expect(found).to.be.false;
 });
@@ -131,10 +183,15 @@ pm.test("Status code is 200", function () {
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png)
 
 ## 持续集成
-### 导出数据
+### 导出接口
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png)
 
 使用推荐的格式，导出一个 json 文件。
+
+### 导出环境变量
+![环境变量](https://cdn.nlark.com/yuque/0/2023/png/160590/1695779153775-1cc9a182-a8e2-4b52-baf5-34e9c3173dc3.png)
+
+![导出环境变量](https://cdn.nlark.com/yuque/0/2023/png/160590/1695779160975-7a625a91-bd51-45c5-b095-d89529b8ef51.png)
 
 ### 提交到Git
 把 json 文件放到项目中，并提交到 Git
@@ -150,7 +207,7 @@ newman:
     - node -v
     - npm -v
     - npm install -g newman
-    - newman run export.postman_collection.json --reporter-cli-exit-code
+    - newman run export.postman_collection.json -e dev.postman_environment.json --reporter-cli-exit-code
   tags:
     - gitlab-runner
   only:

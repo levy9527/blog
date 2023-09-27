@@ -269,6 +269,6 @@ mvn -U clean install
 ```
 ## 参考文档
 
-- [Gitlab CI 示例 ](https://docs.gitlab.com/ee/ci/examples/)
+- [Gitlab CI 示例](https://docs.gitlab.com/ee/ci/examples/)
 - [预设的环境变量](https://docs.gitlab.com/ee/ci/variables/predefined_variables.html)
 - [rules规则说明](https://docs.gitlab.com/ee/ci/jobs/job_control.html#specify-when-jobs-run-with-rules)
