@@ -7,6 +7,11 @@ tag:
 ---
 
 # Gitlab CI
+## 前言
+Gitlab 在私企内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。
+
+<!-- more -->
+
 ## 合并代码前进行检查
 ### 背景
 有的产品线使用 Jenkins 进行 CI，但又没设置好相应的 GitLab 插件，于是会形成这样一个流程：
@@ -198,9 +203,46 @@ deploy:
 </repositories>
 ```
 
+## 保存中间产物
+需要保存中间产物的一个场景是，流水线分多个阶段，后一个阶段依赖前一个阶段的产物。
+
+举个例子：某个 java 项目，需要先编译输出 jar，再基于 jar 构建镜像。
+
+相关示例代码如下：
+```yaml
+build-jar:
+  stage: build
+  script:
+    - mvn clean package -P ${CI_COMMIT_REF_NAME} -U -DskipTests
+  artifacts: # save output 
+    paths:
+      - ${APP_NAME}/target/${APP_NAME}*.jar
+  tags:
+    - java
+  only:
+    - /test|uat/
+```
+
+```yaml
+build-image:
+  stage: push
+  script:
+    - docker build -f ${APP_NAME}/Dockerfile -t ${IMAGE_NAME} .
+    - docker push ${IMAGE_NAME}
+    - docker rmi ${IMAGE_NAME}
+  dependencies:
+    - build-jar
+  tags:
+    - java
+  only:
+    - /test|uat/
+```
+
 ## 其他问题与解决方案
 ### Node.js
-本文主要以 Java 项目为例进行 Gitlab CI 相关的讲解，如果需要 Node.js 项目的示例，可以查看[另一篇文章](../software-testing/use-playwright-for-ui-testing.html#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90)。
+本文主要以 Java 项目为例进行 Gitlab CI 相关的讲解，如果需要 Node.js 项目的示例，可以查看另外两篇文章：
+- [Playwright UI自动化测试](../software-testing/use-playwright-for-ui-testing.html#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90)
+- [Postman API自动化测试](../software-testing/use-postman-for-api-testing.html#建立ci任务)
 
 ### 创建不了容器
 > ERROR: Preparation failed: adding cache volume: set volume permissions: running permission container "d1574748b77fc73a4319a45341af1f0eab983900d81885a02c017ff6c5559f28" for volume "runner-bzsttzs-project-2271-concurrent-0-cache-3c3f060a0374fc8bc39395164f415a70": starting permission container: Error response from daemon: OCI runtime create failed: container_linux.go:349: starting container process caused "process_linux.go:319: getting the final child's pid from pipe caused \"EOF\"": unknown (linux_set.go:105:0s)
