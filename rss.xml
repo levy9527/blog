@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 27 Sep 2023 02:31:45 GMT</pubDate>
-    <lastBuildDate>Wed, 27 Sep 2023 02:31:45 GMT</lastBuildDate>
+    <pubDate>Wed, 27 Sep 2023 03:21:05 GMT</pubDate>
+    <lastBuildDate>Wed, 27 Sep 2023 03:21:05 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1809,6 +1809,10 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388474604.png" alt="image.png" loading="lazy"></p>
 <p>如果错误，会有提示。<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png" alt="image.png" loading="lazy"></p>
+<p>如果配置成功，会看到 GitLab 的图标：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png" alt="" loading="lazy"></p>
+<p>如果图标如下所示，说明文件有误，比如文件名开头多了个空格🤦‍♂️：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png" alt="" loading="lazy"></p>
 <h3> 效果</h3>
 <p>当流水线还未结束时，不能提前合并代码，只能等待流水线成功。<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388481821.png" alt="image.png" loading="lazy"></p>
