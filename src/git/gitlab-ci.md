@@ -2,13 +2,13 @@
 date: 2023-01-10
 tag: 
 - Git
-- Gitlab
+- GitLab
 - Java
 ---
 
-# Gitlab CI
+# GitLab CI
 ## 前言
-Gitlab 在企业内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。
+GitLab 在企业内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。
 
 <!-- more -->
 
