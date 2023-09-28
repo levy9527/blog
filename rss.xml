@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 28 Sep 2023 05:51:51 GMT</pubDate>
-    <lastBuildDate>Thu, 28 Sep 2023 05:51:51 GMT</lastBuildDate>
+    <pubDate>Thu, 28 Sep 2023 05:58:03 GMT</pubDate>
+    <lastBuildDate>Thu, 28 Sep 2023 05:58:03 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1771,7 +1771,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <h2> 前言</h2>
 <p>GitLab 在企业内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。</p>
 <!-- more -->
-<h2> GitLab Runner 安装与配置</h2>
+<h2> 安装与配置</h2>
 <h3> GitLab Runner 安装</h3>
 <p>进行 Gitlab CI 的第一步是要安装 GitLab Runner。如果公司、团队内部已安装过，可以跳过这一步。</p>
 <p>这里推荐使用 docker 的方式安装，复制以下命令执行即可：</p>
