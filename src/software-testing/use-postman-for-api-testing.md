@@ -67,6 +67,16 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 使用 `{{var}}` 的形式引用变量，可在 url 及 body 处引用环境变量 `var`。
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602746808280-6743bf6c-34b5-402a-abe6-397eb76c5380.png)
 
+注意细节，如果是变量值是字符串，要用双引号把它包起来：
+```json
+{
+    "name": "exist",
+    "version": 1,
+    "datasourceTypeId": {{datasourceTypeId}}, // 这个是数字
+    "fileId": "{{fileId}}", // 这个是字符串
+}
+```
+
 环境变量还可以在测试用例里去修改值：
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694424229773-4c83c6cf-0640-4c8a-aa33-38097d84f0cd.png)
 
