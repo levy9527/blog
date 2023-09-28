@@ -166,14 +166,13 @@ pm.test("Status code is 200", function () {
 ```
 
 ### 运行集合
-
 本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了
 
-记得先重置变量当前值
+先切换到对应的环境，再重置变量当前值
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1603339930271-36e9f9e5-8013-40fa-9fac-e7cb642ba451.png)
 
-再选择集合，点击运行
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747943902-be50a347-cf3d-417c-9bed-e8d8abbb520d.png)
+再选择集合，点击 Run collection:
+![](https://cdn.nlark.com/yuque/0/2023/png/160590/1695864657881-dc204c38-386e-47d2-a377-083397bacad1.png)
 
 点击如图所示内容：
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748072901-4d49553d-bf78-4276-baee-6b8e84c83951.png)
@@ -193,12 +192,13 @@ pm.test("Status code is 200", function () {
 
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695779160975-7a625a91-bd51-45c5-b095-d89529b8ef51.png)
 
+也是导出一个 json 文件。
 ### 提交到Git
-把 json 文件放到项目中，并提交到 Git
+把导出的 json 文件放到项目中，并提交到 Git
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594578211-b381d377-f6a5-4dd2-be82-0c9295f10fc6.png)
 
 ### 建立CI任务
-以 Gitlab 为例，修改 .gitlab-ci.yml，增加以下内容：
+以 Gitlab 为例，修改`.gitlab-ci.yml`，增加以下内容：
 ```java
 newman:
   stage: test
@@ -209,7 +209,7 @@ newman:
     - npm install -g newman
     - newman run export.postman_collection.json -e dev.postman_environment.json --reporter-cli-exit-code
   tags:
-    - gitlab-runner
+    - your-gitlab-runner #记得把这里修改成你的 runner 名字
   only:
     - /dev|test|uat/
 ```
