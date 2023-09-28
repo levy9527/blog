@@ -4,6 +4,7 @@ tag:
 - Git
 - GitLab
 - Java
+- Node.js
 ---
 
 # GitLab CI
@@ -11,7 +12,7 @@ tag:
 GitLab 在企业内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。
 
 <!-- more -->
-## GitLab Runner 安装与配置
+## 安装与配置
 ### GitLab Runner 安装
 进行 Gitlab CI 的第一步是要安装 GitLab Runner。如果公司、团队内部已安装过，可以跳过这一步。
 
