@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 28 Sep 2023 01:37:03 GMT</pubDate>
-    <lastBuildDate>Thu, 28 Sep 2023 01:37:03 GMT</lastBuildDate>
+    <pubDate>Thu, 28 Sep 2023 05:51:51 GMT</pubDate>
+    <lastBuildDate>Thu, 28 Sep 2023 05:51:51 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1771,6 +1771,42 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <h2> 前言</h2>
 <p>GitLab 在企业内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。</p>
 <!-- more -->
+<h2> GitLab Runner 安装与配置</h2>
+<h3> GitLab Runner 安装</h3>
+<p>进行 Gitlab CI 的第一步是要安装 GitLab Runner。如果公司、团队内部已安装过，可以跳过这一步。</p>
+<p>这里推荐使用 docker 的方式安装，复制以下命令执行即可：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其他安装方式可查阅<a href="https://docs.gitlab.com/runner/install/docker.html#install-the-docker-image-and-start-the-container" target="_blank" rel="noopener noreferrer">文档</a>。</p>
+<h3> GitLab Runner 注册</h3>
+<p>GitLab Runner 安装以后，还要注册到 GitLab 的项目中才能使用，此步骤需要项目的 Maintainer 权限。</p>
+<p>在注册前，可以先检查下，自己的项目中是否已有可以使用的 GitLab Runner（如果看不到 Settings，说明没有权限），如果有就记住其名字，然后跳过此步骤。<br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277808112.png" alt="" loading="lazy"></p>
+<p>GitLab Runner 根据范围分为<a href="https://docs.gitlab.com/ee/ci/runners/runners_scope.html" target="_blank" rel="noopener noreferrer">三种</a>。<br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387098778.png" alt="image.png" loading="lazy"></p>
+<p>下面以 Specific Runner 为例进行说明。</p>
+<p>进入项目如下界面：<br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387102770.png" alt="image.png" loading="lazy"></p>
+<p>拿到 URL 及 token：<br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387107092.png" alt="image.png" loading="lazy"></p>
+<p>执行命令进行注册:</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>根据提示输入内容，其中 URL 及 token 就是前面步骤中 Web 界面获取的信息。</p>
+<p>命令行操作示例如下，注意两点即可：</p>
+<ol>
+<li>最重要的就是 URL 与 token，需要根据实际情况填写</li>
+<li>其他参数可以与示例完全一致</li>
+</ol>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注册成功后，显示示例如下：<br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387118062.png" alt="image.png" loading="lazy"></p>
+<h3> 提交.gitlab-ci.yml</h3>
+<p>要想 Gitlab Runner 工作，还需要在项目根目录提交 .gitlab-ci.yml 文件。</p>
+<p>建议提交.gitlab-ci.yml文件前，在 GitLab 先进行语法校验。<br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388474604.png" alt="image.png" loading="lazy"></p>
+<p>如果错误，会有提示。<br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png" alt="image.png" loading="lazy"></p>
+<p>如果配置成功，会看到 GitLab 的图标：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png" alt="" loading="lazy"></p>
+<p>如果图标如下所示，说明文件有误，比如文件名开头多了个空格🤦‍♂️：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png" alt="" loading="lazy"></p>
+<p>以上就是 GitLab CI 所需的基本环境配置，接下来进行实战内容讲解。</p>
 <h2> 合并代码前进行检查</h2>
 <h3> 背景</h3>
 <p>有的产品线使用 Jenkins 进行 CI，但又没设置好相应的 GitLab 插件，于是会形成这样一个流程：</p>
@@ -1782,37 +1818,14 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 </ul>
 <p>最后一点，非常难以忍受，因为代码已经合并进去了，木已成舟。此时面对编译报错，第一反应是解决报错，重新编译。但有没有一种可能，我根本不想要这些编译报错的代码呢？</p>
 <p>笔者还是更倾向于防患于未然的思维模式，也即不能通过编译的代码，不允许合并至受保护的分支。而使用 Gitlab CI 来做这件事比 Jenkins 体验更丝滑，下面就来介绍一下具体的做法。</p>
-<h3> 安装Gitlab Runner</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>其他安装方式可查阅<a href="https://docs.gitlab.com/runner/install/docker.html#install-the-docker-image-and-start-the-container" target="_blank" rel="noopener noreferrer">文档</a>。</p>
-<h3> 注册Gitlab Runner</h3>
-<p>Gitlab Runner 根据范围分为<a href="https://docs.gitlab.com/ee/ci/runners/runners_scope.html" target="_blank" rel="noopener noreferrer">三种</a>。注册需要获取相应的 token，这就涉及到了权限，至少需要 Maintainer 权限。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387098778.png" alt="image.png" loading="lazy"><br>
-下面以 Specific Runner 为例进行说明。</p>
-<p>进入项目如下界面：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387102770.png" alt="image.png" loading="lazy"></p>
-<p>拿到 URL 及 token：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387107092.png" alt="image.png" loading="lazy"></p>
-<p>执行命令进行注册:</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>根据提示输入内容，其中 URL 及 token 就是前面步骤中 Web 界面获取的信息。</p>
-<p>命令行操作示例如下：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注册成功后，显示示例如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387118062.png" alt="image.png" loading="lazy"></p>
 <h3> 设置MR检查</h3>
 <p>进入项目如下界面：<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387122013.png" alt="image.png" loading="lazy"></p>
 <p>勾选流水线必须成功。<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388470210.png" alt="image.png" loading="lazy"></p>
-<h3> 配置.gitlab-ci.yml</h3>
+<h3> .gitlab-ci.yml 示例</h3>
 <p>简单示例如下，根据实际情况修改：</p>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上述示例要设置成功，还要确保 .m2/settings.xml 文件存在。</p>
-<p>建议提前 yml 文件前，在 Gitlab 先进行语法校验。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388474604.png" alt="image.png" loading="lazy"></p>
-<p>如果错误，会有提示。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png" alt="image.png" loading="lazy"></p>
-<p>如果配置成功，会看到 GitLab 的图标：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png" alt="" loading="lazy"></p>
-<p>如果图标如下所示，说明文件有误，比如文件名开头多了个空格🤦‍♂️：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png" alt="" loading="lazy"></p>
 <h3> 效果</h3>
 <p>当流水线还未结束时，不能提前合并代码，只能等待流水线成功。<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388481821.png" alt="image.png" loading="lazy"></p>
@@ -1842,8 +1855,8 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <h3> Maven配置</h3>
 <p>考虑到一个项目A，可能划分了多个模块，并非每个模块都需要发布 jar，可以修改对应模块的 pom.xml</p>
 <div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>则在项目根目录执行 deploy 命令即可：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> Gitlab配置</h3>
-<p>相应 gitlab-ci 配置如下：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> .gitlab-ci.yml 配置</h3>
+<p>相应的配置如下：</p>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>代码合并或有新的 commit 时，会执行流水线：<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388489368.png" alt="image.png" loading="lazy"></p>
 <h3> 拉取最新的jar</h3>
@@ -1876,7 +1889,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <li><a href="https://docs.gitlab.com/ee/ci/jobs/job_control.html#specify-when-jobs-run-with-rules" target="_blank" rel="noopener noreferrer">rules规则说明</a></li>
 </ul>
 ]]></content:encoded>
-      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387098778.png" type="image/png"/>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277808112.png" type="image/png"/>
     </item>
     <item>
       <title>再论Git Flow</title>
