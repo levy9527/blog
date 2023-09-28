@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 28 Sep 2023 05:58:03 GMT</pubDate>
-    <lastBuildDate>Thu, 28 Sep 2023 05:58:03 GMT</lastBuildDate>
+    <pubDate>Thu, 28 Sep 2023 08:25:37 GMT</pubDate>
+    <lastBuildDate>Thu, 28 Sep 2023 08:25:37 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -3183,7 +3183,8 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747475793-1f85e976-8189-44b7-9667-f1a195ff8c35.png" alt="" loading="lazy"></p>
 <p>使用 <code>{{var}}</code> 的形式引用变量，可在 url 及 body 处引用环境变量 <code>var</code>。<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602746808280-6743bf6c-34b5-402a-abe6-397eb76c5380.png" alt="" loading="lazy"></p>
-<p>环境变量还可以在测试用例里去修改值：<br>
+<p>注意细节，如果是变量值是字符串，要用双引号把它包起来：</p>
+<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>环境变量还可以在测试用例里去修改值：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694424229773-4c83c6cf-0640-4c8a-aa33-38097d84f0cd.png" alt="" loading="lazy"></p>
 <h3> 请求设置</h3>
 <p>对于请求体的发送，一般进行如下设置：<br>
