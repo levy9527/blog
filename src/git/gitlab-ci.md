@@ -11,20 +11,11 @@ tag:
 GitLab 在企业内部还是比较通用的，其 CI 用起来个人也觉得比 Jenkins 顺手，因此在这里分享一下相关的实践经验。
 
 <!-- more -->
+## GitLab Runner 安装与配置
+### GitLab Runner 安装
+进行 Gitlab CI 的第一步是要安装 GitLab Runner。如果公司、团队内部已安装过，可以跳过这一步。
 
-## 合并代码前进行检查
-### 背景
-有的产品线使用 Jenkins 进行 CI，但又没设置好相应的 GitLab 插件，于是会形成这样一个流程：
-
-- feature 分支发起 Merge Request
-- 合并至受保护的分支
-- 登录 Jenkins，点击构建
-- 构建失败，原因：编译报错
-
-最后一点，非常难以忍受，因为代码已经合并进去了，木已成舟。此时面对编译报错，第一反应是解决报错，重新编译。但有没有一种可能，我根本不想要这些编译报错的代码呢？
-
-笔者还是更倾向于防患于未然的思维模式，也即不能通过编译的代码，不允许合并至受保护的分支。而使用 Gitlab CI 来做这件事比 Jenkins 体验更丝滑，下面就来介绍一下具体的做法。
-### 安装Gitlab Runner
+这里推荐使用 docker 的方式安装，复制以下命令执行即可：
 ```shell
 docker run -d --name gitlab-runner --restart always \
   -v /var/run/docker.sock:/var/run/docker.sock \
@@ -32,9 +23,16 @@ docker run -d --name gitlab-runner --restart always \
   gitlab/gitlab-runner:latest
 ```
 其他安装方式可查阅[文档](https://docs.gitlab.com/runner/install/docker.html#install-the-docker-image-and-start-the-container)。
-### 注册Gitlab Runner
-Gitlab Runner 根据范围分为[三种](https://docs.gitlab.com/ee/ci/runners/runners_scope.html)。注册需要获取相应的 token，这就涉及到了权限，至少需要 Maintainer 权限。
+
+### GitLab Runner 注册
+GitLab Runner 安装以后，还要注册到 GitLab 的项目中才能使用，此步骤需要项目的 Maintainer 权限。
+
+在注册前，可以先检查下，自己的项目中是否已有可以使用的 GitLab Runner（如果看不到 Settings，说明没有权限），如果有就记住其名字，然后跳过此步骤。
+![](https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277808112.png)
+
+GitLab Runner 根据范围分为[三种](https://docs.gitlab.com/ee/ci/runners/runners_scope.html)。
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387098778.png)
+
 下面以 Specific Runner 为例进行说明。
 
 进入项目如下界面：
@@ -49,7 +47,9 @@ docker run --rm -it -v /srv/gitlab-runner/config:/etc/gitlab-runner gitlab/gitla
 ```
 根据提示输入内容，其中 URL 及 token 就是前面步骤中 Web 界面获取的信息。
 
-命令行操作示例如下：
+命令行操作示例如下，注意两点即可：
+1. 最重要的就是 URL 与 token，需要根据实际情况填写
+2. 其他参数可以与示例完全一致
 ```bash
 Enter the GitLab instance URL (for example, https://gitlab.com/):
 https://your-gitlab
@@ -73,13 +73,45 @@ maven:3.6.3-openjdk-8
 
 注册成功后，显示示例如下：
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387118062.png)
+
+### 提交.gitlab-ci.yml
+要想 Gitlab Runner 工作，还需要在项目根目录提交 .gitlab-ci.yml 文件。
+
+建议提交.gitlab-ci.yml文件前，在 GitLab 先进行语法校验。
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388474604.png)
+
+如果错误，会有提示。
+![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png)
+
+如果配置成功，会看到 GitLab 的图标：
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png)
+
+如果图标如下所示，说明文件有误，比如文件名开头多了个空格🤦‍♂️：
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png)
+
+以上就是 GitLab CI 所需的基本环境配置，接下来进行实战内容讲解。
+
+## 合并代码前进行检查
+### 背景
+有的产品线使用 Jenkins 进行 CI，但又没设置好相应的 GitLab 插件，于是会形成这样一个流程：
+
+- feature 分支发起 Merge Request
+- 合并至受保护的分支
+- 登录 Jenkins，点击构建
+- 构建失败，原因：编译报错
+
+最后一点，非常难以忍受，因为代码已经合并进去了，木已成舟。此时面对编译报错，第一反应是解决报错，重新编译。但有没有一种可能，我根本不想要这些编译报错的代码呢？
+
+笔者还是更倾向于防患于未然的思维模式，也即不能通过编译的代码，不允许合并至受保护的分支。而使用 Gitlab CI 来做这件事比 Jenkins 体验更丝滑，下面就来介绍一下具体的做法。
+
 ### 设置MR检查
 进入项目如下界面：
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387122013.png)
 
 勾选流水线必须成功。
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388470210.png)
-### 配置.gitlab-ci.yml
+
+### .gitlab-ci.yml 示例
 简单示例如下，根据实际情况修改：
 ```yaml
 image: maven:3.6.3-openjdk-8
@@ -107,17 +139,6 @@ build:
 ```
 上述示例要设置成功，还要确保 .m2/settings.xml 文件存在。
 
-建议提前 yml 文件前，在 Gitlab 先进行语法校验。
-![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388474604.png)
-
-如果错误，会有提示。
-![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png)
-
-如果配置成功，会看到 GitLab 的图标：
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png)
-
-如果图标如下所示，说明文件有误，比如文件名开头多了个空格🤦‍♂️：
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png)
 ### 效果
 当流水线还未结束时，不能提前合并代码，只能等待流水线成功。
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388481821.png)
@@ -177,8 +198,8 @@ mvn --also-make -pl b test
 mvn deploy -Dmaven.test.skip
 ```
 
-### Gitlab配置
-相应 gitlab-ci 配置如下：
+### .gitlab-ci.yml 配置
+相应的配置如下：
 ```yaml
 deploy:
   stage: deploy
@@ -192,6 +213,7 @@ deploy:
 ```
 代码合并或有新的 commit 时，会执行流水线：
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388489368.png)
+
 ### 拉取最新的jar
 在B项目中，如果要引用A项目打出来的 jar，记得拉取最新的版本，pom.xml 设置如下：
 ```xml
