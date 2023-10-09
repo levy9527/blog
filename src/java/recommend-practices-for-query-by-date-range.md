@@ -72,7 +72,7 @@ WHERE created_time BETWEEN '2023-09-12' AND '2023-09-13';
 - `<` 转成 `&lt;`
 
 这就是不推荐这种写法的原因之一。
-### Java 8
+### LoxalDate
 都已经 Java 8 了，就不要使用 java.util.Date 了，使用 java.time.LocalDate 吧。方便应对后续的时间操作。
 
 结束时间+1天，非常简单：
@@ -82,8 +82,20 @@ WHERE created_time BETWEEN '2023-09-12' AND '2023-09-13';
         return operationLog.delete(log.getStartDate(), log.getEndDate().plus(1, ChronoUnit.DAYS));
     }
 ```
+
+记得在 Controller 对时间字段加注解：
+```java
+@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+private LocalDate startDate;
+```
+
+否则会报错：
+> Failed to convert property value of type 'java.lang.String' to required type 'java.time.LocalDate' for property 'startDate'; nested exception is org.springframework.core.convert.ConversionFailedException:
+
 ### Jackson
-如果不设置反序列化，请求数据无法转换成 LocalDate。既然要设置反序列化，那序列化也少不了。我把全部设置的代码放下面了，有需要复制即可：
+如果不想在每个字段都加 `@DateTimeFormat` 注解，可以利用 Jackson 进行反序列化相关设置。
+
+既然要设置反序列化，那序列化也少不了。我把全部设置的代码放下面了，有需要复制即可：
 ```java
 @SpringBootConfiguration
 public class JacksonConfig {
