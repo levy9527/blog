@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 09 Oct 2023 09:38:08 GMT</pubDate>
-    <lastBuildDate>Mon, 09 Oct 2023 09:38:08 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Oct 2023 09:52:08 GMT</pubDate>
+    <lastBuildDate>Mon, 09 Oct 2023 09:52:08 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2270,11 +2270,17 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <li><code>&lt;</code> 转成 <code>&amp;lt;</code></li>
 </ul>
 <p>这就是不推荐这种写法的原因之一。</p>
-<h3> Java 8</h3>
+<h3> LoxalDate</h3>
 <p>都已经 Java 8 了，就不要使用 java.util.Date 了，使用 java.time.LocalDate 吧。方便应对后续的时间操作。</p>
 <p>结束时间+1天，非常简单：</p>
-<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> Jackson</h3>
-<p>如果不设置反序列化，请求数据无法转换成 LocalDate。既然要设置反序列化，那序列化也少不了。我把全部设置的代码放下面了，有需要复制即可：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>记得在 Controller 对时间字段加注解：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>否则会报错：</p>
+<blockquote>
+<p>Failed to convert property value of type 'java.lang.String' to required type 'java.time.LocalDate' for property 'startDate'; nested exception is org.springframework.core.convert.ConversionFailedException:</p>
+</blockquote>
+<h3> Jackson</h3>
+<p>如果不想在每个字段都加 <code>@DateTimeFormat</code> 注解，可以利用 Jackson 进行反序列化相关设置。</p>
+<p>既然要设置反序列化，那序列化也少不了。我把全部设置的代码放下面了，有需要复制即可：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 结语</h2>
 <p>好了，终于搞完了，我的评价是：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694501621853-c16a33fa-68e7-4aba-a72e-a9907793b564.png" alt="" loading="lazy"></p>
