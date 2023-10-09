@@ -85,9 +85,6 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 对于请求体的发送，一般进行如下设置：
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747761421-f2c415ec-1b1c-48f6-976d-fbc958fdcbf3.png)
 
-如果要上传文件，则一般进行如下设置：
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747847485-5d86f2f6-18cc-4262-b5fd-69349feb4bbe.png)
-
 还可以利用 Pre-request Script， 在请求前动态修改请求设置。
 比如有以下场景：
 - 线上环境接口路径为：/app-name/api/v1/api-name
@@ -122,6 +119,11 @@ pm.test('Response status code is 200', function () {
     resp = pm.response.json()
     pm.environment.set('jwt', "Bearer " + resp.payload.access_token)
 })
+```
+
+- 设置当天时间：
+```javascript
+pm.environment.set('currentDate', new Date().toISOString().split('T')[0]);  
 ```
 
 - 创建
@@ -175,6 +177,22 @@ pm.test("Status code is 200", function () {
 });
 ```
 
+### 上传文件
+如果要上传文件，则一般进行如下设置：
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747847485-5d86f2f6-18cc-4262-b5fd-69349feb4bbe.png)
+
+注意要把文件放到工作目录中。查看工作目录的方法如下：
+
+![点击设置](https://cdn.nlark.com/yuque/0/2023/png/160590/1696845111698-7494d4ca-4a10-401b-9907-b93b1b2f3474.png)
+
+![查看Location](https://cdn.nlark.com/yuque/0/2023/png/160590/1696845104321-e3956555-f26c-4c57-9d78-d14571a25dd6.png)
+
+把要上传的文件放到该目录下：
+
+![把要上传的文件放到该目录下](https://cdn.nlark.com/yuque/0/2023/png/160590/1696845627177-ede00f46-b2fb-48d8-9f23-eecd342901ea.png)
+
+这样才方便后续运行集合、以及持续集成。
+
 ### 运行集合
 本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了
 
@@ -184,11 +202,7 @@ pm.test("Status code is 200", function () {
 再选择集合，点击 Run collection:
 ![](https://cdn.nlark.com/yuque/0/2023/png/160590/1695864657881-dc204c38-386e-47d2-a377-083397bacad1.png)
 
-点击如图所示内容：
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748072901-4d49553d-bf78-4276-baee-6b8e84c83951.png)
-在弹出的窗口中，选择环境，再把下面的四个 checkbox 取消勾选。一般而言，这样不会容易出错。
-
-点击执行，可以看到集合内所有接口的执行结果：
+点击运行，可以看到集合内所有接口的执行结果：
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png)
 
 ## 持续集成
@@ -203,8 +217,14 @@ pm.test("Status code is 200", function () {
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695779160975-7a625a91-bd51-45c5-b095-d89529b8ef51.png)
 
 也是导出一个 json 文件。
+
+### 复制要上传的文件
+把要上传的文件，复制到项目根目录。
+
+如果没有上传文件的接口，忽略此步骤。
+
 ### 提交到Git
-把导出的 json 文件放到项目中，并提交到 Git
+把导出的 json 文件放到项目根目录中（与上传文件同级），并提交到 Git
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594578211-b381d377-f6a5-4dd2-be82-0c9295f10fc6.png)
 
 ### 建立CI任务
