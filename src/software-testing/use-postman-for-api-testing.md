@@ -183,13 +183,13 @@ pm.test("Status code is 200", function () {
 
 注意要把文件放到工作目录中。查看工作目录的方法如下：
 
-![点击设置](https://cdn.nlark.com/yuque/0/2023/png/160590/1696845111698-7494d4ca-4a10-401b-9907-b93b1b2f3474.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1696845111698-7494d4ca-4a10-401b-9907-b93b1b2f3474.png)
 
-![查看Location](https://cdn.nlark.com/yuque/0/2023/png/160590/1696845104321-e3956555-f26c-4c57-9d78-d14571a25dd6.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1696845104321-e3956555-f26c-4c57-9d78-d14571a25dd6.png)
 
 把要上传的文件放到该目录下：
 
-![把要上传的文件放到该目录下](https://cdn.nlark.com/yuque/0/2023/png/160590/1696845627177-ede00f46-b2fb-48d8-9f23-eecd342901ea.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1696845627177-ede00f46-b2fb-48d8-9f23-eecd342901ea.png)
 
 这样才方便后续运行集合、以及持续集成。
 
@@ -200,7 +200,7 @@ pm.test("Status code is 200", function () {
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1603339930271-36e9f9e5-8013-40fa-9fac-e7cb642ba451.png)
 
 再选择集合，点击 Run collection:
-![](https://cdn.nlark.com/yuque/0/2023/png/160590/1695864657881-dc204c38-386e-47d2-a377-083397bacad1.png)
+![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695864657881-dc204c38-386e-47d2-a377-083397bacad1.png)
 
 点击运行，可以看到集合内所有接口的执行结果：
 ![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png)
