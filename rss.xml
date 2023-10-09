@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Mon, 09 Oct 2023 09:52:08 GMT</pubDate>
-    <lastBuildDate>Mon, 09 Oct 2023 09:52:08 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Oct 2023 10:09:30 GMT</pubDate>
+    <lastBuildDate>Mon, 09 Oct 2023 10:09:30 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -3194,8 +3194,6 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <h3> 请求设置</h3>
 <p>对于请求体的发送，一般进行如下设置：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747761421-f2c415ec-1b1c-48f6-976d-fbc958fdcbf3.png" alt="" loading="lazy"></p>
-<p>如果要上传文件，则一般进行如下设置：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747847485-5d86f2f6-18cc-4262-b5fd-69349feb4bbe.png" alt="" loading="lazy"></p>
 <p>还可以利用 Pre-request Script， 在请求前动态修改请求设置。<br>
 比如有以下场景：</p>
 <ul>
@@ -3215,6 +3213,9 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <li>设置 jwt</li>
 </ul>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>设置当天时间：</li>
+</ul>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><ul>
 <li>创建</li>
 </ul>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
@@ -3229,16 +3230,22 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
 <li>确保返回的数据里没有特定的数据</li>
 </ul>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 运行集合</h3>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 上传文件</h3>
+<p>如果要上传文件，则一般进行如下设置：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602747847485-5d86f2f6-18cc-4262-b5fd-69349feb4bbe.png" alt="" loading="lazy"></p>
+<p>注意要把文件放到工作目录中。查看工作目录的方法如下：</p>
+<figure><img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1696845111698-7494d4ca-4a10-401b-9907-b93b1b2f3474.png" alt="点击设置" tabindex="0" loading="lazy"><figcaption>点击设置</figcaption></figure>
+<figure><img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1696845104321-e3956555-f26c-4c57-9d78-d14571a25dd6.png" alt="查看Location" tabindex="0" loading="lazy"><figcaption>查看Location</figcaption></figure>
+<p>把要上传的文件放到该目录下：</p>
+<figure><img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1696845627177-ede00f46-b2fb-48d8-9f23-eecd342901ea.png" alt="把要上传的文件放到该目录下" tabindex="0" loading="lazy"><figcaption>把要上传的文件放到该目录下</figcaption></figure>
+<p>这样才方便后续运行集合、以及持续集成。</p>
+<h3> 运行集合</h3>
 <p>本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了</p>
 <p>先切换到对应的环境，再重置变量当前值<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1603339930271-36e9f9e5-8013-40fa-9fac-e7cb642ba451.png" alt="" loading="lazy"></p>
 <p>再选择集合，点击 Run collection:<br>
 <img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695864657881-dc204c38-386e-47d2-a377-083397bacad1.png" alt="" loading="lazy"></p>
-<p>点击如图所示内容：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748072901-4d49553d-bf78-4276-baee-6b8e84c83951.png" alt="" loading="lazy"><br>
-在弹出的窗口中，选择环境，再把下面的四个 checkbox 取消勾选。一般而言，这样不会容易出错。</p>
-<p>点击执行，可以看到集合内所有接口的执行结果：<br>
+<p>点击运行，可以看到集合内所有接口的执行结果：<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png" alt="" loading="lazy"></p>
 <h2> 持续集成</h2>
 <h3> 导出接口</h3>
@@ -3248,8 +3255,11 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695779153775-1cc9a182-a8e2-4b52-baf5-34e9c3173dc3.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695779160975-7a625a91-bd51-45c5-b095-d89529b8ef51.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>也是导出一个 json 文件。</p>
+<h3> 复制要上传的文件</h3>
+<p>把要上传的文件，复制到项目根目录。</p>
+<p>如果没有上传文件的接口，忽略此步骤。</p>
 <h3> 提交到Git</h3>
-<p>把导出的 json 文件放到项目中，并提交到 Git<br>
+<p>把导出的 json 文件放到项目根目录中（与上传文件同级），并提交到 Git<br>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694594578211-b381d377-f6a5-4dd2-be82-0c9295f10fc6.png" alt="" loading="lazy"></p>
 <h3> 建立CI任务</h3>
 <p>以 Gitlab 为例，修改<code>.gitlab-ci.yml</code>，增加以下内容：</p>
