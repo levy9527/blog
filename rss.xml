@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 28 Sep 2023 08:25:37 GMT</pubDate>
-    <lastBuildDate>Thu, 28 Sep 2023 08:25:37 GMT</lastBuildDate>
+    <pubDate>Mon, 09 Oct 2023 09:38:08 GMT</pubDate>
+    <lastBuildDate>Mon, 09 Oct 2023 09:38:08 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2260,15 +2260,14 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <li>结束时间 +1 天：</li>
 </ol>
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>两种方案都是可以行，我推荐的是第二种。并且，由后端处理，不需要前端拼接字符串。</p>
+<blockquote>
+<p>注：结束时间 +1 的原因是，实际存储的的 created_time 是带有时分秒的，而用户选择时，只精确到日，这就相当于时分秒的值为0。如果结束时间不加1，则结束时间当天的记录都无法匹配到。</p>
+</blockquote>
 <h3> MyBatis</h3>
 <p>如果使用的是 <code>&gt;=</code> 这种要SQL写法，MyBatis 就需要转义：</p>
 <ul>
-<li>
-<blockquote>
-<p>转成 &gt;</p>
-</blockquote>
-</li>
-<li>&lt; 转成 &lt;</li>
+<li><code>&gt;</code> 转成 <code>&amp;gt;</code></li>
+<li><code>&lt;</code> 转成 <code>&amp;lt;</code></li>
 </ul>
 <p>这就是不推荐这种写法的原因之一。</p>
 <h3> Java 8</h3>
