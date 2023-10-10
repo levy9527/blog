@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 10 Oct 2023 03:33:12 GMT</pubDate>
-    <lastBuildDate>Tue, 10 Oct 2023 03:33:12 GMT</lastBuildDate>
+    <pubDate>Tue, 10 Oct 2023 03:36:00 GMT</pubDate>
+    <lastBuildDate>Tue, 10 Oct 2023 03:36:00 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -1803,9 +1803,9 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>如果错误，会有提示。<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png" alt="image.png" loading="lazy"></p>
 <p>如果配置成功，会看到 GitLab 的图标：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png" alt="" loading="lazy"></p>
 <p>如果图标如下所示，说明文件有误，比如文件名开头多了个空格🤦‍♂️：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png" alt="" loading="lazy"></p>
 <p>以上就是 GitLab CI 所需的基本环境配置，接下来进行实战内容讲解。</p>
 <h2> 合并代码前进行检查</h2>
 <h3> 背景</h3>
