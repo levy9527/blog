@@ -56,12 +56,10 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 ![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602746875957-dc9090e7-900e-4352-91f7-039792e2a9e0.png)
 点击右上角红框处，即可设置变量，需要先设置环境名。
 ![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747172023-7b96aa77-39bc-4881-b1e9-36d5535c92f1.png)
-值得注意的是：
 
-1. 一般设置 initial value 即可
-2. 如果设置了 current value，则运行 postman 时使用的是 current value
+一般设置 current value 即可，则运行 postman 时使用的就是该值。
 
-如果有多套环境，就点击复制，再修改环境名及包含变量的 initial value 即可。
+如果有多套环境，就点击复制，再修改环境名及包含变量的 current value 即可。
 ![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747475793-1f85e976-8189-44b7-9667-f1a195ff8c35.png)
 
 使用 `{{var}}` 的形式引用变量，可在 url 及 body 处引用环境变量 `var`。
