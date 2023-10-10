@@ -85,10 +85,10 @@ maven:3.6.3-openjdk-8
 ![image.png](https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png)
 
 如果配置成功，会看到 GitLab 的图标：
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png)
 
 如果图标如下所示，说明文件有误，比如文件名开头多了个空格🤦‍♂️：
-![](https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png)
 
 以上就是 GitLab CI 所需的基本环境配置，接下来进行实战内容讲解。
 
