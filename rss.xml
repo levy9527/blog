@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 10 Oct 2023 03:36:00 GMT</pubDate>
-    <lastBuildDate>Tue, 10 Oct 2023 03:36:00 GMT</lastBuildDate>
+    <pubDate>Tue, 10 Oct 2023 03:43:03 GMT</pubDate>
+    <lastBuildDate>Tue, 10 Oct 2023 03:43:03 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -3178,13 +3178,9 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <h3> 环境变量</h3>
 <p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602746875957-dc9090e7-900e-4352-91f7-039792e2a9e0.png" alt="" loading="lazy"><br>
 点击右上角红框处，即可设置变量，需要先设置环境名。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747172023-7b96aa77-39bc-4881-b1e9-36d5535c92f1.png" alt="" loading="lazy"><br>
-值得注意的是：</p>
-<ol>
-<li>一般设置 initial value 即可</li>
-<li>如果设置了 current value，则运行 postman 时使用的是 current value</li>
-</ol>
-<p>如果有多套环境，就点击复制，再修改环境名及包含变量的 initial value 即可。<br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747172023-7b96aa77-39bc-4881-b1e9-36d5535c92f1.png" alt="" loading="lazy"></p>
+<p>一般设置 current value 即可，则运行 postman 时使用的就是该值。</p>
+<p>如果有多套环境，就点击复制，再修改环境名及包含变量的 current value 即可。<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747475793-1f85e976-8189-44b7-9667-f1a195ff8c35.png" alt="" loading="lazy"></p>
 <p>使用 <code>{{var}}</code> 的形式引用变量，可在 url 及 body 处引用环境变量 <code>var</code>。<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602746808280-6743bf6c-34b5-402a-abe6-397eb76c5380.png" alt="" loading="lazy"></p>
@@ -3249,7 +3245,8 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png" alt="" loading="lazy"></p>
 <h2> 持续集成</h2>
 <h3> 导出接口</h3>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>导出接口合集：<br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png" alt="" loading="lazy"></p>
 <p>使用推荐的格式，导出一个 json 文件。</p>
 <h3> 导出环境变量</h3>
 <figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695779153775-1cc9a182-a8e2-4b52-baf5-34e9c3173dc3.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
