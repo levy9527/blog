@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Tue, 10 Oct 2023 03:43:03 GMT</pubDate>
-    <lastBuildDate>Tue, 10 Oct 2023 03:43:03 GMT</lastBuildDate>
+    <pubDate>Wed, 11 Oct 2023 07:29:44 GMT</pubDate>
+    <lastBuildDate>Wed, 11 Oct 2023 07:29:44 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2165,7 +2165,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 缺少字体</h3>
 <p>Excel 的导出需要字体文件。</p>
 <p>缺少字体时，可能会报错：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>为什么会缺少字体呢？笔者遇到的一个例子就是，使用了过于精简的基础镜像来打包应用，如使用：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>为什么会缺少字体呢？一个经典的例子就是，使用了过于精简的基础镜像来打包应用，如使用 busybox 就会报错：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>解决方案就是换一个更“丰满”一点的镜像。</p>
 <p>但如果没有导出的内容没有格式要求，其实推荐优先使用 CSV。因为 CSV 不需要字体，而又与 Excel 兼容。</p>
 <h3> 序列化失败</h3>
