@@ -167,7 +167,7 @@ java.lang.NullPointerException: null
 at sun.awt.FontConfiguration.getVersion(FontConfiguration.java:1264)
 ```
 
-为什么会缺少字体呢？笔者遇到的一个例子就是，使用了过于精简的基础镜像来打包应用，如使用：
+为什么会缺少字体呢？一个经典的例子就是，使用了过于精简的基础镜像来打包应用，如使用 busybox 就会报错：
 ```shell
 openjdk:8-jdk-bosybox
 ```
