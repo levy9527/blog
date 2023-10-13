@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 11 Oct 2023 07:29:44 GMT</pubDate>
-    <lastBuildDate>Wed, 11 Oct 2023 07:29:44 GMT</lastBuildDate>
+    <pubDate>Fri, 13 Oct 2023 07:49:43 GMT</pubDate>
+    <lastBuildDate>Fri, 13 Oct 2023 07:49:43 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2124,6 +2124,176 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154158111.png" alt="52fee749bc6d270f9ccab3eb0e04208b.png" loading="lazy"></p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154008266.png" type="image/png"/>
+    </item>
+    <item>
+      <title>IDEA常见问题与解决方案</title>
+      <link>https://levy.vip/java/Resolving-Common-Problems-in-IntelliJ-IDEA.html</link>
+      <guid>https://levy.vip/java/Resolving-Common-Problems-in-IntelliJ-IDEA.html</guid>
+      <source url="https://levy.vip/rss.xml">IDEA常见问题与解决方案</source>
+      <description>IDEA常见问题与解决方案 启动参数过长 Error running OrderStartupApplication. Command line is too long. Shorten the command line and rerun. 解决方案： 编辑 .idea/workspace.xml 找到 PropertiesComponent 添加： 或者这样：</description>
+      <pubDate>Fri, 13 Oct 2023 07:41:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> IDEA常见问题与解决方案</h1>
+<h2> 启动参数过长</h2>
+<p>Error running OrderStartupApplication. Command line is too long. Shorten the command line and rerun.<br>
+解决方案：</p>
+<ol>
+<li>编辑 .idea/workspace.xml</li>
+<li>找到 <code>PropertiesComponent</code></li>
+<li>添加：</li>
+</ol>
+<p>或者这样：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1691568843067-69847e70-987e-4263-81f3-7f19c3acccc5.png" alt="image.png" loading="lazy"></p>
+<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 设置JDK版本</h2>
+<p>相关报错：</p>
+<ul>
+<li><a href="https://blog.csdn.net/qq_32452623/article/details/106141126" target="_blank" rel="noopener noreferrer">java: Compilation failed: internal java compiler error</a></li>
+<li>Cannot resolve jdk.tools:jdk.tools:1.7</li>
+</ul>
+<p>解决方案如下。</p>
+<p>1.先确保已安装 jdk。</p>
+<p>2.修改运行设置<br>
+<img src="https://cdn.nlark.com/yuque/0/2021/png/160590/1637063344496-6b8f60c5-c444-4f77-a404-9b8ca8d7a9bb.png" alt="image.png" loading="lazy"><br>
+<img src="https://cdn.nlark.com/yuque/0/2021/png/160590/1637063379719-7c3d4323-5d77-44c4-8c49-7d79c4d61865.png" alt="image.png" loading="lazy"><br>
+3.修改外部依赖设置<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1645614452333-3f5d2763-e7a1-42d8-a3ea-b73cb664e6a1.png" alt="image.png" loading="lazy"><br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1645614476794-b37230c5-958a-459d-8dce-ecb5cb839d3f.png" alt="image.png" loading="lazy"></p>
+<h2> lombok 编译报错</h2>
+<p>前提：<a href="https://blog.csdn.net/weixin_42440768/article/details/107999786" target="_blank" rel="noopener noreferrer">lombok 有maven依赖后，还要安装IDE插件</a></p>
+<p>相关报错：<br>
+<a href="https://stackoverflow.com/questions/66801256/java-lang-illegalaccesserror-class-lombok-javac-apt-lombokprocessor-cannot-acce" target="_blank" rel="noopener noreferrer">class lombok.javac.apt.LombokProcessor (in unnamed module @0x29f3e3c7) cannot access class com.sun.tools.javac.processing.JavacProcessingEnvironment (in module jdk.compiler) because module jdk.compiler does not export com.sun.tools.javac.processing to unnamed module @0x29f3e3c7</a>：</p>
+<p>解决方案：找到相应的 pom.xml，更新依赖版本（如果没有，则添加依赖）</p>
+<div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>当然，还要确保项目 JDK 版本正确<a href="https://blog.csdn.net/qq_32452623/article/details/106141126" target="_blank" rel="noopener noreferrer"><br>
+</a></p>
+<h2> 设置启动参数</h2>
+<p>Run -&gt; Edit Configurations<br>
+注意是 VM options</p>
+<p>常见使用场景，使用本地配置：-Dspring.profiles.active=local<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1641977331365-8803c79f-8e88-401d-9452-f86c4d5a457e.png" alt="image.png" loading="lazy"></p>
+<h2> 栈溢出</h2>
+<p>maven build "Exception in thread "main" java.lang.StackOverflowError"</p>
+<p>-Xss40m<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1669357898562-420a3ceb-3dfd-4b9c-93fa-8884edc8b231.png" alt="image.png" loading="lazy"></p>
+<p>不是maven的编译选项在下面<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1669357950353-4cc40792-1e54-400e-b3c8-aab28b71df64.png" alt="image.png" loading="lazy"></p>
+<h2> 内存不足</h2>
+<p>如图所示进入设置：<img src="https://cdn.nlark.com/yuque/0/2021/png/160590/1637063639112-cf83394f-5c10-4eb6-9946-8f10cf901f62.png" alt="image.png" loading="lazy"><br>
+-Xmx4011m</p>
+<hr>
+<p>相关报错：<br>
+java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
+<p>解决方案：需要进行如图所示修改设置<br>
+<img src="https://cdn.nlark.com/yuque/0/2021/png/160590/1639039051050-9a0039c3-1087-4701-8ee9-0d61994bf2ca.png" alt="image.png" loading="lazy"></p>
+<h2> 热加载</h2>
+<p>相关文章：<a href="https://cloud.tencent.com/developer/article/1683029" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1683029</a></p>
+<p>提示：不用追求自动重新编译，手动按 build 即可。</p>
+<h2> 终端加载环境变量</h2>
+<p>相关问答：<a href="https://stackoverflow.com/questions/36592226/bashrc-not-sourced-on-intellij-ideas-terminal/59138750#59138750" target="_blank" rel="noopener noreferrer">https://stackoverflow.com/questions/36592226/bashrc-not-sourced-on-intellij-ideas-terminal/59138750#59138750</a></p>
+<p>注意两点：</p>
+<ol>
+<li>shell 命令带上 -i</li>
+<li>根据 shell 的版本，使用 .bashrc 或 .zshrc</li>
+</ol>
+<h2> 添加外部jar作为依赖</h2>
+<p>如下图所示：<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1669256297330-7985774e-3d1b-4d8b-af90-5b179b1fc825.png" alt="image.png" loading="lazy"><br>
+打开相应文件夹，选中jar即可。</p>
+<h2> 文件找不到——依赖冲突</h2>
+<p>相关报错：<code>nested exception is java.io.FileNotFoundException</code><br>
+这一般是 jar 包冲突。</p>
+<p>首先确保 pom.xml 的修改已生效，再利用 Maven Helper 插件，寻找冲突的依赖，根据报错信息，把不想的包 exclude 掉，重新加载 pom.xml。</p>
+<p>如果报错的包根本不在冲突列表里，也有可能是以下情况：</p>
+<ul>
+<li>版本不对， 则 google 一下相关报错，设置成正确的版本</li>
+<li>引入了多余的包，执行了不想要的逻辑</li>
+</ul>
+<p>exclue掉：<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1666767522281-08333ca8-f4fa-4965-8e61-65b4da2f3524.png" alt="image.png" loading="lazy"></p>
+<p>重新加载：<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1666767567101-8308c02c-a792-4fbd-9198-6edf2a514e8c.png" alt="image.png" loading="lazy"></p>
+<h2> 自动import</h2>
+<figure><img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1659925756116-626b591f-2be4-4bb5-90c8-91f65989fc2b.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<h2> 文件乱码</h2>
+<p>如图所示，根据情况修改即可：<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1641976626307-9d57d76f-eb57-4f57-8660-c77813485d5a.png" alt="image.png" loading="lazy"></p>
+<h2> autowired 提示变量未赋值</h2>
+<p>这是<a href="https://stackoverflow.com/a/44670144/6759562" target="_blank" rel="noopener noreferrer">因为我使用的是社区版</a>，需要<a href="https://stackoverflow.com/a/62437991/6759562" target="_blank" rel="noopener noreferrer">手动设置下</a>：<br>
+<img src="https://i.stack.imgur.com/3bSYa.png#from=url&amp;id=Wxizo&amp;originHeight=368&amp;originWidth=1858&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;title=" alt="" loading="lazy"><br>
+该方法可以放心使用。<br>
+虽然说的是 suppress unsed warning，其实是 suppress never assigned warning， unsed warning 还是会生效的。</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2023/png/160590/1691568843067-69847e70-987e-4263-81f3-7f19c3acccc5.png" type="image/png"/>
+    </item>
+    <item>
+      <title>Maven常见问题与解决方案</title>
+      <link>https://levy.vip/java/Resolving-Common-Problems-in-Maven.md.html</link>
+      <guid>https://levy.vip/java/Resolving-Common-Problems-in-Maven.md.html</guid>
+      <source url="https://levy.vip/rss.xml">Maven常见问题与解决方案</source>
+      <description>Maven常见问题与解决方案 运行 class 找不到主类 maven compile 得到 class 文件后 cd /my-app/target/com/mycompany/app java App</description>
+      <pubDate>Fri, 13 Oct 2023 07:41:44 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Maven常见问题与解决方案</h1>
+<h2> 运行 class 找不到主类</h2>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>得到 class 文件后</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>报错：</p>
+<blockquote>
+<p>错误: 找不到或无法加载主类 App<br>
+原因: java.lang.NoClassDefFoundError: com/mycompany/app/App (wrong name: App)</p>
+</blockquote>
+<p>这是因为主类并非在默认包下，故需要在正确的路径下调用全限定名。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 运行 jar 找不到主类</h2>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>打出 jar 后，运行失败，因为主清单找不到主类。这是因为缺少了打包配置</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 编译时找不到主类</h2>
+<p>表现：Maven 有相应的 jar，IDEA 能自动 import，编译时却报找不到类 <code>NoClassDefFoundError</code></p>
+<p>实例：flink-quickstart-java 项目就是如此。</p>
+<p>原因：这跟 Maven 依赖的 score 有关，因为 pom.xml 对依赖的 scope 定义为 provided，默认时编译不会去找相应的依赖。关于 maven scope 的知识点，<a href="https://www.baeldung.com/maven-dependency-scopes" target="_blank" rel="noopener noreferrer">点击这里</a>。</p>
+<p>解决方案：</p>
+<ol>
+<li>build configuration</li>
+<li>modify options</li>
+<li>把 provided 加入 classpath</li>
+</ol>
+<figure><img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<h2> 设置Maven目录</h2>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1670227320589-edf93b93-25d6-4992-9fe1-528218537ecf.png" alt="image.png" loading="lazy"><br>
+尽管IDEA可以设置 local repository，但实际上还是以 settings.xml 的配置为主，注意检查路径是否正确</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 无法识别 Maven 项目</h2>
+<p>IDEA的表现：Java文件 icon 异常<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1668149177501-37c6b4d2-1674-4ab2-b7c7-f7774ab90e12.png" alt="image.png" loading="lazy">，<br>
+正常是这样的<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1668149163603-a59d7ffe-7236-4756-8add-a55c1d282754.png" alt="image.png" loading="lazy">。</p>
+<p>此时代码的方法、变量不能跳转到定义处，无法编译、找不到主类。</p>
+<p>表面上看，这是没有把源码目录设置为 src root，但实际上，这是 pom.xml 解析、Maven依赖下载失败后的结果。很可能是因为把 IDEA 下载依赖的进程杀死了而导致的。</p>
+<p>解决方案：删除项目，重新创建。</p>
+<h2> 使用了不想要的镜像源</h2>
+<p>有可能第三方依赖包指定了第三方镜像源，而该镜像源不可用、或网络很慢，此时想避免使用该镜像源。</p>
+<p>解决方案：观察日志，确认第三方镜像源的名字，修改 ~/.m2/settings.xml，拦截其请求</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>以上配置会拦截所有指向 Maven中央仓库、third-party-central 的请求，使用 my-central 下载依赖。</p>
+<h2> 下载 jar 失败</h2>
+<p>如果因为网络问题， mvn 命令安装依赖失败（如下载某个依赖卡死），可以试试手动下载。</p>
+<p>解决方案：</p>
+<ol>
+<li>点击相应的 jar 包链接，使用浏览器下载</li>
+<li>观察 jar 包的下载链接，把下载到的 jar 复制到相应的 ~/.m2 子目录下</li>
+<li>重新执行 mvn install</li>
+</ol>
+<h2> 私服认证401</h2>
+<p>下载私服依赖时，报了 401。</p>
+<p>解决方案：</p>
+<ol>
+<li>检查 ~/.m2/settings.xml，找到 server 选项，确保设置了相应的用户名与密码</li>
+<li>点击私服链接，输入用户名与密码</li>
+<li>如果上述步骤不能正确执行，说明设置有误，需要更正设置；如果上述步骤正常，有可能是 IDEA 抽风，建议：
+<ol>
+<li>删除项目，重新克隆</li>
+<li>手动下载 jar，放到~/.m2 目录</li>
+</ol>
+</li>
+</ol>
+<h2> 避免缓存</h2>
+<p>pom.xml 作好设置</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>或命令行强制不使用依赖：</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 参考资料</h2>
+<p>官网：<a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html" target="_blank" rel="noopener noreferrer">https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html</a><br>
+书籍：《Maven实战》</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2022/png/160590/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png" type="image/png"/>
     </item>
     <item>
       <title>Excel处理常用实践</title>
