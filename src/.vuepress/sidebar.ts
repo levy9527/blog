@@ -68,6 +68,7 @@ export default sidebar({
         "Resolving-Common-Problems-in-Maven.md",
         "recommend-practices-for-query-by-date-range",
         "common-practices-for-handling-excel",
+        "check-if-name-exists",
         "how-to-convert-snapshot-into-release-jar-without-source-code",
         "why-i-prefer-fastjson-instead-of-jackson",
         "why-is-it-so-hard-to-upgrade-dependencies",
