@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 13 Oct 2023 07:49:43 GMT</pubDate>
-    <lastBuildDate>Fri, 13 Oct 2023 07:49:43 GMT</lastBuildDate>
+    <pubDate>Tue, 24 Oct 2023 08:29:52 GMT</pubDate>
+    <lastBuildDate>Tue, 24 Oct 2023 08:29:52 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2131,7 +2131,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
       <guid>https://levy.vip/java/Resolving-Common-Problems-in-IntelliJ-IDEA.html</guid>
       <source url="https://levy.vip/rss.xml">IDEA常见问题与解决方案</source>
       <description>IDEA常见问题与解决方案 启动参数过长 Error running OrderStartupApplication. Command line is too long. Shorten the command line and rerun. 解决方案： 编辑 .idea/workspace.xml 找到 PropertiesComponent 添加： 或者这样：</description>
-      <pubDate>Fri, 13 Oct 2023 07:41:44 GMT</pubDate>
+      <pubDate>Fri, 25 Nov 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> IDEA常见问题与解决方案</h1>
 <h2> 启动参数过长</h2>
 <p>Error running OrderStartupApplication. Command line is too long. Shorten the command line and rerun.<br>
@@ -2229,7 +2229,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
       <guid>https://levy.vip/java/Resolving-Common-Problems-in-Maven.md.html</guid>
       <source url="https://levy.vip/rss.xml">Maven常见问题与解决方案</source>
       <description>Maven常见问题与解决方案 运行 class 找不到主类 maven compile 得到 class 文件后 cd /my-app/target/com/mycompany/app java App</description>
-      <pubDate>Fri, 13 Oct 2023 07:41:44 GMT</pubDate>
+      <pubDate>Fri, 09 Dec 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Maven常见问题与解决方案</h1>
 <h2> 运行 class 找不到主类</h2>
 <div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>得到 class 文件后</p>
@@ -2294,6 +2294,60 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 书籍：《Maven实战》</p>
 ]]></content:encoded>
       <enclosure url="https://cdn.nlark.com/yuque/0/2022/png/160590/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png" type="image/png"/>
+    </item>
+    <item>
+      <title>避免密码明文传输</title>
+      <link>https://levy.vip/java/avoid-sending-password-in-plaintext.html</link>
+      <guid>https://levy.vip/java/avoid-sending-password-in-plaintext.html</guid>
+      <source url="https://levy.vip/rss.xml">避免密码明文传输</source>
+      <description>避免密码明文传输 说明 密码加密是很常见的安全性需求，但由于涉及前后端，前后端分离的情况下，开发人员容易只关心自己熟悉的领域，最终导致“知道要加密，实际还是没明文”的情况发生。 本文分享实际可运行的前后端代码，以减轻大家实现密码密文传输的负担。 流程说明：前端加密，后端解密。 当然，数据库存储的肯定是密文。这里后端解密的意思是：需要使用密码的时候，如获取数据库的连接，由后端解密后使用。</description>
+      <pubDate>Tue, 24 Oct 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 避免密码明文传输</h1>
+<h2> 说明</h2>
+<p>密码加密是很常见的安全性需求，但由于涉及前后端，前后端分离的情况下，开发人员容易只关心自己熟悉的领域，最终导致“知道要加密，实际还是没明文”的情况发生。</p>
+<p>本文分享实际可运行的前后端代码，以减轻大家实现密码密文传输的负担。</p>
+<p>流程说明：前端加密，后端解密。</p>
+<p>当然，数据库存储的肯定是密文。这里后端解密的意思是：需要使用密码的时候，如获取数据库的连接，由后端解密后使用。</p>
+<!-- more -->
+<h2> 前端代码</h2>
+<p>记得安装相应的 npm 模块。</p>
+<div class="language-typescript line-numbers-mode" data-ext="ts"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 后端代码</h2>
+<p>maven:</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>源码：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>单元测试：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>检查名字是否重复</title>
+      <link>https://levy.vip/java/check-if-name-exists.html</link>
+      <guid>https://levy.vip/java/check-if-name-exists.html</guid>
+      <source url="https://levy.vip/rss.xml">检查名字是否重复</source>
+      <description>检查名字是否重复 检查名字是否重复是很常用的业务需求，本文推荐一种更省心、更少bug的做法。</description>
+      <pubDate>Wed, 18 Oct 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 检查名字是否重复</h1>
+<p>检查名字是否重复是很常用的业务需求，本文推荐一种更省心、更少bug的做法。</p>
+<!-- more -->
+<h2> 推荐做法</h2>
+<p>借助数据库的来实现，执行以下语句：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后，在程序里添加全局异常处理类：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>示例返回：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1697616346892-cea4b6c7-1966-4dc5-84c6-d901eeeabd65.png#averageHue=%23fcfbfb&amp;clientId=u791d113b-6ee5-4&amp;from=paste&amp;height=146&amp;id=u5e5b9578&amp;originHeight=146&amp;originWidth=575&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=11093&amp;status=done&amp;style=none&amp;taskId=u48e1cd4e-70db-4617-be80-0ec3828b522&amp;title=&amp;width=575" alt="image.png" loading="lazy"></p>
+<h2> Why</h2>
+<p>为什么这样做呢？因为这样只需要改一次代码。后续再有类似的需求时，只需要增加 SQL 即可，不需要再修改码、不需要重新编译、构建、部署。</p>
+<p>如果选择修改代码，则每次至少要修改两个地方：新增、修改都要处理。</p>
+<p>示例代码如下：</p>
+<ul>
+<li>检查是否存在</li>
+</ul>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>新增接口</li>
+</ul>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><ul>
+<li>修改接口</li>
+</ul>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>实践的经验表明：改得多，错的多！</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2023/png/160590/1697616346892-cea4b6c7-1966-4dc5-84c6-d901eeeabd65.png#averageHue=%23fcfbfb&amp;clientId=u791d113b-6ee5-4&amp;from=paste&amp;height=146&amp;id=u5e5b9578&amp;originHeight=146&amp;originWidth=575&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=11093&amp;status=done&amp;style=none&amp;taskId=u48e1cd4e-70db-4617-be80-0ec3828b522&amp;title=&amp;width=575" type="image/"/>
     </item>
     <item>
       <title>Excel处理常用实践</title>
