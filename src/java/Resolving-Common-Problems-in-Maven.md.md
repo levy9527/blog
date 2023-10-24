@@ -1,3 +1,10 @@
+---
+date: 2022-12-09
+tag:
+- Java
+- Daily
+---
+
 # Maven常见问题与解决方案
 ## 运行 class 找不到主类
 ```xml
