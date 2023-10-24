@@ -64,6 +64,8 @@ export default sidebar({
       text: "Java",
       prefix: "/java",
       children: [
+        "Resolving-Common-Problems-in-IntelliJ-IDEA",
+        "Resolving-Common-Problems-in-Maven.md",
         "recommend-practices-for-query-by-date-range",
         "common-practices-for-handling-excel",
         "how-to-convert-snapshot-into-release-jar-without-source-code",
