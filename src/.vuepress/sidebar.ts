@@ -66,6 +66,7 @@ export default sidebar({
       children: [
         "Resolving-Common-Problems-in-IntelliJ-IDEA",
         "Resolving-Common-Problems-in-Maven.md",
+        "avoid-sending-password-in-plaintext",
         "recommend-practices-for-query-by-date-range",
         "common-practices-for-handling-excel",
         "check-if-name-exists",
