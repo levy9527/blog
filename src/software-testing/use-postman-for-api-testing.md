@@ -192,7 +192,7 @@ pm.test("Status code is 200", function () {
 这样才方便后续运行集合、以及持续集成。
 
 ### 运行集合
-本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了
+本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了。
 
 先切换到对应的环境，再重置变量当前值
 ![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1603339930271-36e9f9e5-8013-40fa-9fac-e7cb642ba451.png)
@@ -203,6 +203,7 @@ pm.test("Status code is 200", function () {
 点击运行，可以看到集合内所有接口的执行结果：
 ![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png)
 
+提示：如果单独调试成功，运行集合却失败，注意检查文件是否已保存。如果文件处于编辑未保存状态，运行集合时使用的是修改前的接口。
 ## 持续集成
 ### 导出接口
 导出接口合集：
