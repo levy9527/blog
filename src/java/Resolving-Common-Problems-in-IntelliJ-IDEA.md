@@ -57,8 +57,12 @@ Error running OrderStartupApplication. Command line is too long. Shorten the com
 Run -> Edit Configurations
 注意是 VM options
 
-常见使用场景，使用本地配置：-Dspring.profiles.active=local
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1641977331365-8803c79f-8e88-401d-9452-f86c4d5a457e.png)
+注入环境变量：spring.profiles.active=local
+![](https://cdn.nlark.com/yuque/0/2023/png/160590/1698212254651-9ffbcfab-7e1a-45c0-ae93-2ef2ad68cf11.png)
+
+也可以设置 VM options，不过要带上 -D：-Dspring.profiles.active=local
+![](https://cdn.nlark.com/yuque/0/2023/png/160590/1698212412181-3374a830-1693-4db2-95eb-b314e6313517.png)
+
 ## 栈溢出
 maven build "Exception in thread "main" java.lang.StackOverflowError"
 
