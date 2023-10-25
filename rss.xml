@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 25 Oct 2023 05:45:18 GMT</pubDate>
-    <lastBuildDate>Wed, 25 Oct 2023 05:45:18 GMT</lastBuildDate>
+    <pubDate>Wed, 25 Oct 2023 06:41:09 GMT</pubDate>
+    <lastBuildDate>Wed, 25 Oct 2023 06:41:09 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -3462,13 +3462,14 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1696845627177-ede00f46-b2fb-48d8-9f23-eecd342901ea.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <p>这样才方便后续运行集合、以及持续集成。</p>
 <h3> 运行集合</h3>
-<p>本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了</p>
+<p>本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了。</p>
 <p>先切换到对应的环境，再重置变量当前值<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1603339930271-36e9f9e5-8013-40fa-9fac-e7cb642ba451.png" alt="" loading="lazy"></p>
 <p>再选择集合，点击 Run collection:<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695864657881-dc204c38-386e-47d2-a377-083397bacad1.png" alt="" loading="lazy"></p>
 <p>点击运行，可以看到集合内所有接口的执行结果：<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png" alt="" loading="lazy"></p>
+<p>提示：如果单独调试成功，运行集合却失败，注意检查文件是否已保存。如果文件处于编辑未保存状态，运行集合时使用的是修改前的接口。</p>
 <h2> 持续集成</h2>
 <h3> 导出接口</h3>
 <p>导出接口合集：<br>
