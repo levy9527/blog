@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Wed, 25 Oct 2023 06:41:09 GMT</pubDate>
-    <lastBuildDate>Wed, 25 Oct 2023 06:41:09 GMT</lastBuildDate>
+    <pubDate>Thu, 26 Oct 2023 06:11:54 GMT</pubDate>
+    <lastBuildDate>Thu, 26 Oct 2023 06:11:54 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2261,8 +2261,14 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <p>IDEA的表现：Java文件 icon 异常<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1668149177501-37c6b4d2-1674-4ab2-b7c7-f7774ab90e12.png" alt="image.png" loading="lazy">，<br>
 正常是这样的<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1668149163603-a59d7ffe-7236-4756-8add-a55c1d282754.png" alt="image.png" loading="lazy">。</p>
 <p>此时代码的方法、变量不能跳转到定义处，无法编译、找不到主类。</p>
-<p>表面上看，这是没有把源码目录设置为 src root，但实际上，这是 pom.xml 解析、Maven依赖下载失败后的结果。很可能是因为把 IDEA 下载依赖的进程杀死了而导致的。</p>
-<p>解决方案：删除项目，重新创建。</p>
+<p>表面上看，这是没有把源码目录设置为 src root，但实际上，这是 pom.xml 解析缓存或Maven依赖下载失败后的结果。</p>
+<p>这里又分两种情况：</p>
+<ol>
+<li>子模块不能被识别</li>
+<li>主模块不能被识别</li>
+</ol>
+<p>如果是第1种情况，添加了子模块不能正确识别，删除 <code>&lt;module&gt;my-new-submodule&lt;/module&gt;</code> 这一行，重新加载 pom.xml；再重新添加这一行，然后重新加载 pom.xml 即可。</p>
+<div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果是第2种情况，笔者曾遇到的场景是： 因为把 IDEA 下载依赖的进程杀死了而导致的。 解决方案：删除项目，重新创建。</p>
 <h2> 使用了不想要的镜像源</h2>
 <p>有可能第三方依赖包指定了第三方镜像源，而该镜像源不可用、或网络很慢，此时想避免使用该镜像源。</p>
 <p>解决方案：观察日志，确认第三方镜像源的名字，修改 ~/.m2/settings.xml，拦截其请求</p>
