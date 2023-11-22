@@ -66,6 +66,11 @@ export default sidebar({
       children: [
         "Resolving-Common-Problems-in-IntelliJ-IDEA",
         "Resolving-Common-Problems-in-Maven.md",
+        "using-enum-in-java",
+        "which-one-is-better-Boolean-or-boolean",
+        "which-one-is-better-forEach-or-map",
+        "recommend-practices-for-collections-naming-convention",
+        "recommend-practices-for-writing-good-functions",
         "avoid-sending-password-in-plaintext",
         "recommend-practices-for-query-by-date-range",
         "common-practices-for-handling-excel",
