@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 26 Oct 2023 06:11:54 GMT</pubDate>
-    <lastBuildDate>Thu, 26 Oct 2023 06:11:54 GMT</lastBuildDate>
+    <pubDate>Thu, 23 Nov 2023 01:06:28 GMT</pubDate>
+    <lastBuildDate>Thu, 23 Nov 2023 01:06:28 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -295,6 +295,59 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>看看大佬的演讲，还是有很多启发的。别的不说，推荐的书单就很有价值。</p>
 <!-- more -->
 ]]></content:encoded>
+    </item>
+    <item>
+      <title>生产教训：测试环境要与生产环境一致</title>
+      <link>https://levy.vip/daily/testing-environments-should-be-consistent-with-production-environments.html</link>
+      <guid>https://levy.vip/daily/testing-environments-should-be-consistent-with-production-environments.html</guid>
+      <source url="https://levy.vip/rss.xml">生产教训：测试环境要与生产环境一致</source>
+      <description>生产教训：测试环境要与生产环境一致 事件还原 业务流程： app-a 上传文件 app-b 下载文件后使用文件 其他信息： 开发、测试环境使用 MinIO 生产环境使用 Amazon S3 问题： app-a 上传文件成功 app-b 使用文件报错 逐步分析定位问题： app-a 与 app-b　配置是否一致？——确认都是使用 S3 S3 是否正确配置？有没权限问题？——确认配置正确，没有权限问题 app-a 是否真的上传成功？——确认文件已在 S3 app-b 是否下载成功？——根据日志，判断下载失败，得到的信息是：文件不存在。</description>
+      <pubDate>Sun, 12 Nov 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 生产教训：测试环境要与生产环境一致</h1>
+<h2> 事件还原</h2>
+<p>业务流程：</p>
+<ol>
+<li>app-a 上传文件</li>
+<li>app-b 下载文件后使用文件</li>
+</ol>
+<p>其他信息：</p>
+<ol>
+<li>开发、测试环境使用 MinIO</li>
+<li>生产环境使用 Amazon S3</li>
+</ol>
+<p>问题：</p>
+<ol>
+<li>app-a 上传文件成功</li>
+<li>app-b 使用文件报错</li>
+</ol>
+<p>逐步分析定位问题：</p>
+<ol>
+<li>app-a 与 app-b　配置是否一致？——确认都是使用 S3</li>
+<li>S3 是否正确配置？有没权限问题？——确认配置正确，没有权限问题</li>
+<li>app-a 是否真的上传成功？——确认文件已在 S3</li>
+<li>app-b 是否下载成功？——根据日志，判断下载失败，得到的信息是：文件不存在。</li>
+</ol>
+<p>所以问题就在于，为什么 app-b 的代码会判断文件不存在？</p>
+<ul>
+<li>是传过去的路径参数不对？</li>
+<li>还是 app-b　的逻辑有问题？</li>
+</ul>
+<p>经过确认，传参是正确的，那么只有一个推论： app-b 判断文件是否存在的逻辑有问题。</p>
+<p>具体是哪里有问题呢？</p>
+<p>原来文件下载前，有一个判断目录是否存在的逻辑，其实现是判断 S3 的对象是否存在，示例代码如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>则该代码永远为 false。</p>
+<p>如何修复呢？改为调用 <code>listObjects</code>就可以了。如下图所示（左边是修改前，右边是修改后）：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1699790489630-9003e1b5-8388-48b4-ab78-a89685efa382.png#averageHue=%239b7340&amp;clientId=u4410405e-6621-4&amp;from=paste&amp;height=195&amp;id=uc3b4dbdd&amp;originHeight=293&amp;originWidth=1592&amp;originalType=binary&amp;ratio=1.5&amp;rotation=0&amp;showTitle=false&amp;size=60088&amp;status=done&amp;style=none&amp;taskId=ube041bd4-ea04-4f00-b3c3-d5643d8db6a&amp;title=&amp;width=1061.3333333333333" alt="image.png" loading="lazy"></p>
+<h2> 分析</h2>
+<p>很难想像，为什么在涉及对象存储的代码中，会有判断目录是否存在的逻辑。</p>
+<p>好在我是个善于为别人找理由的人。我观察了下代码库，发现接口与类结构如下：<br>
+<img src="https://cdn.nlark.com/yuque/__mermaid_v3/60dd2cb12a7fcb019482c4fc140f6347.svg#lake_card_v2=eyJ0eXBlIjoibWVybWFpZCIsImNvZGUiOiJjbGFzc0RpYWdyYW1cblx0ICBJU3RvcmFnZSA8fC4uIEhERlNTdG9yYWdlXG4gICAgSVN0b3JhZ2UgPHwuLiBNaW5JT1N0b3JhZ2Vcblx0XHRJU3RvcmFnZSA8fC4uIFMzU3RvcmFnZVxuXHRcdFxuICAgIGNsYXNzIElTdG9yYWdlIHtcblx0XHQgIDw8aW50ZXJmYWNlPj5cblx0XHR9XG5cdFx0XG4gICAgY2xhc3MgTWluSU9TdG9yYWdlIHtcbiAgICB9XG5cdFx0XG5cdFx0Y2xhc3MgUzNTdG9yYWdlIHsgIFxuXHRcdH1cblxuXHRcdGNsYXNzIEhERlNTdG9yYWdlIHsgIFxuXHRcdH1cblx0XHQiLCJ1cmwiOiJodHRwczovL2Nkbi5ubGFyay5jb20veXVxdWUvX19tZXJtYWlkX3YzLzYwZGQyY2IxMmE3ZmNiMDE5NDgyYzRmYzE0MGY2MzQ3LnN2ZyIsImlkIjoiZWY3N3IiLCJtYXJnaW4iOnsidG9wIjp0cnVlLCJib3R0b20iOnRydWV9LCJjYXJkIjoiZGlhZ3JhbSJ9" alt="" loading="lazy">应该是在写 HDFSStorage 的时候，用到了判断目录是否存在的逻辑，从而把方法提升到了接口定义 IStorage 中。</p>
+<p>如果定义 IStorage 与实现 S3Storage 的代码的人并不相同（我相信很可能是这样），那么我更倾向于认为责任在定义 IStorage 的人身上，因为TA并没有合理地设计接口，导致后来者被迫实现没有意义的接口，从而出错。</p>
+<h2> 结论</h2>
+<p>为什么开发、测试环境没问题？或者说，为什么 MinIO　没这个问题？那是因为实现 MinIOStorage 的人，没有踩这个坑。</p>
+<p>所以，本此事件给我来的经验教训是什么呢？既不是 S3 如何判断目录是否存在，也不是接口定义的重要性。而是：要让测试环境与生产环境尽可能保持一致，提前暴露问题。而不是测试环境是这样的配置，生产环境又是那样的配置——这就会加大生产环境出问题的可能性！</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2023/png/160590/1699790489630-9003e1b5-8388-48b4-ab78-a89685efa382.png#averageHue=%239b7340&amp;clientId=u4410405e-6621-4&amp;from=paste&amp;height=195&amp;id=uc3b4dbdd&amp;originHeight=293&amp;originWidth=1592&amp;originalType=binary&amp;ratio=1.5&amp;rotation=0&amp;showTitle=false&amp;size=60088&amp;status=done&amp;style=none&amp;taskId=ube041bd4-ea04-4f00-b3c3-d5643d8db6a&amp;title=&amp;width=1061.3333333333333" type="image/"/>
     </item>
     <item>
       <title>对Vue不得不吐槽的事</title>
@@ -2456,6 +2509,54 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" type="image/png"/>
     </item>
     <item>
+      <title>集合命名推荐</title>
+      <link>https://levy.vip/java/recommend-practices-for-collections-naming-convention.html</link>
+      <guid>https://levy.vip/java/recommend-practices-for-collections-naming-convention.html</guid>
+      <source url="https://levy.vip/rss.xml">集合命名推荐</source>
+      <description>集合命名推荐 概述 建议给常用集合类的变量命名时，后缀带上相应的集合信息，以提高可读性。 当然，在此之前要回答一个问题：当把鼠标放到变量上面时，IDE 会提示变量的类型，为什么还要在命名上做文章？ 这是因为，有时并不在 IDE 上阅读代码，比如进行 GitHub 或 GitLab 进行 code review，此时无法获得提示，需要通过命名的规范来帮助理解。</description>
+      <pubDate>Wed, 01 Jun 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 集合命名推荐</h1>
+<h2> 概述</h2>
+<p>建议给常用集合类的变量命名时，后缀带上相应的集合信息，以提高可读性。</p>
+<p>当然，在此之前要回答一个问题：当把鼠标放到变量上面时，IDE 会提示变量的类型，为什么还要在命名上做文章？<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654049668320-c53d0ef6-4063-4163-aa3e-2c304af4e39a.png" alt="image.png" loading="lazy"></p>
+<p>这是因为，有时并不在 IDE 上阅读代码，比如进行 GitHub 或 GitLab 进行 code review，此时无法获得提示，需要通过命名的规范来帮助理解。</p>
+<h2> List</h2>
+<p>List 的变量，一般以 List 或 s 结尾， 如 idList 或 ids。这点易于理解，大家也容易遵守。</p>
+<p>坏的示例：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>第一眼看到这代码的时候，不知道读者是什么反应？</p>
+<p>按照习惯，nodeType 通常要么是字符串、数字、或枚举，但上述居然能调用 forEach 方法？我不禁愣了一下，赶紧去看了下定义，才发现原来是List。</p>
+<p>好的示例：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> Set</h2>
+<p>参考List，在变量后面加 Set 即可。</p>
+<h2> Map</h2>
+<p>Map 的变量命名是值得重点关注，因为很容易造成差可读性的重灾区。</p>
+<p>Map 的变量，推荐根据 key 与 value 来命名。规则表达式为：${key} + To + ${value} + Map，如 idToNameMap。<br>
+其中：</p>
+<ul>
+<li>可以玩一下“文字游戏”，把 To 写成 2（就像把 For 写成 4，这种 word play 是可以接受的），即 id2NameMap</li>
+<li>如果名字够清晰或已经很长，Map 可以省略，如 id2Name</li>
+</ul>
+<p>为什么推荐这样命名？我们先来看一则案例，看一看经典的 Map&lt;String, String&gt; 在实际编码中，命名是如何造成理解上的困难的。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>getTableIdMap</code>核心实现如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><code>replaceNodeId</code>核心实现如下：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>不知读者是否已经晕了？反正我是一头雾水。可能以为是因为我删减了很多代码导致的？恰恰相反，实际代码还有更多的逻辑判断，我已经抽出了核心部分，不需要被其他逻辑干扰了。</p>
+<p>上面的代码带来的疑问有：<br>
+疑问1：都是 <code>Map&lt;String, String&gt;</code>，<code>tableIdMaps</code> 与 <code>tableMaps</code> 有什么区别，它们存储的到底是什么？从类型上看，也不像是 id -&gt; table 的映射啊。<br>
+疑问2：<code>tableMaps.put(tableNode.getNodeId(), tableNodeId);</code>  这个 <code>tableNode.getNodeId()</code> 不是等于 <code>tableNodeId</code>吗？<br>
+疑问3：<code>String nodeId = tableMaps.get(tableNode.getNodeId()); </code>根据 nodeId 拿到 nodeId？</p>
+<p>到这里已可以猜到，<code>tableMaps</code>里的 key 与 value 肯定不是单纯的 nodeId 的意思，但这并没有什么帮助，因为我们还是不知道 <code>tableMaps</code>  key -&gt; value 映射的到底是什么。</p>
+<p>我们来看修改变量名之后，上述代码的效果。</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>现在是不是好懂很多了：</p>
+<ul>
+<li>str2TableIdMap 存储的 str -&gt; tableId 的映射, 其中 str 是由某种规则拼接而成的字符串，具体规则封装在了 <code>getTableNodeId</code>这个函数里，我们暂时可以不用关心</li>
+<li>nodeId2TableIdMap 存储的是 nodeId -&gt; tableId 的映射</li>
+</ul>
+<p>仅仅修改变量名，可读性就有大大提高，效果立竿见影！</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2022/png/160590/1654049668320-c53d0ef6-4063-4163-aa3e-2c304af4e39a.png" type="image/png"/>
+    </item>
+    <item>
       <title>根据时间范围查询推荐实践</title>
       <link>https://levy.vip/java/recommend-practices-for-query-by-date-range.html</link>
       <guid>https://levy.vip/java/recommend-practices-for-query-by-date-range.html</guid>
@@ -2518,6 +2619,301 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694501621853-c16a33fa-68e7-4aba-a72e-a9907793b564.png" alt="" loading="lazy"></p>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694499288408-aaec3b0c-9d06-43c1-849b-7af4ec9eb01a.png" type="image/png"/>
+    </item>
+    <item>
+      <title>编写函数的最佳实践</title>
+      <link>https://levy.vip/java/recommend-practices-for-writing-good-functions.html</link>
+      <guid>https://levy.vip/java/recommend-practices-for-writing-good-functions.html</guid>
+      <source url="https://levy.vip/rss.xml">编写函数的最佳实践</source>
+      <description>编写函数的最佳实践 前言 编写函数的目的，最根本的目的是提高可维护性，从而提高研发效率。 本文将推荐一些编写函数的最佳实践，以供参数。 减少重复 这是在遵守 Don&amp;apos;t repeat yourself (DRY) 原则。 实践中可以采取一个简单的判断方法：当相同的代码段第二次出现时，就是需要把代码封装成函数的契机。</description>
+      <pubDate>Fri, 14 Oct 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 编写函数的最佳实践</h1>
+<h2> 前言</h2>
+<p>编写函数的目的，最根本的目的是提高可维护性，从而提高研发效率。</p>
+<p>本文将推荐一些编写函数的最佳实践，以供参数。</p>
+<h3> 减少重复</h3>
+<p>这是在遵守 <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself" target="_blank" rel="noopener noreferrer">Don't repeat yourself</a> (DRY) 原则。</p>
+<p>实践中可以采取一个简单的判断方法：当相同的代码段第二次出现时，就是需要把代码封装成函数的契机。</p>
+<p>然而，有时代码只是相似，不完全相同，不能简单地使用 IDEA 右键 + Refactor + Extract Method 来抽取函数。<br>
+此时，为减少重复，需要进行一些思考。</p>
+<p>可以把程序的划分成三个部分：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>一般而言，函数的入参都是数据变量，也即 Data Structure。<br>
+而 Java 8 以后，lambda 表达式（也即函数）可以作为入参，其代表的是 Logic。<br>
+因此，最抽象的函数，是只定义了 Control、把 Logic 及 Data Structure 都作为入参的函数。当遇到类似却不完全相同的代码、想封装函数有遇难时，可以借助上述思路来梳理逻辑。</p>
+<h3> 隐藏细节</h3>
+<p>隐藏细节，是为了减少使用者的心智负担，方便其调用。</p>
+<p>有一个简单的判断标准：如果调用者需要频繁查看函数内部情况，以确定函数的目的或实现细节，那么隐藏细节的意图是失败的。</p>
+<h2> 建议</h2>
+<p>为了达到前文所述的目的，如以下实践建议。需要指出的是，以下提倡的是建议，并非金科玉律；只适用于一般情况，并非所有情况，特殊情况是可以特殊处理的。</p>
+<h3> 优先根据业务命名</h3>
+<p>一般而言，函数名最好是根据业务逻辑、结合业务领域来命名，而不是根据程序逻辑来命名。</p>
+<p>示例：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>当然，如果有些方法名是专业名词或是耳熟能详的，那直接使用即可，如：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 一个函数只做一件事</h3>
+<p>遵守 <a href="https://en.wikipedia.org/wiki/KISS_principle" target="_blank" rel="noopener noreferrer">Keep it simple stupid</a> (KISS) 原则。</p>
+<p>当然，不可能所有函数都达到这个要求——程序入口一般就会做很多事。我们的目标是尽可能地遵守该原则，减少调用者需要频繁查看函数实现的可能。</p>
+<p>反例1：做A且做B</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>坏的示例问题出在哪里呢？根据入参的合法性，有可能产生以下情况：</p>
+<ol>
+<li>参数合法，同时做A与B；只要有一个参数不合法，均不做A与B</li>
+<li>哪个合法就做哪个，也即可能出现：
+<ol>
+<li>只做A</li>
+<li>只做B</li>
+<li>做A也做B</li>
+<li>二者均不做</li>
+</ol>
+</li>
+</ol>
+<p>到底是什么情况呢？对此疑问，调用方只有查看函数实现，才能了解，于是破坏了封装的意图。<br>
+而且，坏的示例还会存在一个问题：如果调用方只想做A怎么办？我想很少人会把原代码拆分成两个函数，更常见的做法是保持原函数不变，并拷贝原函数的部分逻辑，封装一个只做A的新函数——这就造成了代码的冗余，于是减少重复的目的失败了。</p>
+<p>反例2：做A或做B</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>同样的，坏的示例会让人疑惑，搞不清楚函数的意图到底属于以下哪种情况：</p>
+<ol>
+<li>要么做A，要么做B，一定会做其中一个</li>
+<li>哪个合法做哪个，可能会出现：
+<ol>
+<li>只做A</li>
+<li>只做B</li>
+<li>做A也做B</li>
+<li>二者均不做</li>
+</ol>
+</li>
+</ol>
+<p>当然，一些常见的深入人心的 API，我们是可以接受这种“或逻辑”的：</p>
+<ul>
+<li>saveOrUpdate() // 有 id 就是 update，没有就是 insert</li>
+<li>getOrDefault() // 获取值；如果值不存在，就返回默认值</li>
+</ul>
+<h3> 优先使用纯函数</h3>
+<p>纯函数(pure function)，可以借助数学中的函数概念来理解：y = f(x)</p>
+<ul>
+<li>给定 x，能返回确定的 y</li>
+<li>无论函数调用几次、在何处调用，上述结果都不会变化</li>
+</ul>
+<p>纯函数的好处之一是无副作用（side effect）。也即调用函数后，不会对函数作用域以外的变量造成影响。</p>
+<p>反例：一个常见的现象，辅助函数会修改入参，主函数的变量生命周期贯穿整个主函数</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>因为已经省略了其他代码，因此我们不难看出 <code>nodesMap</code>是辅助变量，是为返回结果而服务的，而没有返回值的函数调用很可能修改了该变量。</p>
+<p>但实际上，代码逻辑很长，还有其他变量掺杂其中，代码意图并非能够一目了然。假设稍微修改一下，为 <code>getUpstream()</code>添加多一个参数，还能看出函数到底修改了哪个变量吗？</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果 <code>edgesMap</code>是来自主函数的参数呢？</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>情况变得糟糕了，因为按照 <code>getUpstream()</code>会修改入参的“习性”，我们很难有信心认为 <code>edgesMap</code>一定没有被修改。</p>
+<p>上述例子是想表明：为了贪图方便，编写一个不需要返回值而直接修改入参的函数，会给后续的维护增加负担。一方面变量状态难以追踪，另一方面这样的函数也不方便测试。</p>
+<p>一般而言，优先使用纯函数，会助于对大函数的拆分，从而使得 KISS 原则更容易被遵守。</p>
+<p>当然，总有例外情况。当程序逻辑复杂时，或有些函数就是对 setter 语句的调用，此时不需要返回值并且会造成副作用，又该怎么办呢？请看下一条建议。</p>
+<h3> 编写不需要返回值的函数</h3>
+<p>有如下建议：</p>
+<ol>
+<li 要修改的变量名="">方法名叫<code>setup</code>+ $</li>
+<li>一个方法只修改一个变量</li>
+<li>要修改的变量就是函数的第一个参数</li>
+<li>lambda（如果有的话） 作为最后的参数</li>
+</ol>
+<p>示例：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 参考资料</h2>
+<ul>
+<li><a href="https://mostly-adequate.gitbook.io/mostly-adequate-guide/ch03" target="_blank" rel="noopener noreferrer">functional-programming-mostly-adequate-guide/ch03</a></li>
+<li><a href="http://aroma.vn/web/wp-content/uploads/2016/11/code-complete-2nd-edition-v413hav.pdf" target="_blank" rel="noopener noreferrer">code-complete-2nd-edition.pdf</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>枚举的推荐实践</title>
+      <link>https://levy.vip/java/using-enum-in-java.html</link>
+      <guid>https://levy.vip/java/using-enum-in-java.html</guid>
+      <source url="https://levy.vip/rss.xml">枚举的推荐实践</source>
+      <description>枚举的推荐实践 背景 定义枚举的动机在于，可以作为常量，避免魔法值的出现。并且具有相应的类型，方便检索、与代码提示。 而在使用过程中，一种符合直觉的想法是，期望枚举在具备基本的 key-value 的功能外，还能够承载更多的信息。 本文推荐，不要在枚举中定义数字，直接使用枚举名即可！ Java 极简实现 理想状态下，枚举就应该这样简单！ public enum SEX { MALE, FEMALE; }</description>
+      <pubDate>Fri, 14 Oct 2022 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 枚举的推荐实践</h1>
+<h2> 背景</h2>
+<p>定义枚举的动机在于，可以作为常量，避免魔法值的出现。并且具有相应的类型，方便检索、与代码提示。</p>
+<p>而在使用过程中，一种符合直觉的想法是，期望枚举在具备基本的 key-value 的功能外，还能够承载更多的信息。</p>
+<p>本文推荐，不要在枚举中定义数字，直接使用枚举名即可！</p>
+<h2> Java</h2>
+<h3> 极简实现</h3>
+<p>理想状态下，枚举就应该这样简单！</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 常见实现</h3>
+<p>然而，代码库中常见的实现是，使用 enum 关键字定义枚举类型，并写下枚举名以及相应的绑定值</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>就这点代码，从业务的角度讲，逻辑已经实现了。</p>
+<p>但从具体编程语言（Java）的角度讲，工作还没有完成：此时，编译器会提示报错，因为缺少构造函数。</p>
+<p>站在调用方的角度，就会发现，我们没有方法拿到枚举里的定义值，也即<code>(1, "this is description for male")</code> ，</p>
+<p>因此，还需要编写以下内容：</p>
+<ul>
+<li>final 的成员变量</li>
+<li>在构造函数中为成员变量赋值</li>
+<li>定义成员变量相应的 getter 方法</li>
+</ul>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>前面说到，我们期望枚举里有 key-value 的功能，则还要再定义 <code>getValueByKey</code> 方法：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>有了上面的方法，我们才可以通过传入 code，返回相应的 desc</p>
+<p>如果反过来，我们想通过传入 desc 返回相应的 code 呢？还得再写一个方法！真是烦琐！</p>
+<h3> 更好的方式</h3>
+<p>前面我们可以看到，当关键逻辑写出来以后，还要写那么多模板代码，简直索然无味。</p>
+<p>为什么把简单的事情搞复杂，有没有更好的方式？</p>
+<p>需要了解到以下事实，枚举类型提供了通过枚举名获得枚举值的方法：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>也就是说，如果使用 <code>valueOf</code>的方式来定位枚举值，就可以通过 getter 方法来获取自定义的业务值，不需要再写自定义的 getValueByKey 方法。</p>
+<h3> 为什么还要定义数字？</h3>
+<p>另外，再看之前的枚举定义，为什么要定义 <code>MALE(1, "this is description for male")</code>呢？<br>
+在 <code>MALE</code>本身已经有含义的情况下，为何还要再设置一个数字呢？</p>
+<p>这个数字导致了不必要的转换：</p>
+<ol>
+<li>前端传数字 -&gt; 后端转成枚举</li>
+<li>后端再把枚举转成数字 -&gt; 存入数据库</li>
+</ol>
+<p>最蛋疼的就是，select 数据库数据的时候，全是1、2、3，都不知道什么意思。</p>
+<p>能不能不要这个数字？ 直接把定义好的枚举名，存入数据库呢？</p>
+<p>表面上看，这是因为数据库定义如此——从数据库查出来是数字，因而要根据数字去获取别的业务信息。</p>
+<p>然而，我再问了一下，得到的回答是： 上述做法是设计如此。为了节省存储空间及提升查询性能，才在数据库设置的数字，而不是直接存储字符串。</p>
+<p>这就引出了另一个问题，需要这样做来提高性能吗？对此，我们接下来要进行数据库层面的讨论。</p>
+<h2> 数据库</h2>
+<p>数据库本身是支持检举类型的，下文以 MySQL 为例进行说明。</p>
+<p>枚举相关的 SQL 语句示例：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>存储方式：转换成数字存储，查询时再转换成字符串<br>
+<a href="https://dev.mysql.com/doc/refman/5.7/en/storage-requirements.html#data-types-storage-reqs-numeric" target="_blank" rel="noopener noreferrer">存储空间</a>：1 or 2 bytes (65,535 values maximum)</p>
+<p>由上可知，为了节省空间及提高查询性能，在数据库层面使用数字代表枚举进行存储，是不必要的，因为数据库本身已有相应的功能。</p>
+<h3> 排序特点</h3>
+<p>排序规则如下（如执行order by 时）：</p>
+<ul>
+<li>NULL 在最前面，'' 次之，接下来是非空的枚举值</li>
+<li>定义枚举值时的顺序，就是排序的顺序</li>
+</ul>
+<p>推荐使用以下技巧：</p>
+<ul>
+<li>按字母表顺序定义检举值</li>
+<li>把检举值转换成字符串再排序 ORDER BY CAST(col AS CHAR) or ORDER BY CONCAT(col)</li>
+</ul>
+<h3> 添加新值</h3>
+<p>使用枚举类型的最大的问题是，后续添加新值时需要执行 alter table。</p>
+<p>如果枚举值经常变动且对枚举值的顺序要求（添加的新值不一定在最后面），则不建议使用枚举类型。</p>
+<p>否则的话，可以使用枚举类型。</p>
+<p>因为 alter table 的机制是：</p>
+<ol>
+<li>创建临时表 t'</li>
+<li>插入数据</li>
+<li>删除当前表 t</li>
+<li>把 t' 重命名为 t</li>
+</ol>
+<p>这在表数据量较大时，会导致表被锁较长时间而不可用。</p>
+<p>可以使用以下技巧进行更新，记得严格按照顺序执行：</p>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果在 Navicat 或 DBeaver等图形工具上看不出表结构的变化，请刷新数据库。</p>
+<h2> 总结</h2>
+<p>本文主要目的是想消除枚举中对魔法数字的误用，试图让 Java 代码、数据库数据、以及前端 API 传参都使用可理解、可读性强的枚举值。</p>
+<p>在数据库层面，对于枚举类型字段的注意点，本文也做了说明。如果实在不想每次添加新的枚举值都执行 <code>alter table</code>语句，贪图省事，使用 varchar 存储也未尝不可。</p>
+<p>总之，本文想强调的是 Java 代码与数据库数据展示内容的一致性，至于数据库的存储格式，是见仁见智的。</p>
+<h2> 参考资料</h2>
+<ul>
+<li><a href="https://www.baeldung.com/java-enum-values" target="_blank" rel="noopener noreferrer">https://www.baeldung.com/java-enum-values</a></li>
+<li><a href="https://www.baeldung.com/a-guide-to-java-enums" target="_blank" rel="noopener noreferrer">https://www.baeldung.com/a-guide-to-java-enums</a></li>
+<li><a href="https://dev.mysql.com/doc/refman/5.7/en/enum.html" target="_blank" rel="noopener noreferrer">https://dev.mysql.com/doc/refman/5.7/en/enum.html</a></li>
+<li><a href="https://www.oreilly.com/library/view/high-performance-mysql/9781449332471/" target="_blank" rel="noopener noreferrer">High Performance MySQL 3rd Edition</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>Boolean 还是 boolean？</title>
+      <link>https://levy.vip/java/which-one-is-better-Boolean-or-boolean.html</link>
+      <guid>https://levy.vip/java/which-one-is-better-Boolean-or-boolean.html</guid>
+      <source url="https://levy.vip/rss.xml">Boolean 还是 boolean？</source>
+      <description>Boolean 还是 boolean？ 在 Java 中，对于布尔类型的变量、对象属性或方法参数的定义，到底是用包装类型 Boolean 还是基本类型 boolean 呢？ 结论 先说结论：根据《Effective Java》(第三版），始终尽可能地使用基本类型。故应该使用 boolean。 原文如下：</description>
+      <pubDate>Wed, 22 Nov 2023 09:59:56 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> Boolean 还是 boolean？</h1>
+<p>在 Java 中，对于布尔类型的变量、对象属性或方法参数的定义，到底是用包装类型 Boolean 还是基本类型 boolean 呢？</p>
+<h2> 结论</h2>
+<p>先说结论：根据《Effective Java》(第三版），始终尽可能地使用基本类型。故应该使用 boolean。</p>
+<p>原文如下：<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654073705555-ed3a3c4c-bb4b-4bfb-955f-00fc0f0356b4.png" alt="image.png" loading="lazy"></p>
+<blockquote>
+<p>红线处翻译：总结就是，当你有得选的时候，请务必使用基本类型，而非包装类型。</p>
+</blockquote>
+<p>那什么时候使用包装类型呢？原文如下：<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654073877311-28b24470-1fc2-4560-a752-caa1bcff807c.png" alt="image.png" loading="lazy"></p>
+<blockquote>
+<p>红线处翻译：当你没得选、被强制要求时，才使用包装类型。如：使用泛型（使用集合类、调用参数是泛型参数的方法），以及通过反射进行方法调用(使用 invoke 方法）</p>
+</blockquote>
+<h2> 争议</h2>
+<p>阿里的<a href="https://github.com/alibaba/p3c/blob/master/Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C(%E9%BB%84%E5%B1%B1%E7%89%88).pdf" target="_blank" rel="noopener noreferrer">《Java开发手册》</a>有提到，类属性强制使用包装类型。<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654076977162-f5358442-5426-4bca-936b-fcedcff0d3d3.png" alt="image.png" loading="lazy">文中举的例子还是有道理的：有时需要 null 来表示额外的信息。</p>
+<p>但注意，本文讨论的仅仅是布尔类型，不要发散话题。 那现在就来分析一下，布尔类型有没有必要考虑 null 的情况？</p>
+<p>我认为是没有的必要的。理由如下：</p>
+<ul>
+<li>布尔类型就是二进制的，代码两种情况：1或0；真或假。使用包装类型，出现第三种情况 null，不但要注意空指针异常问题，还要兼容 null 的情况——此时到底是真还是假呢?</li>
+<li>如果 null 表示的既不是真也不假，而是第三种情况——就不该定义为布尔类型，而应定义为枚举类型，因为一共有三种情况。使用 Boolean 来表示三种情况，是设计上的偷懒。</li>
+</ul>
+<h2> 实战</h2>
+<p>我们来看一下实际代码中，滥用 Boolean 类型导致的问题。</p>
+<h3> 简单例子</h3>
+<p>有如下 Controller，使用的是 boolean：</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>前端传个空值，会得到报错信息：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695173173498-3a5c865a-912b-429c-bb9c-ee8132e6dee5.png" alt="image.png" loading="lazy"><br>
+但如果使用 Boolean，并不能检查出是非法参数：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695173219438-a3bf6805-fefb-4ee7-b592-c0472f784d79.png" alt="image.png" loading="lazy"><br>
+这原本是前端传参错误，但却无法即使发现。</p>
+<p>你可能会问，为什么不先判断 Boolean 变量是否为 null  呢？因为别人在声明 Boolean 变量时，设置了默认值为 false，谁能想到前端会传个 null？</p>
+<p>这就是 Boolean 的问题：“千防万防，家贼难防”！</p>
+<h3> 复杂例子</h3>
+<p>下面是前端传给 Controller 的参数：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>需要注意的是，有至少两个 Controller 会接受到了这个参数，并且根据业务的不同，它们对参数的处理是不同的：</p>
+<ul>
+<li>有的会判断如果 withTable2Api 为 null，就设置为 true</li>
+<li>有的则完全由前端传值，也即 forkable、withTable2Api 有可能为 null</li>
+</ul>
+<p>来看一下，Service 里的相应代码：<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654083796570-a55a49ad-dcd3-4e5c-a35d-c3455d786715.png" alt="image.png" loading="lazy"><br>
+这里有什么问题呢？可以看到，第二个 if 使用 <code>!Boolean._TRUE_</code>去判断很别扭，然而，却不能改写成：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这就是布尔值使用 Boolean 类型在实战中最大的问题——你不能任意地进行真或假的判断，而必须兼容上下文中隐式对 null 赋予的含义。</p>
+<p>而多人协作过程中，外部调用是很难控制的，因此，此时使用 Boolean，只增加了无谓的编码负担。</p>
+<h2> 附</h2>
+<p><a href="https://www.yuque.com/attachments/yuque/0/2022/pdf/160590/1654077188552-25d2e37f-f34c-46db-817e-569163265605.pdf?_lake_card=%7B%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2022%2Fpdf%2F160590%2F1654077188552-25d2e37f-f34c-46db-817e-569163265605.pdf%22%2C%22name%22%3A%22Joshua%20Bloch%20-%20Effective%20Java%20(3rd)%20-%202018.pdf%22%2C%22size%22%3A2294786%2C%22ext%22%3A%22pdf%22%2C%22source%22%3A%22%22%2C%22status%22%3A%22done%22%2C%22download%22%3Atrue%2C%22type%22%3A%22application%2Fpdf%22%2C%22mode%22%3A%22title%22%2C%22taskId%22%3A%22u4da28c90-dfee-481c-b1b9-7ab6c120cdd%22%2C%22taskType%22%3A%22upload%22%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22ud6462faf%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%2C%22card%22%3A%22file%22%7D" target="_blank" rel="noopener noreferrer">Joshua Bloch - Effective Java (3rd) - 2018.pdf</a></p>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2022/png/160590/1654073705555-ed3a3c4c-bb4b-4bfb-955f-00fc0f0356b4.png" type="image/png"/>
+    </item>
+    <item>
+      <title>forEach 还是 map？</title>
+      <link>https://levy.vip/java/which-one-is-better-forEach-or-map.html</link>
+      <guid>https://levy.vip/java/which-one-is-better-forEach-or-map.html</guid>
+      <source url="https://levy.vip/rss.xml">forEach 还是 map？</source>
+      <description>forEach 还是 map？ 背景 遍历一个集合，在里面执行某种操作后，再依次返回每一个元素，常见的实现方式有： List&amp;lt;Type&amp;gt; result = new ArrayList&amp;lt;&amp;gt;(); list.forEach(src -&amp;gt; { Type target = BeanUtils.copyProperties(src, target); //省略代码 result.add(target); });</description>
+      <pubDate>Wed, 22 Nov 2023 09:59:56 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> forEach 还是 map？</h1>
+<h2> 背景</h2>
+<p>遍历一个集合，在里面执行某种操作后，再依次返回每一个元素，常见的实现方式有：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>两种方式看起来没多大差别啊，到底用哪种呢？</p>
+<h2> 结论</h2>
+<p>先说结论：根据《Effective Java》(第三版），forEach 只用于消费数据的场景，并不应该用于计算、累加，故上述代码应该使用 map。</p>
+<p>原文如下：<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654151903594-61668916-08c9-4349-9429-024742b14fac.png" alt="image.png" loading="lazy"></p>
+<blockquote>
+<p>红字处翻译：forEach 仅适用于输出 stream 里的计算结果，并不适合执行计算。</p>
+</blockquote>
+<h2> 解析</h2>
+<p>为更好地理解上述结论，需要先理解以下内涵：<br>
+<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654153524133-3fcb016b-8dae-4482-807b-952b5dd0ca6e.png" alt="image.png" loading="lazy"><br>
+Stream 的引入，不仅带来新的语法，也带来了函数式编程的思维。</p>
+<p>这里最重要的一点就是：编写纯函数（pure function），不造成副作用（side-effect）。</p>
+<p>纯函数可以用数学中的函数映射来理解：y = f(x)</p>
+<ul>
+<li>给定 x，能唯一确定 y</li>
+<li>无论函数调用几次、在何处调用，上述结果都不会变化</li>
+</ul>
+<p>无副作用意思是：调用函数后，不会对函数作用域以外的变量造成影响。而纯函数，一定是无副作用的。</p>
+<p>前文使用 forEach 的代码，其实是造成了副作用的：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>很简单的一个识别方法：再调用一次 forEach，result 的结果还是期望的结果吗？显然不是。</p>
+<p>但如果 map 方法呢？再调用一次，结果不变！</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>类似的，修改函数入参，也不是纯函数：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上面的 <code>collectIds</code>函数是令人讨厌的——写代码的人懒得写函数返回时，直接修改函数入参，给后面维护的人留下隐患。</p>
+<p>当然，如果一定要用纯函数来看待问题，未免过于理想化，因为有时要执行这样的代码：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>虽然上述代码并没影响到函数作用域以外的代码变量，但 myService 会把数据持久化，站在整个应用的角度讲，仍然造成了副作用。</p>
+<p>但上述代码可以接受的。因此，建议记住 forEach 只用于消费数据，不用于计算及返回，就不容易混淆。</p>
+<h2> 实战</h2>
+<p>当然，上述的讨论还是比较偏理论的，我们来看一下实际项目中，滥用 forEach 可能导致可读性较差的问题。</p>
+<p>代码一开始，是简单清晰的：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然而，业务会变化，逻辑会复杂，代码也要修改。而上述在 forEach 中修改变量的行为，罪恶的根源在于，它在向后来修改代码的人发出邀请：新增的逻辑，写在这个 forEach 里面就好了！</p>
+<p>当仅在 forEach 添加代码就能完成任务的时候，很难有人能抵抗这种诱惑，于是就会变成：</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>写代码一时爽，维护火葬场。上面的代码，将是维护的噩梦！</p>
+<p>并且，如果维护者只想知道函数的整体逻辑，由于变量穿插、隐藏在 forEach 内部，维护者不得不在各种 if-else 里面追踪变量，很容易就陷入不必要的细节中。</p>
+<p>如果换个方式来写呢？</p>
+<div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>效果有大大的不同！</p>
+<p>现在想追查哪个变量，简单轻松好多啦！</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2022/png/160590/1654151903594-61668916-08c9-4349-9429-024742b14fac.png" type="image/png"/>
     </item>
     <item>
       <title>Jackson 经典异常 UnrecognizedPropertyException</title>
@@ -2656,7 +3052,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
       <link>https://levy.vip/mysql/mysql-data-migration-case-study-add-auto-increment.html</link>
       <guid>https://levy.vip/mysql/mysql-data-migration-case-study-add-auto-increment.html</guid>
       <source url="https://levy.vip/rss.xml">数据迁移案例：表AUTO_INCREMENT加10w</source>
-      <description>数据迁移案例：表AUTO_INCREMENT加10w 背景 项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。 问题分析： 两个 mysql 实例的表的主键都是自增的，若直接合并，必然造成主键冲突。 可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。 迁移思路: 由于 mysql-b 的数据更重要、且数据量更大，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条） mysql-b 的相应的表 AUTO_INCREMENT 加 10w 记得动手前先确保数据已备份 注意：mysql-b的数据量比mysql-a的大，所以 mysql-b也直接设置AUTO_INCREMENT 加10w。 但如果mysql-a的数量比较大，那是不可行的，此时mysql-b 需要先select 出每张表的最大id，作为需要增加的AUTO_INCREMENT。</description>
+      <description>数据迁移案例：表AUTO_INCREMENT加10w 背景 项目要做数据迁移，要把 mysql-a 的数据，迁移至 mysql-b，同时 mysql-b 的数据不能丢失。 问题分析： 两个 mysql 实例的表的主键都是自增的，若直接合并，必然造成主键冲突。 可以修改某一方的主键后再迁移，但要注意后续不会因主键增长而发生冲突。 迁移思路: 由于 mysql-b 的数据更重要、且数据量更大，故决定修改 mysql-a 的数据的主键，方案是增加 10w（mysql-b 的单表数据不超过 10w条） mysql-b 的相应的表 AUTO_INCREMENT 加 10w 记得动手前先确保数据已备份 注意： mysql-b 的数据量比 mysql-a 的大，所以 mysql-b 也直接设置 AUTO_INCREMENT 加10w。 但如果 mysql-a的数量比较大，那是不可行的，此时 mysql-b 需要先 select 出每张表的最大id，作为需要增加的 AUTO_INCREMENT。</description>
       <pubDate>Wed, 16 Aug 2023 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 数据迁移案例：表AUTO_INCREMENT加10w</h1>
 <h2> 背景</h2>
@@ -2672,8 +3068,11 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <li>mysql-b 的相应的表 AUTO_INCREMENT 加 10w</li>
 <li>记得动手前先确保数据已备份</li>
 </ol>
-<p>注意：mysql-b的数据量比mysql-a的大，所以 mysql-b也直接设置AUTO_INCREMENT 加10w。<br>
-但如果mysql-a的数量比较大，那是不可行的，此时mysql-b 需要先select 出每张表的最大id，作为需要增加的AUTO_INCREMENT。</p>
+<p>注意：</p>
+<ul>
+<li>mysql-b 的数据量比 mysql-a 的大，所以 mysql-b 也直接设置 AUTO_INCREMENT 加10w。</li>
+<li>但如果 mysql-a的数量比较大，那是不可行的，此时 mysql-b 需要先 select 出每张表的最大id，作为需要增加的 AUTO_INCREMENT。</li>
+</ul>
 <!-- more -->
 <h2> 备份</h2>
 <p>迁移前一定要做好备份。备份的技巧在<a href="/mysql/mysql-backup-case-study-mysqldump-in-action.html" target="blank">另一篇文章</a>里有讲，就不在此赘述了。</p>
@@ -3417,7 +3816,10 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <p>使用 <code>{{var}}</code> 的形式引用变量，可在 url 及 body 处引用环境变量 <code>var</code>。<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602746808280-6743bf6c-34b5-402a-abe6-397eb76c5380.png" alt="" loading="lazy"></p>
 <p>注意细节，如果是变量值是字符串，要用双引号把它包起来：</p>
-<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>环境变量还可以在测试用例里去修改值：<br>
+<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Postman内置了全局变量，输入 <code>{{</code> 会出现提示：<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1700621852579-0ae851ef-9214-4880-8eb2-2a0cb06c63c5.png" alt="" loading="lazy"></p>
+<p>使用示例：</p>
+<div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>环境变量还可以在测试用例里去修改值：<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694424229773-4c83c6cf-0640-4c8a-aa33-38097d84f0cd.png" alt="" loading="lazy"></p>
 <h3> 请求设置</h3>
 <p>对于请求体的发送，一般进行如下设置：<br>
