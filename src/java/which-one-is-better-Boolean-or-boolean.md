@@ -1,3 +1,10 @@
+---
+date: 2022-06-02
+tag:
+- Java
+- Daily
+---
+
 # Boolean 还是 boolean？
 
 在 Java 中，对于布尔类型的变量、对象属性或方法参数的定义，到底是用包装类型 Boolean 还是基本类型 boolean 呢？
