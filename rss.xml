@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 23 Nov 2023 01:06:28 GMT</pubDate>
-    <lastBuildDate>Thu, 23 Nov 2023 01:06:28 GMT</lastBuildDate>
+    <pubDate>Thu, 23 Nov 2023 01:36:12 GMT</pubDate>
+    <lastBuildDate>Thu, 23 Nov 2023 01:36:12 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -2813,7 +2813,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
       <guid>https://levy.vip/java/which-one-is-better-Boolean-or-boolean.html</guid>
       <source url="https://levy.vip/rss.xml">Boolean 还是 boolean？</source>
       <description>Boolean 还是 boolean？ 在 Java 中，对于布尔类型的变量、对象属性或方法参数的定义，到底是用包装类型 Boolean 还是基本类型 boolean 呢？ 结论 先说结论：根据《Effective Java》(第三版），始终尽可能地使用基本类型。故应该使用 boolean。 原文如下：</description>
-      <pubDate>Wed, 22 Nov 2023 09:59:56 GMT</pubDate>
+      <pubDate>Thu, 02 Jun 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> Boolean 还是 boolean？</h1>
 <p>在 Java 中，对于布尔类型的变量、对象属性或方法参数的定义，到底是用包装类型 Boolean 还是基本类型 boolean 呢？</p>
 <h2> 结论</h2>
@@ -2871,7 +2871,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
       <guid>https://levy.vip/java/which-one-is-better-forEach-or-map.html</guid>
       <source url="https://levy.vip/rss.xml">forEach 还是 map？</source>
       <description>forEach 还是 map？ 背景 遍历一个集合，在里面执行某种操作后，再依次返回每一个元素，常见的实现方式有： List&amp;lt;Type&amp;gt; result = new ArrayList&amp;lt;&amp;gt;(); list.forEach(src -&amp;gt; { Type target = BeanUtils.copyProperties(src, target); //省略代码 result.add(target); });</description>
-      <pubDate>Wed, 22 Nov 2023 09:59:56 GMT</pubDate>
+      <pubDate>Tue, 05 Apr 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> forEach 还是 map？</h1>
 <h2> 背景</h2>
 <p>遍历一个集合，在里面执行某种操作后，再依次返回每一个元素，常见的实现方式有：</p>
