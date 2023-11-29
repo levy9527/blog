@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 23 Nov 2023 01:36:12 GMT</pubDate>
-    <lastBuildDate>Thu, 23 Nov 2023 01:36:12 GMT</lastBuildDate>
+    <pubDate>Wed, 29 Nov 2023 01:19:17 GMT</pubDate>
+    <lastBuildDate>Wed, 29 Nov 2023 01:19:17 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -442,6 +442,116 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>6.那么，梳理完逻辑链条，我认为，虽然某些程序员的在实现上犯了低级错误，但不是主要原因，罪魁祸首应该是设计上的懒惰。设计精细一点，明确好 tenant_id 到哪张表为止，也就没有后面的 sql 注入、数据错误那么多事了。所以，我才说，给租户隔离等于给每张表加 tenant_id 的设计很傻逼！</p>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128515-cca8f7a3-6846-48ca-9eef-d7395c186ae2.jpeg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>旧文章精选</title>
+      <link>https://levy.vip/frontend/old-articles.html</link>
+      <guid>https://levy.vip/frontend/old-articles.html</guid>
+      <source url="https://levy.vip/rss.xml">旧文章精选</source>
+      <description>旧文章精选 📦vue组件发布npm最佳实践 🔨揭秘vue-sfc-cli：组件研发利器 🚀Github集成TravisCI：自动发布 ⚡Github集成Netlify：快速预览PR 🌪自动化的Github Workflow 🤖如何写一个GithubApp 🔒免费开启HTTPS 🕸捕获与改写HTTPS请求</description>
+      <pubDate>Tue, 03 Sep 2019 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 旧文章精选</h1>
+<ul>
+<li><a href="https://github.com/levy9527/blog/issues/2" target="_blank" rel="noopener noreferrer">📦vue组件发布npm最佳实践</a></li>
+<li><a href="https://github.com/levy9527/blog/issues/7" target="_blank" rel="noopener noreferrer">🔨揭秘vue-sfc-cli：组件研发利器</a></li>
+<li><a href="https://github.com/levy9527/blog/issues/1" target="_blank" rel="noopener noreferrer">🚀Github集成TravisCI：自动发布</a></li>
+<li><a href="https://github.com/levy9527/blog/issues/4" target="_blank" rel="noopener noreferrer">⚡Github集成Netlify：快速预览PR</a></li>
+<li><a href="https://github.com/levy9527/blog/issues/12" target="_blank" rel="noopener noreferrer">🌪自动化的Github Workflow</a></li>
+<li><a href="https://github.com/levy9527/blog/issues/10" target="_blank" rel="noopener noreferrer">🤖如何写一个GithubApp</a></li>
+<li><a href="https://github.com/levy9527/blog/issues/5" target="_blank" rel="noopener noreferrer">🔒免费开启HTTPS</a></li>
+<li><a href="https://github.com/levy9527/blog/issues/11" target="_blank" rel="noopener noreferrer">🕸捕获与改写HTTPS请求</a></li>
+</ul>
+]]></content:encoded>
+    </item>
+    <item>
+      <title>前端项目性能优化实战</title>
+      <link>https://levy.vip/frontend/performance-optimization-in-action.html</link>
+      <guid>https://levy.vip/frontend/performance-optimization-in-action.html</guid>
+      <source url="https://levy.vip/rss.xml">前端项目性能优化实战</source>
+      <description>前端项目性能优化实战 本文将分享常用的 Web 页面性能分析工具，以及一个前端项目性能优化的实战经验。</description>
+      <pubDate>Wed, 27 Jan 2021 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 前端项目性能优化实战</h1>
+<p>本文将分享常用的 Web 页面性能分析工具，以及一个前端项目性能优化的实战经验。</p>
+<!-- more -->
+<h2> 检测</h2>
+<p>使用两个工具分析项目首页性能情况：</p>
+<ol>
+<li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener noreferrer">https://developers.google.com/speed/pagespeed/insights/</a></li>
+<li><a href="https://tools.pingdom.com/" target="_blank" rel="noopener noreferrer">https://tools.pingdom.com/</a></li>
+</ol>
+<p>得到结果如下：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714344531-6501362c-526d-40e5-b1a4-a3399a544ea1.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607738629800-10ff9829-ea0c-402b-b826-1d05903ee302.png" alt="" loading="lazy"><br>
+可以看到，首页超过50%的请求都与图片有空，优化空间比较大，因此第一步应该是优化图片加载。</p>
+<h2> 图片优化</h2>
+<p>关于图片，PageSpeed 的优化建议如下：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607739432571-c4ebd1bb-bf91-4ced-afca-ad70b84c4de6.png" alt="" loading="lazy"><br>
+根据文章《<a href="https://zhuanlan.zhihu.com/p/99769484" target="_blank" rel="noopener noreferrer">把图片优化指南做成一个组件：v-img</a>》，找到首页的图片相关的代码：</p>
+<ol>
+<li>把 <code>&lt;img&gt;</code>&nbsp; 元素修改成 <code>&lt;v-img/&gt;</code>&nbsp;，注意设置 width 或 height</li>
+<li>把 <code>&lt;div ``style="background-image: url(img-url)"``&gt;&lt;/div&gt;</code> 修改成 <code>&lt;div v-img="{src: img-url}"&gt;&lt;/div&gt;</code></li>
+</ol>
+<p>注意：img-url 应该是 oss 的链接，并且是 https 协议。<br>
+如果是 http 协议，或不指定协议 //img-url，则很可能会出现下图的情况：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714403654-591acc14-7c8e-4882-a781-a5271bb0b428.png" alt="" loading="lazy"></p>
+<p>如果图片是放在项目中，且项目并没有部署到 oss，则无法享受自动加载 webp 格式图片的福利。</p>
+<p>则在此环节，一次性做到了上图中的三个优化点。</p>
+<h2> 提高TTFB时间</h2>
+<p>来看下一条优化建议：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914614811-2ea4a4f6-0f0c-4222-bc6f-112f3512bfbb.png" alt="" loading="lazy"><br>
+因为项目是服务端渲染的，有些请求是在服务端做了。找到相关代码：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914815788-19181de1-6526-46f1-8ed2-e4c3bd130e7a.png" alt="" loading="lazy"><br>
+经过分析，上述代码存在两个问题：</p>
+<ol>
+<li>可在客户端执行却放在了服务端</li>
+<li>可并行执行却写成了串行</li>
+</ol>
+<p>修改如下：</p>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914801350-ca4cadfe-9750-47be-98f4-fd5a305bb408.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<hr>
+<p>通过分析请求日志发现，有一个请求应该是在客户端发送，代码本意也是在客户端执行，却在服务端也执行了。<br>
+找到发送请求的代码：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607929114683-23cb4794-bc67-4bed-8e95-0a8f493cb1e6.png" alt="" loading="lazy"><br>
+原来是代码写在了 created 里，这是个经典的案例：为了让请求更早一点发送，不写在 mounted 钩子，而写在 created 里，导致请求分别在 server-side 与 client-side 都执行了。具体说明请看 <a href="https://ssr.vuejs.org/guide/universal.html#component-lifecycle-hooks" target="_blank" rel="noopener noreferrer">vue ssr 官方文档</a>。</p>
+<p>修改如下：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607929358177-06449ad6-8251-444d-9ae3-1e2ae93b8fef.png" alt="" loading="lazy"></p>
+<h2> 移除未使用的 Javascript</h2>
+<p>来看下一条优化建议：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607931113342-9fbf0d58-58dd-4d77-9628-cb2a1182d957.png" alt="" loading="lazy"><br>
+因为经过多次迭代，有可能某些功能曾经上线过，后来被下线，但当时代码没删干净，所以留下一些现在没用的第三方库。根据建议，找到这些引入的 js，确保不影响正常功能后，删除即可。</p>
+<p>此时注意用到以下基本操作：</p>
+<ol>
+<li>google/github 查询库的用途</li>
+<li>git history/annotate 查看是何人何时引入、并在何处使用的，如何代码不能表明意图，则最好找到相关人员询问是有何意图。</li>
+</ol>
+<h2> 延迟静态资源的加载</h2>
+<p>来看另一个相关的建议：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607932915571-42f62757-85e0-4893-8a1f-5b3d103da94c.png" alt="" loading="lazy"><br>
+如果有些第三方 js 确实有用到，但却不是关键资源，则可以延迟其加载或解析时机，缩短阻塞时间。</p>
+<p>以一些第三方代码为例，它们并不是关键资源，可以在 window.onload 事件触发后，再加载</p>
+<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 启用文本压缩</h2>
+<p>首先是启用文本压缩，采用 gzip 是最简单的方式。对应的请求头是：<strong>Content-Encoding</strong><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1612505764342-9505cfe1-9025-49b0-b1fc-3e49e6d9f2c5.png" alt="" loading="lazy"></p>
+<p>因为静态资源是放到对象储存服务上的，故应该修改相关的配置。</p>
+<ul>
+<li>如果是阿里云OSS，<a href="https://help.aliyun.com/document_detail/31913.html?spm=5176.11065259.1996646101.searchclickresult.76556e6eoNS81O" target="_blank" rel="noopener noreferrer">点击查看参考文档</a></li>
+<li>如果是华为云OBS，<a href="https://support.huaweicloud.com/usermanual-cdn/cdn_01_0119.html" target="_blank" rel="noopener noreferrer">点击查看参考文档</a></li>
+</ul>
+<p>这里要注意的是，对于静态资源的访问，最好使用自定义域名，而不是存储桶的域名，方便CDN做加速优化。</p>
+<h2> 优化缓存策略</h2>
+<p>下一条相关的优化建议是缓存策略，对应的请求头是：<strong>Cache-Control</strong><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1612506152108-a13a4684-6b3c-46d2-8fa3-0b20fda0d4ec.png" alt="" loading="lazy"><br>
+简单来说，就是在静态资源（html 除外）的 HTTP&nbsp;响应头中设置如下字段：</p>
+<div class="language-http line-numbers-mode" data-ext="http"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>以阿里云&nbsp;oss&nbsp;为例进行说明，其他静态资源存储如 obs、S3 都是同理。</p>
+<p>对于少量的资源，可以进行手工操作。打开&nbsp;<a href="https://github.com/aliyun/oss-browser" target="_blank" rel="noopener noreferrer">oss-browser</a>，找到相应资源：</p>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574909023658-459fff93-ad99-43ad-92c1-bf94d5cff9c6.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574909060558-751aeab8-c08c-4a84-95f4-f3fbe5e13e24.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<p>本中使用的&nbsp;oss-browser&nbsp;版本，一次只能对一个资源进行&nbsp;HTTP&nbsp;头的设置，操作十分不便，可以<a href="https://help.aliyun.com/document_detail/31913.html?spm=a2c4g.11186623.4.1.7e863bdb6IwtQq" target="_blank" rel="noopener noreferrer">登录阿里云控制台进行批量操作</a>。</p>
+<p>当然，最根本的解决办法，是使用 <a href="https://help.aliyun.com/document_detail/120057.html?spm=a2c4g.11186623.6.711.c31a2d24TVqy6d" target="_blank" rel="noopener noreferrer">阿里云oss命令行工具</a> 上传的时候就进行设置。</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>注意，在命令行里别乱设置 Content-Encoding:gzip，否则会出现下面的情况，页面都打不开，具体说明<a href="https://appuals.com/how-to-fix-err_content_decoding_failed-error/" target="_blank" rel="noopener noreferrer">查看详情</a><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574914337532-52c323e6-b22c-45a4-b514-c2614762909a.png" alt="" loading="lazy"></p>
+]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714344531-6501362c-526d-40e5-b1a4-a3399a544ea1.png" type="image/png"/>
     </item>
     <item>
       <title>现代大学英语精读(第2版)第一册</title>
@@ -1386,116 +1496,6 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 最后保存到笔记本上即可。</p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211581972.png" type="image/png"/>
-    </item>
-    <item>
-      <title>旧文章精选</title>
-      <link>https://levy.vip/frontend/old-articles.html</link>
-      <guid>https://levy.vip/frontend/old-articles.html</guid>
-      <source url="https://levy.vip/rss.xml">旧文章精选</source>
-      <description>旧文章精选 📦vue组件发布npm最佳实践 🔨揭秘vue-sfc-cli：组件研发利器 🚀Github集成TravisCI：自动发布 ⚡Github集成Netlify：快速预览PR 🌪自动化的Github Workflow 🤖如何写一个GithubApp 🔒免费开启HTTPS 🕸捕获与改写HTTPS请求</description>
-      <pubDate>Tue, 03 Sep 2019 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 旧文章精选</h1>
-<ul>
-<li><a href="https://github.com/levy9527/blog/issues/2" target="_blank" rel="noopener noreferrer">📦vue组件发布npm最佳实践</a></li>
-<li><a href="https://github.com/levy9527/blog/issues/7" target="_blank" rel="noopener noreferrer">🔨揭秘vue-sfc-cli：组件研发利器</a></li>
-<li><a href="https://github.com/levy9527/blog/issues/1" target="_blank" rel="noopener noreferrer">🚀Github集成TravisCI：自动发布</a></li>
-<li><a href="https://github.com/levy9527/blog/issues/4" target="_blank" rel="noopener noreferrer">⚡Github集成Netlify：快速预览PR</a></li>
-<li><a href="https://github.com/levy9527/blog/issues/12" target="_blank" rel="noopener noreferrer">🌪自动化的Github Workflow</a></li>
-<li><a href="https://github.com/levy9527/blog/issues/10" target="_blank" rel="noopener noreferrer">🤖如何写一个GithubApp</a></li>
-<li><a href="https://github.com/levy9527/blog/issues/5" target="_blank" rel="noopener noreferrer">🔒免费开启HTTPS</a></li>
-<li><a href="https://github.com/levy9527/blog/issues/11" target="_blank" rel="noopener noreferrer">🕸捕获与改写HTTPS请求</a></li>
-</ul>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>前端项目性能优化实战</title>
-      <link>https://levy.vip/frontend/performance-optimization-in-action.html</link>
-      <guid>https://levy.vip/frontend/performance-optimization-in-action.html</guid>
-      <source url="https://levy.vip/rss.xml">前端项目性能优化实战</source>
-      <description>前端项目性能优化实战 本文将分享常用的 Web 页面性能分析工具，以及一个前端项目性能优化的实战经验。</description>
-      <pubDate>Wed, 27 Jan 2021 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 前端项目性能优化实战</h1>
-<p>本文将分享常用的 Web 页面性能分析工具，以及一个前端项目性能优化的实战经验。</p>
-<!-- more -->
-<h2> 检测</h2>
-<p>使用两个工具分析项目首页性能情况：</p>
-<ol>
-<li><a href="https://developers.google.com/speed/pagespeed/insights/" target="_blank" rel="noopener noreferrer">https://developers.google.com/speed/pagespeed/insights/</a></li>
-<li><a href="https://tools.pingdom.com/" target="_blank" rel="noopener noreferrer">https://tools.pingdom.com/</a></li>
-</ol>
-<p>得到结果如下：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714344531-6501362c-526d-40e5-b1a4-a3399a544ea1.png" alt="" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607738629800-10ff9829-ea0c-402b-b826-1d05903ee302.png" alt="" loading="lazy"><br>
-可以看到，首页超过50%的请求都与图片有空，优化空间比较大，因此第一步应该是优化图片加载。</p>
-<h2> 图片优化</h2>
-<p>关于图片，PageSpeed 的优化建议如下：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607739432571-c4ebd1bb-bf91-4ced-afca-ad70b84c4de6.png" alt="" loading="lazy"><br>
-根据文章《<a href="https://zhuanlan.zhihu.com/p/99769484" target="_blank" rel="noopener noreferrer">把图片优化指南做成一个组件：v-img</a>》，找到首页的图片相关的代码：</p>
-<ol>
-<li>把 <code>&lt;img&gt;</code>&nbsp; 元素修改成 <code>&lt;v-img/&gt;</code>&nbsp;，注意设置 width 或 height</li>
-<li>把 <code>&lt;div ``style="background-image: url(img-url)"``&gt;&lt;/div&gt;</code> 修改成 <code>&lt;div v-img="{src: img-url}"&gt;&lt;/div&gt;</code></li>
-</ol>
-<p>注意：img-url 应该是 oss 的链接，并且是 https 协议。<br>
-如果是 http 协议，或不指定协议 //img-url，则很可能会出现下图的情况：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714403654-591acc14-7c8e-4882-a781-a5271bb0b428.png" alt="" loading="lazy"></p>
-<p>如果图片是放在项目中，且项目并没有部署到 oss，则无法享受自动加载 webp 格式图片的福利。</p>
-<p>则在此环节，一次性做到了上图中的三个优化点。</p>
-<h2> 提高TTFB时间</h2>
-<p>来看下一条优化建议：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914614811-2ea4a4f6-0f0c-4222-bc6f-112f3512bfbb.png" alt="" loading="lazy"><br>
-因为项目是服务端渲染的，有些请求是在服务端做了。找到相关代码：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914815788-19181de1-6526-46f1-8ed2-e4c3bd130e7a.png" alt="" loading="lazy"><br>
-经过分析，上述代码存在两个问题：</p>
-<ol>
-<li>可在客户端执行却放在了服务端</li>
-<li>可并行执行却写成了串行</li>
-</ol>
-<p>修改如下：</p>
-<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914801350-ca4cadfe-9750-47be-98f4-fd5a305bb408.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<hr>
-<p>通过分析请求日志发现，有一个请求应该是在客户端发送，代码本意也是在客户端执行，却在服务端也执行了。<br>
-找到发送请求的代码：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607929114683-23cb4794-bc67-4bed-8e95-0a8f493cb1e6.png" alt="" loading="lazy"><br>
-原来是代码写在了 created 里，这是个经典的案例：为了让请求更早一点发送，不写在 mounted 钩子，而写在 created 里，导致请求分别在 server-side 与 client-side 都执行了。具体说明请看 <a href="https://ssr.vuejs.org/guide/universal.html#component-lifecycle-hooks" target="_blank" rel="noopener noreferrer">vue ssr 官方文档</a>。</p>
-<p>修改如下：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607929358177-06449ad6-8251-444d-9ae3-1e2ae93b8fef.png" alt="" loading="lazy"></p>
-<h2> 移除未使用的 Javascript</h2>
-<p>来看下一条优化建议：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607931113342-9fbf0d58-58dd-4d77-9628-cb2a1182d957.png" alt="" loading="lazy"><br>
-因为经过多次迭代，有可能某些功能曾经上线过，后来被下线，但当时代码没删干净，所以留下一些现在没用的第三方库。根据建议，找到这些引入的 js，确保不影响正常功能后，删除即可。</p>
-<p>此时注意用到以下基本操作：</p>
-<ol>
-<li>google/github 查询库的用途</li>
-<li>git history/annotate 查看是何人何时引入、并在何处使用的，如何代码不能表明意图，则最好找到相关人员询问是有何意图。</li>
-</ol>
-<h2> 延迟静态资源的加载</h2>
-<p>来看另一个相关的建议：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607932915571-42f62757-85e0-4893-8a1f-5b3d103da94c.png" alt="" loading="lazy"><br>
-如果有些第三方 js 确实有用到，但却不是关键资源，则可以延迟其加载或解析时机，缩短阻塞时间。</p>
-<p>以一些第三方代码为例，它们并不是关键资源，可以在 window.onload 事件触发后，再加载</p>
-<div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 启用文本压缩</h2>
-<p>首先是启用文本压缩，采用 gzip 是最简单的方式。对应的请求头是：<strong>Content-Encoding</strong><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1612505764342-9505cfe1-9025-49b0-b1fc-3e49e6d9f2c5.png" alt="" loading="lazy"></p>
-<p>因为静态资源是放到对象储存服务上的，故应该修改相关的配置。</p>
-<ul>
-<li>如果是阿里云OSS，<a href="https://help.aliyun.com/document_detail/31913.html?spm=5176.11065259.1996646101.searchclickresult.76556e6eoNS81O" target="_blank" rel="noopener noreferrer">点击查看参考文档</a></li>
-<li>如果是华为云OBS，<a href="https://support.huaweicloud.com/usermanual-cdn/cdn_01_0119.html" target="_blank" rel="noopener noreferrer">点击查看参考文档</a></li>
-</ul>
-<p>这里要注意的是，对于静态资源的访问，最好使用自定义域名，而不是存储桶的域名，方便CDN做加速优化。</p>
-<h2> 优化缓存策略</h2>
-<p>下一条相关的优化建议是缓存策略，对应的请求头是：<strong>Cache-Control</strong><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1612506152108-a13a4684-6b3c-46d2-8fa3-0b20fda0d4ec.png" alt="" loading="lazy"><br>
-简单来说，就是在静态资源（html 除外）的 HTTP&nbsp;响应头中设置如下字段：</p>
-<div class="language-http line-numbers-mode" data-ext="http"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>以阿里云&nbsp;oss&nbsp;为例进行说明，其他静态资源存储如 obs、S3 都是同理。</p>
-<p>对于少量的资源，可以进行手工操作。打开&nbsp;<a href="https://github.com/aliyun/oss-browser" target="_blank" rel="noopener noreferrer">oss-browser</a>，找到相应资源：</p>
-<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574909023658-459fff93-ad99-43ad-92c1-bf94d5cff9c6.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574909060558-751aeab8-c08c-4a84-95f4-f3fbe5e13e24.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<p>本中使用的&nbsp;oss-browser&nbsp;版本，一次只能对一个资源进行&nbsp;HTTP&nbsp;头的设置，操作十分不便，可以<a href="https://help.aliyun.com/document_detail/31913.html?spm=a2c4g.11186623.4.1.7e863bdb6IwtQq" target="_blank" rel="noopener noreferrer">登录阿里云控制台进行批量操作</a>。</p>
-<p>当然，最根本的解决办法，是使用 <a href="https://help.aliyun.com/document_detail/120057.html?spm=a2c4g.11186623.6.711.c31a2d24TVqy6d" target="_blank" rel="noopener noreferrer">阿里云oss命令行工具</a> 上传的时候就进行设置。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>注意，在命令行里别乱设置 Content-Encoding:gzip，否则会出现下面的情况，页面都打不开，具体说明<a href="https://appuals.com/how-to-fix-err_content_decoding_failed-error/" target="_blank" rel="noopener noreferrer">查看详情</a><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574914337532-52c323e6-b22c-45a4-b514-c2614762909a.png" alt="" loading="lazy"></p>
-]]></content:encoded>
-      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714344531-6501362c-526d-40e5-b1a4-a3399a544ea1.png" type="image/png"/>
     </item>
     <item>
       <title>Git最佳实践</title>
@@ -2450,7 +2450,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 缺少字体</h3>
 <p>Excel 的导出需要字体文件。</p>
 <p>缺少字体时，可能会报错：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>为什么会缺少字体呢？一个经典的例子就是，使用了过于精简的基础镜像来打包应用，如使用 busybox 就会报错：</p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>为什么会缺少字体呢？一个经典的例子就是，使用了过于精简的基础镜像来打包应用，如使用 busybox 就会报错：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>解决方案就是换一个更“丰满”一点的镜像。</p>
 <p>但如果没有导出的内容没有格式要求，其实推荐优先使用 CSV。因为 CSV 不需要字体，而又与 Excel 兼容。</p>
 <h3> 序列化失败</h3>
