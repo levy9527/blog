@@ -164,7 +164,11 @@ Excel 的导出需要字体文件。
 缺少字体时，可能会报错：
 ```shell
 java.lang.NullPointerException: null
-at sun.awt.FontConfiguration.getVersion(FontConfiguration.java:1264)
+        at sun.awt.FontConfiguration.getVersion(FontConfiguration.java:1264)
+        at sun.awt.FontConfiguration.readFontConfigFile(FontConfiguration.java:219)
+        at sun.awt.FontConfiguration.init(FontConfiguration.java:107)
+        at sun.awt.X11FontManager.createFontConfiguration(X11FontManager.java:774)
+        at sun.font.SunFontManager$2.run(SunFontManager.java:431)
 ```
 
 为什么会缺少字体呢？一个经典的例子就是，使用了过于精简的基础镜像来打包应用，如使用 busybox 就会报错：
