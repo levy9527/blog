@@ -10,7 +10,7 @@ tag:
 建议给常用集合类的变量命名时，后缀带上相应的集合信息，以提高可读性。
 
 当然，在此之前要回答一个问题：当把鼠标放到变量上面时，IDE 会提示变量的类型，为什么还要在命名上做文章？
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1654049668320-c53d0ef6-4063-4163-aa3e-2c304af4e39a.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654049668320-c53d0ef6-4063-4163-aa3e-2c304af4e39a.png)
 
 这是因为，有时并不在 IDE 上阅读代码，比如进行 GitHub 或 GitLab 进行 code review，此时无法获得提示，需要通过命名的规范来帮助理解。
 ## List

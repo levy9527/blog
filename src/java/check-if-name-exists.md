@@ -33,7 +33,7 @@ public class GlobalExceptionHandler {
 ```
 
 示例返回：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1697616346892-cea4b6c7-1966-4dc5-84c6-d901eeeabd65.png#averageHue=%23fcfbfb&clientId=u791d113b-6ee5-4&from=paste&height=146&id=u5e5b9578&originHeight=146&originWidth=575&originalType=binary&ratio=1&rotation=0&showTitle=false&size=11093&status=done&style=none&taskId=u48e1cd4e-70db-4617-be80-0ec3828b522&title=&width=575)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1697616346892-cea4b6c7-1966-4dc5-84c6-d901eeeabd65.png#averageHue=%23fcfbfb&clientId=u791d113b-6ee5-4&from=paste&height=146&id=u5e5b9578&originHeight=146&originWidth=575&originalType=binary&ratio=1&rotation=0&showTitle=false&size=11093&status=done&style=none&taskId=u48e1cd4e-70db-4617-be80-0ec3828b522&title=&width=575)
 ## Why
 为什么这样做呢？因为这样只需要改一次代码。后续再有类似的需求时，只需要增加 SQL 即可，不需要再修改码、不需要重新编译、构建、部署。
 

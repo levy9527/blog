@@ -76,7 +76,7 @@ Optional<Map<String, Object>> foundMenu = menuList.stream().filter(v -> {
 ```
 
 Postman内置了全局变量，输入 `{{` 会出现提示：
-![](https://cdn.nlark.com/yuque/0/2023/png/160590/1700621852579-0ae851ef-9214-4880-8eb2-2a0cb06c63c5.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1700621852579-0ae851ef-9214-4880-8eb2-2a0cb06c63c5.png)
 
 使用示例：
 ```json

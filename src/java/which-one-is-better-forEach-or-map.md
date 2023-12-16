@@ -30,13 +30,13 @@ List<Type> result = list.map(src -> {
 先说结论：根据《Effective Java》(第三版），forEach 只用于消费数据的场景，并不应该用于计算、累加，故上述代码应该使用 map。
 
 原文如下：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1654151903594-61668916-08c9-4349-9429-024742b14fac.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654151903594-61668916-08c9-4349-9429-024742b14fac.png)
 > 红字处翻译：forEach 仅适用于输出 stream 里的计算结果，并不适合执行计算。
 
 
 ## 解析
 为更好地理解上述结论，需要先理解以下内涵：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1654153524133-3fcb016b-8dae-4482-807b-952b5dd0ca6e.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654153524133-3fcb016b-8dae-4482-807b-952b5dd0ca6e.png)
 Stream 的引入，不仅带来新的语法，也带来了函数式编程的思维。
 
 这里最重要的一点就是：编写纯函数（pure function），不造成副作用（side-effect）。
