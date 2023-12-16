@@ -6,7 +6,7 @@ tag:
 - Gitlab
 ---
 
-# 使用pytest为LLM应用添加回归测试
+# 使用 pytest 为LLM应用添加回归测试
 
 ## 回归测试的必要性
 基于 LLM 的 Chat 应用大量依赖了 Prompt Engineering，而用户的输入又千奇百怪，调整了 Prompt 模板，很可能会有意想不到的效果：满足了新需求，却破坏了旧功能。
