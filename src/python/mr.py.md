@@ -2,6 +2,7 @@
 date: 2023-06-05
 tag:
 - Git
+- Python
 ---
 
 [操作 Gitlab MR 的命令行工具](../git/use-command-line-tool-to-manage-gitlab-merge-request.md)的源码与测试代码。

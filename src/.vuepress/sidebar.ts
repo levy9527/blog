@@ -93,8 +93,10 @@ export default sidebar({
       text: "Python",
       prefix: "/python",
       children: [
-        "export-mysql-table-into-excel",
+        'docker-build-and-push-script',
+        'reduce-python-image-size',
         "mr.py",
+        "export-mysql-table-into-excel",
       ]
     },
     {
