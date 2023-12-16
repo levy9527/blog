@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 08 Dec 2023 06:38:31 GMT</pubDate>
-    <lastBuildDate>Fri, 08 Dec 2023 06:38:31 GMT</lastBuildDate>
+    <pubDate>Sat, 16 Dec 2023 18:49:39 GMT</pubDate>
+    <lastBuildDate>Sat, 16 Dec 2023 18:49:39 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -31,23 +31,6 @@
       <content:encoded><![CDATA[<h1> 来自Navicat的侵权警告</h1>
 <p>公司收到了Navicat的侵权警告, 很有可能要吃官司。在此还是呼吁大家使用正版，拒绝使用盗版软件。</p>
 <p>另外，开发者常用的软件的合法替代品，视频中也有推荐。</p>
-]]></content:encoded>
-    </item>
-    <item>
-      <title>关于 Arm 你需要了解的三件事</title>
-      <link>https://levy.vip/daily/about-arm-things-you-need-to-know.html</link>
-      <guid>https://levy.vip/daily/about-arm-things-you-need-to-know.html</guid>
-      <source url="https://levy.vip/rss.xml">关于 Arm 你需要了解的三件事</source>
-      <description>关于 Arm 你需要了解的三件事 Arm 是另一种CPU架构（CISC），与常见的 x86 有所不同（RISC）。 跟我们有什么关系呢？ MacOS 的 M1 芯片是基于 Arm 的 云厂商及生态都在积极与 Arm 进行合作 Docker 镜像的构建有注意事项</description>
-      <pubDate>Wed, 02 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 关于 Arm 你需要了解的三件事</h1>
-<p>Arm 是另一种CPU架构（CISC），与常见的 x86 有所不同（RISC）。</p>
-<p>跟我们有什么关系呢？</p>
-<ol>
-<li>MacOS 的 M1 芯片是基于 Arm 的</li>
-<li>云厂商及生态都在积极与 Arm 进行合作</li>
-<li>Docker 镜像的构建有注意事项</li>
-</ol>
 ]]></content:encoded>
     </item>
     <item>
@@ -393,25 +376,6 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 ]]></content:encoded>
     </item>
     <item>
-      <title>sh与bash的区别</title>
-      <link>https://levy.vip/daily/what-is-the-difference-between-sh-and-bash.html</link>
-      <guid>https://levy.vip/daily/what-is-the-difference-between-sh-and-bash.html</guid>
-      <source url="https://levy.vip/rss.xml">sh与bash的区别</source>
-      <description>sh与bash的区别 结论：如果可移植性很重要，那么应该使用 sh！</description>
-      <pubDate>Thu, 03 Aug 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> sh与bash的区别</h1>
-<p>结论：如果可移植性很重要，那么应该使用 sh！</p>
-<!-- more -->
-<p>以下是 ChatGPT 的回答：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691066962763-bfbe3c1a-cb4f-43bc-b181-062eabee9529.png#averageHue=%23e4e5e7&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=196&amp;id=u6521b3f3&amp;originHeight=392&amp;originWidth=1428&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=235208&amp;status=done&amp;style=none&amp;taskId=uef2009af-bd00-4e0e-a215-9cca4c37ed2&amp;title=&amp;width=714" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691067007160-ec9a619b-be1c-4947-9dfc-6578d7b95003.png#averageHue=%23e5e6e8&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=116&amp;id=u443ed474&amp;originHeight=232&amp;originWidth=1354&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=75155&amp;status=done&amp;style=none&amp;taskId=u999f43f5-eb71-425d-8651-fbe5098a7c9&amp;title=&amp;width=677" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691067065982-c0370621-ff74-41e2-a435-b21973c64be4.png#averageHue=%23e3e4e6&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=170&amp;id=u00ae3745&amp;originHeight=340&amp;originWidth=1382&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=116797&amp;status=done&amp;style=none&amp;taskId=u563107c4-dbc5-464b-bb87-ab1c1dea427&amp;title=&amp;width=691" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691067101217-a60e6bd8-600c-4c68-89d0-53675a11442c.png#averageHue=%23e5e5e8&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=118&amp;id=u1559e5c7&amp;originHeight=236&amp;originWidth=1370&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=77383&amp;status=done&amp;style=none&amp;taskId=u846749a0-6dcb-429b-ad44-0d6e77dea00&amp;title=&amp;width=685" alt="" loading="lazy"></p>
-<p>视频里有实战演示：</p>
-]]></content:encoded>
-      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691066962763-bfbe3c1a-cb4f-43bc-b181-062eabee9529.png#averageHue=%23e4e5e7&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=196&amp;id=u6521b3f3&amp;originHeight=392&amp;originWidth=1428&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=235208&amp;status=done&amp;style=none&amp;taskId=uef2009af-bd00-4e0e-a215-9cca4c37ed2&amp;title=&amp;width=714" type="image/"/>
-    </item>
-    <item>
       <title>技术点评：别每张表都加tenant_id</title>
       <link>https://levy.vip/daily/you-dont-need-to-add-tenant_id-to-every-table.html</link>
       <guid>https://levy.vip/daily/you-dont-need-to-add-tenant_id-to-every-table.html</guid>
@@ -442,6 +406,46 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>6.那么，梳理完逻辑链条，我认为，虽然某些程序员的在实现上犯了低级错误，但不是主要原因，罪魁祸首应该是设计上的懒惰。设计精细一点，明确好 tenant_id 到哪张表为止，也就没有后面的 sql 注入、数据错误那么多事了。所以，我才说，给租户隔离等于给每张表加 tenant_id 的设计很傻逼！</p>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128515-cca8f7a3-6846-48ca-9eef-d7395c186ae2.jpeg" type="image/jpeg"/>
+    </item>
+    <item>
+      <title>关于 Arm 你需要了解的三件事</title>
+      <link>https://levy.vip/devops/about-arm-things-you-need-to-know.html</link>
+      <guid>https://levy.vip/devops/about-arm-things-you-need-to-know.html</guid>
+      <source url="https://levy.vip/rss.xml">关于 Arm 你需要了解的三件事</source>
+      <description>关于 Arm 你需要了解的三件事 Arm 是另一种CPU架构（CISC），与常见的 x86 有所不同（RISC）。 跟我们有什么关系呢？ MacOS 的 M1 芯片是基于 Arm 的 云厂商及生态都在积极与 Arm 进行合作 Docker 镜像的构建有注意事项 构建镜像时，为 Arm 平台构建镜像时，常见的问题：exec user process caused: exec format error。 这是因为试图在 x86 机器上执行对平台有依赖的命令，如 shell 命令。</description>
+      <pubDate>Wed, 02 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 关于 Arm 你需要了解的三件事</h1>
+<p>Arm 是另一种CPU架构（CISC），与常见的 x86 有所不同（RISC）。</p>
+<p>跟我们有什么关系呢？</p>
+<ol>
+<li>MacOS 的 M1 芯片是基于 Arm 的</li>
+<li>云厂商及生态都在积极与 Arm 进行合作</li>
+<li>Docker 镜像的构建有注意事项</li>
+</ol>
+<p>构建镜像时，为 Arm 平台构建镜像时，常见的问题：<code>exec user process caused: exec format error</code>。<br>
+这是因为试图在 x86 机器上执行对平台有依赖的命令，如 shell 命令。<br>
+<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1690980143888-a9ffdab2-8be1-4463-84ef-d83be1c6d6c5.png" alt="" loading="lazy"></p>
+<p>解决办法就是，想办法把相关命令前置，提前执行，再构建镜像。</p>
+<p>如注释掉 Dockerfile 里的　<code>Run chmod 777</code>，改成在构建镜像前执行。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-12-17-zfOoTC.png" alt="" loading="lazy"></p>
+<p>视频里有更详细的讲解：</p>
+]]></content:encoded>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2023/png/160590/1690980143888-a9ffdab2-8be1-4463-84ef-d83be1c6d6c5.png" type="image/png"/>
+    </item>
+    <item>
+      <title>sh与bash的区别</title>
+      <link>https://levy.vip/devops/what-is-the-difference-between-sh-and-bash.html</link>
+      <guid>https://levy.vip/devops/what-is-the-difference-between-sh-and-bash.html</guid>
+      <source url="https://levy.vip/rss.xml">sh与bash的区别</source>
+      <description>sh与bash的区别 结论：如果可移植性很重要，那么应该使用 sh！一般编写 Dockerfile　时，有关的脚本优先使用 sh。 常见问题：明明是存在的、可执行的shell脚本，却在容器报错 No such file or directory，很可能是因为shell脚本开头声明了bash，但容器里只能执行 sh。</description>
+      <pubDate>Thu, 03 Aug 2023 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> sh与bash的区别</h1>
+<p>结论：如果可移植性很重要，那么应该使用 sh！一般编写 Dockerfile　时，有关的脚本优先使用 sh。</p>
+<p>常见问题：明明是存在的、可执行的shell脚本，却在容器报错 <code>No such file or directory</code>，很可能是因为shell脚本开头声明了bash，但容器里只能执行 sh。</p>
+<!-- more -->
+<p>视频里有实战演示：</p>
+]]></content:encoded>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691066962763-bfbe3c1a-cb4f-43bc-b181-062eabee9529.png#averageHue=%23e4e5e7&amp;clientId=ue1ff8f12-10ba-4&amp;from=paste&amp;height=196&amp;id=u6521b3f3&amp;originHeight=392&amp;originWidth=1428&amp;originalType=binary&amp;ratio=2&amp;rotation=0&amp;showTitle=false&amp;size=235208&amp;status=done&amp;style=none&amp;taskId=uef2009af-bd00-4e0e-a215-9cca4c37ed2&amp;title=&amp;width=714" type="image/"/>
     </item>
     <item>
       <title>现代大学英语精读(第2版)第一册</title>
