@@ -57,6 +57,7 @@ export default sidebar({
       children: [
         'what-is-the-difference-between-sh-and-bash',
         'about-arm-things-you-need-to-know',
+        'common-solutions-of-object-storage-for-static-assets',
       ]
     },
     {
