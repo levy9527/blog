@@ -48,7 +48,8 @@ tag: English
 2. 找到自己感兴趣的读物，通过网站判定书籍的蓝思值是否合适 [https://hub.lexile.com/find-a-book/book-results](https://hub.lexile.com/find-a-book/book-results)
 
 相关的 app 我推荐: 轻听英语，里面的书都是免费的。当然大家也可以推荐别的 app，直接有标明蓝思值的就最好不过了。
-![lADPJw1WS0BSWVnNBQDNBMw_1228_1280.jpg](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427501518.png](https://cdn.nlark.com/yuque/0/2022/jpeg/160590/1656413042641-47c45b34-b4d2-4197-9af8-536ea2e8b4be.jpeg#averageHue=%23f0edeb&clientId=u576bfa2c-89a1-4&from=paste&height=471&id=u89b97437&name=lADPJv8gUK04WVbNBQDNAz4_830_1280.jpg&originHeight=1280&originWidth=830&originalType=binary&ratio=1&rotation=0&showTitle=false&size=204047&status=done&style=none&taskId=udfd982fe-6ea1-4219-89f5-d3a68b12c42&title=&width=305.3333740234375)
+![lADPJw1WS0BSWVnNBQDNBMw_1228_1280.jpg](https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427501518.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1656413042641-47c45b34-b4d2-4197-9af8-536ea2e8b4be.jpeg)
 ### 巧查生词
 阅读的一个拦路虎是生词。大家的第一反应是认为生词太多，看不懂，很容易放弃。
 
