@@ -270,10 +270,10 @@ build-image:
 ## 其他问题与解决方案
 ### 环境变量
 Settings -> CI/CD -> Variables 
-![](https://cdn.nlark.com/yuque/0/2023/png/160590/1701856198558-fbb7db94-a26a-46c2-9e05-06daa09f1ee7.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701856198558-fbb7db94-a26a-46c2-9e05-06daa09f1ee7.png)
 
 如果想隐藏变量值，不在日志中打印，可以在添加变量时勾选 Mask variable:
-![](https://cdn.nlark.com/yuque/0/2023/png/160590/1701856682934-425f5ecc-a09f-493f-8a65-d6f2f74fb26a.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701856682934-425f5ecc-a09f-493f-8a65-d6f2f74fb26a.png)
 ### Node.js
 本文主要以 Java 项目为例进行 Gitlab CI 相关的讲解，如果需要 Node.js 项目的示例，可以查看另外两篇文章：
 - [Playwright UI自动化测试](../software-testing/use-playwright-for-ui-testing.html#%E6%8C%81%E7%BB%AD%E9%9B%86%E6%88%90)
