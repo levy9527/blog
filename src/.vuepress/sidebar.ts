@@ -52,7 +52,7 @@ export default sidebar({
       ]
     },
     {
-      text: "DevOps",
+      text: "DevOps,
       prefix: "/devops",
       children: [
         'what-is-the-difference-between-sh-and-bash',
@@ -92,7 +92,10 @@ export default sidebar({
     {
       text: "Python",
       prefix: "/python",
-      children: ["export-mysql-table-into-excel"]
+      children: [
+        "export-mysql-table-into-excel",
+        "mr.py",
+      ]
     },
     {
       text: "前端技术",
