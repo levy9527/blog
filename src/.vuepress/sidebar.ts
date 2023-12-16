@@ -52,6 +52,14 @@ export default sidebar({
       ]
     },
     {
+      text: "DevOps",
+      prefix: "/devops",
+      children: [
+        'what-is-the-difference-between-sh-and-bash',
+        'about-arm-things-you-need-to-know',
+      ]
+    },
+    {
       text: "MySQL",
       prefix: "/mysql",
       children: [
