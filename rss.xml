@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 16 Dec 2023 18:49:39 GMT</pubDate>
-    <lastBuildDate>Sat, 16 Dec 2023 18:49:39 GMT</lastBuildDate>
+    <pubDate>Sat, 16 Dec 2023 19:04:22 GMT</pubDate>
+    <lastBuildDate>Sat, 16 Dec 2023 19:04:22 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -320,17 +320,17 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>原来文件下载前，有一个判断目录是否存在的逻辑，其实现是判断 S3 的对象是否存在，示例代码如下：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>则该代码永远为 false。</p>
 <p>如何修复呢？改为调用 <code>listObjects</code>就可以了。如下图所示（左边是修改前，右边是修改后）：<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1699790489630-9003e1b5-8388-48b4-ab78-a89685efa382.png#averageHue=%239b7340&amp;clientId=u4410405e-6621-4&amp;from=paste&amp;height=195&amp;id=uc3b4dbdd&amp;originHeight=293&amp;originWidth=1592&amp;originalType=binary&amp;ratio=1.5&amp;rotation=0&amp;showTitle=false&amp;size=60088&amp;status=done&amp;style=none&amp;taskId=ube041bd4-ea04-4f00-b3c3-d5643d8db6a&amp;title=&amp;width=1061.3333333333333" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1699790489630-9003e1b5-8388-48b4-ab78-a89685efa382.png" alt="" loading="lazy"></p>
 <h2> 分析</h2>
 <p>很难想像，为什么在涉及对象存储的代码中，会有判断目录是否存在的逻辑。</p>
 <p>好在我是个善于为别人找理由的人。我观察了下代码库，发现接口与类结构如下：<br>
-<img src="https://cdn.nlark.com/yuque/__mermaid_v3/60dd2cb12a7fcb019482c4fc140f6347.svg#lake_card_v2=eyJ0eXBlIjoibWVybWFpZCIsImNvZGUiOiJjbGFzc0RpYWdyYW1cblx0ICBJU3RvcmFnZSA8fC4uIEhERlNTdG9yYWdlXG4gICAgSVN0b3JhZ2UgPHwuLiBNaW5JT1N0b3JhZ2Vcblx0XHRJU3RvcmFnZSA8fC4uIFMzU3RvcmFnZVxuXHRcdFxuICAgIGNsYXNzIElTdG9yYWdlIHtcblx0XHQgIDw8aW50ZXJmYWNlPj5cblx0XHR9XG5cdFx0XG4gICAgY2xhc3MgTWluSU9TdG9yYWdlIHtcbiAgICB9XG5cdFx0XG5cdFx0Y2xhc3MgUzNTdG9yYWdlIHsgIFxuXHRcdH1cblxuXHRcdGNsYXNzIEhERlNTdG9yYWdlIHsgIFxuXHRcdH1cblx0XHQiLCJ1cmwiOiJodHRwczovL2Nkbi5ubGFyay5jb20veXVxdWUvX19tZXJtYWlkX3YzLzYwZGQyY2IxMmE3ZmNiMDE5NDgyYzRmYzE0MGY2MzQ3LnN2ZyIsImlkIjoiZWY3N3IiLCJtYXJnaW4iOnsidG9wIjp0cnVlLCJib3R0b20iOnRydWV9LCJjYXJkIjoiZGlhZ3JhbSJ9" alt="" loading="lazy">应该是在写 HDFSStorage 的时候，用到了判断目录是否存在的逻辑，从而把方法提升到了接口定义 IStorage 中。</p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/60dd2cb12a7fcb019482c4fc140f6347.svg#lake_card_v2=eyJ0eXBlIjoibWVybWFpZCIsImNvZGUiOiJjbGFzc0RpYWdyYW1cblx0ICBJU3RvcmFnZSA8fC4uIEhERlNTdG9yYWdlXG4gICAgSVN0b3JhZ2UgPHwuLiBNaW5JT1N0b3JhZ2Vcblx0XHRJU3RvcmFnZSA8fC4uIFMzU3RvcmFnZVxuXHRcdFxuICAgIGNsYXNzIElTdG9yYWdlIHtcblx0XHQgIDw8aW50ZXJmYWNlPj5cblx0XHR9XG5cdFx0XG4gICAgY2xhc3MgTWluSU9TdG9yYWdlIHtcbiAgICB9XG5cdFx0XG5cdFx0Y2xhc3MgUzNTdG9yYWdlIHsgIFxuXHRcdH1cblxuXHRcdGNsYXNzIEhERlNTdG9yYWdlIHsgIFxuXHRcdH1cblx0XHQiLCJ1cmwiOiJodHRwczovL2Nkbi5ubGFyay5jb20veXVxdWUvX19tZXJtYWlkX3YzLzYwZGQyY2IxMmE3ZmNiMDE5NDgyYzRmYzE0MGY2MzQ3LnN2ZyIsImlkIjoiZWY3N3IiLCJtYXJnaW4iOnsidG9wIjp0cnVlLCJib3R0b20iOnRydWV9LCJjYXJkIjoiZGlhZ3JhbSJ9" alt="" loading="lazy"></p>
 <p>如果定义 IStorage 与实现 S3Storage 的代码的人并不相同（我相信很可能是这样），那么我更倾向于认为责任在定义 IStorage 的人身上，因为TA并没有合理地设计接口，导致后来者被迫实现没有意义的接口，从而出错。</p>
 <h2> 结论</h2>
 <p>为什么开发、测试环境没问题？或者说，为什么 MinIO　没这个问题？那是因为实现 MinIOStorage 的人，没有踩这个坑。</p>
 <p>所以，本此事件给我来的经验教训是什么呢？既不是 S3 如何判断目录是否存在，也不是接口定义的重要性。而是：要让测试环境与生产环境尽可能保持一致，提前暴露问题。而不是测试环境是这样的配置，生产环境又是那样的配置——这就会加大生产环境出问题的可能性！</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.nlark.com/yuque/0/2023/png/160590/1699790489630-9003e1b5-8388-48b4-ab78-a89685efa382.png#averageHue=%239b7340&amp;clientId=u4410405e-6621-4&amp;from=paste&amp;height=195&amp;id=uc3b4dbdd&amp;originHeight=293&amp;originWidth=1592&amp;originalType=binary&amp;ratio=1.5&amp;rotation=0&amp;showTitle=false&amp;size=60088&amp;status=done&amp;style=none&amp;taskId=ube041bd4-ea04-4f00-b3c3-d5643d8db6a&amp;title=&amp;width=1061.3333333333333" type="image/"/>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1699790489630-9003e1b5-8388-48b4-ab78-a89685efa382.png" type="image/png"/>
     </item>
     <item>
       <title>对Vue不得不吐槽的事</title>
@@ -424,13 +424,13 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 </ol>
 <p>构建镜像时，为 Arm 平台构建镜像时，常见的问题：<code>exec user process caused: exec format error</code>。<br>
 这是因为试图在 x86 机器上执行对平台有依赖的命令，如 shell 命令。<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1690980143888-a9ffdab2-8be1-4463-84ef-d83be1c6d6c5.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1690980143888-a9ffdab2-8be1-4463-84ef-d83be1c6d6c5.png" alt="" loading="lazy"></p>
 <p>解决办法就是，想办法把相关命令前置，提前执行，再构建镜像。</p>
 <p>如注释掉 Dockerfile 里的　<code>Run chmod 777</code>，改成在构建镜像前执行。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-12-17-zfOoTC.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/2023-12-17-zfOoTC.png" alt="" loading="lazy"></p>
 <p>视频里有更详细的讲解：</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.nlark.com/yuque/0/2023/png/160590/1690980143888-a9ffdab2-8be1-4463-84ef-d83be1c6d6c5.png" type="image/png"/>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1690980143888-a9ffdab2-8be1-4463-84ef-d83be1c6d6c5.png" type="image/png"/>
     </item>
     <item>
       <title>sh与bash的区别</title>
@@ -1175,7 +1175,8 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <li>找到自己感兴趣的读物，通过网站判定书籍的蓝思值是否合适 <a href="https://hub.lexile.com/find-a-book/book-results" target="_blank" rel="noopener noreferrer">https://hub.lexile.com/find-a-book/book-results</a></li>
 </ol>
 <p>相关的 app 我推荐: 轻听英语，里面的书都是免费的。当然大家也可以推荐别的 app，直接有标明蓝思值的就最好不过了。<br>
-![lADPJw1WS0BSWVnNBQDNBMw_1228_1280.jpg](<a href="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427501518.png" target="_blank" rel="noopener noreferrer">https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427501518.png</a>](<a href="https://cdn.nlark.com/yuque/0/2022/jpeg/160590/1656413042641-47c45b34-b4d2-4197-9af8-536ea2e8b4be.jpeg#averageHue=%23f0edeb&amp;clientId=u576bfa2c-89a1-4&amp;from=paste&amp;height=471&amp;id=u89b97437&amp;name=lADPJv8gUK04WVbNBQDNAz4_830_1280.jpg&amp;originHeight=1280&amp;originWidth=830&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=204047&amp;status=done&amp;style=none&amp;taskId=udfd982fe-6ea1-4219-89f5-d3a68b12c42&amp;title=&amp;width=305.3333740234375" target="_blank" rel="noopener noreferrer">https://cdn.nlark.com/yuque/0/2022/jpeg/160590/1656413042641-47c45b34-b4d2-4197-9af8-536ea2e8b4be.jpeg#averageHue=%23f0edeb&amp;clientId=u576bfa2c-89a1-4&amp;from=paste&amp;height=471&amp;id=u89b97437&amp;name=lADPJv8gUK04WVbNBQDNAz4_830_1280.jpg&amp;originHeight=1280&amp;originWidth=830&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=204047&amp;status=done&amp;style=none&amp;taskId=udfd982fe-6ea1-4219-89f5-d3a68b12c42&amp;title=&amp;width=305.3333740234375</a>)</p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427501518.png" alt="lADPJw1WS0BSWVnNBQDNBMw_1228_1280.jpg" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1656413042641-47c45b34-b4d2-4197-9af8-536ea2e8b4be.jpeg" alt="" loading="lazy"></p>
 <h3> 巧查生词</h3>
 <p>阅读的一个拦路虎是生词。大家的第一反应是认为生词太多，看不懂，很容易放弃。</p>
 <p>首先，我推荐欧路词典。如果是在电脑上看 pdf，鼠标选中区域就能查词或翻译，非常方便。</p>
@@ -1925,9 +1926,9 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他问题与解决方案</h2>
 <h3> 环境变量</h3>
 <p>Settings -&gt; CI/CD -&gt; Variables<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1701856198558-fbb7db94-a26a-46c2-9e05-06daa09f1ee7.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701856198558-fbb7db94-a26a-46c2-9e05-06daa09f1ee7.png" alt="" loading="lazy"></p>
 <p>如果想隐藏变量值，不在日志中打印，可以在添加变量时勾选 Mask variable:<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1701856682934-425f5ecc-a09f-493f-8a65-d6f2f74fb26a.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701856682934-425f5ecc-a09f-493f-8a65-d6f2f74fb26a.png" alt="" loading="lazy"></p>
 <h3> Node.js</h3>
 <p>本文主要以 Java 项目为例进行 Gitlab CI 相关的讲解，如果需要 Node.js 项目的示例，可以查看另外两篇文章：</p>
 <ul>
@@ -2204,7 +2205,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <li>添加：</li>
 </ol>
 <p>或者这样：<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1691568843067-69847e70-987e-4263-81f3-7f19c3acccc5.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691568843067-69847e70-987e-4263-81f3-7f19c3acccc5.png" alt="" loading="lazy"></p>
 <div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 设置JDK版本</h2>
 <p>相关报错：</p>
 <ul>
@@ -2214,11 +2215,11 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>解决方案如下。</p>
 <p>1.先确保已安装 jdk。</p>
 <p>2.修改运行设置<br>
-<img src="https://cdn.nlark.com/yuque/0/2021/png/160590/1637063344496-6b8f60c5-c444-4f77-a404-9b8ca8d7a9bb.png" alt="image.png" loading="lazy"><br>
-<img src="https://cdn.nlark.com/yuque/0/2021/png/160590/1637063379719-7c3d4323-5d77-44c4-8c49-7d79c4d61865.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063344496-6b8f60c5-c444-4f77-a404-9b8ca8d7a9bb.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063379719-7c3d4323-5d77-44c4-8c49-7d79c4d61865.png" alt="" loading="lazy"><br>
 3.修改外部依赖设置<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1645614452333-3f5d2763-e7a1-42d8-a3ea-b73cb664e6a1.png" alt="image.png" loading="lazy"><br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1645614476794-b37230c5-958a-459d-8dce-ecb5cb839d3f.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1645614452333-3f5d2763-e7a1-42d8-a3ea-b73cb664e6a1.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1645614476794-b37230c5-958a-459d-8dce-ecb5cb839d3f.png" alt="" loading="lazy"></p>
 <h2> lombok 编译报错</h2>
 <p>前提：<a href="https://blog.csdn.net/weixin_42440768/article/details/107999786" target="_blank" rel="noopener noreferrer">lombok 有maven依赖后，还要安装IDE插件</a></p>
 <p>相关报错：<br>
@@ -2230,23 +2231,23 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>Run -&gt; Edit Configurations<br>
 注意是 VM options</p>
 <p>注入环境变量：spring.profiles.active=local<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1698212254651-9ffbcfab-7e1a-45c0-ae93-2ef2ad68cf11.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1698212254651-9ffbcfab-7e1a-45c0-ae93-2ef2ad68cf11.png" alt="" loading="lazy"></p>
 <p>也可以设置 VM options，不过要带上 -D：-Dspring.profiles.active=local<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1698212412181-3374a830-1693-4db2-95eb-b314e6313517.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1698212412181-3374a830-1693-4db2-95eb-b314e6313517.png" alt="" loading="lazy"></p>
 <h2> 栈溢出</h2>
 <p>maven build "Exception in thread "main" java.lang.StackOverflowError"</p>
 <p>-Xss40m<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1669357898562-420a3ceb-3dfd-4b9c-93fa-8884edc8b231.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669357898562-420a3ceb-3dfd-4b9c-93fa-8884edc8b231.png" alt="" loading="lazy"></p>
 <p>不是maven的编译选项在下面<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1669357950353-4cc40792-1e54-400e-b3c8-aab28b71df64.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669357950353-4cc40792-1e54-400e-b3c8-aab28b71df64.png" alt="" loading="lazy"></p>
 <h2> 内存不足</h2>
-<p>如图所示进入设置：<img src="https://cdn.nlark.com/yuque/0/2021/png/160590/1637063639112-cf83394f-5c10-4eb6-9946-8f10cf901f62.png" alt="image.png" loading="lazy"><br>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063639112-cf83394f-5c10-4eb6-9946-8f10cf901f62.png" alt="" loading="lazy"><br>
 -Xmx4011m</p>
 <hr>
 <p>相关报错：<br>
 java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <p>解决方案：需要进行如图所示修改设置<br>
-<img src="https://cdn.nlark.com/yuque/0/2021/png/160590/1639039051050-9a0039c3-1087-4701-8ee9-0d61994bf2ca.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1639039051050-9a0039c3-1087-4701-8ee9-0d61994bf2ca.png" alt="" loading="lazy"></p>
 <h2> 热加载</h2>
 <p>相关文章：<a href="https://cloud.tencent.com/developer/article/1683029" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1683029</a></p>
 <p>提示：不用追求自动重新编译，手动按 build 即可。</p>
@@ -2259,7 +2260,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 </ol>
 <h2> 添加外部jar作为依赖</h2>
 <p>如下图所示：<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1669256297330-7985774e-3d1b-4d8b-af90-5b179b1fc825.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669256297330-7985774e-3d1b-4d8b-af90-5b179b1fc825.png" alt="" loading="lazy"><br>
 打开相应文件夹，选中jar即可。</p>
 <h2> 文件找不到——依赖冲突</h2>
 <p>相关报错：<code>nested exception is java.io.FileNotFoundException</code><br>
@@ -2271,21 +2272,21 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <li>引入了多余的包，执行了不想要的逻辑</li>
 </ul>
 <p>exclue掉：<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1666767522281-08333ca8-f4fa-4965-8e61-65b4da2f3524.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1666767522281-08333ca8-f4fa-4965-8e61-65b4da2f3524.png" alt="" loading="lazy"></p>
 <p>重新加载：<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1666767567101-8308c02c-a792-4fbd-9198-6edf2a514e8c.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1666767567101-8308c02c-a792-4fbd-9198-6edf2a514e8c.png" alt="" loading="lazy"></p>
 <h2> 自动import</h2>
-<figure><img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1659925756116-626b591f-2be4-4bb5-90c8-91f65989fc2b.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1659925756116-626b591f-2be4-4bb5-90c8-91f65989fc2b.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h2> 文件乱码</h2>
 <p>如图所示，根据情况修改即可：<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1641976626307-9d57d76f-eb57-4f57-8660-c77813485d5a.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1641976626307-9d57d76f-eb57-4f57-8660-c77813485d5a.png" alt="" loading="lazy"></p>
 <h2> autowired 提示变量未赋值</h2>
 <p>这是<a href="https://stackoverflow.com/a/44670144/6759562" target="_blank" rel="noopener noreferrer">因为我使用的是社区版</a>，需要<a href="https://stackoverflow.com/a/62437991/6759562" target="_blank" rel="noopener noreferrer">手动设置下</a>：<br>
 <img src="https://i.stack.imgur.com/3bSYa.png#from=url&amp;id=Wxizo&amp;originHeight=368&amp;originWidth=1858&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;title=" alt="" loading="lazy"><br>
 该方法可以放心使用。<br>
 虽然说的是 suppress unsed warning，其实是 suppress never assigned warning， unsed warning 还是会生效的。</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.nlark.com/yuque/0/2023/png/160590/1691568843067-69847e70-987e-4263-81f3-7f19c3acccc5.png" type="image/png"/>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691568843067-69847e70-987e-4263-81f3-7f19c3acccc5.png" type="image/png"/>
     </item>
     <item>
       <title>Maven常见问题与解决方案</title>
@@ -2315,13 +2316,13 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <li>modify options</li>
 <li>把 provided 加入 classpath</li>
 </ol>
-<figure><img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
 <h2> 设置Maven目录</h2>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1670227320589-edf93b93-25d6-4992-9fe1-528218537ecf.png" alt="image.png" loading="lazy"><br>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1670227320589-edf93b93-25d6-4992-9fe1-528218537ecf.png" alt="" loading="lazy"><br>
 尽管IDEA可以设置 local repository，但实际上还是以 settings.xml 的配置为主，注意检查路径是否正确</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 无法识别 Maven 项目</h2>
-<p>IDEA的表现：Java文件 icon 异常<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1668149177501-37c6b4d2-1674-4ab2-b7c7-f7774ab90e12.png" alt="image.png" loading="lazy">，<br>
-正常是这样的<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1668149163603-a59d7ffe-7236-4756-8add-a55c1d282754.png" alt="image.png" loading="lazy">。</p>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668149177501-37c6b4d2-1674-4ab2-b7c7-f7774ab90e12.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668149163603-a59d7ffe-7236-4756-8add-a55c1d282754.png" alt="" loading="lazy"></p>
 <p>此时代码的方法、变量不能跳转到定义处，无法编译、找不到主类。</p>
 <p>表面上看，这是没有把源码目录设置为 src root，但实际上，这是 pom.xml 解析缓存或Maven依赖下载失败后的结果。</p>
 <p>这里又分两种情况：</p>
@@ -2363,7 +2364,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <p>官网：<a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html" target="_blank" rel="noopener noreferrer">https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html</a><br>
 书籍：《Maven实战》</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.nlark.com/yuque/0/2022/png/160590/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png" type="image/png"/>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png" type="image/png"/>
     </item>
     <item>
       <title>避免密码明文传输</title>
@@ -2401,7 +2402,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <p>借助数据库的来实现，执行以下语句：</p>
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后，在程序里添加全局异常处理类：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>示例返回：<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1697616346892-cea4b6c7-1966-4dc5-84c6-d901eeeabd65.png#averageHue=%23fcfbfb&amp;clientId=u791d113b-6ee5-4&amp;from=paste&amp;height=146&amp;id=u5e5b9578&amp;originHeight=146&amp;originWidth=575&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=11093&amp;status=done&amp;style=none&amp;taskId=u48e1cd4e-70db-4617-be80-0ec3828b522&amp;title=&amp;width=575" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1697616346892-cea4b6c7-1966-4dc5-84c6-d901eeeabd65.png#averageHue=%23fcfbfb&amp;clientId=u791d113b-6ee5-4&amp;from=paste&amp;height=146&amp;id=u5e5b9578&amp;originHeight=146&amp;originWidth=575&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=11093&amp;status=done&amp;style=none&amp;taskId=u48e1cd4e-70db-4617-be80-0ec3828b522&amp;title=&amp;width=575" alt="" loading="lazy"></p>
 <h2> Why</h2>
 <p>为什么这样做呢？因为这样只需要改一次代码。后续再有类似的需求时，只需要增加 SQL 即可，不需要再修改码、不需要重新编译、构建、部署。</p>
 <p>如果选择修改代码，则每次至少要修改两个地方：新增、修改都要处理。</p>
@@ -2417,7 +2418,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 </ul>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>实践的经验表明：改得多，错的多！</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.nlark.com/yuque/0/2023/png/160590/1697616346892-cea4b6c7-1966-4dc5-84c6-d901eeeabd65.png#averageHue=%23fcfbfb&amp;clientId=u791d113b-6ee5-4&amp;from=paste&amp;height=146&amp;id=u5e5b9578&amp;originHeight=146&amp;originWidth=575&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=11093&amp;status=done&amp;style=none&amp;taskId=u48e1cd4e-70db-4617-be80-0ec3828b522&amp;title=&amp;width=575" type="image/"/>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1697616346892-cea4b6c7-1966-4dc5-84c6-d901eeeabd65.png#averageHue=%23fcfbfb&amp;clientId=u791d113b-6ee5-4&amp;from=paste&amp;height=146&amp;id=u5e5b9578&amp;originHeight=146&amp;originWidth=575&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=11093&amp;status=done&amp;style=none&amp;taskId=u48e1cd4e-70db-4617-be80-0ec3828b522&amp;title=&amp;width=575" type="image/"/>
     </item>
     <item>
       <title>Excel处理常用实践</title>
@@ -2528,7 +2529,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <h2> 概述</h2>
 <p>建议给常用集合类的变量命名时，后缀带上相应的集合信息，以提高可读性。</p>
 <p>当然，在此之前要回答一个问题：当把鼠标放到变量上面时，IDE 会提示变量的类型，为什么还要在命名上做文章？<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654049668320-c53d0ef6-4063-4163-aa3e-2c304af4e39a.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654049668320-c53d0ef6-4063-4163-aa3e-2c304af4e39a.png" alt="" loading="lazy"></p>
 <p>这是因为，有时并不在 IDE 上阅读代码，比如进行 GitHub 或 GitLab 进行 code review，此时无法获得提示，需要通过命名的规范来帮助理解。</p>
 <h2> List</h2>
 <p>List 的变量，一般以 List 或 s 结尾， 如 idList 或 ids。这点易于理解，大家也容易遵守。</p>
@@ -2563,7 +2564,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 </ul>
 <p>仅仅修改变量名，可读性就有大大提高，效果立竿见影！</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.nlark.com/yuque/0/2022/png/160590/1654049668320-c53d0ef6-4063-4163-aa3e-2c304af4e39a.png" type="image/png"/>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654049668320-c53d0ef6-4063-4163-aa3e-2c304af4e39a.png" type="image/png"/>
     </item>
     <item>
       <title>根据时间范围查询推荐实践</title>
@@ -2828,18 +2829,18 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <h2> 结论</h2>
 <p>先说结论：根据《Effective Java》(第三版），始终尽可能地使用基本类型。故应该使用 boolean。</p>
 <p>原文如下：<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654073705555-ed3a3c4c-bb4b-4bfb-955f-00fc0f0356b4.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654073705555-ed3a3c4c-bb4b-4bfb-955f-00fc0f0356b4.png" alt="" loading="lazy"></p>
 <blockquote>
 <p>红线处翻译：总结就是，当你有得选的时候，请务必使用基本类型，而非包装类型。</p>
 </blockquote>
 <p>那什么时候使用包装类型呢？原文如下：<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654073877311-28b24470-1fc2-4560-a752-caa1bcff807c.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654073877311-28b24470-1fc2-4560-a752-caa1bcff807c.png" alt="" loading="lazy"></p>
 <blockquote>
 <p>红线处翻译：当你没得选、被强制要求时，才使用包装类型。如：使用泛型（使用集合类、调用参数是泛型参数的方法），以及通过反射进行方法调用(使用 invoke 方法）</p>
 </blockquote>
 <h2> 争议</h2>
 <p>阿里的<a href="https://github.com/alibaba/p3c/blob/master/Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C(%E9%BB%84%E5%B1%B1%E7%89%88).pdf" target="_blank" rel="noopener noreferrer">《Java开发手册》</a>有提到，类属性强制使用包装类型。<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654076977162-f5358442-5426-4bca-936b-fcedcff0d3d3.png" alt="image.png" loading="lazy">文中举的例子还是有道理的：有时需要 null 来表示额外的信息。</p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654076977162-f5358442-5426-4bca-936b-fcedcff0d3d3.png" alt="" loading="lazy"></p>
 <p>但注意，本文讨论的仅仅是布尔类型，不要发散话题。 那现在就来分析一下，布尔类型有没有必要考虑 null 的情况？</p>
 <p>我认为是没有的必要的。理由如下：</p>
 <ul>
@@ -2851,9 +2852,9 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <h3> 简单例子</h3>
 <p>有如下 Controller，使用的是 boolean：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>前端传个空值，会得到报错信息：<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695173173498-3a5c865a-912b-429c-bb9c-ee8132e6dee5.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695173173498-3a5c865a-912b-429c-bb9c-ee8132e6dee5.png" alt="" loading="lazy"><br>
 但如果使用 Boolean，并不能检查出是非法参数：<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1695173219438-a3bf6805-fefb-4ee7-b592-c0472f784d79.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695173219438-a3bf6805-fefb-4ee7-b592-c0472f784d79.png" alt="" loading="lazy"><br>
 这原本是前端传参错误，但却无法即使发现。</p>
 <p>你可能会问，为什么不先判断 Boolean 变量是否为 null  呢？因为别人在声明 Boolean 变量时，设置了默认值为 false，谁能想到前端会传个 null？</p>
 <p>这就是 Boolean 的问题：“千防万防，家贼难防”！</p>
@@ -2865,14 +2866,14 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <li>有的则完全由前端传值，也即 forkable、withTable2Api 有可能为 null</li>
 </ul>
 <p>来看一下，Service 里的相应代码：<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654083796570-a55a49ad-dcd3-4e5c-a35d-c3455d786715.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654083796570-a55a49ad-dcd3-4e5c-a35d-c3455d786715.png" alt="" loading="lazy"><br>
 这里有什么问题呢？可以看到，第二个 if 使用 <code>!Boolean._TRUE_</code>去判断很别扭，然而，却不能改写成：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这就是布尔值使用 Boolean 类型在实战中最大的问题——你不能任意地进行真或假的判断，而必须兼容上下文中隐式对 null 赋予的含义。</p>
 <p>而多人协作过程中，外部调用是很难控制的，因此，此时使用 Boolean，只增加了无谓的编码负担。</p>
 <h2> 附</h2>
 <p><a href="https://www.yuque.com/attachments/yuque/0/2022/pdf/160590/1654077188552-25d2e37f-f34c-46db-817e-569163265605.pdf?_lake_card=%7B%22src%22%3A%22https%3A%2F%2Fwww.yuque.com%2Fattachments%2Fyuque%2F0%2F2022%2Fpdf%2F160590%2F1654077188552-25d2e37f-f34c-46db-817e-569163265605.pdf%22%2C%22name%22%3A%22Joshua%20Bloch%20-%20Effective%20Java%20(3rd)%20-%202018.pdf%22%2C%22size%22%3A2294786%2C%22ext%22%3A%22pdf%22%2C%22source%22%3A%22%22%2C%22status%22%3A%22done%22%2C%22download%22%3Atrue%2C%22type%22%3A%22application%2Fpdf%22%2C%22mode%22%3A%22title%22%2C%22taskId%22%3A%22u4da28c90-dfee-481c-b1b9-7ab6c120cdd%22%2C%22taskType%22%3A%22upload%22%2C%22__spacing%22%3A%22both%22%2C%22id%22%3A%22ud6462faf%22%2C%22margin%22%3A%7B%22top%22%3Atrue%2C%22bottom%22%3Atrue%7D%2C%22card%22%3A%22file%22%7D" target="_blank" rel="noopener noreferrer">Joshua Bloch - Effective Java (3rd) - 2018.pdf</a></p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.nlark.com/yuque/0/2022/png/160590/1654073705555-ed3a3c4c-bb4b-4bfb-955f-00fc0f0356b4.png" type="image/png"/>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654073705555-ed3a3c4c-bb4b-4bfb-955f-00fc0f0356b4.png" type="image/png"/>
     </item>
     <item>
       <title>forEach 还是 map？</title>
@@ -2888,13 +2889,13 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <h2> 结论</h2>
 <p>先说结论：根据《Effective Java》(第三版），forEach 只用于消费数据的场景，并不应该用于计算、累加，故上述代码应该使用 map。</p>
 <p>原文如下：<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654151903594-61668916-08c9-4349-9429-024742b14fac.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654151903594-61668916-08c9-4349-9429-024742b14fac.png" alt="" loading="lazy"></p>
 <blockquote>
 <p>红字处翻译：forEach 仅适用于输出 stream 里的计算结果，并不适合执行计算。</p>
 </blockquote>
 <h2> 解析</h2>
 <p>为更好地理解上述结论，需要先理解以下内涵：<br>
-<img src="https://cdn.nlark.com/yuque/0/2022/png/160590/1654153524133-3fcb016b-8dae-4482-807b-952b5dd0ca6e.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654153524133-3fcb016b-8dae-4482-807b-952b5dd0ca6e.png" alt="" loading="lazy"><br>
 Stream 的引入，不仅带来新的语法，也带来了函数式编程的思维。</p>
 <p>这里最重要的一点就是：编写纯函数（pure function），不造成副作用（side-effect）。</p>
 <p>纯函数可以用数学中的函数映射来理解：y = f(x)</p>
@@ -2922,7 +2923,7 @@ Stream 的引入，不仅带来新的语法，也带来了函数式编程的思�
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>效果有大大的不同！</p>
 <p>现在想追查哪个变量，简单轻松好多啦！</p>
 ]]></content:encoded>
-      <enclosure url="https://cdn.nlark.com/yuque/0/2022/png/160590/1654151903594-61668916-08c9-4349-9429-024742b14fac.png" type="image/png"/>
+      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654151903594-61668916-08c9-4349-9429-024742b14fac.png" type="image/png"/>
     </item>
     <item>
       <title>Jackson 经典异常 UnrecognizedPropertyException</title>
@@ -3826,7 +3827,7 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602746808280-6743bf6c-34b5-402a-abe6-397eb76c5380.png" alt="" loading="lazy"></p>
 <p>注意细节，如果是变量值是字符串，要用双引号把它包起来：</p>
 <div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Postman内置了全局变量，输入 <code>{{</code> 会出现提示：<br>
-<img src="https://cdn.nlark.com/yuque/0/2023/png/160590/1700621852579-0ae851ef-9214-4880-8eb2-2a0cb06c63c5.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1700621852579-0ae851ef-9214-4880-8eb2-2a0cb06c63c5.png" alt="" loading="lazy"></p>
 <p>使用示例：</p>
 <div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>环境变量还可以在测试用例里去修改值：<br>
 <img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694424229773-4c83c6cf-0640-4c8a-aa33-38097d84f0cd.png" alt="" loading="lazy"></p>
