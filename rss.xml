@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 16 Dec 2023 19:53:10 GMT</pubDate>
-    <lastBuildDate>Sat, 16 Dec 2023 19:53:10 GMT</lastBuildDate>
+    <pubDate>Sat, 16 Dec 2023 19:56:02 GMT</pubDate>
+    <lastBuildDate>Sat, 16 Dec 2023 19:56:02 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -4079,13 +4079,13 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694596433278-eb3e5566-0126-4e93-9dfe-a9c4d8edae51.png" type="image/png"/>
     </item>
     <item>
-      <title>使用pytest为LLM应用添加回归测试</title>
+      <title>使用 pytest 为LLM应用添加回归测试</title>
       <link>https://levy.vip/software-testing/use-pytest-for-regression-testing-in-llm-app.html</link>
       <guid>https://levy.vip/software-testing/use-pytest-for-regression-testing-in-llm-app.html</guid>
-      <source url="https://levy.vip/rss.xml">使用pytest为LLM应用添加回归测试</source>
-      <description>使用pytest为LLM应用添加回归测试 回归测试的必要性 基于 LLM 的 Chat 应用大量依赖了 Prompt Engineering，而用户的输入又千奇百怪，调整了 Prompt 模板，很可能会有意想不到的效果：满足了新需求，却破坏了旧功能。 因此，LLM应用比任何时候都需要回归测试，确保在迭代过程中，不破坏旧功能、不让已修复的bug复现。 而回归测试，当然是自动化执行效率才高。本文交分享如何使用 pytest 对 LLM 应用进行自动化的回归测试。</description>
+      <source url="https://levy.vip/rss.xml">使用 pytest 为LLM应用添加回归测试</source>
+      <description>使用 pytest 为LLM应用添加回归测试 回归测试的必要性 基于 LLM 的 Chat 应用大量依赖了 Prompt Engineering，而用户的输入又千奇百怪，调整了 Prompt 模板，很可能会有意想不到的效果：满足了新需求，却破坏了旧功能。 因此，LLM应用比任何时候都需要回归测试，确保在迭代过程中，不破坏旧功能、不让已修复的bug复现。 而回归测试，当然是自动化执行效率才高。本文交分享如何使用 pytest 对 LLM 应用进行自动化的回归测试。</description>
       <pubDate>Fri, 15 Dec 2023 00:00:00 GMT</pubDate>
-      <content:encoded><![CDATA[<h1> 使用pytest为LLM应用添加回归测试</h1>
+      <content:encoded><![CDATA[<h1> 使用 pytest 为LLM应用添加回归测试</h1>
 <h2> 回归测试的必要性</h2>
 <p>基于 LLM 的 Chat 应用大量依赖了 Prompt Engineering，而用户的输入又千奇百怪，调整了 Prompt 模板，很可能会有意想不到的效果：满足了新需求，却破坏了旧功能。</p>
 <p>因此，LLM应用比任何时候都需要回归测试，确保在迭代过程中，不破坏旧功能、不让已修复的bug复现。</p>
