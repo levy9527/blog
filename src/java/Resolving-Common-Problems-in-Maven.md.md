@@ -58,17 +58,17 @@ maven package
 2. modify options
 3. 把 provided 加入 classpath
 
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png)
 
 ## 设置Maven目录
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1670227320589-edf93b93-25d6-4992-9fe1-528218537ecf.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1670227320589-edf93b93-25d6-4992-9fe1-528218537ecf.png)
 尽管IDEA可以设置 local repository，但实际上还是以 settings.xml 的配置为主，注意检查路径是否正确
 ```bash
 <localRepository>/path/to/repository</localRepository>
 ```
 ## 无法识别 Maven 项目
-IDEA的表现：Java文件 icon 异常![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1668149177501-37c6b4d2-1674-4ab2-b7c7-f7774ab90e12.png)，
-正常是这样的![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1668149163603-a59d7ffe-7236-4756-8add-a55c1d282754.png)。
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668149177501-37c6b4d2-1674-4ab2-b7c7-f7774ab90e12.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668149163603-a59d7ffe-7236-4756-8add-a55c1d282754.png)
 
 此时代码的方法、变量不能跳转到定义处，无法编译、找不到主类。
 

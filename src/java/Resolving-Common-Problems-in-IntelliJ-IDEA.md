@@ -16,7 +16,7 @@ Error running OrderStartupApplication. Command line is too long. Shorten the com
 3. 添加：<property name="dynamic.classpath" value="true" />
 
 或者这样：
-![image.png](https://cdn.nlark.com/yuque/0/2023/png/160590/1691568843067-69847e70-987e-4263-81f3-7f19c3acccc5.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691568843067-69847e70-987e-4263-81f3-7f19c3acccc5.png)
 ```json
 "dynamic.classpath": "true",
 ```
@@ -32,11 +32,11 @@ Error running OrderStartupApplication. Command line is too long. Shorten the com
 1.先确保已安装 jdk。
 
 2.修改运行设置
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/160590/1637063344496-6b8f60c5-c444-4f77-a404-9b8ca8d7a9bb.png)
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/160590/1637063379719-7c3d4323-5d77-44c4-8c49-7d79c4d61865.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063344496-6b8f60c5-c444-4f77-a404-9b8ca8d7a9bb.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063379719-7c3d4323-5d77-44c4-8c49-7d79c4d61865.png)
 3.修改外部依赖设置
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1645614452333-3f5d2763-e7a1-42d8-a3ea-b73cb664e6a1.png)
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1645614476794-b37230c5-958a-459d-8dce-ecb5cb839d3f.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1645614452333-3f5d2763-e7a1-42d8-a3ea-b73cb664e6a1.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1645614476794-b37230c5-958a-459d-8dce-ecb5cb839d3f.png)
 ## lombok 编译报错
 前提：[lombok 有maven依赖后，还要安装IDE插件](https://blog.csdn.net/weixin_42440768/article/details/107999786)
 
@@ -58,22 +58,22 @@ Run -> Edit Configurations
 注意是 VM options
 
 注入环境变量：spring.profiles.active=local
-![](https://cdn.nlark.com/yuque/0/2023/png/160590/1698212254651-9ffbcfab-7e1a-45c0-ae93-2ef2ad68cf11.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1698212254651-9ffbcfab-7e1a-45c0-ae93-2ef2ad68cf11.png)
 
 也可以设置 VM options，不过要带上 -D：-Dspring.profiles.active=local
-![](https://cdn.nlark.com/yuque/0/2023/png/160590/1698212412181-3374a830-1693-4db2-95eb-b314e6313517.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1698212412181-3374a830-1693-4db2-95eb-b314e6313517.png)
 
 ## 栈溢出
 maven build "Exception in thread "main" java.lang.StackOverflowError"
 
 -Xss40m
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1669357898562-420a3ceb-3dfd-4b9c-93fa-8884edc8b231.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669357898562-420a3ceb-3dfd-4b9c-93fa-8884edc8b231.png)
 
 不是maven的编译选项在下面
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1669357950353-4cc40792-1e54-400e-b3c8-aab28b71df64.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669357950353-4cc40792-1e54-400e-b3c8-aab28b71df64.png)
 
 ## 内存不足
-如图所示进入设置：![image.png](https://cdn.nlark.com/yuque/0/2021/png/160590/1637063639112-cf83394f-5c10-4eb6-9946-8f10cf901f62.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063639112-cf83394f-5c10-4eb6-9946-8f10cf901f62.png)
 -Xmx4011m
 
 ---
@@ -82,7 +82,7 @@ maven build "Exception in thread "main" java.lang.StackOverflowError"
 java: java.lang.OutOfMemoryError: GC overhead limit exceeded
 
 解决方案：需要进行如图所示修改设置
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/160590/1639039051050-9a0039c3-1087-4701-8ee9-0d61994bf2ca.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1639039051050-9a0039c3-1087-4701-8ee9-0d61994bf2ca.png)
 ## 热加载
 相关文章：[https://cloud.tencent.com/developer/article/1683029](https://cloud.tencent.com/developer/article/1683029)
 
@@ -96,7 +96,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded
 2. 根据 shell 的版本，使用 .bashrc 或 .zshrc
 ## 添加外部jar作为依赖
 如下图所示：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1669256297330-7985774e-3d1b-4d8b-af90-5b179b1fc825.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669256297330-7985774e-3d1b-4d8b-af90-5b179b1fc825.png)
 打开相应文件夹，选中jar即可。
 ## 文件找不到——依赖冲突
 相关报错：`nested exception is java.io.FileNotFoundException`
@@ -110,15 +110,15 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded
 - 引入了多余的包，执行了不想要的逻辑
 
 exclue掉：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1666767522281-08333ca8-f4fa-4965-8e61-65b4da2f3524.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1666767522281-08333ca8-f4fa-4965-8e61-65b4da2f3524.png)
 
 重新加载：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1666767567101-8308c02c-a792-4fbd-9198-6edf2a514e8c.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1666767567101-8308c02c-a792-4fbd-9198-6edf2a514e8c.png)
 ## 自动import
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1659925756116-626b591f-2be4-4bb5-90c8-91f65989fc2b.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1659925756116-626b591f-2be4-4bb5-90c8-91f65989fc2b.png)
 ## 文件乱码
 如图所示，根据情况修改即可：
-![image.png](https://cdn.nlark.com/yuque/0/2022/png/160590/1641976626307-9d57d76f-eb57-4f57-8660-c77813485d5a.png)
+![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1641976626307-9d57d76f-eb57-4f57-8660-c77813485d5a.png)
 
 ## autowired 提示变量未赋值
 这是[因为我使用的是社区版](https://stackoverflow.com/a/44670144/6759562)，需要[手动设置下](https://stackoverflow.com/a/62437991/6759562)：
