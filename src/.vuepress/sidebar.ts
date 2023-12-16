@@ -52,9 +52,11 @@ export default sidebar({
       ]
     },
     {
-      text: "DevOps,
+      text: "DevOps",
       prefix: "/devops",
       children: [
+        'docker-build-and-push-script',
+        'reduce-python-image-size',
         'what-is-the-difference-between-sh-and-bash',
         'about-arm-things-you-need-to-know',
         'common-solutions-of-object-storage-for-static-assets',
@@ -93,8 +95,7 @@ export default sidebar({
       text: "Python",
       prefix: "/python",
       children: [
-        'docker-build-and-push-script',
-        'reduce-python-image-size',
+        'add-logging-for-llm-app.md',
         "mr.py",
         "export-mysql-table-into-excel",
       ]
