@@ -46,6 +46,7 @@ export default sidebar({
         'unit-testing-overview',
         "use-postman-for-api-testing",
         "use-RestAssured-for-api-testing",
+        "use-pytest-for-regression-testing-in-llm-app",
         "use-jest-for-test-driven-development",
         "use-playwright-for-ui-testing",
         "use-cypress-for-e2e-testing",
