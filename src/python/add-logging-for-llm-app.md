@@ -17,6 +17,10 @@ print 的作用，就相当于 Java 的 System.out.print，相当于 Node.js 的
 使用 Python 内置的日志模块 logging，直接 import 即可使用：
 ```python
 import logging
+# 在入口函数添加以下一行
+logging.basicConfig(level=logging.INFO)
+
+# 使用示例
 logging.info("log")
 ```
 
@@ -27,6 +31,7 @@ log_cli = 1
 log_cli_level = INFO
 ```
 logging 模块完整的用法，可以[点击查看文章](https://betterstack.com/community/guides/logging/how-to-start-logging-with-python/)。
+
 ## 何时打印日志
 为避免排查线上问题时，被迫吐槽：“怎么一点日志都没有！”建议平时养成打日志的习惯，方便应用的迭代与维护。
 
