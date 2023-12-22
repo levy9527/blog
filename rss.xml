@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 22 Dec 2023 06:45:53 GMT</pubDate>
-    <lastBuildDate>Fri, 22 Dec 2023 06:45:53 GMT</lastBuildDate>
+    <pubDate>Fri, 22 Dec 2023 08:20:54 GMT</pubDate>
+    <lastBuildDate>Fri, 22 Dec 2023 08:20:54 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -3295,7 +3295,7 @@ Stream 的引入，不仅带来新的语法，也带来了函数式编程的思�
 <!-- more -->
 <p>打包成 Docker 镜像时，Python 应用很可能看不到 <a href="https://stackoverflow.com/questions/29663459/why-doesnt-python-app-print-anything-when-run-in-a-detached-docker-container" target="_blank" rel="noopener noreferrer">print 输出</a>。使用 pytest 执行测试用例时，<a href="https://stackoverflow.com/questions/24617397/how-do-i-print-to-console-in-pytest" target="_blank" rel="noopener noreferrer">默认也是看不到 print</a> 输出的。再加上 print 太简陋了，输出没有时间，没有级别分类，建议还是弃用，改用专门的日志模块。</p>
 <p>使用 Python 内置的日志模块 logging，直接 import 即可使用：</p>
-<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>如果要在 pytest 中显示日志，还要在项目根目录添加 pytest.ini 文件，补充如下内容：</p>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果要在 pytest 中显示日志，还要在项目根目录添加 pytest.ini 文件，补充如下内容：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>logging 模块完整的用法，可以<a href="https://betterstack.com/community/guides/logging/how-to-start-logging-with-python/" target="_blank" rel="noopener noreferrer">点击查看文章</a>。</p>
 <h2> 何时打印日志</h2>
 <p>为避免排查线上问题时，被迫吐槽：“怎么一点日志都没有！”建议平时养成打日志的习惯，方便应用的迭代与维护。</p>
