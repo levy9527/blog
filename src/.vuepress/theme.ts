@@ -92,7 +92,7 @@ export default hopeTheme({
       //echarts: true,
       gfm: true,
       figure: true,
-      imgLazyload: true,
+      imgLazyload: false,
       imgSize: true,
       //include: true,
       katex: true,
