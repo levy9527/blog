@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Fri, 22 Dec 2023 08:20:54 GMT</pubDate>
-    <lastBuildDate>Fri, 22 Dec 2023 08:20:54 GMT</lastBuildDate>
+    <pubDate>Sat, 30 Dec 2023 03:24:05 GMT</pubDate>
+    <lastBuildDate>Sat, 30 Dec 2023 03:24:05 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -78,15 +78,15 @@
 <h2> 正文</h2>
 <p>我总结了一下，主要有以下原因：<br>
 1.深刻地理解了源码与测试用例之间的关系。只相信测试用例，而不是相信源码。如果你只改源码而不是补充相应的测试代码，那所谓的有追求是盲目、片面的。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128677-28080825-d512-41fe-85e4-6a56553d25f1.jpeg" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128677-28080825-d512-41fe-85e4-6a56553d25f1.jpeg" alt=""></p>
 <p>2.对具体的编码实现已经缺乏兴致了。尤其是有AI的情况下，真的是有手就会，何必要我来写呢？我负责设计，再进行 Code Review　不是更好吗？<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-09-24-IMG_2577.jpg" alt="" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-09-24-IMG_2578.jpg" alt="" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-09-24-IMG_2579.jpg" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-09-24-IMG_2577.jpg" alt=""><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-09-24-IMG_2578.jpg" alt=""><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-09-24-IMG_2579.jpg" alt=""></p>
 <p>3.要考虑时间成本。如果别人已经做了一大半，我何必重头开始？</p>
 <p>4.提升对质量的认知。聚集于产出质量，而不仅仅是代码质量，那么你就会发现，要做的事还挺多，再考虑时间成本，需要做一个权衡取舍。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539182620-f3e4d2e3-bd24-4211-bb61-f5104b0e7ef3.jpeg" alt="" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539182844-04210738-e753-43c8-8917-a1c98e8f4d77.jpeg" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539182620-f3e4d2e3-bd24-4211-bb61-f5104b0e7ef3.jpeg" alt=""><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539182844-04210738-e753-43c8-8917-a1c98e8f4d77.jpeg" alt=""></p>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128677-28080825-d512-41fe-85e4-6a56553d25f1.jpeg" type="image/jpeg"/>
     </item>
@@ -220,18 +220,18 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>让 AI 生成代码的 prompt 很简单，示例如下：</p>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>根据实际情况，把 Java 替换成 Node.js/Python/Go 即可。</p>
 <p>使用 chatGPT 结果截图：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689239437556-36a14986-6114-44e1-b07c-c38a288874db.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689239437556-36a14986-6114-44e1-b07c-c38a288874db.png" alt=""></p>
 <p>完整代码如下：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>把上述代码 copy 下来，放到工程中，根据需要改造即可。</p>
 <p>这里特别要说下，强烈推荐使用原版 AI，而不是寻找平替，同样的 prompt，下图是某一中文平替输出的结果：<br>
 只生成了函数声明，没有生成函数实现。二者对比，未免相形见绌。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688721631064-514593cc-21d3-4851-8f41-71e776658295.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688721631064-514593cc-21d3-4851-8f41-71e776658295.png" alt=""></p>
 <h3> 辅助编程工具</h3>
 <p>改造的过程中，少不了 AI pair programming tools。对此，我推荐使用 Amazon 的 CodeWhisperer，原因很简单，跟 GitHub Copilot 相比，它是免费的😃。</p>
 <p>CodeWhisperer 的安装可以看文末的安装教程，我们先来看一下它是怎么辅助我们编码的。</p>
 <p>第一种方式是最简单的，那就是什么都不管，等待智能提示即可，就好像 IDEA 原来的提示一样，只不过更智能。</p>
 <p>下图示例中，要把原来的中文异常提示，修改成英文，而我只输入了两个字符 <code>IM</code>， 就得到了智能提示，补全了完整的英文字符串！<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689230327179-e9bf9c63-7081-41ca-8720-840f0f7f7c77.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689230327179-e9bf9c63-7081-41ca-8720-840f0f7f7c77.png" alt=""><br>
 可以注意到，上图的智能建议一共有 5 条，相应的快捷键为：</p>
 <ol>
 <li>方向键 -&gt;，查看下一条提示</li>
@@ -240,15 +240,15 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <li>Esc，拒绝提示</li>
 </ol>
 <p>我们再来看第二种 CodeWhisperer 的使用方式，编写注释，获得编码建议。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689301926714-26dc940a-9762-4b3b-ab3d-f59cff96d54d.gif#averageHue=%23436733&amp;clientId=u2b1600a8-64be-4&amp;from=paste&amp;height=720&amp;id=u7ba54448&amp;originHeight=720&amp;originWidth=1280&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=663291&amp;status=done&amp;style=none&amp;taskId=ufeb3c36e-8e32-419e-bbe3-8acd6f88063&amp;title=&amp;width=1280" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689301926714-26dc940a-9762-4b3b-ab3d-f59cff96d54d.gif#averageHue=%23436733&amp;clientId=u2b1600a8-64be-4&amp;from=paste&amp;height=720&amp;id=u7ba54448&amp;originHeight=720&amp;originWidth=1280&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=663291&amp;status=done&amp;style=none&amp;taskId=ufeb3c36e-8e32-419e-bbe3-8acd6f88063&amp;title=&amp;width=1280" alt=""><br>
 最后一种就是编写一个空函数，让 CodeWhisperer 根据函数名去猜测函数的实现，这种情况需要足够的上下文，才能得到令人满意的结果。</p>
 <h2> 软件测试</h2>
 <p>AI 生成的内容，并不是完全可信任的，因此，单元测试的重要性变得尤为突出。</p>
 <p>对上述代码编写测试代码后，实际上并不能一次通过，因为前面 AI 生成的代码参数有误。</p>
 <p>此时需要一边执行单测，一边根据结果与 AI 进行交互：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689240199090-8daed9cd-273d-406d-9f20-60ba66732436.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689240199090-8daed9cd-273d-406d-9f20-60ba66732436.png" alt=""></p>
 <p>经过修改，最终测试用例通过👏！<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689240017776-4f52a685-d749-4af3-8061-94c4befe3e8b.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689240017776-4f52a685-d749-4af3-8061-94c4befe3e8b.png" alt=""></p>
 <h2> 总结</h2>
 <p>本文通过案例，展示了 AI 如何结合软件研发的流程，提升我们的编程效率的。</p>
 <p>其中，个人认为最重要的是编写伪代码与进行单元测试。有趣的是，这两样实践在 AIGC 时代之前，就已经被认为是最佳实践。这给我们启示：某些方法论、实践经得起时间的考验，技术更新迭代，它们历久弥新。</p>
@@ -256,14 +256,14 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>最后，AI 是否能进一步渗透我们的工作流，还有待探索。此文作引抛砖引玉之用，期待大家的后续分享。</p>
 <h2> 附：CodeWhisperer 安装</h2>
 <p>下载 2023 年的 IDEA，打开 Plugins Marketplace，找到 AWS Toolkit<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371554642-c3105125-ac08-4d22-8da5-c6cec8b898fa.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371554642-c3105125-ac08-4d22-8da5-c6cec8b898fa.png" alt=""></p>
 <p>安装完成、重启 IDEA 后，点击左下角，按下图所示操作：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371684736-b48a0257-1aa1-442f-b998-05aa79bf0863.png" alt="" loading="lazy"></p>
-<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371750789-6aabc4d0-512e-44bc-9c12-13d02c9f8527.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371684736-b48a0257-1aa1-442f-b998-05aa79bf0863.png" alt=""></p>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371750789-6aabc4d0-512e-44bc-9c12-13d02c9f8527.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <p>如果第一次使用，就点击 1 处进行注册，如果已经有账号了，就点击 2 处使用自己的账号登录。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371861568-6da13369-3074-4f4e-86e6-0a2c8738b30c.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371861568-6da13369-3074-4f4e-86e6-0a2c8738b30c.png" alt=""><br>
 注册、登录、授权成功后，出现如图所示页面，即可使用 CodeWhisperer。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371897998-369e984e-f5b8-4c4b-bc56-897015092549.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1688371897998-369e984e-f5b8-4c4b-bc56-897015092549.png" alt=""></p>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1689239437556-36a14986-6114-44e1-b07c-c38a288874db.png" type="image/png"/>
     </item>
@@ -320,11 +320,11 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>原来文件下载前，有一个判断目录是否存在的逻辑，其实现是判断 S3 的对象是否存在，示例代码如下：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>则该代码永远为 false。</p>
 <p>如何修复呢？改为调用 <code>listObjects</code>就可以了。如下图所示（左边是修改前，右边是修改后）：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1699790489630-9003e1b5-8388-48b4-ab78-a89685efa382.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1699790489630-9003e1b5-8388-48b4-ab78-a89685efa382.png" alt=""></p>
 <h2> 分析</h2>
 <p>很难想像，为什么在涉及对象存储的代码中，会有判断目录是否存在的逻辑。</p>
 <p>好在我是个善于为别人找理由的人。我观察了下代码库，发现接口与类结构如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/60dd2cb12a7fcb019482c4fc140f6347.svg#lake_card_v2=eyJ0eXBlIjoibWVybWFpZCIsImNvZGUiOiJjbGFzc0RpYWdyYW1cblx0ICBJU3RvcmFnZSA8fC4uIEhERlNTdG9yYWdlXG4gICAgSVN0b3JhZ2UgPHwuLiBNaW5JT1N0b3JhZ2Vcblx0XHRJU3RvcmFnZSA8fC4uIFMzU3RvcmFnZVxuXHRcdFxuICAgIGNsYXNzIElTdG9yYWdlIHtcblx0XHQgIDw8aW50ZXJmYWNlPj5cblx0XHR9XG5cdFx0XG4gICAgY2xhc3MgTWluSU9TdG9yYWdlIHtcbiAgICB9XG5cdFx0XG5cdFx0Y2xhc3MgUzNTdG9yYWdlIHsgIFxuXHRcdH1cblxuXHRcdGNsYXNzIEhERlNTdG9yYWdlIHsgIFxuXHRcdH1cblx0XHQiLCJ1cmwiOiJodHRwczovL2Nkbi5ubGFyay5jb20veXVxdWUvX19tZXJtYWlkX3YzLzYwZGQyY2IxMmE3ZmNiMDE5NDgyYzRmYzE0MGY2MzQ3LnN2ZyIsImlkIjoiZWY3N3IiLCJtYXJnaW4iOnsidG9wIjp0cnVlLCJib3R0b20iOnRydWV9LCJjYXJkIjoiZGlhZ3JhbSJ9" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/60dd2cb12a7fcb019482c4fc140f6347.svg#lake_card_v2=eyJ0eXBlIjoibWVybWFpZCIsImNvZGUiOiJjbGFzc0RpYWdyYW1cblx0ICBJU3RvcmFnZSA8fC4uIEhERlNTdG9yYWdlXG4gICAgSVN0b3JhZ2UgPHwuLiBNaW5JT1N0b3JhZ2Vcblx0XHRJU3RvcmFnZSA8fC4uIFMzU3RvcmFnZVxuXHRcdFxuICAgIGNsYXNzIElTdG9yYWdlIHtcblx0XHQgIDw8aW50ZXJmYWNlPj5cblx0XHR9XG5cdFx0XG4gICAgY2xhc3MgTWluSU9TdG9yYWdlIHtcbiAgICB9XG5cdFx0XG5cdFx0Y2xhc3MgUzNTdG9yYWdlIHsgIFxuXHRcdH1cblxuXHRcdGNsYXNzIEhERlNTdG9yYWdlIHsgIFxuXHRcdH1cblx0XHQiLCJ1cmwiOiJodHRwczovL2Nkbi5ubGFyay5jb20veXVxdWUvX19tZXJtYWlkX3YzLzYwZGQyY2IxMmE3ZmNiMDE5NDgyYzRmYzE0MGY2MzQ3LnN2ZyIsImlkIjoiZWY3N3IiLCJtYXJnaW4iOnsidG9wIjp0cnVlLCJib3R0b20iOnRydWV9LCJjYXJkIjoiZGlhZ3JhbSJ9" alt=""></p>
 <p>如果定义 IStorage 与实现 S3Storage 的代码的人并不相同（我相信很可能是这样），那么我更倾向于认为责任在定义 IStorage 的人身上，因为TA并没有合理地设计接口，导致后来者被迫实现没有意义的接口，从而出错。</p>
 <h2> 结论</h2>
 <p>为什么开发、测试环境没问题？或者说，为什么 MinIO　没这个问题？那是因为实现 MinIOStorage 的人，没有踩这个坑。</p>
@@ -359,7 +359,7 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>大家好，今天给大家来评测一下几个AI工具，然后做一个推荐。</p>
 <p>首先要评测的当然是ChatGPT了，因为最早用的就是它。</p>
 <!-- more -->
-<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691497563137-33a17053-c9a2-47bf-bc2e-25f4d567d406.jpeg" alt="" width="200" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691497563137-33a17053-c9a2-47bf-bc2e-25f4d567d406.jpeg" alt="" width="200" tabindex="0"><figcaption></figcaption></figure>
 ]]></content:encoded>
     </item>
     <item>
@@ -388,9 +388,9 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <!-- more -->
 <h2> 背景</h2>
 <p>在维护旧系统时，踩了各种坑，终于忍不住在群里吐槽了下，于是有以下对话。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128515-cca8f7a3-6846-48ca-9eef-d7395c186ae2.jpeg" alt="" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128672-66e5d124-51c2-4327-b9c2-a0e72c1ba9f4.jpeg" alt="" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128413-7a5ccc98-e7ec-4fb7-94ee-d78bdc5b0bcf.jpeg" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128515-cca8f7a3-6846-48ca-9eef-d7395c186ae2.jpeg" alt=""><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128672-66e5d124-51c2-4327-b9c2-a0e72c1ba9f4.jpeg" alt=""><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695539128413-7a5ccc98-e7ec-4fb7-94ee-d78bdc5b0bcf.jpeg" alt=""><br>
 既然群友有疑问，我索性就整理了一下，把前因后果清楚。</p>
 <h2> 正文</h2>
 <p>1.首先，租户数据隔离级别应该如何，没有唯一标准，评价只有是否合适。因此，逻辑隔离、物理隔离，都不是吐槽点。</p>
@@ -424,10 +424,10 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 </ol>
 <p>构建镜像时，为 Arm 平台构建镜像时，常见的问题：<code>exec user process caused: exec format error</code>。<br>
 这是因为试图在 x86 机器上执行对平台有依赖的命令，如 shell 命令。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1690980143888-a9ffdab2-8be1-4463-84ef-d83be1c6d6c5.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1690980143888-a9ffdab2-8be1-4463-84ef-d83be1c6d6c5.png" alt=""></p>
 <p>解决办法就是，想办法把相关命令前置，提前执行，再构建镜像。</p>
 <p>如注释掉 Dockerfile 里的　<code>Run chmod 777</code>，改成在构建镜像前执行。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/2023-12-17-zfOoTC.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/2023-12-17-zfOoTC.png" alt=""></p>
 <p>视频里有更详细的讲解：</p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1690980143888-a9ffdab2-8be1-4463-84ef-d83be1c6d6c5.png" type="image/png"/>
@@ -447,27 +447,27 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <h2> 阿里云OSS</h2>
 <p>对于新建的bucket，需要做一些设置，才能正常使用静态资源。</p>
 <h3> 绑定域名</h3>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702347742834-834879a6-3610-4b57-b0d3-73c7bcdead4e.png#averageHue=%23eaeae6&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=342&amp;id=u96fb23ed&amp;originHeight=342&amp;originWidth=1808&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=302360&amp;status=done&amp;style=none&amp;taskId=u8ae79e13-fed5-4ff3-9214-5f220758b8e&amp;title=&amp;width=1808" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348155056-40bd48ea-53f8-48c1-88f4-82cc11460d80.png#averageHue=%23fdfdfd&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=421&amp;id=ubf7c51d8&amp;originHeight=421&amp;originWidth=1480&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=204064&amp;status=done&amp;style=none&amp;taskId=ua9e752a5-6884-4531-8e86-ab7cad1773f&amp;title=&amp;width=1480" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702347742834-834879a6-3610-4b57-b0d3-73c7bcdead4e.png#averageHue=%23eaeae6&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=342&amp;id=u96fb23ed&amp;originHeight=342&amp;originWidth=1808&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=302360&amp;status=done&amp;style=none&amp;taskId=u8ae79e13-fed5-4ff3-9214-5f220758b8e&amp;title=&amp;width=1808" alt="" tabindex="0"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348155056-40bd48ea-53f8-48c1-88f4-82cc11460d80.png#averageHue=%23fdfdfd&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=421&amp;id=ubf7c51d8&amp;originHeight=421&amp;originWidth=1480&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=204064&amp;status=done&amp;style=none&amp;taskId=ua9e752a5-6884-4531-8e86-ab7cad1773f&amp;title=&amp;width=1480" alt="" tabindex="0"><figcaption></figcaption></figure>
 <p>则使用自定义域名访问，可以解决访问 html 变成下载的问题。</p>
 <h3> CNAME设置</h3>
 <p>如果绑定的是同一个阿里云账号下的域名，则可以自动添加 CNAME 记录。否则需要手动添加。</p>
 <p>查看 bucket 外网地址：<a href="http://my-bucket.oss-cn-shenzhen.aliyuncs.com" target="_blank" rel="noopener noreferrer">my-bucket.oss-cn-shenzhen.aliyuncs.com</a><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348349732-a5a3015a-262a-4b32-b89d-593c32e56cfc.png#averageHue=%23faf9f9&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=662&amp;id=u278acbcc&amp;originHeight=662&amp;originWidth=1590&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=226370&amp;status=done&amp;style=none&amp;taskId=u455741d8-010a-4202-9b96-170a9d9ffb7&amp;title=&amp;width=1590" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348349732-a5a3015a-262a-4b32-b89d-593c32e56cfc.png#averageHue=%23faf9f9&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=662&amp;id=u278acbcc&amp;originHeight=662&amp;originWidth=1590&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=226370&amp;status=done&amp;style=none&amp;taskId=u455741d8-010a-4202-9b96-170a9d9ffb7&amp;title=&amp;width=1590" alt=""></p>
 <p>则去域名解析供应商设置：<br>
 <a href="http://static.domain.com" target="_blank" rel="noopener noreferrer">static.domain.com</a>(自定义域名）&nbsp;-&gt; CNAME -&gt;&nbsp;<a href="http://my-bucket.oss-cn-shenzhen.aliyuncs.com" target="_blank" rel="noopener noreferrer">my-bucket.oss-cn-shenzhen.aliyuncs.com</a></p>
 <h3> HTTPS证书托管</h3>
 <p>上传证书，开启 HTTPS<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348442889-df82e3da-e07d-451e-af99-45f40f7e789a.png#averageHue=%23e6e4e0&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=340&amp;id=u94fa9d74&amp;originHeight=340&amp;originWidth=1586&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=228171&amp;status=done&amp;style=none&amp;taskId=u51004980-ecd6-4be3-914a-75f0b84cec0&amp;title=&amp;width=1586" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348569375-f32bac2c-25ae-4b38-a2e8-3d3d5a42164c.png#averageHue=%23f4f3f3&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=904&amp;id=u6ae4a65b&amp;originHeight=904&amp;originWidth=1607&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=308821&amp;status=done&amp;style=none&amp;taskId=uaa66eaf6-767e-47db-92fa-fdeaeb76403&amp;title=&amp;width=1607" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348442889-df82e3da-e07d-451e-af99-45f40f7e789a.png#averageHue=%23e6e4e0&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=340&amp;id=u94fa9d74&amp;originHeight=340&amp;originWidth=1586&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=228171&amp;status=done&amp;style=none&amp;taskId=u51004980-ecd6-4be3-914a-75f0b84cec0&amp;title=&amp;width=1586" alt=""><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348569375-f32bac2c-25ae-4b38-a2e8-3d3d5a42164c.png#averageHue=%23f4f3f3&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=904&amp;id=u6ae4a65b&amp;originHeight=904&amp;originWidth=1607&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=308821&amp;status=done&amp;style=none&amp;taskId=uaa66eaf6-767e-47db-92fa-fdeaeb76403&amp;title=&amp;width=1607" alt=""></p>
 <p>如果没有证书，查看教程获取：<a href="https://github.com/levy9527/blog/issues/5" target="_blank" rel="noopener noreferrer">🔒免费开启HTTPS</a></p>
 <h3> 公共读</h3>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348615962-e6695e07-9c22-4095-876a-9ea0cd412d0d.png#averageHue=%23fcfaf9&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=409&amp;id=uc420f547&amp;originHeight=409&amp;originWidth=1748&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=192573&amp;status=done&amp;style=none&amp;taskId=u78cd38c9-f1b7-4132-afc0-3bbf461b01d&amp;title=&amp;width=1748" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348615962-e6695e07-9c22-4095-876a-9ea0cd412d0d.png#averageHue=%23fcfaf9&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=409&amp;id=uc420f547&amp;originHeight=409&amp;originWidth=1748&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=192573&amp;status=done&amp;style=none&amp;taskId=u78cd38c9-f1b7-4132-afc0-3bbf461b01d&amp;title=&amp;width=1748" alt="" tabindex="0"><figcaption></figcaption></figure>
 <p>这样可以解决访问链接超时的问题。</p>
 <h3> CORS跨域设置</h3>
 <p>在基础设置下，找到跨域设置<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1547111265557-dd3885fc-1007-4dfe-bef9-1e70a3578f0f.png#averageHue=%23fefdfd&amp;height=116&amp;id=hyGnS&amp;originHeight=314&amp;originWidth=2022&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;title=&amp;width=747" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1547111287199-072507c0-02d4-4cdb-8be7-0bccc13c096c.png#averageHue=%239fa69d&amp;height=159&amp;id=JDTLh&amp;originHeight=438&amp;originWidth=2058&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;title=&amp;width=747" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1547111265557-dd3885fc-1007-4dfe-bef9-1e70a3578f0f.png#averageHue=%23fefdfd&amp;height=116&amp;id=hyGnS&amp;originHeight=314&amp;originWidth=2022&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;title=&amp;width=747" alt=""><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1547111287199-072507c0-02d4-4cdb-8be7-0bccc13c096c.png#averageHue=%239fa69d&amp;height=159&amp;id=JDTLh&amp;originHeight=438&amp;originWidth=2058&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;title=&amp;width=747" alt=""></p>
 <p>在来源中设置域名，或ip地址。下面给出最简单的示例为 *，实际可以根据需要填写允许的域名，一行一个。</p>
 <ul>
 <li>将allowed origins设置成&nbsp;<code>*</code></li>
@@ -484,9 +484,9 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <h2> 华为云OBS</h2>
 <h3> 跨域设置</h3>
 <p>华为云的入口如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702347220980-e3545244-04d2-4435-bc87-f277a6ddbf91.png#averageHue=%23fefdfc&amp;clientId=u1ece0f42-2e8c-4&amp;from=paste&amp;height=570&amp;id=ub4d8b2f8&amp;originHeight=570&amp;originWidth=1099&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=47529&amp;status=done&amp;style=none&amp;taskId=uba2e51ff-d581-4e8c-8dcc-95be2bca9cf&amp;title=&amp;width=1099" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702347220980-e3545244-04d2-4435-bc87-f277a6ddbf91.png#averageHue=%23fefdfc&amp;clientId=u1ece0f42-2e8c-4&amp;from=paste&amp;height=570&amp;id=ub4d8b2f8&amp;originHeight=570&amp;originWidth=1099&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=47529&amp;status=done&amp;style=none&amp;taskId=uba2e51ff-d581-4e8c-8dcc-95be2bca9cf&amp;title=&amp;width=1099" alt=""><br>
 具体规则的填写是类似阿里云OSS的。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348727824-91972218-3050-4346-838e-f33b317dba14.png#averageHue=%23e7e7e7&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=710&amp;id=u532a6905&amp;originHeight=710&amp;originWidth=1221&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=43351&amp;status=done&amp;style=none&amp;taskId=u606e3ead-a17a-41ce-bd9c-801c4ea1259&amp;title=&amp;width=1221" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702348727824-91972218-3050-4346-838e-f33b317dba14.png#averageHue=%23e7e7e7&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=710&amp;id=u532a6905&amp;originHeight=710&amp;originWidth=1221&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=43351&amp;status=done&amp;style=none&amp;taskId=u606e3ead-a17a-41ce-bd9c-801c4ea1259&amp;title=&amp;width=1221" alt=""></p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702347742834-834879a6-3610-4b57-b0d3-73c7bcdead4e.png#averageHue=%23eaeae6&amp;clientId=u60f42bc1-4481-4&amp;from=paste&amp;height=342&amp;id=u96fb23ed&amp;originHeight=342&amp;originWidth=1808&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=302360&amp;status=done&amp;style=none&amp;taskId=u8ae79e13-fed5-4ff3-9214-5f220758b8e&amp;title=&amp;width=1808" type="image/"/>
     </item>
@@ -500,7 +500,7 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
       <content:encoded><![CDATA[<h1> Docker 构建镜像、推送、启动实用脚本</h1>
 <p>support command:</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><a href="http://build-image.sh" target="_blank" rel="noopener noreferrer">build-image.sh</a> (remember to replace <code>xxx</code> with true value)：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><a href="http://startup.sh" target="_blank" rel="noopener noreferrer">startup.sh</a></p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><a href="http://startup.sh" target="_blank" rel="noopener noreferrer">startup.sh</a></p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
     </item>
     <item>
@@ -513,7 +513,7 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
       <content:encoded><![CDATA[<h1> 缩减Python应用的镜像体积</h1>
 <h2> 背景</h2>
 <p>当你为 LLM 应用构建镜像时，发现整个过程很慢，一看镜像体积：好家伙，1.76 G！<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701851964516-fbd3eb62-111f-4e94-b8d6-2948a974a0ac.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701851964516-fbd3eb62-111f-4e94-b8d6-2948a974a0ac.png" alt=""><br>
 能不能减少镜像体积，缩短打包时间啊？本文将分享两招实用的技巧，让 Python 应用的镜像体积减少 50%。</p>
 <!-- more -->
 <h2> 原始Dockerfile</h2>
@@ -533,9 +533,9 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>则上述两行代码优化如下：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 优化效果</h2>
 <p>第一次优化，使用 slim 镜像：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701851939395-45a1f231-9075-4d41-b71e-b4eeaf53136e.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701851939395-45a1f231-9075-4d41-b71e-b4eeaf53136e.png" alt=""></p>
 <p>第二次优化，减少层数、取消本地缓存：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701853194080-cb829a4a-b778-4b19-b221-6b6896252223.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701853194080-cb829a4a-b778-4b19-b221-6b6896252223.png" alt=""><br>
 小小的改动，大大的变化！</p>
 <h2> 参考</h2>
 <p><a href="https://icloudnative.io/posts/intro-guide-to-dockerfile-best-practices/" target="_blank" rel="noopener noreferrer">https://icloudnative.io/posts/intro-guide-to-dockerfile-best-practices/</a><br>
@@ -755,7 +755,7 @@ understanding and forgiving.</li>
 <li>原文：<a href="http://www.kekenet.com/daxue/201903/580020.shtml" target="_blank" rel="noopener noreferrer">http://www.kekenet.com/daxue/201903/580020.shtml</a></li>
 </ul>
 <p>The Rivals<br>
-两个男的在言语上较劲，只觉得好笑，可看到后面，我心情如此图<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1688258250066.png" alt="1657000860176_9DFDD7F8-C809-4aa4-A996-05F4C984C76A.png" loading="lazy"><br>
+两个男的在言语上较劲，只觉得好笑，可看到后面，我心情如此图<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1688258250066.png" alt="1657000860176_9DFDD7F8-C809-4aa4-A996-05F4C984C76A.png"><br>
 强烈推荐，你一定也会“surprised”!</p>
 <ul>
 <li>原文：<a href="http://www.kekenet.com/daxue/201904/584021.shtml" target="_blank" rel="noopener noreferrer">http://www.kekenet.com/daxue/201904/584021.shtml</a></li>
@@ -1091,7 +1091,7 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 </ul>
 <p>有人可能会问，赖世雄是谁，没听说过啊。这是可以理解的，因为在进行这样的学习之前，我也没听过，但他却是中国十大名师之一。他最励志的经历是，一个在高考英语中只能得7分（满分100分）的人，经过学习，成为英语教学硕士。这是典型的后天成才的前辈，跟着他学，经过本人亲自验证，绝对靠谱。</p>
 <p>我给出了我之前的学习进度记录，仅供参考<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426129817.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426129817.png" alt="image.png"></p>
 <p>学完之后，如果有兴趣，可以了解下进阶内容。American pronunciation workshop：<a href="https://www.bilibili.com/video/BV1qE411v7oE?vd_source=046b87a1b6f0cc325266cccbb4f307fa" target="_blank" rel="noopener noreferrer">https://www.bilibili.com/video/BV1qE411v7oE</a><br>
 （我特意找了没有字幕的视频，建议就这样看。如果是侧重读写的同学，直接跳过就好）</p>
 <p>再给出关于音标的一些资料：</p>
@@ -1144,9 +1144,9 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <li>学习软件：欧路词典——免费，全平台通用</li>
 </ol>
 <p>以手机欧路词典为例，打开后，点击“学习”，选择适合自己的单词本（或先做测试让软件来推荐），进行学习即可。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426210376.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426210376.png" alt="image.png"><br>
 注意结合个人情况，进行学习设置，例如学习新词数量及、复习数量。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426214482.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426214482.png" alt="image.png"><br>
 就我个人而言，我的做法是把全部单词刷一遍，过滤掉我完全掌握的，然后再进行新词的复习。</p>
 <h2> 提醒</h2>
 <p>必须要给大家一个提醒，避免进入单词学习的陷阱：那就是忍受不了单词学习进度缓慢、记了又忘的情况，于是追求“超级记忆术”，把单词一股脑装在脑子里。</p>
@@ -1155,10 +1155,10 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <p>再者，单词与阅读理解，并非简单的线性对应关系，即不是单词量学得越多，阅读理解越深。另一方面来说，也不是只有单词量“爆表”，才能进行全英文阅读。</p>
 <p>以我自身为例，我可以阅读原著，但我的词汇量不过四千左右。</p>
 <p>我之前在某个词汇量评测网站做过评估：<a href="http://testyourvocab.com/result?user=13229458" target="_blank" rel="noopener noreferrer">http://testyourvocab.com/result?user=13229458</a><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426218162.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426218162.png" alt="image.png"></p>
 <p>4360 是网站为我估算的单词数量。</p>
 <p>为求精确，我还找了一本考研（包含了高考、四级、六级、考研词汇）的单词本，把上面的所有单词刷了一遍，结果如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426221966.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426221966.png" alt="image.png"><br>
 上图的含义为：</p>
 <ul>
 <li>0 个未学习，意思是单词本的所有单词我都遇到了一遍了，并且我都进行了掌握程度判断</li>
@@ -1274,21 +1274,21 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <li>因为是动漫的文字版，除了画外音（内心的独白），几乎全是人物的对话，这些内容是很容易理解的</li>
 </ul>
 <p>之后我信心大涨，用一周时间，把魔兽世界官方小说《Arthas: Rise of the Lich King》原版看完了。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427477232.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427477232.png" alt="image.png"></p>
 <h3> 根据蓝思值选书</h3>
 <p>有了信心之后，我们就可以科学地、有节奏地培养自己的英文阅读能力了。</p>
 <p>核心思路是评估自己的阅读<a href="https://lexile.com/parents-students/understanding-your-lexile-measure/lexile-measures-reading/" target="_blank" rel="noopener noreferrer">蓝思值</a>，再找到适合自己的阅读材料。什么是蓝思值呢？<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427484594.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427484594.png" alt="image.png"><br>
 假设你的阅读水平是 600L，那么蓝思值在 550L~700L 的阅读材料比较适合你。再低就太简单，达不到提升的效果；再高就超出阅读能力太多，很可能读不下去（因为我们在讲全英文阅读，所以我就不翻译了）。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427489979.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427489979.png" alt="image.png"></p>
 <p>综上所述，推荐按以下步骤提升阅读能力：</p>
 <ol>
-<li>评估自己的阅读能力 <a href="https://readtheory.org/" target="_blank" rel="noopener noreferrer">https://readtheory.org/</a> <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427496404.png" alt="image.png" loading="lazy"></li>
+<li>评估自己的阅读能力 <a href="https://readtheory.org/" target="_blank" rel="noopener noreferrer">https://readtheory.org/</a> <img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427496404.png" alt="image.png"></li>
 <li>找到自己感兴趣的读物，通过网站判定书籍的蓝思值是否合适 <a href="https://hub.lexile.com/find-a-book/book-results" target="_blank" rel="noopener noreferrer">https://hub.lexile.com/find-a-book/book-results</a></li>
 </ol>
 <p>相关的 app 我推荐: 轻听英语，里面的书都是免费的。当然大家也可以推荐别的 app，直接有标明蓝思值的就最好不过了。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427501518.png" alt="lADPJw1WS0BSWVnNBQDNBMw_1228_1280.jpg" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1656413042641-47c45b34-b4d2-4197-9af8-536ea2e8b4be.jpeg" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427501518.png" alt="lADPJw1WS0BSWVnNBQDNBMw_1228_1280.jpg"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1656413042641-47c45b34-b4d2-4197-9af8-536ea2e8b4be.jpeg" alt=""></p>
 <h3> 巧查生词</h3>
 <p>阅读的一个拦路虎是生词。大家的第一反应是认为生词太多，看不懂，很容易放弃。</p>
 <p>首先，我推荐欧路词典。如果是在电脑上看 pdf，鼠标选中区域就能查词或翻译，非常方便。</p>
@@ -1310,11 +1310,11 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <h2> 写作</h2>
 <p>阅读是输入，写作是输出，二者是相辅相成的。 对于写的能力，推荐从读书笔记开始做练习 （就像看完中文书那样做笔记），也可以找机会与人发邮件。</p>
 <p>读书笔记示例：</p>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/indispensable-opposition.png" alt="indispensable-opposition.png" tabindex="0" loading="lazy"><figcaption>indispensable-opposition.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/indispensable-opposition.png" alt="indispensable-opposition.png" tabindex="0"><figcaption>indispensable-opposition.png</figcaption></figure>
 <p>这是我购买 <a href="http://eslpod.com" target="_blank" rel="noopener noreferrer">eslpod.com</a> 教材时发的邮件：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427508571.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427508571.png" alt="image.png"></p>
 <p>这是我申请 JetBrains 正版授权时发的邮件：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427519794.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682427519794.png" alt="image.png"></p>
 <p>还有一种方法， 那就是利用软件的翻译功能，把自己写的中文笔记，翻译成英文，再去校对、修改。很多文本类 Web 应用都有此功能，可以利用起来。<br>
 这种方法本质就是，自己一开始不知道英文文章写什么，那就从校对、修改开始做起；自己不能写完整的英文文章，那就从摘取段落开始做起。适应这个过程后，写作的障碍就减少了。</p>
 <p>总结一下，英文读写的提升需要踏出舒适区，要耐着性子，不要怕慢。坚持去做，量变终会有质变！</p>
@@ -1334,9 +1334,9 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <h2> 单词量</h2>
 <p>进入网站：<a href="https://preply.com/en/learn/english/test-your-vocab" target="_blank" rel="noopener noreferrer">https://preply.com/en/learn/english/test-your-vocab</a></p>
 <p>看到如图所示区域，开始勾选单词，规则很简单：一眼看上去认识的就勾选，不认识、犹豫的都跳过，之后点击红框处继续。注意，千万不要勾选的过程中去查单词。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426636662.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426636662.png" alt="image.png"><br>
 在下一页，重复上面的步骤，之后点击 <code>Continue</code>，等待几秒钟，就会出现评估的单词量。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426647325.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426647325.png" alt="image.png"><br>
 对于该结果，网站有以下值得注意的解释：</p>
 <ol>
 <li>结果偏差在正负10%左右：</li>
@@ -1347,33 +1347,33 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <ol start="2">
 <li>英语非母语者，用单词量作为能力标准通常划分如下：</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426651054.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426651054.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <ol start="3">
 <li>结果一年测一次最有效</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426657822.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426657822.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <h2> 阅读能力</h2>
 <p>评估阅读能力也就是评估蓝思值。进入网站：<a href="https://readtheory.org/" target="_blank" rel="noopener noreferrer">https://readtheory.org/</a></p>
 <p>右上角点击注册：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426663590.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426663590.png" alt="image.png"></p>
 <p>选择作为学生：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426667189.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426667189.png" alt="image.png"></p>
 <p>可以直接使用谷歌账号注册：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426672418.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426672418.png" alt="image.png"><br>
 如果不能谷歌，可以看我写的谷歌教程：<a href="https://www.yuque.com/levy/blog/how-to-surf" target="_blank" rel="noopener noreferrer">https://www.yuque.com/levy/blog/how-to-surf</a><br>
 或者自己填表单，进入下一步。</p>
 <p>确保自己至少有20分钟的空闲时间，之后点击已经准备好了：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426676249.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426676249.png" alt="image.png"></p>
 <p>开始做题，一共8道，看不懂就乱选，后面的题目会根据你的答题情况自动调整：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426719299.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426719299.png" alt="image.png"></p>
 <p>做完后，点击确认：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426727690.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426727690.png" alt="image.png"></p>
 <p>点击下图红框处：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426733660.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426733660.png" alt="image.png"></p>
 <p>往下翻阅，即可看到自己的蓝思值初步评分：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426739821.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426739821.png" alt="image.png"></p>
 <p>再给出通用的蓝思值能力对照表：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426744993.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426744993.png" alt="image.png"><br>
 以上就是今天的英文能力评测手把手教学啦，希望对大家有所帮助。</p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426636662.png" type="image/png"/>
@@ -1383,10 +1383,10 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
       <link>https://levy.vip/english/learning-7000-words-task-completed.html</link>
       <guid>https://levy.vip/english/learning-7000-words-task-completed.html</guid>
       <source url="https://levy.vip/rss.xml">完成刷7k单词任务</source>
-      <description>完成刷7k单词任务 这周算是完成了今年定下的刷单词的任务，写篇文章总结下，为这件事划上一个句号，也给有需要的人一定的参考价值。 首先，解释下为什么完成度不是100%，我也称之为完成任务。因为软件出问题了（又或是我使用方式问题），剩下的单词无法进行学习了，进度条止步于此。我也不想纠结于这一点，就这样吧，算是残缺美。</description>
+      <description>完成刷7k单词任务 这周算是完成了今年定下的刷单词的任务，写篇文章总结下，为这件事划上一个句号，也给有需要的人一定的参考价值。 首先，解释下为什么完成度不是100%，我也称之为完成任务。因为软件出问题了（又或是我使用方式问题），剩下的单词无法进行学习了，进度条止步于此。我也不想纠结于这一点，就这样吧，算是残缺美。 再者，说明下为什么要做这件事。主要原因有三：</description>
       <pubDate>Sat, 17 Sep 2022 00:00:00 GMT</pubDate>
       <content:encoded><![CDATA[<h1> 完成刷7k单词任务</h1>
-<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426608041.png" alt="image.png" loading="lazy"><br>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1682426608041.png" alt="image.png"><br>
 这周算是完成了今年定下的刷单词的任务，写篇文章总结下，为这件事划上一个句号，也给有需要的人一定的参考价值。</p>
 <p>首先，解释下为什么完成度不是100%，我也称之为完成任务。因为软件出问题了（又或是我使用方式问题），剩下的单词无法进行学习了，进度条止步于此。我也不想纠结于这一点，就这样吧，算是残缺美。</p>
 <p>再者，说明下为什么要做这件事。主要原因有三：</p>
@@ -1442,7 +1442,7 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <li>口语练习题，根据个人需求查找即可，下文将以<a href="https://liuxue.koolearn.com/ielts/speak-1-44-0/" target="_blank" rel="noopener noreferrer">雅思</a>为例进行说明</li>
 </ol>
 <p>安装好插件后，打开 chatGPT 界面，下方就会出现语音输入按钮。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211581972.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211581972.png" alt="image.png"></p>
 <h2> 常用Prompt</h2>
 <p>下面总结了常用的 Prompt，可以有根据需要进行使用或调整。</p>
 <p>设置角色：</p>
@@ -1467,39 +1467,39 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <h2> 进行对话</h2>
 <p>第一句话，是设置好 AI 的角色，让它扮演口语考官。</p>
 <p>可以使用以下 prompt:</p>
-<div class="language-markdown line-numbers-mode" data-ext="md"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211593449.png" alt="image.png" loading="lazy"><br>
+<div class="language-markdown line-numbers-mode" data-ext="md"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211593449.png" alt="image.png"><br>
 可以看出，语音转文字出现错误，单词 IELTS 始终未能正确识别，但 ChatGPT 却能明白其中的意思。</p>
 <p>开启语音插件的意义在于，如果语音识别不了自己说的话，很有可能是自己的发音有问题，起到提醒自己纠正发音的作用。另外，ChatGPT 回复的文字，也会转换成语音输出，顺便练习了听力。</p>
 <p>根据练习材料，让 AI 问自己问题。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211601688.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211601688.png" alt="image.png"><br>
 记得让 AI 对自己的回答评分，可以使用以下 prompt：</p>
-<div class="language-markdown line-numbers-mode" data-ext="md"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211608559.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<div class="language-markdown line-numbers-mode" data-ext="md"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211608559.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <p>进行下一个问题：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211615610.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211615610.png" alt="image.png"><br>
 上述回答不太好，AI 给出了理由：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211861818.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211861818.png" alt="image.png"></p>
 <p>修改后再回答，有所进步<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211906368.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211906368.png" alt="image.png"></p>
 <p>再问下一个问题：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211920743.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211920743.png" alt="image.png"><br>
 这个回答同样不理想，但看了提示也不知道要怎么改：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211928334.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211928334.png" alt="image.png"></p>
 <p>此时可以新建一个聊天窗口，让 AI 提供示例回答：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211938210.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211938210.png" alt="image.png"></p>
 <p>根据示例答案，结合关键词，重新组织语言，切换回原聊天窗口，再回答一次：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211955902.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211955902.png" alt="image.png"><br>
 有所进步！</p>
 <p>有时对话长了，AI 会“糊涂”如下所示：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683373370527.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683373370527.png" alt="image.png"></p>
 <p>此时要重新强调它扮演的角色，让其回忆起上下文，可以使用以下 prompt:</p>
-<div class="language-markdown line-numbers-mode" data-ext="md"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683373376359.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<div class="language-markdown line-numbers-mode" data-ext="md"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683373376359.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <p>除此之外，就没啥值得注意的了。重复上述过程，不断练习即可。</p>
 <h2> 记录回答</h2>
 <p>做完了练习，还要作笔记。但在记录回答之前，还要润色一下，毕竟口语表达的时候，可能会存在语法错误。</p>
 <p>进入 <a href="https://quillbot.com/" target="_blank" rel="noopener noreferrer">https://quillbot.com/</a>，把答案复制上去，先进行语法检查：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211964246.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211964246.png" alt="image.png"><br>
 再进行流畅度润色：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211997332.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211997332.png" alt="image.png"><br>
 最后保存到笔记本上即可。</p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/english/1683211581972.png" type="image/png"/>
@@ -1541,12 +1541,12 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <li><a href="https://tools.pingdom.com/" target="_blank" rel="noopener noreferrer">https://tools.pingdom.com/</a></li>
 </ol>
 <p>得到结果如下：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714344531-6501362c-526d-40e5-b1a4-a3399a544ea1.png" alt="" loading="lazy"><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607738629800-10ff9829-ea0c-402b-b826-1d05903ee302.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714344531-6501362c-526d-40e5-b1a4-a3399a544ea1.png" alt=""><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607738629800-10ff9829-ea0c-402b-b826-1d05903ee302.png" alt=""><br>
 可以看到，首页超过50%的请求都与图片有空，优化空间比较大，因此第一步应该是优化图片加载。</p>
 <h2> 图片优化</h2>
 <p>关于图片，PageSpeed 的优化建议如下：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607739432571-c4ebd1bb-bf91-4ced-afca-ad70b84c4de6.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607739432571-c4ebd1bb-bf91-4ced-afca-ad70b84c4de6.png" alt=""><br>
 根据文章《<a href="https://zhuanlan.zhihu.com/p/99769484" target="_blank" rel="noopener noreferrer">把图片优化指南做成一个组件：v-img</a>》，找到首页的图片相关的代码：</p>
 <ol>
 <li>把 <code>&lt;img&gt;</code>&nbsp; 元素修改成 <code>&lt;v-img/&gt;</code>&nbsp;，注意设置 width 或 height</li>
@@ -1554,31 +1554,31 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 </ol>
 <p>注意：img-url 应该是 oss 的链接，并且是 https 协议。<br>
 如果是 http 协议，或不指定协议 //img-url，则很可能会出现下图的情况：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714403654-591acc14-7c8e-4882-a781-a5271bb0b428.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714403654-591acc14-7c8e-4882-a781-a5271bb0b428.png" alt=""></p>
 <p>如果图片是放在项目中，且项目并没有部署到 oss，则无法享受自动加载 webp 格式图片的福利。</p>
 <p>则在此环节，一次性做到了上图中的三个优化点。</p>
 <h2> 提高TTFB时间</h2>
 <p>来看下一条优化建议：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914614811-2ea4a4f6-0f0c-4222-bc6f-112f3512bfbb.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914614811-2ea4a4f6-0f0c-4222-bc6f-112f3512bfbb.png" alt=""><br>
 因为项目是服务端渲染的，有些请求是在服务端做了。找到相关代码：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914815788-19181de1-6526-46f1-8ed2-e4c3bd130e7a.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914815788-19181de1-6526-46f1-8ed2-e4c3bd130e7a.png" alt=""><br>
 经过分析，上述代码存在两个问题：</p>
 <ol>
 <li>可在客户端执行却放在了服务端</li>
 <li>可并行执行却写成了串行</li>
 </ol>
 <p>修改如下：</p>
-<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914801350-ca4cadfe-9750-47be-98f4-fd5a305bb408.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607914801350-ca4cadfe-9750-47be-98f4-fd5a305bb408.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <hr>
 <p>通过分析请求日志发现，有一个请求应该是在客户端发送，代码本意也是在客户端执行，却在服务端也执行了。<br>
 找到发送请求的代码：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607929114683-23cb4794-bc67-4bed-8e95-0a8f493cb1e6.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607929114683-23cb4794-bc67-4bed-8e95-0a8f493cb1e6.png" alt=""><br>
 原来是代码写在了 created 里，这是个经典的案例：为了让请求更早一点发送，不写在 mounted 钩子，而写在 created 里，导致请求分别在 server-side 与 client-side 都执行了。具体说明请看 <a href="https://ssr.vuejs.org/guide/universal.html#component-lifecycle-hooks" target="_blank" rel="noopener noreferrer">vue ssr 官方文档</a>。</p>
 <p>修改如下：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607929358177-06449ad6-8251-444d-9ae3-1e2ae93b8fef.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607929358177-06449ad6-8251-444d-9ae3-1e2ae93b8fef.png" alt=""></p>
 <h2> 移除未使用的 Javascript</h2>
 <p>来看下一条优化建议：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607931113342-9fbf0d58-58dd-4d77-9628-cb2a1182d957.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607931113342-9fbf0d58-58dd-4d77-9628-cb2a1182d957.png" alt=""><br>
 因为经过多次迭代，有可能某些功能曾经上线过，后来被下线，但当时代码没删干净，所以留下一些现在没用的第三方库。根据建议，找到这些引入的 js，确保不影响正常功能后，删除即可。</p>
 <p>此时注意用到以下基本操作：</p>
 <ol>
@@ -1587,12 +1587,12 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 </ol>
 <h2> 延迟静态资源的加载</h2>
 <p>来看另一个相关的建议：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607932915571-42f62757-85e0-4893-8a1f-5b3d103da94c.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1607932915571-42f62757-85e0-4893-8a1f-5b3d103da94c.png" alt=""><br>
 如果有些第三方 js 确实有用到，但却不是关键资源，则可以延迟其加载或解析时机，缩短阻塞时间。</p>
 <p>以一些第三方代码为例，它们并不是关键资源，可以在 window.onload 事件触发后，再加载</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 启用文本压缩</h2>
 <p>首先是启用文本压缩，采用 gzip 是最简单的方式。对应的请求头是：<strong>Content-Encoding</strong><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1612505764342-9505cfe1-9025-49b0-b1fc-3e49e6d9f2c5.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1612505764342-9505cfe1-9025-49b0-b1fc-3e49e6d9f2c5.png" alt=""></p>
 <p>因为静态资源是放到对象储存服务上的，故应该修改相关的配置。</p>
 <ul>
 <li>如果是阿里云OSS，<a href="https://help.aliyun.com/document_detail/31913.html?spm=5176.11065259.1996646101.searchclickresult.76556e6eoNS81O" target="_blank" rel="noopener noreferrer">点击查看参考文档</a></li>
@@ -1601,16 +1601,16 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <p>这里要注意的是，对于静态资源的访问，最好使用自定义域名，而不是存储桶的域名，方便CDN做加速优化。</p>
 <h2> 优化缓存策略</h2>
 <p>下一条相关的优化建议是缓存策略，对应的请求头是：<strong>Cache-Control</strong><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1612506152108-a13a4684-6b3c-46d2-8fa3-0b20fda0d4ec.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1612506152108-a13a4684-6b3c-46d2-8fa3-0b20fda0d4ec.png" alt=""><br>
 简单来说，就是在静态资源（html 除外）的 HTTP&nbsp;响应头中设置如下字段：</p>
 <div class="language-http line-numbers-mode" data-ext="http"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>以阿里云&nbsp;oss&nbsp;为例进行说明，其他静态资源存储如 obs、S3 都是同理。</p>
 <p>对于少量的资源，可以进行手工操作。打开&nbsp;<a href="https://github.com/aliyun/oss-browser" target="_blank" rel="noopener noreferrer">oss-browser</a>，找到相应资源：</p>
-<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574909023658-459fff93-ad99-43ad-92c1-bf94d5cff9c6.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574909060558-751aeab8-c08c-4a84-95f4-f3fbe5e13e24.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574909023658-459fff93-ad99-43ad-92c1-bf94d5cff9c6.png" alt="" tabindex="0"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574909060558-751aeab8-c08c-4a84-95f4-f3fbe5e13e24.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <p>本中使用的&nbsp;oss-browser&nbsp;版本，一次只能对一个资源进行&nbsp;HTTP&nbsp;头的设置，操作十分不便，可以<a href="https://help.aliyun.com/document_detail/31913.html?spm=a2c4g.11186623.4.1.7e863bdb6IwtQq" target="_blank" rel="noopener noreferrer">登录阿里云控制台进行批量操作</a>。</p>
 <p>当然，最根本的解决办法，是使用 <a href="https://help.aliyun.com/document_detail/120057.html?spm=a2c4g.11186623.6.711.c31a2d24TVqy6d" target="_blank" rel="noopener noreferrer">阿里云oss命令行工具</a> 上传的时候就进行设置。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>注意，在命令行里别乱设置 Content-Encoding:gzip，否则会出现下面的情况，页面都打不开，具体说明<a href="https://appuals.com/how-to-fix-err_content_decoding_failed-error/" target="_blank" rel="noopener noreferrer">查看详情</a><br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574914337532-52c323e6-b22c-45a4-b514-c2614762909a.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1574914337532-52c323e6-b22c-45a4-b514-c2614762909a.png" alt=""></p>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1611714344531-6501362c-526d-40e5-b1a4-a3399a544ea1.png" type="image/png"/>
     </item>
@@ -1639,18 +1639,18 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <p>版本控制系统具有一个很强大的附带功能，那就是服务器端的备份功能。但是千万不要把 VCS 仅仅当成一个备份系统。特别需要注意的是，只能提交那些有意义的改动。</p>
 <h2> Github实例</h2>
 <h3> 一个功能对应一个分支</h3>
-<p>下面是好的示例： 格式化代码，也应该单独一个PR<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344980430.png" alt="" loading="lazy"><br>
+<p>下面是好的示例： 格式化代码，也应该单独一个PR<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344980430.png" alt=""><br>
 下面是不好的示例：因为一个PR修改了不同的主题内容<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344985874.png" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344990582.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344985874.png" alt=""><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344990582.png" alt=""></p>
 <h3> 提交“瘦”的PR</h3>
 <p>参考文章：<a href="https://deliveroo.engineering/2017/09/06/play-pull-request-roulette.html#ideas-to-make-your-prs-more-review-friendly" target="_blank" rel="noopener noreferrer">https://deliveroo.engineering/2017/09/06/play-pull-request-roulette.html#ideas-to-make-your-prs-more-review-friendly</a><br>
 其中最重要的一点：不要一次提交一个很大改动的PR，否则别人很难 review，要学会拆分步骤。<br>
 下面是一个 PR 示例：<br>
-拆分前，包含了35个改动，很难 review<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344998899.png" alt="" loading="lazy"></p>
-<p>下图是拆分后：<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345004360.png" alt="" loading="lazy"></p>
+拆分前，包含了35个改动，很难 review<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344998899.png" alt=""></p>
+<p>下图是拆分后：<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345004360.png" alt=""></p>
 <p>单个PR的改动文件只有11个<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345009991.png" alt="" loading="lazy">每个 PR&nbsp;改动的文件少了，这样&nbsp;review&nbsp;起来就更容易了。</p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345009991.png" alt="">每个 PR&nbsp;改动的文件少了，这样&nbsp;review&nbsp;起来就更容易了。</p>
 <h3> 使用正确的标题</h3>
 <p><a href="https://github.com/angular/angular.js/blob/master/DEVELOPERS.md#commits" target="_blank" rel="noopener noreferrer">相关规范看这里</a></p>
 <p>另外，请回答：出于什么原因需要进行这次修改？具体改动了些什么？</p>
@@ -1661,21 +1661,21 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <p>好的示例：<code>docs: extraQuery 的正确使用方法</code><br>
 不好的示例：<code>docs: 更新不直观的例子</code></p>
 <h3> 根据模板填写PR描述</h3>
-<p>这是我们 Github 的 PR 模板，融合了我们的最佳实践<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345014045.png" alt="" loading="lazy"><br>
-下面是实际的好的例子<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345019293.png" alt="" loading="lazy"></p>
+<p>这是我们 Github 的 PR 模板，融合了我们的最佳实践<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345014045.png" alt=""><br>
+下面是实际的好的例子<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345019293.png" alt=""></p>
 <h3> 自动关闭issue</h3>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345024941.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345024941.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>当pr合并时，将自动close issue</p>
 <h3> 1+2 review 规则</h3>
 <p>1 是指发起 PR 的人，2 是指进行 code review 的人。也即，每一个 PR，至少要经过两个团队成员 approve 才能合并。</p>
 <blockquote>
 <p>上面是针对 github 的协作，项目组中可酌情变为 1+1 规则</p>
 </blockquote>
-<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345031945.png" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345036964.png" alt="" loading="lazy"></p>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345031945.png" alt=""><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345036964.png" alt=""></p>
 <h3> 礼貌提问</h3>
 <p>在 github 向人提问时，需要有礼貌。当提出 feature request时，还要说明自己的情况，尽可能提供更多的信息给对方。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345041577.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682345041577.png" alt=""><br>
 上面的示例有三个重点：</p>
 <ol>
 <li>开头表达感谢</li>
@@ -1732,27 +1732,27 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <li>本地切换到 dev 分支，更新代码</li>
 <li>合并相应的 feat 分支</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344287512.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344287512.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <ol>
 <li>弹出冲突提示，点击合并</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344293749.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344293749.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <ol>
 <li>首先处理无冲突的代码，点击下图红框处</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344298158.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344298158.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <ol>
 <li>再根据情况，选择合并代码或丢弃代码。</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344303228.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344303228.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <ol>
 <li>在 dev 分支上切出新分支，推荐命名为 conflict/xxx</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344307534.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344307534.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <ol>
 <li>推送代码，提交MR（conflict -&gt; dev)，记得勾选合并后删除</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344312127.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344312127.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <h2> 功能分支被污染</h2>
 <p>分支一多，人难免失误，很可能造成 feat 分支被污染，即当提MR（feat -&gt; test）时，出现不想合并到 test的代码或提交记录。<br>
 这种场景的出现可能有多种原因：</p>
@@ -1771,14 +1771,14 @@ limitations of the human intellect and the infirmity of the human spirit.</p>
 <ol>
 <li>更新目标分支（在这里是 test）</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344317048.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344317048.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <ol>
 <li>基于 test 切新分支，这里示例命名为：clean</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344322358.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344322358.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <ol>
 <li>在拥有最新代码的分支（这里是 feat） 找到并选中相应的提交记录</li>
-<li>右键，点击 Cherry-Pick<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344326902.png" alt="" loading="lazy"></li>
+<li>右键，点击 Cherry-Pick<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682344326902.png" alt=""></li>
 <li>则相应的提交记录就会合并到 clean 分支</li>
 <li>推送 clean，提交MR（clean -&gt; test）</li>
 </ol>
@@ -1816,12 +1816,12 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <!-- more -->
 <p>第一个是叫 <code>annotate with git blame</code>。<br>
 在IDEA的行号这个位置，右键，再点击即可。如图所示：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img.PNG" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img.PNG" alt=""></p>
 <p>效果就是，每一行代码都会显示，该行代码是由谁提交的、 什么时候提交的。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_1.PNG" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_1.PNG" alt=""></p>
 <p>在合并冲突的时候也可以用这个技巧。</p>
 <p>对左右两边进行<code>git blame</code>一下， 然后就可以看到如图所示的情况：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_2.PNG" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_2.PNG" alt=""></p>
 <p>这样就能提供更多的信息帮助解决冲突。</p>
 <p>就算冲突无法自己解决，也至少能知道提交代码的是谁，可以找到作者去进行沟通。</p>
 <p>当然<code>git blame</code> 是有一些注意点的。因为它本质上显示的是某一行代码的最后提交人， 也就是last modified的一个概念，而有些时候这并不意味着最后的修改人就是代码的原作者。</p>
@@ -1835,9 +1835,9 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>这说明，有时候仅知道了某一行代码是由谁最近修改的还不够，还需要知道某一个文件经过了怎么样的修改。</p>
 <p>这就引出了第二个小技巧了: <code>git show history</code>。</p>
 <p>点击IDEA某个文件的空白处，然后右键，选择git，然后点击 show history。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_3.PNG" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_3.PNG" alt=""></p>
 <p>就会出现如图所示的这样的一个 git log的 界面。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_4.PNG" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/2023-08-12/img_4.PNG" alt=""></p>
 <p>那么这样就可以看到这个文件从最初到至今经历过了怎样的修改、 有过哪些人在上面修改， 从而更好的进行记录追踪。</p>
 <p>这两个技巧， 其实是越有经验就对你帮助越大的。因为你，年限越长，你看别人的代码的机会就越； 而如果你年限尚浅的话，更多的是你的代码被别人 review。</p>
 ]]></content:encoded>
@@ -1858,7 +1858,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <h2> 配置</h2>
 <p>Mac/Linux 用户 执行以下操作</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>Windows用户在桌面用户文件夹下有个.gitconfig隐藏文件，直接修改即可<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682343376774.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682343376774.png" alt=""><br>
 补充以下内容</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 增强</h2>
 <p>Mac或Linux用户，推荐安装<a href="https://github.com/robbyrussell/oh-my-zsh" target="_blank" rel="noopener noreferrer">https://github.com/robbyrussell/oh-my-zsh</a>，增强命令行体验。</p>
@@ -1910,7 +1910,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <ol>
 <li>checkout目标分支(target branch)</li>
 <li>选中相应的提交记录，右键</li>
-<li>点击Cherry-pick<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682343384184.png" alt="image.png" loading="lazy"></li>
+<li>点击Cherry-pick<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682343384184.png" alt="image.png"></li>
 <li>则相应的提交记录就会合并到目标分支</li>
 </ol>
 <h3> merge unrelated histories</h3>
@@ -1949,14 +1949,14 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <h3> GitLab Runner 注册</h3>
 <p>GitLab Runner 安装以后，还要注册到 GitLab 的项目中才能使用，此步骤需要项目的 Maintainer 权限。</p>
 <p>在注册前，可以先检查下，自己的项目中是否已有可以使用的 GitLab Runner（如果看不到 Settings，说明没有权限），如果有就记住其名字，然后跳过此步骤。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277808112.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277808112.png" alt=""></p>
 <p>GitLab Runner 根据范围分为<a href="https://docs.gitlab.com/ee/ci/runners/runners_scope.html" target="_blank" rel="noopener noreferrer">三种</a>。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387098778.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387098778.png" alt="image.png"></p>
 <p>下面以 Specific Runner 为例进行说明。</p>
 <p>进入项目如下界面：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387102770.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387102770.png" alt="image.png"></p>
 <p>拿到 URL 及 token：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387107092.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387107092.png" alt="image.png"></p>
 <p>执行命令进行注册:</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>根据提示输入内容，其中 URL 及 token 就是前面步骤中 Web 界面获取的信息。</p>
 <p>命令行操作示例如下，注意两点即可：</p>
@@ -1965,17 +1965,17 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <li>其他参数可以与示例完全一致</li>
 </ol>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注册成功后，显示示例如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387118062.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387118062.png" alt="image.png"></p>
 <h3> 提交.gitlab-ci.yml</h3>
 <p>要想 Gitlab Runner 工作，还需要在项目根目录提交 .gitlab-ci.yml 文件。</p>
 <p>建议提交.gitlab-ci.yml文件前，在 GitLab 先进行语法校验。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388474604.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388474604.png" alt="image.png"></p>
 <p>如果错误，会有提示。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388478169.png" alt="image.png"></p>
 <p>如果配置成功，会看到 GitLab 的图标：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695784435960-bdac2473-54cd-4c42-85f3-cfbf18e21274.png" alt=""></p>
 <p>如果图标如下所示，说明文件有误，比如文件名开头多了个空格🤦‍♂️：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695784470379-51a5693b-ecfc-4b7f-9b67-5b0b00ccf8d0.png" alt=""></p>
 <p>以上就是 GitLab CI 所需的基本环境配置，接下来进行实战内容讲解。</p>
 <h2> 合并代码前进行检查</h2>
 <h3> 背景</h3>
@@ -1990,17 +1990,17 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>笔者还是更倾向于防患于未然的思维模式，也即不能通过编译的代码，不允许合并至受保护的分支。而使用 Gitlab CI 来做这件事比 Jenkins 体验更丝滑，下面就来介绍一下具体的做法。</p>
 <h3> 设置MR检查</h3>
 <p>进入项目如下界面：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387122013.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682387122013.png" alt="image.png"></p>
 <p>勾选流水线必须成功。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388470210.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388470210.png" alt="image.png"></p>
 <h3> .gitlab-ci.yml 示例</h3>
 <p>简单示例如下，根据实际情况修改：</p>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>上述示例要设置成功，还要确保 .m2/settings.xml 文件存在。</p>
 <h3> 效果</h3>
 <p>当流水线还未结束时，不能提前合并代码，只能等待流水线成功。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388481821.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388481821.png" alt="image.png"></p>
 <p>如果流水线失败了，不能合并。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388485568.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388485568.png" alt="image.png"></p>
 <h2> 集成单元测试</h2>
 <p>核心思路就是在 CI 环境运行 <code>mvn test</code>。</p>
 <p>可能遇到的问题在于，由于项目依赖关系：</p>
@@ -2019,7 +2019,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>则此时就跳过了子模块 a。</p>
 <p>但如果子模块 b 又依赖了 common，此时 common 的遗留的测试用例报错了，那我们的解决办法只能是：一个个地解决报错。</p>
 <p>当上述 maven 命令可以运行后，就可以修改 Gitlab CI 的配置，然后设置调度任务，让 Gitlab 每天都跑测试用例。一旦用例执行不通过，就会发邮件通知到我们。</p>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683436020492.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683436020492.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <h2> 线上发布 jar</h2>
 <p>可以在前文的基础上，设置流水线自动发布 jar。</p>
 <h3> Maven配置</h3>
@@ -2028,7 +2028,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> .gitlab-ci.yml 配置</h3>
 <p>相应的配置如下：</p>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>代码合并或有新的 commit 时，会执行流水线：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388489368.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/git/1682388489368.png" alt="image.png"></p>
 <h3> 拉取最新的jar</h3>
 <p>在B项目中，如果要引用A项目打出来的 jar，记得拉取最新的版本，pom.xml 设置如下：</p>
 <div class="language-xml line-numbers-mode" data-ext="xml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 保存中间产物</h2>
@@ -2038,9 +2038,9 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他问题与解决方案</h2>
 <h3> 环境变量</h3>
 <p>Settings -&gt; CI/CD -&gt; Variables<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701856198558-fbb7db94-a26a-46c2-9e05-06daa09f1ee7.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701856198558-fbb7db94-a26a-46c2-9e05-06daa09f1ee7.png" alt=""></p>
 <p>如果想隐藏变量值，不在日志中打印，可以在添加变量时勾选 Mask variable:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701856682934-425f5ecc-a09f-493f-8a65-d6f2f74fb26a.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701856682934-425f5ecc-a09f-493f-8a65-d6f2f74fb26a.png" alt=""></p>
 <h3> Node.js</h3>
 <p>本文主要以 Java 项目为例进行 Gitlab CI 相关的讲解，如果需要 Node.js 项目的示例，可以查看另外两篇文章：</p>
 <ul>
@@ -2199,15 +2199,15 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <ol>
 <li>打开Gitlab，右上角点击个人头像</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154008266.png" alt="0a8ff2ce0d86d685fd2b5283c40871d9.png" tabindex="0" loading="lazy"><figcaption>0a8ff2ce0d86d685fd2b5283c40871d9.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154008266.png" alt="0a8ff2ce0d86d685fd2b5283c40871d9.png" tabindex="0"><figcaption>0a8ff2ce0d86d685fd2b5283c40871d9.png</figcaption></figure>
 <ol start="2">
 <li>点击左侧边栏</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154013693.png" alt="f1151c580d5672d187ca38699e9c2013.png" tabindex="0" loading="lazy"><figcaption>f1151c580d5672d187ca38699e9c2013.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154013693.png" alt="f1151c580d5672d187ca38699e9c2013.png" tabindex="0"><figcaption>f1151c580d5672d187ca38699e9c2013.png</figcaption></figure>
 <ol start="3">
 <li>勾选全部权限，并确认生成 token</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154016668.png" alt="790ed16e056c26d79f35b7ff4c072c8f.png" tabindex="0" loading="lazy"><figcaption>790ed16e056c26d79f35b7ff4c072c8f.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154016668.png" alt="790ed16e056c26d79f35b7ff4c072c8f.png" tabindex="0"><figcaption>790ed16e056c26d79f35b7ff4c072c8f.png</figcaption></figure>
 <h3> codebases</h3>
 <p>适用于多基线的场景。</p>
 <p>如产品默认有三个环境，分别对应三条分支 dev、test、master。<br>
@@ -2217,47 +2217,47 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <ol>
 <li>查找"环境变量"</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154020270.png" alt="157a114acdf00def50ae774b4d68e004.png" tabindex="0" loading="lazy"><figcaption>157a114acdf00def50ae774b4d68e004.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154020270.png" alt="157a114acdf00def50ae774b4d68e004.png" tabindex="0"><figcaption>157a114acdf00def50ae774b4d68e004.png</figcaption></figure>
 <ol start="2">
 <li>点击"环境变量"</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154023459.png" alt="6a99dd2754b75348523a388d36067bd9.png" tabindex="0" loading="lazy"><figcaption>6a99dd2754b75348523a388d36067bd9.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154023459.png" alt="6a99dd2754b75348523a388d36067bd9.png" tabindex="0"><figcaption>6a99dd2754b75348523a388d36067bd9.png</figcaption></figure>
 <ol start="3">
 <li>找到 Path，点击"编辑"</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154026703.png" alt="d1335d05ddefa6aa33006e9f24f3254f.png" tabindex="0" loading="lazy"><figcaption>d1335d05ddefa6aa33006e9f24f3254f.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154026703.png" alt="d1335d05ddefa6aa33006e9f24f3254f.png" tabindex="0"><figcaption>d1335d05ddefa6aa33006e9f24f3254f.png</figcaption></figure>
 <ol start="4">
 <li>点击"新增"，再点击"浏览"，找到最里层的 mr 目录</li>
 </ol>
-<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154030135.png" alt="6df5b86a1f91452414382718983e0e22.png" loading="lazy"><br>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154030135.png" alt="6df5b86a1f91452414382718983e0e22.png"><br>
 （上图是示例，具体路径根据自己的情况而定）</p>
 <p>重新打开 git bash 即可生效，记得一定要重新打开！</p>
 <p>注：如果是 Linux，那很简单，修改 ~/.bashrc</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> IDEA</h3>
 <p>该步骤选填，适用于 JetBrains 系列产品，想在 IDEA 的终端中也使用 mr 命令时可配置。</p>
 <p>File -&gt; Settings -&gt; Tools -&gt; Terminal：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154033353.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154033353.png" alt="image.png"></p>
 <h2> 使用</h2>
 <p>可以不带参数运行，查看支持的命令：mr<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154109989.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154109989.png" alt="image.png"></p>
 <h3> 创建MR</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>提示输入要提交 MR 的源分支，按回车使用当前分支：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154113289.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154113289.png" alt="image.png"><br>
 创建成功：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154116622.png" alt="ae115431acc7c0b9275c158fb99e3eaa.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154116622.png" alt="ae115431acc7c0b9275c158fb99e3eaa.png"></p>
 <p>可以处理同名项目的情况：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/dealing-with-same-name-projects.png" alt="dealing-with-same-name-projects.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/dealing-with-same-name-projects.png" alt="dealing-with-same-name-projects.png"></p>
 <p>MR 不会重复创建：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154120100.png" alt="ab7d3ea5177726bbab0ccbcd870d0044.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154120100.png" alt="ab7d3ea5177726bbab0ccbcd870d0044.png"></p>
 <p>分支没有代码更新时，也不会创建 MR：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154123348.png" alt="147f745360164598c78c3de8808af1d2.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154123348.png" alt="147f745360164598c78c3de8808af1d2.png"></p>
 <h3> 查看MR</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>可以用来查看自己有哪些MR未合并。注意：只显示自己创建的。</p>
 <ul>
 <li>如果可以合并，显示 [ok]</li>
 <li>如果有冲突，显示 [conflict]</li>
 </ul>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154126283.png" alt="85ac4ee87e49965270f502ef830bf619.png" tabindex="0" loading="lazy"><figcaption>85ac4ee87e49965270f502ef830bf619.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154126283.png" alt="85ac4ee87e49965270f502ef830bf619.png" tabindex="0"><figcaption>85ac4ee87e49965270f502ef830bf619.png</figcaption></figure>
 <h3> 合并MR</h3>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>{mr_url} 的值可以根据以下方式来获取：</p>
 <ol>
@@ -2266,37 +2266,37 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <li>gitlab web界面上 MR 的 url</li>
 </ol>
 <p>合并前会有确认提示：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154129605.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154129605.png" alt="image.png"></p>
 <p>可以取消，防止误合并：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154133045.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154133045.png" alt="image.png"></p>
 <h3> 冲突处理</h3>
 <p>解决冲突，切换分支，是很麻烦的事情，故本工具为解决冲突提供了一些辅助功能。</p>
 <p>注意：命令行只做拉取代码、切合分支等必要操作，冲突的解决仍需要人工介入，工具不会自动合并代码的。</p>
 <p>合并冲突状态的MR：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>出现提示，是否自动切换分支为解决冲突作准备：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154136190.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154136190.png" alt="image.png"><br>
 当然在此之前，要保证工作目录是干净的，如果有修改未提交，会中止切换分支操作：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154139322.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154139322.png" alt="image.png"></p>
 <blockquote>
 <p>可以使用 <code>git stash</code>保存修改，合并冲突后，再 <code>git stash pop</code></p>
 </blockquote>
 <p>命令执行成功时，会切换到 <code>conflict/</code> 开头的分支。<br>
 此时，打开 IDE 或 Git 管理工具，根据提示把相应的分支合并到 <code>conflict/</code> 分支即可。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154143622.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154143622.png" alt="image.png"></p>
 <p>以 IDEA 为例：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154146323.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154146323.png" alt="image.png"></p>
 <p>解决冲突后，再切回命令行，此时有两种选择：</p>
 <ol>
 <li>创建 MR，适用于自己没有权限合并的场景</li>
 <li>合并 MR，适用于自己有权限合并的场景</li>
 </ol>
 <p>如果是创建，再次执行 create 命令即可：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154149211.png" alt="image.png" loading="lazy"><br>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154149211.png" alt="image.png"><br>
 创建的 MR 合并时会自动删除 <code>conflict/</code> 分支。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154152000.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154152000.png" alt="image.png"></p>
 <p>如果是合并，同样再次执行 merge 命令即可，此时不用带参数：</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154155089.png" alt="image.png" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154158111.png" alt="52fee749bc6d270f9ccab3eb0e04208b.png" loading="lazy"></p>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154155089.png" alt="image.png"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154158111.png" alt="52fee749bc6d270f9ccab3eb0e04208b.png"></p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1689154008266.png" type="image/png"/>
     </item>
@@ -2317,7 +2317,7 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <li>添加：</li>
 </ol>
 <p>或者这样：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691568843067-69847e70-987e-4263-81f3-7f19c3acccc5.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1691568843067-69847e70-987e-4263-81f3-7f19c3acccc5.png" alt=""></p>
 <div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 设置JDK版本</h2>
 <p>相关报错：</p>
 <ul>
@@ -2327,11 +2327,11 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>解决方案如下。</p>
 <p>1.先确保已安装 jdk。</p>
 <p>2.修改运行设置<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063344496-6b8f60c5-c444-4f77-a404-9b8ca8d7a9bb.png" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063379719-7c3d4323-5d77-44c4-8c49-7d79c4d61865.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063344496-6b8f60c5-c444-4f77-a404-9b8ca8d7a9bb.png" alt=""><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063379719-7c3d4323-5d77-44c4-8c49-7d79c4d61865.png" alt=""><br>
 3.修改外部依赖设置<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1645614452333-3f5d2763-e7a1-42d8-a3ea-b73cb664e6a1.png" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1645614476794-b37230c5-958a-459d-8dce-ecb5cb839d3f.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1645614452333-3f5d2763-e7a1-42d8-a3ea-b73cb664e6a1.png" alt=""><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1645614476794-b37230c5-958a-459d-8dce-ecb5cb839d3f.png" alt=""></p>
 <h2> lombok 编译报错</h2>
 <p>前提：<a href="https://blog.csdn.net/weixin_42440768/article/details/107999786" target="_blank" rel="noopener noreferrer">lombok 有maven依赖后，还要安装IDE插件</a></p>
 <p>相关报错：<br>
@@ -2343,23 +2343,23 @@ feat 分支就算被删了，只要提交记录还在，那也没关系：</p>
 <p>Run -&gt; Edit Configurations<br>
 注意是 VM options</p>
 <p>注入环境变量：spring.profiles.active=local<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1698212254651-9ffbcfab-7e1a-45c0-ae93-2ef2ad68cf11.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1698212254651-9ffbcfab-7e1a-45c0-ae93-2ef2ad68cf11.png" alt=""></p>
 <p>也可以设置 VM options，不过要带上 -D：-Dspring.profiles.active=local<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1698212412181-3374a830-1693-4db2-95eb-b314e6313517.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1698212412181-3374a830-1693-4db2-95eb-b314e6313517.png" alt=""></p>
 <h2> 栈溢出</h2>
 <p>maven build "Exception in thread "main" java.lang.StackOverflowError"</p>
 <p>-Xss40m<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669357898562-420a3ceb-3dfd-4b9c-93fa-8884edc8b231.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669357898562-420a3ceb-3dfd-4b9c-93fa-8884edc8b231.png" alt=""></p>
 <p>不是maven的编译选项在下面<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669357950353-4cc40792-1e54-400e-b3c8-aab28b71df64.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669357950353-4cc40792-1e54-400e-b3c8-aab28b71df64.png" alt=""></p>
 <h2> 内存不足</h2>
-<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063639112-cf83394f-5c10-4eb6-9946-8f10cf901f62.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1637063639112-cf83394f-5c10-4eb6-9946-8f10cf901f62.png" alt=""><br>
 -Xmx4011m</p>
 <hr>
 <p>相关报错：<br>
 java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <p>解决方案：需要进行如图所示修改设置<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1639039051050-9a0039c3-1087-4701-8ee9-0d61994bf2ca.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1639039051050-9a0039c3-1087-4701-8ee9-0d61994bf2ca.png" alt=""></p>
 <h2> 热加载</h2>
 <p>相关文章：<a href="https://cloud.tencent.com/developer/article/1683029" target="_blank" rel="noopener noreferrer">https://cloud.tencent.com/developer/article/1683029</a></p>
 <p>提示：不用追求自动重新编译，手动按 build 即可。</p>
@@ -2372,7 +2372,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 </ol>
 <h2> 添加外部jar作为依赖</h2>
 <p>如下图所示：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669256297330-7985774e-3d1b-4d8b-af90-5b179b1fc825.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1669256297330-7985774e-3d1b-4d8b-af90-5b179b1fc825.png" alt=""><br>
 打开相应文件夹，选中jar即可。</p>
 <h2> 文件找不到——依赖冲突</h2>
 <p>相关报错：<code>nested exception is java.io.FileNotFoundException</code><br>
@@ -2384,17 +2384,17 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <li>引入了多余的包，执行了不想要的逻辑</li>
 </ul>
 <p>exclue掉：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1666767522281-08333ca8-f4fa-4965-8e61-65b4da2f3524.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1666767522281-08333ca8-f4fa-4965-8e61-65b4da2f3524.png" alt=""></p>
 <p>重新加载：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1666767567101-8308c02c-a792-4fbd-9198-6edf2a514e8c.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1666767567101-8308c02c-a792-4fbd-9198-6edf2a514e8c.png" alt=""></p>
 <h2> 自动import</h2>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1659925756116-626b591f-2be4-4bb5-90c8-91f65989fc2b.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1659925756116-626b591f-2be4-4bb5-90c8-91f65989fc2b.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <h2> 文件乱码</h2>
 <p>如图所示，根据情况修改即可：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1641976626307-9d57d76f-eb57-4f57-8660-c77813485d5a.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1641976626307-9d57d76f-eb57-4f57-8660-c77813485d5a.png" alt=""></p>
 <h2> autowired 提示变量未赋值</h2>
 <p>这是<a href="https://stackoverflow.com/a/44670144/6759562" target="_blank" rel="noopener noreferrer">因为我使用的是社区版</a>，需要<a href="https://stackoverflow.com/a/62437991/6759562" target="_blank" rel="noopener noreferrer">手动设置下</a>：<br>
-<img src="https://i.stack.imgur.com/3bSYa.png#from=url&amp;id=Wxizo&amp;originHeight=368&amp;originWidth=1858&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;title=" alt="" loading="lazy"><br>
+<img src="https://i.stack.imgur.com/3bSYa.png#from=url&amp;id=Wxizo&amp;originHeight=368&amp;originWidth=1858&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;status=done&amp;style=none&amp;title=" alt=""><br>
 该方法可以放心使用。<br>
 虽然说的是 suppress unsed warning，其实是 suppress never assigned warning， unsed warning 还是会生效的。</p>
 ]]></content:encoded>
@@ -2428,13 +2428,13 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <li>modify options</li>
 <li>把 provided 加入 classpath</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668066163479-43ea1144-f764-4ec0-b5ca-823b8efccae8.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <h2> 设置Maven目录</h2>
-<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1670227320589-edf93b93-25d6-4992-9fe1-528218537ecf.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1670227320589-edf93b93-25d6-4992-9fe1-528218537ecf.png" alt=""><br>
 尽管IDEA可以设置 local repository，但实际上还是以 settings.xml 的配置为主，注意检查路径是否正确</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 无法识别 Maven 项目</h2>
-<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668149177501-37c6b4d2-1674-4ab2-b7c7-f7774ab90e12.png" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668149163603-a59d7ffe-7236-4756-8add-a55c1d282754.png" alt="" loading="lazy"></p>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668149177501-37c6b4d2-1674-4ab2-b7c7-f7774ab90e12.png" alt=""><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1668149163603-a59d7ffe-7236-4756-8add-a55c1d282754.png" alt=""></p>
 <p>此时代码的方法、变量不能跳转到定义处，无法编译、找不到主类。</p>
 <p>表面上看，这是没有把源码目录设置为 src root，但实际上，这是 pom.xml 解析缓存或Maven依赖下载失败后的结果。</p>
 <p>这里又分两种情况：</p>
@@ -2514,7 +2514,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <p>借助数据库的来实现，执行以下语句：</p>
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后，在程序里添加全局异常处理类：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>示例返回：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1697616346892-cea4b6c7-1966-4dc5-84c6-d901eeeabd65.png#averageHue=%23fcfbfb&amp;clientId=u791d113b-6ee5-4&amp;from=paste&amp;height=146&amp;id=u5e5b9578&amp;originHeight=146&amp;originWidth=575&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=11093&amp;status=done&amp;style=none&amp;taskId=u48e1cd4e-70db-4617-be80-0ec3828b522&amp;title=&amp;width=575" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1697616346892-cea4b6c7-1966-4dc5-84c6-d901eeeabd65.png#averageHue=%23fcfbfb&amp;clientId=u791d113b-6ee5-4&amp;from=paste&amp;height=146&amp;id=u5e5b9578&amp;originHeight=146&amp;originWidth=575&amp;originalType=binary&amp;ratio=1&amp;rotation=0&amp;showTitle=false&amp;size=11093&amp;status=done&amp;style=none&amp;taskId=u48e1cd4e-70db-4617-be80-0ec3828b522&amp;title=&amp;width=575" alt=""></p>
 <h2> Why</h2>
 <p>为什么这样做呢？因为这样只需要改一次代码。后续再有类似的需求时，只需要增加 SQL 即可，不需要再修改码、不需要重新编译、构建、部署。</p>
 <p>如果选择修改代码，则每次至少要修改两个地方：新增、修改都要处理。</p>
@@ -2595,9 +2595,9 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <p>问题来了，该 jar 所属的源码不知所踪，那还怎么发布 release.jar 呢？这就是本文要解决的问题。</p>
 <!-- more -->
 <h2> 下载</h2>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" alt=""><br>
 首先我们登录仓库，输入　ArtifactId，找到对应的 snapshot jar 包，并点击进入详情。</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748125239-9f38e77c-e2a9-4cb9-a5ae-663d1cbdbc5a.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748125239-9f38e77c-e2a9-4cb9-a5ae-663d1cbdbc5a.png" alt=""><br>
 找到关键的三个 jar:</p>
 <ul>
 <li>x.jar</li>
@@ -2605,27 +2605,27 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <li>x.pom</li>
 </ul>
 <p>分别点击进入详情<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748130574-143b17a9-4ecc-4543-8802-d51b14f43651.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748130574-143b17a9-4ecc-4543-8802-d51b14f43651.png" alt=""><br>
 依次点击　Path，下载到本地。</p>
 <h2> 修改</h2>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748138424-a8260207-8884-4054-8b86-c247b3766a3b.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748138424-a8260207-8884-4054-8b86-c247b3766a3b.png" alt=""><br>
 首先修改名字，如图所示。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748145414-f10b3b8a-9f57-493e-ae78-978b80e41dcd.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748145414-f10b3b8a-9f57-493e-ae78-978b80e41dcd.png" alt=""><br>
 再使用任意工具解压 x.jar，提取出两个文件夹。进入　META-INF</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748152420-1e600d70-ff87-4962-844f-021fe5288aa2.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748152420-1e600d70-ff87-4962-844f-021fe5288aa2.png" alt=""><br>
 修改　MANIFEST.MF，把里面的 snapshot 字符串去掉（如果有的话）</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748159789-a1ebe8eb-231f-435c-aabb-0c2fb06f93db.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748159789-a1ebe8eb-231f-435c-aabb-0c2fb06f93db.png" alt=""><br>
 再点击　maven　文件夹</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748164871-77ab05e9-480f-4afb-9f48-6dba9b89a49a.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748164871-77ab05e9-480f-4afb-9f48-6dba9b89a49a.png" alt=""><br>
 修改　pom.xml、pom.properties　文件，把里面的 snapshot 字符串去掉。</p>
 <h2> 上传</h2>
 <p>把前面解压出来的文件重新打包成 jar</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>然后上传仓库<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748169575-27ed04cd-a4c5-4956-b8fc-9e7acb9b7f42.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748169575-27ed04cd-a4c5-4956-b8fc-9e7acb9b7f42.png" alt=""><br>
 在Upload中，点击　maven-releases</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748175045-badb4fa7-8d30-45ad-8707-d096da6a28ec.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748175045-badb4fa7-8d30-45ad-8707-d096da6a28ec.png" alt=""><br>
 把三个文件添加上去，点击　Upload。</p>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748258011-2fef169f-82c0-41c4-a7f7-d7bca0065b25.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748258011-2fef169f-82c0-41c4-a7f7-d7bca0065b25.png" alt=""><br>
 可以看到，新的 release 版本的 jar 包已经在仓库中了，可以被安装使用了。</p>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1691748114074-8149044d-a066-4069-9bbd-7124bede3686.png" type="image/png"/>
@@ -2641,7 +2641,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <h2> 概述</h2>
 <p>建议给常用集合类的变量命名时，后缀带上相应的集合信息，以提高可读性。</p>
 <p>当然，在此之前要回答一个问题：当把鼠标放到变量上面时，IDE 会提示变量的类型，为什么还要在命名上做文章？<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654049668320-c53d0ef6-4063-4163-aa3e-2c304af4e39a.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654049668320-c53d0ef6-4063-4163-aa3e-2c304af4e39a.png" alt=""></p>
 <p>这是因为，有时并不在 IDE 上阅读代码，比如进行 GitHub 或 GitLab 进行 code review，此时无法获得提示，需要通过命名的规范来帮助理解。</p>
 <h2> List</h2>
 <p>List 的变量，一般以 List 或 s 结尾， 如 idList 或 ids。这点易于理解，大家也容易遵守。</p>
@@ -2693,7 +2693,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <!-- more -->
 <h2> 需求</h2>
 <p>删除某个时间段以前的日志。类似于消除浏览记录：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694499288408-aaec3b0c-9d06-43c1-849b-7af4ec9eb01a.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694499288408-aaec3b0c-9d06-43c1-849b-7af4ec9eb01a.png" alt=""></p>
 <h2> 分析</h2>
 <p>上图只是UI示例，为了适应UI的变化，最好把接口设置成接收两个参数：</p>
 <ul>
@@ -2738,7 +2738,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <p>既然要设置反序列化，那序列化也少不了。我把全部设置的代码放下面了，有需要复制即可：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 结语</h2>
 <p>好了，终于搞完了，我的评价是：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694501621853-c16a33fa-68e7-4aba-a72e-a9907793b564.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694501621853-c16a33fa-68e7-4aba-a72e-a9907793b564.png" alt=""></p>
 ]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1694499288408-aaec3b0c-9d06-43c1-849b-7af4ec9eb01a.png" type="image/png"/>
     </item>
@@ -2941,18 +2941,18 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <h2> 结论</h2>
 <p>先说结论：根据《Effective Java》(第三版），始终尽可能地使用基本类型。故应该使用 boolean。</p>
 <p>原文如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654073705555-ed3a3c4c-bb4b-4bfb-955f-00fc0f0356b4.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654073705555-ed3a3c4c-bb4b-4bfb-955f-00fc0f0356b4.png" alt=""></p>
 <blockquote>
 <p>红线处翻译：总结就是，当你有得选的时候，请务必使用基本类型，而非包装类型。</p>
 </blockquote>
 <p>那什么时候使用包装类型呢？原文如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654073877311-28b24470-1fc2-4560-a752-caa1bcff807c.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654073877311-28b24470-1fc2-4560-a752-caa1bcff807c.png" alt=""></p>
 <blockquote>
 <p>红线处翻译：当你没得选、被强制要求时，才使用包装类型。如：使用泛型（使用集合类、调用参数是泛型参数的方法），以及通过反射进行方法调用(使用 invoke 方法）</p>
 </blockquote>
 <h2> 争议</h2>
 <p>阿里的<a href="https://github.com/alibaba/p3c/blob/master/Java%E5%BC%80%E5%8F%91%E6%89%8B%E5%86%8C(%E9%BB%84%E5%B1%B1%E7%89%88).pdf" target="_blank" rel="noopener noreferrer">《Java开发手册》</a>有提到，类属性强制使用包装类型。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654076977162-f5358442-5426-4bca-936b-fcedcff0d3d3.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654076977162-f5358442-5426-4bca-936b-fcedcff0d3d3.png" alt=""></p>
 <p>但注意，本文讨论的仅仅是布尔类型，不要发散话题。 那现在就来分析一下，布尔类型有没有必要考虑 null 的情况？</p>
 <p>我认为是没有的必要的。理由如下：</p>
 <ul>
@@ -2964,9 +2964,9 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <h3> 简单例子</h3>
 <p>有如下 Controller，使用的是 boolean：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>前端传个空值，会得到报错信息：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695173173498-3a5c865a-912b-429c-bb9c-ee8132e6dee5.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695173173498-3a5c865a-912b-429c-bb9c-ee8132e6dee5.png" alt=""><br>
 但如果使用 Boolean，并不能检查出是非法参数：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695173219438-a3bf6805-fefb-4ee7-b592-c0472f784d79.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695173219438-a3bf6805-fefb-4ee7-b592-c0472f784d79.png" alt=""><br>
 这原本是前端传参错误，但却无法即使发现。</p>
 <p>你可能会问，为什么不先判断 Boolean 变量是否为 null  呢？因为别人在声明 Boolean 变量时，设置了默认值为 false，谁能想到前端会传个 null？</p>
 <p>这就是 Boolean 的问题：“千防万防，家贼难防”！</p>
@@ -2978,7 +2978,7 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <li>有的则完全由前端传值，也即 forkable、withTable2Api 有可能为 null</li>
 </ul>
 <p>来看一下，Service 里的相应代码：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654083796570-a55a49ad-dcd3-4e5c-a35d-c3455d786715.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654083796570-a55a49ad-dcd3-4e5c-a35d-c3455d786715.png" alt=""><br>
 这里有什么问题呢？可以看到，第二个 if 使用 <code>!Boolean._TRUE_</code>去判断很别扭，然而，却不能改写成：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>这就是布尔值使用 Boolean 类型在实战中最大的问题——你不能任意地进行真或假的判断，而必须兼容上下文中隐式对 null 赋予的含义。</p>
 <p>而多人协作过程中，外部调用是很难控制的，因此，此时使用 Boolean，只增加了无谓的编码负担。</p>
@@ -3001,13 +3001,13 @@ java: java.lang.OutOfMemoryError: GC overhead limit exceeded</p>
 <h2> 结论</h2>
 <p>先说结论：根据《Effective Java》(第三版），forEach 只用于消费数据的场景，并不应该用于计算、累加，故上述代码应该使用 map。</p>
 <p>原文如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654151903594-61668916-08c9-4349-9429-024742b14fac.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654151903594-61668916-08c9-4349-9429-024742b14fac.png" alt=""></p>
 <blockquote>
 <p>红字处翻译：forEach 仅适用于输出 stream 里的计算结果，并不适合执行计算。</p>
 </blockquote>
 <h2> 解析</h2>
 <p>为更好地理解上述结论，需要先理解以下内涵：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654153524133-3fcb016b-8dae-4482-807b-952b5dd0ca6e.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1654153524133-3fcb016b-8dae-4482-807b-952b5dd0ca6e.png" alt=""><br>
 Stream 的引入，不仅带来新的语法，也带来了函数式编程的思维。</p>
 <p>这里最重要的一点就是：编写纯函数（pure function），不造成副作用（side-effect）。</p>
 <p>纯函数可以用数学中的函数映射来理解：y = f(x)</p>
@@ -3067,7 +3067,7 @@ Stream 的引入，不仅带来新的语法，也带来了函数式编程的思�
 <p>今天就站在服务提供方的视角来看下，升级依赖版本，遇到的难点有哪些？</p>
 <!-- more -->
 <h2> 接口调用示意图</h2>
-<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1693060849195-8f65efab-8c15-4731-bf8e-10645785f0f5.jpeg" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1693060849195-8f65efab-8c15-4731-bf8e-10645785f0f5.jpeg" alt="" tabindex="0"><figcaption></figcaption></figure>
 <h2> 已知信息</h2>
 <ol>
 <li>common.jar 的版本是 1.0.0-SNAPSHOT，实际上 common.jar 的最新稳定版已经是 5.x 了。比较了下版本内容，发现二者是不兼容的。</li>
@@ -3109,7 +3109,7 @@ Stream 的引入，不仅带来新的语法，也带来了函数式编程的思�
 <p>在这种情况下，就需要用到我们今天的主角，数据备份工具 mysqldump。</p>
 <!-- more -->
 <h2> 架构</h2>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692280572283-08eb507c-00b6-446b-bd37-cb5ecbe59531.jpeg" alt="" loading="lazy"><br>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692280572283-08eb507c-00b6-446b-bd37-cb5ecbe59531.jpeg" alt=""><br>
 注意到：</p>
 <ol>
 <li>从 mysql-b -&gt; mysql-b'，就要用到工具 mysqldump</li>
@@ -3128,14 +3128,14 @@ Stream 的引入，不仅带来新的语法，也带来了函数式编程的思�
 </ol>
 <h2> 导出</h2>
 <p>导出命令很简单的，类似 mysql 客户端连接，指定用户名、表名、导出文件，再根据提示输入密码即可。</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692281767457-f40d7db4-c2d9-4589-ac46-cbea320266da.png" alt="" loading="lazy"><br>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692281767457-f40d7db4-c2d9-4589-ac46-cbea320266da.png" alt=""><br>
 然而命令行的提示，暗示事情令有玄机：</p>
 <ol>
 <li>首先，这样简单的命令，只能导出表数据，其他数据如触发器则并没导出</li>
 <li>其次，由于目标数据库开启了 GTID 模式(gtid_mode=ON)，导出的文件会有相关的设置</li>
 </ol>
 <h3> --set-gtid-purged=OFF</h3>
-<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692281766948-704c4a90-c575-4340-b596-281c74de5c44.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692281766948-704c4a90-c575-4340-b596-281c74de5c44.png" alt=""><br>
 打开 dump.sql 的前 30 行，可以看到 GTIDs 的相关内容。</p>
 <p>Here's a quick overview of how GTIDs(Global Transaction Identifiers) work in MySQL：</p>
 <ul>
@@ -3229,7 +3229,7 @@ Stream 的引入，不仅带来新的语法，也带来了函数式编程的思�
 <p>但要小心，在正式环境中执行 SQL，也许会有意想不到的坑！</p>
 <h2> 环境说明</h2>
 <p>先说明下我们的环境信息。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692321838318-b353f14d-13d0-432e-a05b-9fbcd3c1dd1f.jpeg" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692321838318-b353f14d-13d0-432e-a05b-9fbcd3c1dd1f.jpeg" alt=""><br>
 我们只能通过跳板机的终端连接 mysql、执行SQL，没有DBeaver、Navicat等工具可用。</p>
 <p>则我们执行SQL语句的方式有两种：</p>
 <ol>
@@ -3253,22 +3253,22 @@ Stream 的引入，不仅带来新的语法，也带来了函数式编程的思�
 <p>这真是血的教训😭。</p>
 <p>我们先来看下错误是否中断的实验。</p>
 <p>新建一个只有两行的SQL文件，其中第一行语句是错误的。</p>
-<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263770642-5487130c-27ed-4e08-9e89-24755194f7ed.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><figure><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263770642-5487130c-27ed-4e08-9e89-24755194f7ed.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <p>使用导入命令：</p>
 <div class="language-sql line-numbers-mode" data-ext="sql"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>提示第一行有错误，第二行未执行。这是符合期望的。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263858957-62a01998-d47a-4fa9-b2a9-b83c5a3be764.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263858957-62a01998-d47a-4fa9-b2a9-b83c5a3be764.png" alt=""></p>
 <p>但如果连接 mysql 后，在交互式命令行里执行 source 命令：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263665731-d9bdde27-6522-4cd3-9c82-4f5c7a0ead79.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263665731-d9bdde27-6522-4cd3-9c82-4f5c7a0ead79.png" alt=""><br>
 错误出现并不会中断SQL的执行。<br>
 复制语句，粘贴到命令行，表现也是如此：错误只提示，不中断执行。</p>
 <p>那么，能否在交互式命令行里执行SQL语句，一旦错误就中断呢？</p>
 <p>我们在MySQL官方论坛里找到了相关的<a href="https://bugs.mysql.com/bug.php?id=35634" target="_blank" rel="noopener noreferrer">帖子</a>：<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692262908887-64d86cd8-c2e9-4b50-b341-75a28a509d94.png" alt="" loading="lazy"></p>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692262908887-64d86cd8-c2e9-4b50-b341-75a28a509d94.png" alt=""></p>
 <p>最终得到的答案是，使用：\e。<br>
 进行类vi界面，在这里粘贴 SQL（这里就不会有中文被过滤的问题）<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263386275-ba3e4365-f45e-435e-a269-05c5d92dfa16.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263386275-ba3e4365-f45e-435e-a269-05c5d92dfa16.png" alt=""><br>
 保存退出后，输入 <code>;</code>则执行 SQL 语句，Ctrl + C　则不执行。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263595582-2f5a733e-ea75-47b1-b128-f76ecf7a1cda.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1692263595582-2f5a733e-ea75-47b1-b128-f76ecf7a1cda.png" alt=""><br>
 可以看到，这种方式执行 SQL 语句，也是可以遇到错误就中断的。</p>
 <h2> 如果要删除错误的数据怎么办？</h2>
 <p>尽管经过测试，但也不敢说语句的执行能百分之分成功，因此，这里给个温馨提醒。</p>
@@ -3367,7 +3367,7 @@ sheet的名字不能超过 31 个字符。<br>
 <p>个人总结为以下两点：</p>
 <ol>
 <li><a href="https://www.stickyminds.com/article/shift-left-approach-software-testing" target="_blank" rel="noopener noreferrer">测试左移</a>，降低修复bug的成本<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1690532448643-e09bebb0-66f2-49f9-8686-d4a8c6b5d590.png" alt="" loading="lazy"></li>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1690532448643-e09bebb0-66f2-49f9-8686-d4a8c6b5d590.png" alt=""></li>
 <li>形成资产，方便回归测试，后续迭代重构、维护有保障</li>
 </ol>
 <!-- more -->
@@ -3429,7 +3429,7 @@ sheet的名字不能超过 31 个字符。<br>
 <h3> 无法重复执行</h3>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果代码 Linux 环境运行怎么办？哪里来的 D 盘？</p>
 <p>这种情况，正确的做法应该是把依赖的文件作为测试夹具，与测试代码一起放入版本控制中。<br>
-<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695537638532-e8092338-3de2-4019-99a2-03bfb98f781f.png" alt="" loading="lazy"><br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1695537638532-e8092338-3de2-4019-99a2-03bfb98f781f.png" alt=""><br>
 参考代码如下：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
       <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1690532448643-e09bebb0-66f2-49f9-8686-d4a8c6b5d590.png" type="image/png"/>
@@ -3514,7 +3514,7 @@ sheet的名字不能超过 31 个字符。<br>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>对应的前端请求代码为(记录一下，以备不时之需😃)：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 下载示例</h2>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>看到全部用例都执行成功，非常爽快！<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/resetassured-download.png" alt="resetassured-download" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/resetassured-download.png" alt="resetassured-download"></p>
 <h2> 持续集成</h2>
 <p>以集成 Gitlab CI 为例，其核心思路就是在 CI 环境运行 <code>mvn test</code>。</p>
 <p>具体做法可以参考笔者的<a href="../git/gitlab-ci#%E9%9B%86%E6%88%90%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95">Gitlab CI文章</a>。</p>
@@ -3554,7 +3554,7 @@ sheet的名字不能超过 31 个字符。<br>
 <div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>或使用淘宝镜像，缺点是可能包不是最新的。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>或这样写</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h3> 目录结构</h3>
-<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494179328.png" alt="image.png" loading="lazy"><br>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494179328.png" alt="image.png"><br>
 推荐结构如上图所示的目录结构：</p>
 <ul>
 <li>cypress 相关的内容放到 test/e2e 文件夹下。与单元测试的 unit 文件夹区分开来</li>
@@ -3600,9 +3600,9 @@ sheet的名字不能超过 31 个字符。<br>
 <p>如果想获得代码提示、代码补全，需在开头添加如下语句，（Webstorm不需要此配置）<a href="https://docs.cypress.io/zh-cn/guides/tooling/intelligent-code-completion.html#" target="_blank" rel="noopener noreferrer">参考文档</a></p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><hr>
 <p>执行 <code>yarn e2e</code>&nbsp;，出现弹窗<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494184473.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494184473.png" alt="image.png"><br>
 点击文件，即会执行用例。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494186469.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494186469.png" alt="image.png"></p>
 <h3> 更复杂的示例</h3>
 <div class="language-text line-numbers-mode" data-ext="text"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 结合TypeScript</h2>
 <p>在 e2e 目录添加 tsconfig.json，内容如下：</p>
@@ -3623,7 +3623,7 @@ sheet的名字不能超过 31 个字符。<br>
 <p>直接运行 Cypress 的场景是，e2e 作为 CI 的最后一个<a href="https://docs.gitlab.com/ee/ci/yaml/README.html#stages" target="_blank" rel="noopener noreferrer">阶段</a>，当应用完成部署后，再对应用运行线上的测试。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>不推荐选择 <code>cypress/included</code> 镜像直接执行 Cypress 命令，因为很可能会遇到以下问题。<br>
 当然，如果自己的用例写的不好，也很可能会出现下面的问题。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494188361.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494188361.png" alt="image.png"></p>
 <h3> 使用 start-server-and-test</h3>
 <p>如果需要本地起个 localhost 服务，然后再运行 cypress。那么可以合作官方推荐的 <code>start-server-and-test</code>&nbsp;模块。它在 CI 上的执行顺序是：</p>
 <ol>
@@ -3640,16 +3640,16 @@ sheet的名字不能超过 31 个字符。<br>
 <li>.gitlab-ci.yml</li>
 </ul>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> This job is stuck</h3>
-<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494190870.png" alt="image.png" loading="lazy">如果是自建的 gitlab, 可能会遇到这个问题。<br>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494190870.png" alt="image.png">如果是自建的 gitlab, 可能会遇到这个问题。<br>
 这是任务没有打对标签，导致无法给任务分配对应的 Runner。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494192801.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494192801.png" alt="image.png"><br>
 进入上图所示页面，注意找到可使用的 Runner<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494195056.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494195056.png" alt="image.png"><br>
 如上图所示， <code>docker</code>&nbsp;标签对应的 Runner 是处于激活状态的，则在 CI 文件里配置即可</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> Cypress Dashbord</h3>
 <p>Cypress 官方提供了一个测试记录托管服务。在 CI 命令中，只需要加上 <code>--record --key $key</code>&nbsp;即可。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>CI 日志如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494197613.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-testing/1686494197613.png" alt="image.png"><br>
 更多介绍请查阅<a href="https://docs.cypress.io/guides/dashboard/introduction.html#Features" target="_blank" rel="noopener noreferrer">官方文档</a></p>
 <h2> 总结</h2>
 <p>cypress 比较适合写一个流程测试。一般情况下，只需要把整个正常流程操作使用 cypress 记录下来即可。</p>
@@ -3794,19 +3794,19 @@ sheet的名字不能超过 31 个字符。<br>
 <p>综上所述，笔者认为 Playwright 是值得在研发过程中引入的一款测试工具，它可以帮助研发、测试团队较平滑地走上自动化测试之路。它适用的典型场景之一，就是做回归测试——测试人员再也不用在界面上使用鼠标进行“点点点”，解放双手，提高测试效率。</p>
 <h2> 安装</h2>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>根据命令提示，输入如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683274667037.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683274667037.png" alt="image.png"><br>
 默认会下载所有浏览器，如果没有浏览器兼容性测试的需求，推荐如上图所示，手动安装一个浏览器。</p>
 <p>以安装 chromium 为例，相应操作步骤如下：</p>
 <ol>
 <li>修改配置</li>
 </ol>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>注释掉以下内容：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683274759403.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683274759403.png" alt="image.png"></p>
 <ol start="2">
 <li>安装浏览器</li>
 </ol>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>等待一段时间即可，如果失败，请重试。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683274769748.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683274769748.png" alt="image.png"></p>
 <p>推荐再安装 <a href="https://marketplace.visualstudio.com/items?itemName=ms-playwright.playwright" target="_blank" rel="noopener noreferrer">VS Code 插件</a>，获取更好的使用体验。</p>
 <h2> 使用</h2>
 <h3> 代码生成</h3>
@@ -3816,18 +3816,18 @@ sheet的名字不能超过 31 个字符。<br>
 <li>一个是普通的浏览器界面</li>
 <li>另一个是代码生成界面，在前一个窗口进行的任何操作，都会生成相应的代码</li>
 </ol>
-<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683275050705.png" alt="image.png" loading="lazy"><br>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683275050705.png" alt="image.png"><br>
 虽然默认生成代码是 Javascript，但可以选择切换语言：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683275136008.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683275136008.png" alt="image.png"><br>
 注意到可以生成 Pytest 的代码，对测试工程师来说，简直是福音。这也提示我们，Playwright 既可以由前端研发来使用，也可以由测试人员来使用，并不限制使用者的职业身份。</p>
 <p>点击"Copy"按钮<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683276292010.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683276292010.png" alt="image.png"><br>
 然后打开代码编辑器，把代码复制进去即可。</p>
 <p>点击"Clear"按钮，<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277483800.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277483800.png" alt="image.png"><br>
 可以清空本次操作生成的代码，从而开始进行下一次操作的代码生成。</p>
 <p>如果是使用 VS Code 插件，点击"Record new"即可。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277490131.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277490131.png" alt="image.png"></p>
 <h3> 修改代码</h3>
 <p>生成的代码，最好还是检查一下，也许需要去掉一些多余的操作记录。<br>
 如下面的代码，<code>Tab</code>的操作只是人工操作时为了方便而进行的按键，对机器而言，是多余的，应该去掉。</p>
@@ -3836,23 +3836,23 @@ sheet的名字不能超过 31 个字符。<br>
 <li>把光标放到测试用例的最后一行</li>
 <li>点击"Record at cursor"，即可继续录制</li>
 </ul>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277555357.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277555357.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <h3> 执行用例</h3>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277566741.png" alt="image.png" loading="lazy"><br>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277566741.png" alt="image.png"><br>
 如果用例失败了，想查看到底哪里错了，可以用以下命令显示浏览器，查看用例执行过程：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>如果是使用 VS Code，直接点击运行用例即可。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277575650.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277575650.png" alt="image.png"><br>
 勾选左下角的"Show broswer"，即可显示浏览器。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277598218.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277598218.png" alt="image.png"></p>
 <h3> 调试用例</h3>
 <p>对于失败的用例，如何 debug呢？添加 --debug 参数即可。</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>点击"Step over" 即可执行下一行代码。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277605265.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277605265.png" alt="image.png"></p>
 <p>如果是使用 VS Code，找到相应的用例，右键出现"Debug Test"，点击即可。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277678957.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277678957.png" alt="image.png"></p>
 <h3> 查看报告</h3>
 <p>在执行完用例后，本地会生成目录 <code>playwright-report</code>，可以通过以下命令查看测试报告</p>
-<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277713874.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277713874.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <h2> 常见场景与解决方案</h2>
 <h3> 应用登录</h3>
 <p>下面给出一个自动登录、并保存用户数据的解决方案。</p>
@@ -3875,16 +3875,16 @@ sheet的名字不能超过 31 个字符。<br>
 <p>人们对元素选择的第一反应是使用 CSS 或 XPath，但 Playwright 并不鼓励这样使用，因为这些选择器容易改变。较为好的办法是，为测试元素添加专门的属性 testid，如下所示：</p>
 <div class="language-html line-numbers-mode" data-ext="html"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>然后通过下列方式进行选择：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>当然，这种方式会对源代码有侵入。更为折衷的方式是，优先使用下列<a href="https://playwright.dev/docs/locators#locate-by-role" target="_blank" rel="noopener noreferrer">官方推荐的方法</a>进行元素选择，最后再使用业务 class，<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277746417.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277746417.png" alt="image.png"></p>
 <p>这里值得一提的是，业务class是针对 Tailwind CSS 这种“解构主义”的纯样式class而言的。你会发现，如果全是 Tailwind 的class，没有业务样式，E2E测试代码很不好写。</p>
 <p>更复杂的示例：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>如果是使用 VS Code，有辅助办法：</p>
 <ol>
 <li>点击“Pick locator”<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683421157907.png" alt="image.png" loading="lazy"></li>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683421157907.png" alt="image.png"></li>
 <li>切换到浏览器界面，点击目标元素</li>
 <li>切回 VS Code，即可看到相应的元素选择代码<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683421163861.png" alt="image.png" loading="lazy"></li>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683421163861.png" alt="image.png"></li>
 </ol>
 <h3> 声明断言 &amp;&amp; 检查元素是否存在</h3>
 <p>生成的代码是没有断言的，因此，很有可能页面报错了，用例执行报告仍然显示成功。为避免这种情况，每个用例至少要有一句断言。</p>
@@ -3907,15 +3907,15 @@ sheet的名字不能超过 31 个字符。<br>
 <li>打开网页控制台（按F12)</li>
 <li>鼠标悬浮在目标元素上面，然后右键，如下图所示</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277759344.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277759344.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <ol start="4">
 <li>点击控制台内部，则此时元素不会丢失 hover 状态，如下图所示</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277780882.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277780882.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <ol start="5">
 <li>切换到 VS Code</li>
 </ol>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277793308.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277793308.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <h3> 操作剪贴板</h3>
 <p>读写剪贴板需要设置权限，下面给出一个判断是否成功从剪贴板获取特定文本的测试用例：</p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 持续集成</h2>
@@ -3923,13 +3923,13 @@ sheet的名字不能超过 31 个字符。<br>
 <p>首先确保已安装 Gitlab Runner 并成功注册，具体操作可以参考<a href="/git/gitlab-ci.html#%E5%AE%89%E8%A3%85gitlab-runner" target="blank">安装文档</a>。</p>
 <p>端对端的测试耗时较长，并且对环境的稳定性有要求，作为回归测试的实践时，一般倾向于借助定时任务跑测试用例。</p>
 <p>新建调度：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683436020492.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683436020492.png" alt="image.png"><br>
 设置调度时间及环境变量：</p>
 <ul>
 <li>每 6 小时跑一次</li>
 <li>e2e 环境变量的值为 true</li>
 </ul>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683436027996.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683436027996.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <p>现在可以开始编写 .gitlab-ci.yml，下面只给出测试相关的配置。</p>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>注意点：</p>
 <ol>
@@ -3939,10 +3939,10 @@ sheet的名字不能超过 31 个字符。<br>
 </ol>
 <p>再修改 Gitlab Runner 的配置，解决<a href="https://github.com/nodejs/help/issues/1754#issuecomment-1260462271" target="_blank" rel="noopener noreferrer">yarn命令无法运行</a>的问题：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>根据 token 找到对应的 Runner 配置，按照下图所示，把红框处的值设置成 <code>true</code><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277800200.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277800200.png" alt="image.png"><br>
 config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一个呢？<br>
 可以在项目界面，根据下图所示的 token（w8exPBfA） 去查找。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277808112.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/software-test/1683277808112.png" alt="image.png"></p>
 <p>修改完后，重启 Gitlab Runner</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>最后，使用 Chromium 可能会出现内存超出限制的问题，需要对 Docker 设置 --ipc=host，配置 .gitlab-ci.yml 如下：</p>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 其他</h2>
@@ -3967,39 +3967,39 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <p>还有就是，Java 的类型检查，在写接口测试时十分束缚手脚。如下述代码：</p>
 <!-- more -->
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>笔者实在忍不住吐槽了一番：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694596433278-eb3e5566-0126-4e93-9dfe-a9c4d8edae51.png" alt="" loading="lazy"></p>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694596460562-b472ca9d-8b73-4e1f-b5a5-7c9c1fb8253a.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694596433278-eb3e5566-0126-4e93-9dfe-a9c4d8edae51.png" alt=""></p>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694596460562-b472ca9d-8b73-4e1f-b5a5-7c9c1fb8253a.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <p>笔者思前想后，最终还是放弃测试代码要与源码使用统一技术栈的构想，再次搬出 Postman 作为接口自动化测试的工具。</p>
 <h2> 本地调试</h2>
 <h3> 接口集合</h3>
 <p>新建一个 collection，然后再在里面新建接口。</p>
 <p>新建方法多种多样，可以手工新建，也可以 curl 导入，也可以从 swagger 导入。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694595120400-0e37bf26-405b-412c-b54f-7057cf49ab20.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694595120400-0e37bf26-405b-412c-b54f-7057cf49ab20.png" alt=""></p>
 <h3> 从 cURL 导入</h3>
 <p>对于已经上线的接口，使用 cURL 导入非常方便，省去了拼接参数的过程。</p>
 <p>下面以获取 token 接口为例进行说明。</p>
 <p>打开登录页面，打开浏览器控制台（按 F12），点击登录按钮，找到获取 token 的接口，然后右键 -&gt; Copy -&gt; Copy as cURL（bash）。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694737892655-0ebc74d0-17de-4972-9411-e36697fd5637.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694737892655-0ebc74d0-17de-4972-9411-e36697fd5637.png" alt=""><br>
 再打开 Postman，点击 Import 即可导入接口。</p>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694738073586-9de6f40e-6ddd-4b0a-b330-b807f9cb851b.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694738073586-9de6f40e-6ddd-4b0a-b330-b807f9cb851b.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <h3> 环境变量</h3>
-<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602746875957-dc9090e7-900e-4352-91f7-039792e2a9e0.png" alt="" loading="lazy"><br>
+<p><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602746875957-dc9090e7-900e-4352-91f7-039792e2a9e0.png" alt=""><br>
 点击右上角红框处，即可设置变量，需要先设置环境名。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747172023-7b96aa77-39bc-4881-b1e9-36d5535c92f1.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747172023-7b96aa77-39bc-4881-b1e9-36d5535c92f1.png" alt=""></p>
 <p>一般设置 current value 即可，则运行 postman 时使用的就是该值。</p>
 <p>如果有多套环境，就点击复制，再修改环境名及包含变量的 current value 即可。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747475793-1f85e976-8189-44b7-9667-f1a195ff8c35.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747475793-1f85e976-8189-44b7-9667-f1a195ff8c35.png" alt=""></p>
 <p>使用 <code>{{var}}</code> 的形式引用变量，可在 url 及 body 处引用环境变量 <code>var</code>。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602746808280-6743bf6c-34b5-402a-abe6-397eb76c5380.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602746808280-6743bf6c-34b5-402a-abe6-397eb76c5380.png" alt=""></p>
 <p>注意细节，如果是变量值是字符串，要用双引号把它包起来：</p>
 <div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>Postman内置了全局变量，输入 <code>{{</code> 会出现提示：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1700621852579-0ae851ef-9214-4880-8eb2-2a0cb06c63c5.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1700621852579-0ae851ef-9214-4880-8eb2-2a0cb06c63c5.png" alt=""></p>
 <p>使用示例：</p>
 <div class="language-json line-numbers-mode" data-ext="json"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>环境变量还可以在测试用例里去修改值：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694424229773-4c83c6cf-0640-4c8a-aa33-38097d84f0cd.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694424229773-4c83c6cf-0640-4c8a-aa33-38097d84f0cd.png" alt=""></p>
 <h3> 请求设置</h3>
 <p>对于请求体的发送，一般进行如下设置：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747761421-f2c415ec-1b1c-48f6-976d-fbc958fdcbf3.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747761421-f2c415ec-1b1c-48f6-976d-fbc958fdcbf3.png" alt=""></p>
 <p>还可以利用 Pre-request Script， 在请求前动态修改请求设置。<br>
 比如有以下场景：</p>
 <ul>
@@ -4007,13 +4007,13 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <li>本地环境接口路径为：/v1/api-name，也即线上环境接口地址多了两个前缀</li>
 </ul>
 <p>观察请求在 Postman 中的数据结构如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695779354530-f92268b0-1294-4ff7-b9d0-7a4cdd48bb4d.png" alt="" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695779354530-f92268b0-1294-4ff7-b9d0-7a4cdd48bb4d.png" alt=""><br>
 则可以编写前置脚本如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695779446073-c53065f9-07a8-4fd5-a062-390282dfd91e.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695779446073-c53065f9-07a8-4fd5-a062-390282dfd91e.png" alt=""></p>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h2> 接口测试</h2>
 <h3> 编写用例</h3>
 <p>在 Tests 标签页里，即可编写测试，在 SNIPPETS 里会有相应的示例。</p>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602748404916-daf8d633-1a35-48f8-a652-cc13c16244b5.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602748404916-daf8d633-1a35-48f8-a652-cc13c16244b5.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <p>下面给出常用CRUD相关接口的测试用例代码：</p>
 <ul>
 <li>设置 jwt</li>
@@ -4038,43 +4038,43 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 </ul>
 <div class="language-javascript line-numbers-mode" data-ext="js"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 上传文件</h3>
 <p>如果要上传文件，则一般进行如下设置：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747847485-5d86f2f6-18cc-4262-b5fd-69349feb4bbe.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602747847485-5d86f2f6-18cc-4262-b5fd-69349feb4bbe.png" alt=""></p>
 <p>注意要把文件放到工作目录中。查看工作目录的方法如下：</p>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1696845111698-7494d4ca-4a10-401b-9907-b93b1b2f3474.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1696845104321-e3956555-f26c-4c57-9d78-d14571a25dd6.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1696845111698-7494d4ca-4a10-401b-9907-b93b1b2f3474.png" alt="" tabindex="0"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1696845104321-e3956555-f26c-4c57-9d78-d14571a25dd6.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <p>把要上传的文件放到该目录下：</p>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1696845627177-ede00f46-b2fb-48d8-9f23-eecd342901ea.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1696845627177-ede00f46-b2fb-48d8-9f23-eecd342901ea.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <p>这样才方便后续运行集合、以及持续集成。</p>
 <h3> 运行集合</h3>
 <p>本地调试好了，把代码部署到线上环境后，就可以使用 postman 对线上的接口进行测试了。</p>
 <p>先切换到对应的环境，再重置变量当前值<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1603339930271-36e9f9e5-8013-40fa-9fac-e7cb642ba451.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1603339930271-36e9f9e5-8013-40fa-9fac-e7cb642ba451.png" alt=""></p>
 <p>再选择集合，点击 Run collection:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695864657881-dc204c38-386e-47d2-a377-083397bacad1.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695864657881-dc204c38-386e-47d2-a377-083397bacad1.png" alt=""></p>
 <p>点击运行，可以看到集合内所有接口的执行结果：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1602748206140-245e5362-ffe3-4d2f-b3a3-61f781730e86.png" alt=""></p>
 <p>提示：如果单独调试成功，运行集合却失败，注意检查文件是否已保存。如果文件处于编辑未保存状态，运行集合时使用的是修改前的接口。</p>
 <h2> 持续集成</h2>
 <h3> 导出接口</h3>
 <p>导出接口合集：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694594443532-5ca5008a-4e57-4eb1-909d-2b40ff4241ff.png" alt=""></p>
 <p>使用推荐的格式，导出一个 json 文件。</p>
 <h3> 导出环境变量</h3>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695779153775-1cc9a182-a8e2-4b52-baf5-34e9c3173dc3.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695779160975-7a625a91-bd51-45c5-b095-d89529b8ef51.png" alt="" tabindex="0" loading="lazy"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695779153775-1cc9a182-a8e2-4b52-baf5-34e9c3173dc3.png" alt="" tabindex="0"><figcaption></figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1695779160975-7a625a91-bd51-45c5-b095-d89529b8ef51.png" alt="" tabindex="0"><figcaption></figcaption></figure>
 <p>也是导出一个 json 文件。</p>
 <h3> 复制要上传的文件</h3>
 <p>把要上传的文件，复制到项目根目录。</p>
 <p>如果没有上传文件的接口，忽略此步骤。</p>
 <h3> 提交到Git</h3>
 <p>把导出的 json 文件放到项目根目录中（与上传文件同级），并提交到 Git<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694594578211-b381d377-f6a5-4dd2-be82-0c9295f10fc6.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694594578211-b381d377-f6a5-4dd2-be82-0c9295f10fc6.png" alt=""></p>
 <h3> 建立CI任务</h3>
 <p>以 Gitlab 为例，修改<code>.gitlab-ci.yml</code>，增加以下内容：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>推送代码，即可看到流水线<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694594759551-cb5a8564-cf20-4491-9378-3b6408e2c9fc.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694594759551-cb5a8564-cf20-4491-9378-3b6408e2c9fc.png" alt=""></p>
 <p>结果如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694594789278-08b7d7e5-397b-47a9-9cbe-2f989a357ae1.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694594789278-08b7d7e5-397b-47a9-9cbe-2f989a357ae1.png" alt=""></p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1694596433278-eb3e5566-0126-4e93-9dfe-a9c4d8edae51.png" type="image/png"/>
     </item>
@@ -4121,8 +4121,8 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <p>所以，我们还需要借助 CI 工具，在有人往代码仓库中提交改动后，立刻执行一次回归测试。</p>
 <p>以 Gitlab CI 为例（点击查看<a href="https://levy.vip/git/gitlab-ci.html" target="_blank" rel="noopener noreferrer">安装教程</a>），<code>.gitlab-ci.yml</code> 文件如下：</p>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>提交代码后就会触发自动化测试、构建镜像并推送。效果截图如下：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702014482966-9391b0d1-906b-4c23-b74b-41c1a2dcc305.png" alt="" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702014525088-10240012-bad2-4b94-a06d-154adb3f1186.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702014482966-9391b0d1-906b-4c23-b74b-41c1a2dcc305.png" alt=""><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702014525088-10240012-bad2-4b94-a06d-154adb3f1186.png" alt=""></p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1702014482966-9391b0d1-906b-4c23-b74b-41c1a2dcc305.png" type="image/png"/>
     </item>
@@ -4139,14 +4139,14 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <p>本文讲教大家如何购买稳定的包年上网套餐，为使用各种 AI 工具打下基础。</p>
 <h2> 购买指南</h2>
 <p><a href="https://cp.cloudnx.cc/aff.php?aff=22930" target="_blank" rel="noopener noreferrer">点击进入服务页面</a>, 看到如下页面：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172119852.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172119852.png" alt="image.png"></p>
 <p>点击注册账户, 会出现如图提示：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172124456.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172124456.png" alt="image.png"></p>
 <p>点击购买产品，就会出现查看产品列表面（为什么要这么绕，因为这是保护措施，避免产品主页被黑）。</p>
 <p>推荐购买 Basic 套餐，一个人用的话，学习工作、娱乐看视频，每月 50GB 足够了。多个客户端可以同时在线，反正就是随便玩！算下来，一天不到7毛钱，很划算了。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/img.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/img.png" alt="image.png"></p>
 <p>点击购买后，选择包年，即可享受优惠价格，如下图所示：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/img_1.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/img_1.png" alt="image.png"></p>
 <p>支持支付宝，购买非常方便。</p>
 <h2> 客户端</h2>
 <p>支持全平台客户端：</p>
@@ -4159,24 +4159,24 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <h2> 导入配置</h2>
 <p>以 Shadowsocks 为例。</p>
 <p>根据客户端复制相应的订阅地址:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172131049.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172131049.png" alt="image.png"></p>
 <p>先禁用系统代理:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172136278.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172136278.png" alt="image.png"></p>
 <p>点击在线配置:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172141931.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172141931.png" alt="image.png"></p>
 <p>输入URL，点击更新:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172145950.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172145950.png" alt="image.png"></p>
 <p>选择一个服务器:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172149930.png" alt="image.png" loading="lazy"><br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172155098.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172149930.png" alt="image.png"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172155098.png" alt="image.png"></p>
 <p>再恢复系统代理，选择PAC模式:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172160264.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172160264.png" alt="image.png"></p>
 <p>就可以愉快地上网啦！</p>
 <h2> 其他</h2>
 <h3> 500 内部代理错误</h3>
-<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172164184.png" alt="image.png" tabindex="0" loading="lazy"><figcaption>image.png</figcaption></figure>
+<figure><img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172164184.png" alt="image.png" tabindex="0"><figcaption>image.png</figcaption></figure>
 <p>出现此问题时，一般是内网自定义域名不允许走代理，需要禁用掉系统代理:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172170331.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172170331.png" alt="image.png"></p>
 <h3> 修改PAC文件</h3>
 <p>PAC模式是指：根据规则识别某网站是否需要使用代理访问。</p>
 <p>什么时候需要修改PAC文件呢？</p>
@@ -4185,29 +4185,29 @@ config.toml 里面可能会有多个 Runner 配置，如何找到要修改哪一
 <li>设置某网站一定走代理</li>
 </ul>
 <p>操作如下（以Shadowsocks为例）:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172175096.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172175096.png" alt=""></p>
 <p>按下图所示，模仿添加，即可实现遇到下列网站时选择直连:<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172179825.png" alt="" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172179825.png" alt=""></p>
 <p>不走代理的示例修改:</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>必走代理的示例修改:</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><p>保存后记得重启软件。</p>
 <h3> 使用 New Bing</h3>
 <p>再给一个配置 Clash 使用 New Bing 的示例：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172184433.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172184433.png" alt="image.png"><br>
 编辑文件：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172189506.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172189506.png" alt="image.png"><br>
 添加如下设置：</p>
 <div class="language-yaml line-numbers-mode" data-ext="yml"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><p>效果如下图：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172193803.png" alt="image.png" loading="lazy"><br>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172193803.png" alt="image.png"><br>
 之后再重新加载配置，即可打开 New Bing 页面。</p>
 <p>但要让 New Bing 回答问题，还要设置全局模式，并选择正确的节点，如图所示。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172198850.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172198850.png" alt="image.png"></p>
 <h3> 申请美区apple id</h3>
 <p>在官网创建申请: <a href="https://appleid.apple.com/account" target="_blank" rel="noopener noreferrer">https://appleid.apple.com/account</a></p>
 <p>不要用 qq邮箱, 注册不会的成功的。</p>
 <p>需要注意的是，地区请选择：Alaska，否则后续充值的话要交税😅</p>
 <p>相关的地址信息，可以使用<a href="https://www.prepostseo.com/tool/fake-address-generator" target="_blank" rel="noopener noreferrer">美国地址生成器</a>，按如图所示选择，再点击生成即可获得注册时的必要信息。这样就不需要输入信用卡信息。<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172198851.png" alt="image.png" loading="lazy"></p>
+<img src="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172198851.png" alt="image.png"></p>
 ]]></content:encoded>
       <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/docs/tools/1682172119852.png" type="image/png"/>
     </item>
