@@ -2,7 +2,7 @@ import { searchPlugin } from '@vuepress/plugin-search'
 import { registerComponentsPlugin } from '@vuepress/plugin-register-components'
 import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
-import {path} from '@vuepress/utils'
+//import {path} from '@vuepress/utils'
 
 const GA = 'G-6HEW6B1S6B'
 export default defineUserConfig({
@@ -19,7 +19,7 @@ export default defineUserConfig({
       // options
     }),
     registerComponentsPlugin({
-      componentsDir: path.resolve(__dirname, './components')
+      //componentsDir: path.resolve(__dirname, './components')
     })
   ],
 
