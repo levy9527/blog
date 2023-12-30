@@ -35,7 +35,7 @@ password=""
 push=false
 
 # Process command-line arguments
-while [[ $# -gt 0 ]]; do
+while [ $# -gt 0 ]; do
   case $1 in
     -u)
       shift
@@ -63,6 +63,7 @@ echo "push: $push"
 # 构建镜像
 echo "Building image: "${IMAGE}:${IMAGE_TAG}
 docker build ${BUILD_CONTEXT} -t ${IMAGE}:${IMAGE_TAG} -f $DOCKERFILE_PATH .
+docker tag ${IMAGE}:${IMAGE_TAG} ${IMAGE}:latest
 
 if [ "$push" = true ]; then
   echo "push is true. Performing push operation..."
@@ -73,7 +74,7 @@ if [ "$push" = true ]; then
 
   # 推送
   echo "Pushing to registry..."
-  docker push ${IMAGE}:${IMAGE_TAG}
+  docker push ${IMAGE}:${IMAGE_TAG} -a
 
   echo "Build and push complete!"
 else
