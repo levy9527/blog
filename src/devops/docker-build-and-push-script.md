@@ -74,7 +74,8 @@ if [ "$push" = true ]; then
 
   # 推送
   echo "Pushing to registry..."
-  docker push ${IMAGE}:${IMAGE_TAG} -a
+  docker push ${IMAGE}:${IMAGE_TAG} 
+  docker push ${IMAGE}:latest
 
   echo "Build and push complete!"
 else
