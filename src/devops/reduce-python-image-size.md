@@ -9,7 +9,7 @@ tag:
 
 ## 背景
 当你为 LLM 应用构建镜像时，发现整个过程很慢，一看镜像体积：好家伙，1.76 G！
-![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701851964516-fbd3eb62-111f-4e94-b8d6-2948a974a0ac.png)
+![](https://cdn.nlark.com/yuque/0/2024/png/160590/1704179561250-cca8b370-edb0-4d90-a0d1-4e4db5e25a71.png)
 能不能减少镜像体积，缩短打包时间啊？本文将分享两招实用的技巧，让 Python 应用的镜像体积减少 50%。
 
 <!-- more -->
@@ -67,10 +67,10 @@ run pip install -i https://pypi.tuna.tsinghua.edu.cn/simple --upgrade pip && \
 ```
 ## 优化效果
 第一次优化，使用 slim 镜像：
-![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701851939395-45a1f231-9075-4d41-b71e-b4eeaf53136e.png)
+![](https://cdn.nlark.com/yuque/0/2024/png/160590/1704179592750-ab34f91e-7ab7-45e4-856a-314341602a74.png)
 
 第二次优化，减少层数、取消本地缓存：
-![](https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701853194080-cb829a4a-b778-4b19-b221-6b6896252223.png)
+![](https://cdn.nlark.com/yuque/0/2024/png/160590/1704179609044-68068d48-0b3b-4f5f-be9a-7745a9173f98.png)
 小小的改动，大大的变化！
 ## 参考
 [https://icloudnative.io/posts/intro-guide-to-dockerfile-best-practices/](https://icloudnative.io/posts/intro-guide-to-dockerfile-best-practices/)
