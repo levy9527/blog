@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Sat, 30 Dec 2023 03:24:05 GMT</pubDate>
-    <lastBuildDate>Sat, 30 Dec 2023 03:24:05 GMT</lastBuildDate>
+    <pubDate>Tue, 02 Jan 2024 07:16:22 GMT</pubDate>
+    <lastBuildDate>Tue, 02 Jan 2024 07:16:22 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -513,7 +513,7 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
       <content:encoded><![CDATA[<h1> 缩减Python应用的镜像体积</h1>
 <h2> 背景</h2>
 <p>当你为 LLM 应用构建镜像时，发现整个过程很慢，一看镜像体积：好家伙，1.76 G！<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701851964516-fbd3eb62-111f-4e94-b8d6-2948a974a0ac.png" alt=""><br>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/160590/1704179561250-cca8b370-edb0-4d90-a0d1-4e4db5e25a71.png" alt=""><br>
 能不能减少镜像体积，缩短打包时间啊？本文将分享两招实用的技巧，让 Python 应用的镜像体积减少 50%。</p>
 <!-- more -->
 <h2> 原始Dockerfile</h2>
@@ -533,16 +533,16 @@ tmd，自己延误工期，还要我陪你加班，哪个这个道理？这是�
 <p>则上述两行代码优化如下：</p>
 <div class="language-bash line-numbers-mode" data-ext="sh"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h2> 优化效果</h2>
 <p>第一次优化，使用 slim 镜像：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701851939395-45a1f231-9075-4d41-b71e-b4eeaf53136e.png" alt=""></p>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/160590/1704179592750-ab34f91e-7ab7-45e4-856a-314341602a74.png" alt=""></p>
 <p>第二次优化，减少层数、取消本地缓存：<br>
-<img src="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701853194080-cb829a4a-b778-4b19-b221-6b6896252223.png" alt=""><br>
+<img src="https://cdn.nlark.com/yuque/0/2024/png/160590/1704179609044-68068d48-0b3b-4f5f-be9a-7745a9173f98.png" alt=""><br>
 小小的改动，大大的变化！</p>
 <h2> 参考</h2>
 <p><a href="https://icloudnative.io/posts/intro-guide-to-dockerfile-best-practices/" target="_blank" rel="noopener noreferrer">https://icloudnative.io/posts/intro-guide-to-dockerfile-best-practices/</a><br>
 <a href="https://icloudnative.io/posts/docker-images-part2-details-specific-to-different-languages/#jdk-vs-jre" target="_blank" rel="noopener noreferrer">https://icloudnative.io/posts/docker-images-part2-details-specific-to-different-languages</a><br>
 <a href="https://www.ardanlabs.com/blog/2020/04/docker-images-part3-going-farther-reduce-image-size.html" target="_blank" rel="noopener noreferrer">https://www.ardanlabs.com/blog/2020/04/docker-images-part3-going-farther-reduce-image-size</a></p>
 ]]></content:encoded>
-      <enclosure url="https://raw.gitmirror.com/levy9527/image-holder/main/md-image-kit/1701851964516-fbd3eb62-111f-4e94-b8d6-2948a974a0ac.png" type="image/png"/>
+      <enclosure url="https://cdn.nlark.com/yuque/0/2024/png/160590/1704179561250-cca8b370-edb0-4d90-a0d1-4e4db5e25a71.png" type="image/png"/>
     </item>
     <item>
       <title>sh与bash的区别</title>
