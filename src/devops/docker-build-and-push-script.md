@@ -7,6 +7,23 @@ tag:
 
 # Docker 构建镜像、推送、启动实用脚本
 
+## misc
+存储多份 docker 认证信息：
+```shell
+mkdir "~/.project1"
+mkdir "~/.project2"
+
+docker --config ~/.project1 login registry.example.com -u <username> -p <deploy_token>
+docker --config ~/.project2 login registry.example.com -u <username> -p <deploy_token> 
+```
+
+使用：
+```shell
+docker --config ~/.project1 pull registry.example.com/project1
+docker --config ~/.project2 pull registry.example.com/project2
+```
+
+## build-image.sh
 support command:
 ```shell
 # only build
@@ -15,7 +32,7 @@ support command:
 ./build-image.sh -u xxx -p xxx --push
 ```
 
-build-image.sh (remember to replace `xxx` with true value)：
+`build-image.sh` (remember to replace `xxx` with true value)：
 ```shell
 #!/bin/sh
 # Docker注册表
@@ -84,7 +101,8 @@ else
 fi
 ```
 
-startup.sh
+## startup.sh
+`startup.sh`
 ```shell
 #!/bin/sh
 # 镜像名称和标签
