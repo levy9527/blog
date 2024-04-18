@@ -23,6 +23,23 @@ docker --config ~/.project1 pull registry.example.com/project1
 docker --config ~/.project2 pull registry.example.com/project2
 ```
 
+## get-version.sh
+```shell
+#!/bin/sh
+
+# Get the current datetime in the desired format (YYYY-MM-DD-HHMM)
+CURRENT_DATETIME=$(TZ="Asia/Shanghai" date +'%Y_%m_%d_%H_%M')
+
+# Get the abbreviated Git commit hash
+GIT_COMMIT=$(git rev-parse --short HEAD)
+
+# Combine the datetime and Git commit hash to generate the tag
+TAG="${CURRENT_DATETIME}-${GIT_COMMIT}"
+
+# Print the generated tag
+echo "${TAG}"
+```
+
 ## build-image.sh
 support command:
 ```shell
@@ -41,7 +58,7 @@ REGISTRY_URL=https://$REGISTRY
 
 # 镜像名称和标签
 IMAGE=$REGISTRY/xxx/$(basename "$(pwd)")
-IMAGE_TAG=$(cat VERSION)
+IMAGE_TAG=$(./get-version.sh)
 
 # Dockerfile文件位置
 DOCKERFILE_PATH=./Dockerfile
