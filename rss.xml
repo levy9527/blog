@@ -6,8 +6,8 @@
     <link>https://levy.vip/</link>
     <description>levy&amp;apos;s blog</description>
     <language>zh-CN</language>
-    <pubDate>Thu, 18 Apr 2024 05:55:24 GMT</pubDate>
-    <lastBuildDate>Thu, 18 Apr 2024 05:55:24 GMT</lastBuildDate>
+    <pubDate>Mon, 29 Apr 2024 11:33:52 GMT</pubDate>
+    <lastBuildDate>Mon, 29 Apr 2024 11:33:52 GMT</lastBuildDate>
     <generator>vuepress-plugin-feed2</generator>
     <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
     <item>
@@ -3326,6 +3326,49 @@ Stream 的引入，不仅带来新的语法，也带来了函数式编程的思�
 <p>一个常见的场景是，某段逻辑因为业务变化要加 if-else 进行特殊处理，你得在这个 if-else 前加上注释，解释其原因。那么这段逻辑就可以添加日志，日志内容就是你的注释内容，也即把注释改写成日志即可。</p>
 <p>示例：</p>
 <div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><div class="language-java line-numbers-mode" data-ext="java"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div>]]></content:encoded>
+    </item>
+    <item>
+      <title>使用Ragas评估LLM应用</title>
+      <link>https://levy.vip/python/evaluate-llm-app-with-ragas.html</link>
+      <guid>https://levy.vip/python/evaluate-llm-app-with-ragas.html</guid>
+      <source url="https://levy.vip/rss.xml">使用Ragas评估LLM应用</source>
+      <description>使用Ragas评估LLM应用 说明 对于已知问题有正确答案的场景，适合使用 ragas 的 faithfulness 指标对 GenAI 应用响应结果进行评估，方便进行回归测试。 注意：本文提到的方法，只适用于对已知问题的评估。对于线上运行时，用户提的随机的、不在测试集范围内的问题，不适合用此方法评估。 安装 pip install ragas</description>
+      <pubDate>Wed, 03 Apr 2024 00:00:00 GMT</pubDate>
+      <content:encoded><![CDATA[<h1> 使用Ragas评估LLM应用</h1>
+<h2> 说明</h2>
+<p>对于已知问题有正确答案的场景，适合使用 ragas 的 faithfulness 指标对 GenAI 应用响应结果进行评估，方便进行回归测试。</p>
+<p>注意：本文提到的方法，只适用于对已知问题的评估。对于线上运行时，用户提的随机的、不在测试集范围内的问题，不适合用此方法评估。</p>
+<h2> 安装</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div></div></div><h2> 数据说明</h2>
+<p>对以下数据进行评估。</p>
+<p>事实：Einstein was born in 1879 in Germany.<br>
+提问：</p>
+<ol>
+<li>When did Einstein born?</li>
+<li>Where did Einstein born?</li>
+</ol>
+<p>正确答案：</p>
+<ol>
+<li>Einstein was born in 1879.</li>
+<li>Einstein was born in Germany.</li>
+</ol>
+<h2> 正确性❌</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1711614954321-45e4ad75-2c87-42a9-9021-6455f01ec484.png" alt=""><br>
+这是不能令人满意的——正确的回答，得到的指标分数却不足0.8。<br>
+这是因为，正确性的评估，还依赖了相似度。<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1711614692649-234f7b6a-16c5-4c09-95e7-db2877663e4c.png" alt=""></p>
+<h2> 忠实度✔</h2>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p><img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1711614916136-dfc65b51-b0ec-41a6-8bae-d0907806fb49.png" alt=""><br>
+符合预期，满足要求！</p>
+<h2> 实战演示</h2>
+<h3> 准备好样例问题</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 准备好正确答案</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><h3> 编写回答函数</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div></div></div><h3> 进行答案评估</h3>
+<div class="language-python line-numbers-mode" data-ext="py"><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>效果如下：<br>
+<img src="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1712136338962-974f31a0-1b27-404e-92de-b26dc6de8adb.png" alt=""></p>
+]]></content:encoded>
+      <enclosure url="https://raw.githubusercontent.com/levy9527/image-holder/main/md-image-kit/1711614954321-45e4ad75-2c87-42a9-9021-6455f01ec484.png" type="image/png"/>
     </item>
     <item>
       <title>Python 导出 MySQL 库表信息到 Excel</title>
