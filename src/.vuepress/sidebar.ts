@@ -27,6 +27,23 @@ export default sidebar({
       ]
     },
     {
+      text: "LLM",
+      prefix: "/llm",
+      children: [
+        'evaluate-llm-app-with-ragas',
+        'llm-with-recordation-review-of-regulations',
+      ]
+    },
+    {
+      text: "Python",
+      prefix: "/python",
+      children: [
+        'add-logging-for-llm-app',
+        "mr.py",
+        "export-mysql-table-into-excel",
+      ]
+    },
+    {
       text: "Git相关",
       prefix: "/git/",
       children: [
@@ -64,15 +81,6 @@ export default sidebar({
       ]
     },
     {
-      text: "MySQL",
-      prefix: "/mysql",
-      children: [
-        "mysql-backup-case-study-mysqldump-in-action",
-        "mysql-data-migration-case-study-add-auto-increment",
-        "mysql-details-you-should-know-when-execute-sql-in-command-line",
-      ]
-    },
-    {
       text: "Java",
       prefix: "/java",
       children: [
@@ -93,12 +101,12 @@ export default sidebar({
       ]
     },
     {
-      text: "Python",
-      prefix: "/python",
+      text: "MySQL",
+      prefix: "/mysql",
       children: [
-        'add-logging-for-llm-app.md',
-        "mr.py",
-        "export-mysql-table-into-excel",
+        "mysql-backup-case-study-mysqldump-in-action",
+        "mysql-data-migration-case-study-add-auto-increment",
+        "mysql-details-you-should-know-when-execute-sql-in-command-line",
       ]
     },
     {
